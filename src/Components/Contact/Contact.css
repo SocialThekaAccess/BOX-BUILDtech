@@ -115,6 +115,7 @@
 
 .contact-title span {
   color: #C8B83C;
+   font-family: var(--font-heading);
 }
 
 /* ── Two-column grid ── */

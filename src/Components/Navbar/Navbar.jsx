@@ -4,11 +4,11 @@ import boxLogo from '../../assets/BOX.png';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { label: 'Home',         section: 'home'         },
-  { label: 'About Us',     section: 'about'        },
-  { label: 'Services',     section: 'services'     },
-  { label: 'Projects',     section: 'projects'     },
-  { label: 'Testimonials', section: 'testimonials' },
+  { label: 'Home',         section: 'home',         path: '/'      },
+  { label: 'About Us',     section: null,           path: '/about' },
+  { label: 'Services',     section: 'services',     path: '/'      },
+  { label: 'Projects',     section: 'projects',     path: '/'      },
+  { label: 'Testimonials', section: 'testimonials', path: '/'      },
 ];
 
 const Navbar = () => {
@@ -18,15 +18,27 @@ const Navbar = () => {
   const navigate  = useNavigate();
   const location  = useLocation();
 
+  /* Mark active based on current route */
+  useEffect(() => {
+    if (location.pathname === '/about') {
+      setActiveNav('About Us');
+    }
+  }, [location.pathname]);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  /* Highlight active section on scroll */
+  /* Highlight active section on scroll — only on home page */
   useEffect(() => {
-    const sections = NAV_LINKS.map((l) => document.getElementById(l.section));
+    if (location.pathname !== '/') return;
+
+    const sections = NAV_LINKS
+      .filter((l) => l.section)
+      .map((l) => document.getElementById(l.section));
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -42,18 +54,50 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, [location]);
 
-  const scrollTo = (section) => {
+  const handleNavClick = (link) => {
     setMenuOpen(false);
-    // Always clean the URL — no hash
+    setActiveNav(link.label);
+
+    /* About Us → dedicated page */
+    if (link.path === '/about') {
+      navigate('/about');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    /* All other links → scroll on home page */
     if (location.pathname !== '/') {
       navigate('/', { replace: true });
       setTimeout(() => {
-        document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+        document.getElementById(link.section)?.scrollIntoView({ behavior: 'smooth' });
+      }, 120);
     } else {
-      // Replace state to remove any hash from URL
       window.history.replaceState(null, '', '/');
-      document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById(link.section)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleLogoClick = () => {
+    setMenuOpen(false);
+    setActiveNav('Home');
+    if (location.pathname !== '/') {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleContactClick = () => {
+    setMenuOpen(false);
+    setActiveNav('Contact');
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 120);
+    } else {
+      window.history.replaceState(null, '', '/');
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -62,7 +106,7 @@ const Navbar = () => {
       <nav className={`nav-root ${scrolled ? 'scrolled' : 'top'}`}>
 
         {/* ── Logo ── */}
-        <button className="nav-logo" onClick={() => scrollTo('home')} aria-label="Go to home">
+        <button className="nav-logo" onClick={handleLogoClick} aria-label="Go to home">
           <img src={boxLogo} alt="BOX Logo" className="nav-logo-img" />
         </button>
 
@@ -72,15 +116,12 @@ const Navbar = () => {
             <button
               key={link.label}
               className={`nav-link ${activeNav === link.label ? 'active' : ''}`}
-              onClick={() => { setActiveNav(link.label); scrollTo(link.section); }}
+              onClick={() => handleNavClick(link)}
             >
               {link.label}
             </button>
           ))}
-          <button
-            className="btn-gold"
-            onClick={() => { setActiveNav('Contact'); scrollTo('contact'); }}
-          >
+          <button className="btn-gold" onClick={handleContactClick}>
             Get A Quote →
           </button>
         </div>
@@ -102,15 +143,12 @@ const Navbar = () => {
           <button
             key={link.label}
             className={`mobile-nav-item ${activeNav === link.label ? 'active' : ''}`}
-            onClick={() => { setActiveNav(link.label); scrollTo(link.section); }}
+            onClick={() => handleNavClick(link)}
           >
             {link.label}
           </button>
         ))}
-        <button
-          className="btn-gold mobile-cta"
-          onClick={() => { setActiveNav('Contact'); scrollTo('contact'); }}
-        >
+        <button className="btn-gold mobile-cta" onClick={handleContactClick}>
           Get A Quote →
         </button>
       </div>

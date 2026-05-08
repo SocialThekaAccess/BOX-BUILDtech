@@ -8,6 +8,7 @@ import About        from './Components/About/About';
 import Testimonials from './Components/Testimonials/Testimonials';
 import Contact      from './Components/Contact/Contact';
 import Footer       from './Components/Footer/Footer';
+import AboutPage    from './Pages/About';
 import './styles/globals.css';
 
 /* ── Back To Top Button ── */
@@ -93,6 +94,13 @@ const HomePage = () => (
   </>
 );
 
+const AboutFullPage = () => (
+  <>
+    <AboutPage />
+    <Footer />
+  </>
+);
+
 export default function App() {
   useEffect(() => {
     if (window.location.hash) {
@@ -104,8 +112,9 @@ export default function App() {
     <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
       <Navbar />
       <Routes>
-        <Route path="/"  element={<HomePage />} />
-        <Route path="*"  element={<HomePage />} />
+        <Route path="/"      element={<HomePage />}     />
+        <Route path="/about" element={<AboutFullPage />} />
+        <Route path="*"      element={<HomePage />}     />
       </Routes>
       <BackToTop />
     </div>

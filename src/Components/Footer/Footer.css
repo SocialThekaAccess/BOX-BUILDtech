@@ -63,9 +63,9 @@
 .footer-tagline {
   font-family: var(--font-body);
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.8;
-  color: var(--text-muted);
+  color: rgba(255,255,255,0.75);
   max-width: 280px;
   margin-bottom: 28px;
 }
@@ -77,11 +77,11 @@
 }
 
 .footer-social-btn {
-  width: 38px;
-  height: 38px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.03);
-  color: var(--text-muted);
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.8);
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 700;
@@ -90,15 +90,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   text-decoration: none;
+  border-radius: 8px;
+}
+
+.footer-social-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 .footer-social-btn:hover {
-  background: rgba(200,184,60,0.12);
-  border-color: var(--border-gold);
+  background: rgba(200,184,60,0.15);
+  border-color: var(--gold);
   color: var(--gold);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(200,184,60,0.2);
 }
 
 /* ── Link Columns ── */
@@ -135,8 +143,8 @@
   cursor: pointer;
   font-family: var(--font-body);
   font-size: 14px;
-  font-weight: 300;
-  color: var(--text-muted);
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
   padding: 6px 0;
   text-align: left;
   transition: color 0.2s ease;
@@ -144,7 +152,7 @@
 }
 
 .footer-link:hover {
-  color: var(--white);
+  color: #ffffff;
 }
 
 .footer-link-arrow {
@@ -181,8 +189,8 @@
 .footer-contact-text {
   font-family: var(--font-body);
   font-size: 14px;
-  font-weight: 300;
-  color: var(--text-muted);
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
   line-height: 1.5;
 }
 
@@ -205,7 +213,7 @@
 .footer-copyright {
   font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.55);
 }
 
 .footer-legal {
@@ -220,7 +228,7 @@
   cursor: pointer;
   font-family: var(--font-body);
   font-size: 13px;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.55);
   transition: color 0.2s ease;
   padding: 0;
 }
@@ -230,7 +238,7 @@
 }
 
 .footer-legal-dot {
-  color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.3);
   font-size: 13px;
 }
 
