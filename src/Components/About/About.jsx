@@ -1,52 +1,66 @@
-import React from 'react';
-import { GoldLine, Tag } from '../Shared/SharedComponents';
-import { ABOUT, ABOUT_FEATURES } from '../../data/constants';
-import './About.css';
+import "./About.css";
 
-const About = () => {
+const FEATURES = [
+  { icon: "🏆", title: "Award Winning",    desc: "25+ industry awards" },
+  { icon: "🤝", title: "Trusted Partners", desc: "100+ global vendors"  },
+  { icon: "♻️", title: "Sustainable",      desc: "Green certified builds"},
+];
+
+const scrollTo = (id) => {
+  window.history.replaceState(null, '', '/');
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+};
+
+export default function About() {
   return (
     <section id="about" className="about">
       <div className="about-inner">
+
         {/* Image */}
         <div className="about-image-wrap">
           <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80"
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
             alt="Our team at work"
           />
         </div>
 
         {/* Content */}
         <div className="about-content">
-          <Tag>{ABOUT.tag}</Tag>
-          <h2 className="section-heading">{ABOUT.heading}</h2>
-          <GoldLine width="50px" margin="16px 0 24px" />
+          <span className="about-tag">Our Story</span>
+          <h2 className="about-heading">
+            Two Decades of Crafting Excellence
+          </h2>
+          <div className="about-gold-line" />
 
-          {ABOUT.body.map((para, i) => (
-            <p key={i} className="about-body">
-              {para}
-            </p>
-          ))}
+          <p className="about-body">
+            Founded in 2005, BOX Buildtech has grown from a small construction firm
+            into one of the region's most trusted names in premium real estate
+            development and design.
+          </p>
+          <p className="about-body">
+            Our philosophy is simple — every project deserves the same level of
+            passion, precision, and dedication, whether it's a private residence
+            or a landmark commercial tower.
+          </p>
 
-          {/* Features */}
           <div className="about-features">
-            {ABOUT_FEATURES.map((feat) => (
-              <div key={feat.title} className="about-feature">
-                <span className="about-feature-icon">{feat.icon}</span>
+            {FEATURES.map((f) => (
+              <div key={f.title} className="about-feature">
+                <div className="about-feature-icon">{f.icon}</div>
                 <div>
-                  <div className="about-feature-title">{feat.title}</div>
-                  <div className="about-feature-desc">{feat.desc}</div>
+                  <div className="about-feature-title">{f.title}</div>
+                  <div className="about-feature-desc">{f.desc}</div>
                 </div>
               </div>
             ))}
           </div>
 
-          <a href={ABOUT.cta.href} className="btn-primary">
-            {ABOUT.cta.label}
-          </a>
+          <button className="about-btn" onClick={() => scrollTo('contact')}>
+            Start Your Project →
+          </button>
         </div>
+
       </div>
     </section>
   );
-};
-
-export default About;
+}

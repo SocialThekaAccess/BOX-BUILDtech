@@ -1,84 +1,189 @@
-.services {
-  padding: 100px 5%;
-  background: #111111;
+/* ═══════════════════════════════════════
+   Services.css — BOX Buildtech Dark Theme
+   ═══════════════════════════════════════ */
+
+.services-section {
+  padding: 110px 5%;
+  background: var(--bg2);
+  position: relative;
+  overflow: hidden;
 }
 
-.section-header {
+/* Diagonal gold motif background */
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -5%;
+  width: 3px;
+  height: 160%;
+  background: linear-gradient(to bottom, transparent, rgba(200,184,60,0.12), transparent);
+  transform: rotate(-55deg);
+  pointer-events: none;
+}
+
+.services-section::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: 3%;
+  width: 2px;
+  height: 160%;
+  background: linear-gradient(to bottom, transparent, rgba(200,184,60,0.07), transparent);
+  transform: rotate(-55deg);
+  pointer-events: none;
+}
+
+.services-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Header ── */
+.services-header {
   text-align: center;
   margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.section-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 4vw, 3rem);
+.services-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 11px;
   font-weight: 700;
-  color: #ffffff;
-  margin-top: 12px;
-  margin-bottom: 16px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--border-gold);
+  padding: 6px 20px;
+  border-radius: 2px;
+  margin-bottom: 18px;
 }
 
-.section-sub {
-  font-size: 1rem;
-  color: #888888;
-  max-width: 480px;
+.services-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.services-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-sub);
+  line-height: 1.8;
+  max-width: 520px;
   margin: 0 auto;
-  line-height: 1.7;
 }
 
+/* ── Grid ── */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 2px;
+  border: 1px solid var(--border);
 }
 
+/* ── Card ── */
 .service-card {
-  background: #1A1A1A;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-  padding: 36px 28px;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  background: var(--bg-card);
+  padding: 40px 36px;
+  transition: all 0.3s ease;
   cursor: default;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--amber));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
 }
 
 .service-card:hover {
-  border-color: rgba(201, 168, 76, 0.4);
+  background: var(--bg-card2);
   transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  border-color: var(--border-gold);
+  z-index: 1;
 }
 
-.service-icon {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.service-card:hover::before {
+  transform: scaleX(1);
 }
 
-.service-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #ffffff;
+/* ── Icon ── */
+.service-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: rgba(200,184,60,0.08);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  color: var(--gold);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrap {
+  background: var(--gold);
+  color: var(--navy);
+  border-color: var(--gold);
+}
+
+/* ── Text ── */
+.service-card-title {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--white);
   margin-bottom: 12px;
 }
 
-.service-desc {
-  font-size: 0.9rem;
-  color: #888888;
-  line-height: 1.7;
+.service-card-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-sub);
+  line-height: 1.8;
+  margin-bottom: 24px;
 }
 
-.service-line {
-  margin-top: 24px;
+.service-card-line {
+  width: 32px;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.35s ease;
 }
 
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.service-card:hover .service-card-line { width: 64px; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .services-section { padding: 80px 5%; }
+  .services-grid    { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 600px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
+  .services-grid { grid-template-columns: 1fr; }
 }
-

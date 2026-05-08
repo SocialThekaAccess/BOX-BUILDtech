@@ -1,23 +1,43 @@
 /* ============================================================
-   FONTS — Single font: Inter only
+   FONTS — Montserrat (headings) + Source Sans 3 (body)
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300&family=Source+Sans+3:wght@300;400;600;700&display=swap');
 
 /* ============================================================
-   CSS VARIABLES
+   CSS VARIABLES — BOX Buildtech Brand Identity System
    ============================================================ */
 :root {
-  --font-heading: 'Inter', sans-serif;
-  --font-body:    'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body:    'Source Sans 3', sans-serif;
 
-  /* Colors */
-  --gold:         #F0B429;
-  --gold-dark:    #C8960C;
-  --bg:           #0A0A0A;
-  --bg2:          #111111;
-  --bg3:          #1A1A1A;
-  --text:         #ffffff;
-  --text-muted:   rgba(255, 255, 255, 0.45);
+  /* Brand Colors — exact from identity doc */
+  --navy:         #0D1B2E;
+  --deep-blue:    #1E3A5F;
+  --brand-blue:   #1E3A5F;
+  --gold:         #C8B83C;
+  --amber:        #F0B429;
+  --white:        #FFFFFF;
+
+  /* Semantic — dark theme */
+  --bg:           #0D1B2E;
+  --bg2:          #122338;
+  --bg3:          #1E3A5F;
+  --bg-card:      #0F2035;
+  --bg-card2:     #162B44;
+
+  --text:         #FFFFFF;
+  --text-sub:     rgba(255,255,255,0.6);
+  --text-muted:   rgba(255,255,255,0.35);
+  --text-light:   #FFFFFF;
+
+  --border:       rgba(255,255,255,0.08);
+  --border-gold:  rgba(200,184,60,0.3);
+
+  --accent:       #C8B83C;
+  --accent-hover: #F0B429;
+
+  /* Diagonal motif angle */
+  --diagonal-angle: -55deg;
 }
 
 /* ============================================================
@@ -36,67 +56,60 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--bg);
+  background: var(--navy);
   color: var(--text);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  font-size: 15px;
-  letter-spacing: -0.01em;
+  font-size: 16px;
 }
 
 /* ============================================================
-   TYPOGRAPHY — Inter only, weight & tracking do the work
+   TYPOGRAPHY — Montserrat headings, Source Sans 3 body
    ============================================================ */
-
-/* H1 — massive, ultra-tight */
 h1 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -0.025em;
-  color: var(--text);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--white);
 }
 
-/* H2, H3 — bold, tight */
 h2, h3 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -0.025em;
-  color: var(--text);
-}
-/* H4, H5, H6 */
-h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: -0.015em;
-  color: var(--text);
+  color: var(--white);
 }
 
-/* Body text */
-p, span, li, label, td, th, blockquote, small {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.7;
+h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--white);
 }
 
 p {
-  font-size: 15px;
+  font-family: var(--font-body);
+  font-size: 16px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--text-sub);
   line-height: 1.75;
 }
 
-/* Buttons */
-button, input[type="submit"], input[type="button"] {
-  font-family: 'Inter', sans-serif;
+p, span, li, label, td, th, blockquote, small {
+  font-family: var(--font-body);
 }
 
-/* Inputs */
+button, input[type="submit"], input[type="button"] {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
 input, textarea, select {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   font-size: inherit;
 }
 
@@ -110,70 +123,146 @@ img {
   display: block;
 }
 
-ul, ol {
-  list-style: none;
-}
+ul, ol { list-style: none; }
 
 /* ============================================================
    SCROLLBAR
    ============================================================ */
 ::-webkit-scrollbar       { width: 4px; }
-::-webkit-scrollbar-track { background: #111; }
-::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 2px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
 
 /* ============================================================
-   SHARED BUTTON UTILITIES
+   SHARED SECTION HEADER — used across all sections
+   ============================================================ */
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--border-gold);
+  padding: 6px 20px;
+  border-radius: 2px;
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 18px;
+}
+
+.section-title span {
+  color: var(--gold);
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--text-sub);
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Gold divider line */
+.gold-line {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--amber));
+  margin: 0 auto 24px;
+}
+
+/* ============================================================
+   SHARED BUTTONS
    ============================================================ */
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-  color: #000000;
-  font-family: 'Inter', sans-serif;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--gold), var(--amber));
+  color: var(--navy);
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 14px 32px;
+  padding: 15px 36px;
   border: none;
   cursor: pointer;
-  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
   transition: all 0.25s ease;
   text-decoration: none;
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(200, 150, 12, 0.45);
+  box-shadow: 0 10px 32px rgba(200,184,60,0.4);
   filter: brightness(1.08);
 }
 
-/* ============================================================
-   SHARED SECTION UTILITIES
-   ============================================================ */
-.section-header {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-heading {
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--white);
   font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text);
-  margin-top: 12px;
-  margin-bottom: 16px;
-  line-height: 1.05;
+  padding: 14px 36px;
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
 }
 
-.section-sub {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--text-muted);
-  max-width: 480px;
-  margin: 0 auto;
-  line-height: 1.75;
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(200,184,60,0.06);
 }
+
+/* ============================================================
+   DIAGONAL GOLD MOTIF — brand element
+   ============================================================ */
+.diagonal-motif {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.diagonal-motif::before,
+.diagonal-motif::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 200%;
+  background: linear-gradient(to bottom, transparent, rgba(200,184,60,0.15), transparent);
+  transform: rotate(-55deg);
+  top: -50%;
+}
+
+.diagonal-motif::before { right: 15%; }
+.diagonal-motif::after  { right: 20%; }
