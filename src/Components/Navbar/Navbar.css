@@ -57,7 +57,7 @@
 }
 
 .nav-link {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 2px;
@@ -98,9 +98,9 @@
   background: linear-gradient(135deg, var(--gold-dark), var(--gold));
   color: #000000;
   border: none;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 12px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
   letter-spacing: 3px;
   text-transform: uppercase;
   padding: 11px 26px;
@@ -169,8 +169,8 @@
   width: 100%;
   padding: 14px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  font-family: var(--font-heading);
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: 15px;
   letter-spacing: 3px;
   text-transform: uppercase;

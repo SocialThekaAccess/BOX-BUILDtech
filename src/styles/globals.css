@@ -48,8 +48,18 @@ body {
    TYPOGRAPHY — set once, applies everywhere
    ============================================================ */
 
-/* All headings use Barlow Condensed */
-h1, h2, h3, h4, h5, h6 {
+/* H1 — Hero headline: Barlow Condensed (massive, bold) */
+h1 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+/* H2, H3, H4 — Section headings: Barlow Condensed */
+h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 800;
   line-height: 1.05;
@@ -58,17 +68,17 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text);
 }
 
-/* All paragraphs, spans, labels use Barlow */
-p, span, label, li, td, th, blockquote {
+/* Body text — Barlow */
+p, span, li, label, td, th, blockquote, small {
   font-family: var(--font-body);
 }
 
-/* Buttons inherit heading font */
-button, .btn-gold, .btn-primary, .nav-link {
-  font-family: var(--font-heading);
+/* Buttons — Barlow (same as paragraphs) */
+button, input[type="submit"], input[type="button"] {
+  font-family: var(--font-body);
 }
 
-/* Inputs use body font */
+/* Inputs, selects, textareas — Barlow */
 input, textarea, select {
   font-family: var(--font-body);
   font-size: inherit;
@@ -104,10 +114,10 @@ ul, ol {
   gap: 8px;
   background: linear-gradient(135deg, var(--gold-dark), var(--gold));
   color: #000000;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 13px;
-  letter-spacing: 3px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   padding: 14px 32px;
   border: none;
