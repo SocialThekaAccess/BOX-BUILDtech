@@ -29,31 +29,53 @@ const BackToTop = () => {
     <button
       onClick={handleClick}
       aria-label="Back to top"
+      className="back-to-top-btn"
       style={{
-        position:        'fixed',
-        bottom:          '36px',
-        right:           '36px',
-        zIndex:          999,
-        width:           '48px',
-        height:          '48px',
-        background:      'linear-gradient(135deg, #C8960C, #F0B429)',
-        border:          'none',
-        cursor:          'pointer',
-        display:         'flex',
-        alignItems:      'center',
-        justifyContent:  'center',
-        clipPath:        'polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)',
-        boxShadow:       '0 4px 20px rgba(200, 150, 12, 0.4)',
-        opacity:          visible ? 1 : 0,
-        transform:        visible ? 'translateY(0)' : 'translateY(16px)',
-        pointerEvents:    visible ? 'all' : 'none',
-        transition:      'opacity 0.3s ease, transform 0.3s ease',
-        fontSize:        '18px',
-        color:           '#000',
-        fontWeight:      '900',
+        position:       'fixed',
+        bottom:         '36px',
+        right:          '36px',
+        zIndex:         999,
+        width:          '52px',
+        height:         '52px',
+        background:     'transparent',
+        border:         'none',
+        cursor:         'pointer',
+        padding:        0,
+        opacity:         visible ? 1 : 0,
+        transform:       visible ? 'translateY(0) rotate(0deg)' : 'translateY(20px) rotate(-10deg)',
+        pointerEvents:   visible ? 'all' : 'none',
+        transition:     'opacity 0.4s ease, transform 0.4s ease',
       }}
     >
-      ↑
+      <svg
+        width="52"
+        height="52"
+        viewBox="0 0 52 52"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ display: 'block', overflow: 'visible' }}
+      >
+        {/* Outer rotating ring */}
+        <circle
+          cx="26" cy="26" r="24"
+          stroke="rgba(200,184,60,0.25)"
+          strokeWidth="1"
+          fill="none"
+        />
+        {/* Gold filled circle */}
+        <circle
+          cx="26" cy="26" r="20"
+          fill="#C8B83C"
+        />
+        {/* Arrow up */}
+        <path
+          d="M26 33 L26 19 M19 26 L26 19 L33 26"
+          stroke="#000000"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
     </button>
   );
 };

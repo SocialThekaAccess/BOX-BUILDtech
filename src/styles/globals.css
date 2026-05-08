@@ -266,3 +266,19 @@ ul, ol { list-style: none; }
 
 .diagonal-motif::before { right: 15%; }
 .diagonal-motif::after  { right: 20%; }
+
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================ */
+.back-to-top-btn circle:nth-child(2) {
+  transition: r 0.3s ease, filter 0.3s ease;
+}
+
+.back-to-top-btn:hover circle:nth-child(2) {
+  filter: brightness(1.15);
+}
+
+.back-to-top-btn:hover {
+  filter: drop-shadow(0 8px 24px rgba(200,184,60,0.55));
+  transform: translateY(-4px) scale(1.08) !important;
+}

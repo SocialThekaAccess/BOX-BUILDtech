@@ -19,7 +19,7 @@ export default function About() {
         {/* Image */}
         <div className="about-image-wrap">
           <img
-           src="https://img.magnific.com/free-photo/illustration-construction-site_23-2151850239.jpg?semt=ais_hybrid&w=740&q=80"
+           src="https://image.slidesdocs.com/responsive-images/background/3d-render-of-construction-site-featuring-residential-building-crane-and-excavator-powerpoint-background_ecf30e9cd2__960_540.jpg"
             alt="Our team at work"
           />
         </div>
