@@ -1,14 +1,14 @@
 /* ============================================================
    FONTS — Single import, two families only
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
 
 /* ============================================================
    CSS VARIABLES — font tokens used everywhere
    ============================================================ */
 :root {
   --font-heading: 'Barlow Condensed', sans-serif;
-  --font-body:    'Barlow', sans-serif;
+  --font-body:    'Inter', sans-serif;
 
   /* Colors */
   --gold:         #F0B429;
@@ -42,6 +42,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
+  font-size: 15px;
+  letter-spacing: -0.01em;
 }
 
 /* ============================================================
@@ -68,12 +70,21 @@ h2, h3, h4, h5, h6 {
   color: var(--text);
 }
 
-/* Body text — Barlow */
+/* Body text — Inter */
 p, span, li, label, td, th, blockquote, small {
   font-family: var(--font-body);
+  line-height: 1.7;
 }
 
-/* Buttons — Barlow (same as paragraphs) */
+/* Paragraphs specifically */
+p {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.75;
+}
+
+/* Buttons — Inter */
 button, input[type="submit"], input[type="button"] {
   font-family: var(--font-body);
 }
