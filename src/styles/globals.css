@@ -67,7 +67,6 @@ h2, h3 {
   letter-spacing: -0.025em;
   color: var(--text);
 }
-
 /* H4, H5, H6 */
 h4, h5, h6 {
   font-family: 'Inter', sans-serif;
@@ -131,10 +130,10 @@ ul, ol {
   gap: 8px;
   background: linear-gradient(135deg, var(--gold-dark), var(--gold));
   color: #000000;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 14px 32px;
   border: none;

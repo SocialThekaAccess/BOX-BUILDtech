@@ -1,11 +1,12 @@
 import React from 'react';
+import { Building2, Users, Award, HardHat } from 'lucide-react';
 import './Hero.css';
 
 const STATS = [
-  { icon: '🏗️', value: '320+', label: 'Projects Built' },
-  { icon: '😊', value: '85+',  label: 'Happy Clients'  },
-  { icon: '🏆', value: '15+',  label: 'Years Experience'},
-  { icon: '👷', value: '50+',  label: 'Team Members'   },
+  { icon: Building2, value: '320+', label: 'Projects Built'    },
+  { icon: Users,     value: '85+',  label: 'Happy Clients'     },
+  { icon: Award,     value: '15+',  label: 'Years Experience'  },
+  { icon: HardHat,   value: '50+',  label: 'Team Members'      },
 ];
 
 const scrollTo = (id) => {
@@ -63,13 +64,16 @@ const Hero = () => {
 
       {/* ── Stats Bar ── */}
       <div className="hero-stats">
-        {STATS.map((s) => (
-          <div key={s.label} className="hero-stat">
-            <span className="hero-stat-icon">{s.icon}</span>
-            <div className="hero-stat-value">{s.value}</div>
-            <div className="hero-stat-label">{s.label}</div>
-          </div>
-        ))}
+        {STATS.map((s) => {
+          const Icon = s.icon;
+          return (
+            <div key={s.label} className="hero-stat">
+              <Icon size={28} strokeWidth={1.5} className="hero-stat-icon" />
+              <div className="hero-stat-value">{s.value}</div>
+              <div className="hero-stat-label">{s.label}</div>
+            </div>
+          );
+        })}
       </div>
 
       {/* ── Scroll Hint ── */}
