@@ -39,8 +39,8 @@ const Hero = () => {
         {/* Headline */}
         <h1 className="hero-headline">
           <span className="hero-headline-line">We Build</span>
-          <span className="hero-headline-line gold">Your Vision</span>
-          <span className="hero-headline-line">Into Reality</span>
+          <span className="hero-headline-line">Your Vision</span>
+          <span className="hero-headline-line gold">Into Reality</span>
         </h1>
 
         {/* Subtext */}

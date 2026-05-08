@@ -101,7 +101,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   animation: fadeUp 0.7s ease both;
   animation-delay: 0.2s;
 }
@@ -127,20 +127,22 @@
 
 /* ── Headline ── */
 .hero-headline {
-  margin: 0 0 28px;
+  margin: 0 0 36px;
   animation: fadeUp 0.7s ease both;
   animation-delay: 0.35s;
+  line-height: 1;
 }
 
 .hero-headline-line {
   display: block;
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2.8rem, 6.5vw, 5.8rem);
   letter-spacing: -0.025em;
   text-transform: uppercase;
   color: #ffffff;
-  line-height: 0.9;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .hero-headline-line.gold {
@@ -150,13 +152,13 @@
 
 /* ── Subtext ── */
 .hero-sub {
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
-  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.55);
-  max-width: 460px;
-  line-height: 1.8;
-  margin-bottom: 44px;
+  max-width: 420px;
+  line-height: 1.75;
+  margin-bottom: 40px;
   letter-spacing: 0.01em;
   animation: fadeUp 0.7s ease both;
   animation-delay: 0.5s;
@@ -166,7 +168,7 @@
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
   animation: fadeUp 0.7s ease both;
   animation-delay: 0.65s;
