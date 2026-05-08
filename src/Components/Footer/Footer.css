@@ -14,8 +14,8 @@
 }
 
 .footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   padding: 72px 5% 40px;
 }
 
@@ -42,6 +42,8 @@
   mix-blend-mode: screen;
   filter: brightness(1.1) contrast(1.05);
   margin-bottom: 20px;
+  align-self: flex-start;
+  margin-left: 0;
 }
 
 .footer-tagline {
