@@ -62,7 +62,9 @@ export default function Projects() {
         {/* Section Header — centered */}
         <div className="projects-section-header">
           <span className="projects-eyebrow-tag">Our Projects</span>
-          <h2 className="projects-main-title">Featured Projects</h2>
+          <h2 className="projects-main-title">
+            Featured <span>Projects</span>
+          </h2>
           <p className="projects-subtitle">
             From luxury residences to landmark commercial towers — every project
             tells a story of precision and passion.

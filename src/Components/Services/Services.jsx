@@ -6,6 +6,7 @@ import {
   Leaf,
   Factory,
   Truck,
+  Headphones,
 } from "lucide-react";
 import "./Services.css";
 
@@ -42,6 +43,11 @@ const SERVICES = [
   },
 ];
 
+const scrollTo = (id) => {
+  window.history.replaceState(null, "", "/");
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
 export default function Services() {
   const [hovered, setHovered] = useState(null);
 
@@ -49,17 +55,19 @@ export default function Services() {
     <section id="services" className="services-section">
       <div className="services-inner">
 
-        {/* Header */}
+        {/* ── Header ── */}
         <div className="services-header">
           <div className="services-tag">What We Do</div>
-          <h2 className="services-title">Our Core Services</h2>
+          <h2 className="services-title">
+            Our Core <span>Services</span>
+          </h2>
           <p className="services-subtitle">
             From concept to completion, we deliver end-to-end solutions
             tailored to your vision.
           </p>
         </div>
 
-        {/* Grid */}
+        {/* ── Grid ── */}
         <div className="services-grid">
           {SERVICES.map((s, i) => {
             const Icon = s.Icon;
@@ -71,14 +79,38 @@ export default function Services() {
                 onMouseLeave={() => setHovered(null)}
               >
                 <div className="service-icon-wrap">
-                  <Icon size={24} strokeWidth={1.5} />
+                  <Icon size={26} strokeWidth={1.5} />
                 </div>
                 <h3 className="service-card-title">{s.title}</h3>
                 <p className="service-card-desc">{s.desc}</p>
-                <div className="service-card-line" />
+                <button
+                  className="service-card-link"
+                  onClick={() => scrollTo("contact")}
+                >
+                  Read More →
+                </button>
               </div>
             );
           })}
+        </div>
+
+        {/* ── Bottom CTA Bar ── */}
+        <div className="services-cta-bar">
+          <div className="services-cta-left">
+            <div className="services-cta-icon">
+              <Headphones size={22} strokeWidth={1.5} />
+            </div>
+            <div className="services-cta-text">
+              <h4>Have a project in mind?</h4>
+              <p>Let's build something great together.</p>
+            </div>
+          </div>
+          <button
+            className="services-cta-btn"
+            onClick={() => scrollTo("contact")}
+          >
+            Get Free Consultation →
+          </button>
         </div>
 
       </div>

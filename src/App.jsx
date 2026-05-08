@@ -79,7 +79,7 @@ export default function App() {
   }, []);
 
   return (
-    <div style={{ background: '#ffffff', color: '#1A1F2E', overflowX: 'hidden' }}>
+    <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
       <Navbar />
       <Routes>
         <Route path="/"  element={<HomePage />} />

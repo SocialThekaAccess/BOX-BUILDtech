@@ -35,7 +35,7 @@ export default function Testimonials() {
         {/* Header */}
         <div className="testimonials-header">
           <span className="testimonials-eyebrow">Testimonials</span>
-          <h2 className="testimonials-title">What Our Clients Say</h2>
+          <h2 className="testimonials-title">What Our <span>Clients Say</span></h2>
           <p className="testimonials-sub">
             Real words from the people who trusted us with their most important projects.
           </p>

@@ -19,7 +19,7 @@ export default function About() {
         {/* Image */}
         <div className="about-image-wrap">
           <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+           src="https://img.magnific.com/free-photo/illustration-construction-site_23-2151850239.jpg?semt=ais_hybrid&w=740&q=80"
             alt="Our team at work"
           />
         </div>
@@ -28,7 +28,7 @@ export default function About() {
         <div className="about-content">
           <span className="about-tag">Our Story</span>
           <h2 className="about-heading">
-            Two Decades of Crafting Excellence
+            Two Decades of Crafting <span>Excellence</span>
           </h2>
           <div className="about-gold-line" />
 
