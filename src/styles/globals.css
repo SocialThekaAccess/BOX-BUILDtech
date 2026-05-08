@@ -1,13 +1,13 @@
 /* ============================================================
-   FONTS — Single import, two families only
+   FONTS — Single font: Inter only
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 /* ============================================================
-   CSS VARIABLES — font tokens used everywhere
+   CSS VARIABLES
    ============================================================ */
 :root {
-  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-heading: 'Inter', sans-serif;
   --font-body:    'Inter', sans-serif;
 
   /* Colors */
@@ -47,36 +47,42 @@ body {
 }
 
 /* ============================================================
-   TYPOGRAPHY — set once, applies everywhere
+   TYPOGRAPHY — Inter only, weight & tracking do the work
    ============================================================ */
 
-/* H1 — Hero headline: Barlow Condensed (massive, bold) */
+/* H1 — massive, ultra-tight */
 h1 {
-  font-family: var(--font-heading);
+  font-family: 'Inter', sans-serif;
   font-weight: 900;
-  line-height: 0.92;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.025em;
   color: var(--text);
 }
 
-/* H2, H3, H4 — Section headings: Barlow Condensed */
-h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+/* H2, H3 — bold, tight */
+h2, h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
   color: var(--text);
 }
 
-/* Body text — Inter */
+/* H4, H5, H6 */
+h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+/* Body text */
 p, span, li, label, td, th, blockquote, small {
-  font-family: var(--font-body);
+  font-family: 'Inter', sans-serif;
   line-height: 1.7;
 }
 
-/* Paragraphs specifically */
 p {
   font-size: 15px;
   font-weight: 400;
@@ -84,14 +90,14 @@ p {
   line-height: 1.75;
 }
 
-/* Buttons — Inter */
+/* Buttons */
 button, input[type="submit"], input[type="button"] {
-  font-family: var(--font-body);
+  font-family: 'Inter', sans-serif;
 }
 
-/* Inputs, selects, textareas — Barlow */
+/* Inputs */
 input, textarea, select {
-  font-family: var(--font-body);
+  font-family: 'Inter', sans-serif;
   font-size: inherit;
 }
 
