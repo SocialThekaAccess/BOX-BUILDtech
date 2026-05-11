@@ -10,12 +10,11 @@ const CONTACT_DETAILS = [
 ];
 
 const SERVICES_LIST = [
-  "Construction",
-  "Interior Design",
-  "Architecture",
-  "Renovation",
-  "Landscaping",
+  "Commercial Construction",
+  "Luxury Residential",
+  "Premium Renovations",
   "Project Management",
+  "Design-Build",
 ];
 
 const scrollToContact = () =>

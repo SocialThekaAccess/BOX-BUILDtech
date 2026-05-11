@@ -13,33 +13,28 @@ import "./Services.css";
 const SERVICES = [
   {
     Icon: Building2,
-    title: "Construction",
-    desc: "End-to-end construction services from foundation to finishing with uncompromising quality and precision.",
+    title: "Commercial Construction",
+    desc: "End-to-end Commercial Construction services from foundation to finishing with uncompromising quality and precision.",
   },
   {
     Icon: HardHat,
-    title: "Project Management",
+    title: "Luxury Residential",
     desc: "Seamless project oversight ensuring timely delivery, budget adherence, and quality control at every stage.",
   },
   {
     Icon: Settings2,
-    title: "Renovation",
-    desc: "Transform existing spaces with precision renovations that breathe new life into old structures.",
+    title: "Premium Renovations",
+    desc: "Transform existing spaces with precision Premium Renovations that breathe new life into old structures.",
   },
   {
     Icon: Leaf,
-    title: "Sustainable Building",
-    desc: "Eco-first materials and green-certified processes that prove sustainability and performance go hand in hand.",
+    title: "Project Management",
+    desc: "Eco-first materials and green-certified processes that prove Project Management and performance go hand in hand.",
   },
   {
     Icon: Factory,
-    title: "Industrial Works",
+    title: "Design-Build",
     desc: "Heavy-duty industrial construction with real-time tracking, milestone management, and zero-defect targets.",
-  },
-  {
-    Icon: Truck,
-    title: "Logistics & Supply",
-    desc: "End-to-end supply chain management ensuring materials arrive on time, every time, without compromise.",
   },
 ];
 

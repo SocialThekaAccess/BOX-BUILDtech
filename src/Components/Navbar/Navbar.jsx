@@ -4,11 +4,11 @@ import boxLogo from '../../assets/BOX.png';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { label: 'Home',         section: 'home',         path: '/'      },
-  { label: 'About Us',     section: null,           path: '/about' },
-  { label: 'Services',     section: 'services',     path: '/'      },
-  { label: 'Projects',     section: 'projects',     path: '/'      },
-  { label: 'Contact Us',   section: 'contact',      path: '/'      },
+  { label: 'Home',         section: 'home',         path: '/'        },
+  { label: 'About Us',     section: null,           path: '/about'   },
+  { label: 'Services',     section: 'services',     path: '/'        },
+  { label: 'Projects',     section: 'projects',     path: '/'        },
+  { label: 'Contact Us',   section: null,           path: '/contact' },
 ];
 
 const Navbar = () => {
@@ -22,6 +22,8 @@ const Navbar = () => {
   useEffect(() => {
     if (location.pathname === '/about') {
       setActiveNav('About Us');
+    } else if (location.pathname === '/contact') {
+      setActiveNav('Contact Us');
     }
   }, [location.pathname]);
 
@@ -58,9 +60,9 @@ const Navbar = () => {
     setMenuOpen(false);
     setActiveNav(link.label);
 
-    /* About Us → dedicated page */
-    if (link.path === '/about') {
-      navigate('/about');
+    /* About Us / Contact Us → dedicated pages */
+    if (link.path === '/about' || link.path === '/contact') {
+      navigate(link.path);
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
