@@ -101,7 +101,7 @@ export default function ConstructionPage() {
             <span className="cs-eyebrow">Our Services</span>
             <h1 className="cs-hero-headline">
               <span className="cs-hl">We Build</span>
-              <span className="cs-hl">Spaces That <span className="cs-gold">Last.</span></span>
+              <span className="cs-hl">Spaces That <span className="cs-gold">Last</span></span>
             </h1>
             <p className="cs-hero-sub">
               From foundation to finish — construction, interiors, architecture,

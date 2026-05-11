@@ -78,11 +78,13 @@
 .cu-hl-line {
   display: block;
   line-height: 1;
+   font-family: var(--font-heading);
 }
 
 .cu-gold {
   color: #E9A102;
   text-shadow: 0 0 80px rgba(233,161,2,0.35);
+   font-family: var(--font-heading);
 }
 
 .cu-hero-sub {

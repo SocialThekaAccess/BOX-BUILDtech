@@ -41,7 +41,7 @@
 .cs-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80');
+  background-image: url('https://t3.ftcdn.net/jpg/07/39/72/02/360_F_739720225_wI41mPgiTu3bg0AhBbg7ckMmouvlOcN4.jpg');
   background-size: cover;
   background-position: center 35%;
   animation: csZoom 14s ease-out forwards;
@@ -99,11 +99,13 @@
 .cs-hl {
   display: block;
   line-height: 1;
+ font-family: var(--font-heading);
 }
 
 .cs-gold {
   color: #E9A102;
   text-shadow: 0 0 80px rgba(233,161,2,0.35);
+  font-family: var(--font-heading);
 }
 
 .cs-hero-sub {

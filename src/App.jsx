@@ -110,6 +110,13 @@ const ContactUsFullPage = () => (
   </>
 );
 
+const ConstructionFullPage = () => (
+  <>
+    <ConstructionPage />
+    <Footer />
+  </>
+);
+
 export default function App() {
   useEffect(() => {
     if (window.location.hash) {
@@ -121,10 +128,11 @@ export default function App() {
     <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
       <Navbar />
       <Routes>
-        <Route path="/"         element={<HomePage />}         />
-        <Route path="/about"    element={<AboutFullPage />}    />
-        <Route path="/contact"  element={<ContactUsFullPage />} />
-        <Route path="*"         element={<HomePage />}         />
+        <Route path="/"            element={<HomePage />}           />
+        <Route path="/about"       element={<AboutFullPage />}      />
+        <Route path="/contact"     element={<ContactUsFullPage />}  />
+        <Route path="/services/construction" element={<ConstructionFullPage />} />
+        <Route path="*"            element={<HomePage />}           />
       </Routes>
       <BackToTop />
     </div>
