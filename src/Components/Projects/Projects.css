@@ -21,7 +21,7 @@
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #C89B3C;
+  color: #E9A102;
   display: block;
   margin-bottom: 12px;
 }
@@ -37,7 +37,7 @@
 }
 
 .projects-main-title span {
-  color: #C89B3C;
+  color: #E9A102;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -54,7 +54,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #C89B3C;
+  color: #E9A102;
   text-decoration: none;
   letter-spacing: 0.05em;
 }
@@ -89,8 +89,8 @@
 
 .projects-filter-btn:hover,
 .projects-filter-btn.active {
-  color: #C89B3C;
-  border-color: #C89B3C;
+  color: #E9A102;
+  border-color: #E9A102;
   background: rgba(200, 155, 60, 0.08);
 }
 
@@ -152,7 +152,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #C89B3C;
+  color: #E9A102;
   letter-spacing: 0.05em;
 }
 
@@ -169,7 +169,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #C89B3C;
+  color: #E9A102;
   display: block;
   margin-bottom: 4px;
 }

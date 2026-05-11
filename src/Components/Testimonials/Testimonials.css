@@ -14,7 +14,7 @@
   left: -80px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(ellipse, rgba(200,184,60,0.07) 0%, transparent 65%);
+  background: radial-gradient(ellipse, rgba(233,161,2,0.07) 0%, transparent 65%);
   z-index: 0;
   pointer-events: none;
 }
@@ -42,7 +42,7 @@
   font-weight: 600;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #C8B83C;
+  color: #E9A102;
   margin-bottom: 16px;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .testimonials-title span {
-  color: #C8B83C;
+  color: #E9A102;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -81,7 +81,7 @@
 /* ── Card ── */
 .testimonial-card {
   background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(200,184,60,0.12);
+  border: 1px solid rgba(233,161,2,0.12);
   border-radius: 8px;
   padding: 36px 32px;
   transition: all 0.3s ease;
@@ -96,7 +96,7 @@
   right: 24px;
   font-size: 120px;
   font-family: Georgia, serif;
-  color: rgba(200,184,60,0.07);
+  color: rgba(233,161,2,0.07);
   line-height: 1;
   pointer-events: none;
 }
@@ -108,15 +108,15 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #C8B83C, transparent);
+  background: linear-gradient(90deg, transparent, #E9A102, transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .testimonial-card:hover {
-  border-color: rgba(200,184,60,0.35);
+  border-color: rgba(233,161,2,0.35);
   transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px rgba(200,184,60,0.07);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px rgba(233,161,2,0.07);
 }
 
 .testimonial-card:hover::after {
@@ -130,7 +130,7 @@
 }
 
 .star {
-  color: #C8B83C;
+  color: #E9A102;
   font-size: 1rem;
 }
 
@@ -157,7 +157,7 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #C8B83C, #F0B429);
+  background: linear-gradient(135deg, #E9A102, #E9A102);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -14,8 +14,8 @@
   --navy:         #0D1B2E;
   --deep-blue:    #1E3A5F;
   --brand-blue:   #1E3A5F;
-  --gold:         #C8B83C;
-  --amber:        #F0B429;
+  --gold:         #E9A102;
+  --amber:        #E9A102;
   --white:        #FFFFFF;
 
   /* Semantic — dark theme */
@@ -31,10 +31,10 @@
   --text-light:   #FFFFFF;
 
   --border:       rgba(255,255,255,0.08);
-  --border-gold:  rgba(200,184,60,0.3);
+  --border-gold:  rgba(233,161,2,0.3);
 
-  --accent:       #C8B83C;
-  --accent-hover: #F0B429;
+  --accent:       #E9A102;
+  --accent-hover: #E9A102;
 
   /* Diagonal motif angle */
   --diagonal-angle: -55deg;
@@ -214,7 +214,7 @@ ul, ol { list-style: none; }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(200,184,60,0.4);
+  box-shadow: 0 10px 32px rgba(233,161,2,0.4);
   filter: brightness(1.08);
 }
 
@@ -239,7 +239,7 @@ ul, ol { list-style: none; }
 .btn-outline:hover {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(200,184,60,0.06);
+  background: rgba(233,161,2,0.06);
 }
 
 /* ============================================================
@@ -259,7 +259,7 @@ ul, ol { list-style: none; }
   position: absolute;
   width: 2px;
   height: 200%;
-  background: linear-gradient(to bottom, transparent, rgba(200,184,60,0.15), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(233,161,2,0.15), transparent);
   transform: rotate(-55deg);
   top: -50%;
 }
@@ -279,6 +279,6 @@ ul, ol { list-style: none; }
 }
 
 .back-to-top-btn:hover {
-  filter: drop-shadow(0 8px 24px rgba(200,184,60,0.55));
+  filter: drop-shadow(0 8px 24px rgba(233,161,2,0.55));
   transform: translateY(-4px) scale(1.08) !important;
 }

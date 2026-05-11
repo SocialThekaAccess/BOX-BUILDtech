@@ -16,7 +16,7 @@
   right: 5%;
   width: 2px;
   height: 160%;
-  background: linear-gradient(to bottom, transparent, rgba(200,184,60,0.08), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(233,161,2,0.08), transparent);
   transform: rotate(-55deg);
   pointer-events: none;
 }
@@ -102,11 +102,11 @@
 }
 
 .footer-social-btn:hover {
-  background: rgba(200,184,60,0.15);
+  background: rgba(233,161,2,0.15);
   border-color: var(--gold);
   color: var(--gold);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(200,184,60,0.2);
+  box-shadow: 0 6px 20px rgba(233,161,2,0.2);
 }
 
 /* ── Link Columns ── */

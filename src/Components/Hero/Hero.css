@@ -90,7 +90,7 @@
 .hero-side-line {
   width: 1px;
   height: 60px;
-  background: linear-gradient(to bottom, rgba(200,184,60,0.5), transparent);
+  background: linear-gradient(to bottom, rgba(233,161,2,0.5), transparent);
 }
 
 /* ── Center Content — LEFT ALIGNED ── */
@@ -122,7 +122,7 @@
 .hero-eyebrow-line {
   width: 40px;
   height: 1px;
-  background: rgba(200,184,60,0.6);
+  background: rgba(233,161,2,0.6);
   flex-shrink: 0;
 }
 
@@ -159,7 +159,7 @@
 
 .hero-headline-line.gold {
   color: var(--gold);
-  text-shadow: 0 0 120px rgba(200,184,60,0.3);
+  text-shadow: 0 0 120px rgba(233,161,2,0.3);
 }
 
 /* ── Subtext ── */
@@ -214,7 +214,7 @@
 .hero-btn-primary:hover {
   background: var(--amber);
   transform: translateY(-3px);
-  box-shadow: 0 16px 48px rgba(200,184,60,0.45);
+  box-shadow: 0 16px 48px rgba(233,161,2,0.45);
 }
 
 .hero-btn-primary .btn-arrow {
@@ -248,7 +248,7 @@
 .hero-btn-secondary:hover {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(200,184,60,0.06);
+  background: rgba(233,161,2,0.06);
   transform: translateY(-3px);
 }
 
@@ -333,7 +333,7 @@
 }
 
 .hero-thumb:hover {
-  border-color: rgba(200,184,60,0.5);
+  border-color: rgba(233,161,2,0.5);
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
@@ -345,8 +345,8 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  background: rgba(200,184,60,0.08);
-  border-color: rgba(200,184,60,0.3);
+  background: rgba(233,161,2,0.08);
+  border-color: rgba(233,161,2,0.3);
 }
 
 .hero-thumb-more-icon {
@@ -363,7 +363,7 @@
 }
 
 .hero-thumb-more:hover {
-  background: rgba(200,184,60,0.15);
+  background: rgba(233,161,2,0.15);
 }
 
 /* ── Stats Bar ── */
@@ -372,7 +372,7 @@
   z-index: 10;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid rgba(200,184,60,0.15);
+  border-top: 1px solid rgba(233,161,2,0.15);
   animation: fadeUp 0.8s ease both;
   animation-delay: 1s;
   margin-top: 48px;
@@ -395,11 +395,11 @@
   top: 24px;
   bottom: 24px;
   width: 1px;
-  background: rgba(200,184,60,0.12);
+  background: rgba(233,161,2,0.12);
 }
 
 .hero-stat:hover {
-  background: rgba(200,184,60,0.03);
+  background: rgba(233,161,2,0.03);
 }
 
 .hero-stat-icon {
@@ -453,7 +453,7 @@
 .hero-scroll-line {
   width: 1px;
   height: 56px;
-  background: linear-gradient(to bottom, rgba(200,184,60,0.5), transparent);
+  background: linear-gradient(to bottom, rgba(233,161,2,0.5), transparent);
   animation: scrollPulse 2.5s ease-in-out infinite;
 }
 
@@ -556,13 +556,13 @@
 }
 
 .hero-typewriter-word {
-  color: #C89B3C;
+  color: #E9A102;
   font-weight: 700;
 }
 
 .hero-cursor {
   animation: blink 0.7s step-end infinite;
-  color: #C89B3C;
+  color: #E9A102;
 }
 
 @keyframes blink {

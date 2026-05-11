@@ -5,7 +5,7 @@
 /* ── CTA Banner ── */
 .cta-banner {
   padding: 80px 5%;
-  background: linear-gradient(135deg, #C8B83C 0%, #F0B429 50%, #C8B83C 100%);
+  background: linear-gradient(135deg, #E9A102 0%, #E9A102 50%, #E9A102 100%);
   position: relative;
   overflow: hidden;
 }
@@ -50,7 +50,7 @@
 
 .cta-btn {
   background: #000000;
-  color: #C8B83C;
+  color: #E9A102;
   border: none;
   padding: 18px 48px;
   font-family: var(--font-body);
@@ -84,7 +84,7 @@
   right: -100px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(ellipse, rgba(200,184,60,0.08) 0%, transparent 65%);
+  background: radial-gradient(ellipse, rgba(233,161,2,0.08) 0%, transparent 65%);
   z-index: 0;
   pointer-events: none;
 }
@@ -114,7 +114,7 @@
 }
 
 .contact-title span {
-  color: #C8B83C;
+  color: #E9A102;
    font-family: var(--font-heading);
 }
 
@@ -138,10 +138,10 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #C8B83C;
+  color: #E9A102;
   margin-bottom: 28px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(200,184,60,0.2);
+  border-bottom: 1px solid rgba(233,161,2,0.2);
 }
 
 .contact-detail-row {
@@ -154,8 +154,8 @@
 .contact-icon-box {
   width: 42px;
   height: 42px;
-  background: rgba(200,184,60,0.08);
-  border: 1px solid rgba(200,184,60,0.2);
+  background: rgba(233,161,2,0.08);
+  border: 1px solid rgba(233,161,2,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,8 +184,8 @@
 .contact-guarantee {
   margin-top: 28px;
   padding: 20px 20px 20px 24px;
-  background: rgba(200,184,60,0.05);
-  border-left: 3px solid #C8B83C;
+  background: rgba(233,161,2,0.05);
+  border-left: 3px solid #E9A102;
   border-radius: 0 4px 4px 0;
 }
 
@@ -195,7 +195,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 11px;
-  color: #C8B83C;
+  color: #E9A102;
   margin-bottom: 8px;
 }
 
@@ -252,8 +252,8 @@
 }
 
 .form-input:focus {
-  border-bottom-color: #C8B83C;
-  background: rgba(200,184,60,0.04);
+  border-bottom-color: #E9A102;
+  background: rgba(233,161,2,0.04);
 }
 
 .form-input::placeholder {
@@ -267,7 +267,7 @@
 
 /* ── Submit ── */
 .btn-gold-submit {
-  background: linear-gradient(135deg, #C8B83C, #F0B429);
+  background: linear-gradient(135deg, #E9A102, #E9A102);
   color: #000;
   border: none;
   padding: 16px 40px;
@@ -285,7 +285,7 @@
 
 .btn-gold-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(200,184,60,0.4);
+  box-shadow: 0 8px 30px rgba(233,161,2,0.4);
   filter: brightness(1.1);
 }
 
@@ -296,7 +296,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(200,184,60,0.3);
+  border: 1px solid rgba(233,161,2,0.3);
   padding: 64px 48px;
   text-align: center;
   min-height: 400px;
@@ -305,7 +305,7 @@
 
 .form-success-check {
   font-size: 56px;
-  color: #C8B83C;
+  color: #E9A102;
   line-height: 1;
   margin-bottom: 20px;
 }

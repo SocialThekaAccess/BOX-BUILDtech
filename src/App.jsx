@@ -59,14 +59,14 @@ const BackToTop = () => {
         {/* Outer rotating ring */}
         <circle
           cx="26" cy="26" r="24"
-          stroke="rgba(200,184,60,0.25)"
+          stroke="rgba(233,161,2,0.25)"
           strokeWidth="1"
           fill="none"
         />
         {/* Gold filled circle */}
         <circle
           cx="26" cy="26" r="20"
-          fill="#C8B83C"
+          fill="#E9A102"
         />
         {/* Arrow up */}
         <path
