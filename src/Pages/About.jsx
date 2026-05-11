@@ -71,8 +71,8 @@ export default function AboutPage() {
           <FadeSection className="ap-hero-content">
             <span className="ap-eyebrow">About BOX Buildtech</span>
             <h1 className="ap-hero-headline">
-              We Turn Ideas<br />
-              Into <span>Experiences.</span>
+              <span className="ap-hl-line">We Turn Ideas</span>
+              <span className="ap-hl-line">Into <span className="ap-hl-gold">Experiences</span></span>
             </h1>
             <p className="ap-hero-sub">
               We help transform concepts into well-built spaces through thoughtful
