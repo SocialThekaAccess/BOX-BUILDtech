@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { label: 'About Us',     section: null,           path: '/about' },
   { label: 'Services',     section: 'services',     path: '/'      },
   { label: 'Projects',     section: 'projects',     path: '/'      },
-  { label: 'Testimonials', section: 'testimonials', path: '/'      },
+  { label: 'Contact Us',   section: 'contact',      path: '/'      },
 ];
 
 const Navbar = () => {
