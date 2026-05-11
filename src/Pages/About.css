@@ -62,8 +62,10 @@
   margin-bottom: 8px;
 }
 
-.ap-heading span { color: #E9A102; 
-font-family: 'Montserrat', sans-serif;}
+.ap-heading span {
+  color: #E9A102;
+  font-family: 'Montserrat', sans-serif;
+}
 .ap-heading.center { text-align: center; }
 
 .ap-gold-bar {
@@ -88,7 +90,7 @@ font-family: 'Montserrat', sans-serif;}
 ══════════════════════════════════════ */
 .ap-hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -123,7 +125,7 @@ font-family: 'Montserrat', sans-serif;}
 .ap-hero-inner {
   position: relative;
   z-index: 2;
-  padding: 140px 5% 80px;
+  padding: 140px 5% 200px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -151,17 +153,15 @@ font-family: 'Montserrat', sans-serif;}
   display: block;
   line-height: 0.95;
   white-space: nowrap;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .ap-hl-gold {
-  color: #E9A102;
+  color: #E9A102 !important;
+  font-family: 'Montserrat', sans-serif;
   text-shadow: 0 0 120px rgba(233,161,2,0.3);
 }
-
-.ap-hl-line { color: #ffffff; 
-font-family: 'Montserrat', sans-serif;}
-
-.ap-hl-gold { color: #E9A102 !important; 
-font-family: 'Montserrat', sans-serif;}
 
 .ap-hero-sub {
   font-family: 'Source Sans 3', sans-serif;
