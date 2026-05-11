@@ -8,16 +8,16 @@ const NAV_LINKS = [
   { label: 'Home',       section: 'home',     path: '/'        },
   { label: 'About Us',   section: null,       path: '/about'   },
   { label: 'Services',   section: 'services', path: '/',       hasDropdown: true },
-  { label: 'Projects',   section: 'projects', path: '/'        },
+  { label: 'Portfolio',   section: 'portfolio', path: '/'        },
   { label: 'Contact Us', section: null,       path: '/contact' },
 ];
 
 const SERVICE_ITEMS = [
-  { Icon: Building2, label: 'Commercial Construction', path: '/services/construction', desc: 'End-to-end building solutions' },
-  { Icon: HardHat,   label: 'Luxury Residential',      path: '/services/construction', desc: 'Premium homes & interiors'    },
-  { Icon: Settings2, label: 'Premium Renovations',     path: '/services/construction', desc: 'Transform existing spaces'    },
-  { Icon: Leaf,      label: 'Project Management',      path: '/services/construction', desc: 'Eco-first, on-time delivery'  },
-  { Icon: Factory,   label: 'Design-Build',            path: '/services/construction', desc: 'Concept to completion'        },
+  { Icon: Building2, label: 'Commercial Construction', path: '/services/commercial-construction', desc: 'End-to-end building solutions' },
+  { Icon: HardHat,   label: 'Luxury Residential',      path: '/services/luxury-residential',      desc: 'Premium homes & interiors'    },
+  { Icon: Settings2, label: 'Premium Renovations',     path: '/services/premium-renovations',     desc: 'Transform existing spaces'    },
+  { Icon: Leaf,      label: 'Project Management',      path: '/services/project-management',      desc: 'Eco-first, on-time delivery'  },
+  { Icon: Factory,   label: 'Design-Build',            path: '/services/design-build',            desc: 'Concept to completion'        },
 ];
 
 const Navbar = () => {

@@ -77,7 +77,7 @@ export default function ContactUsPage() {
           <span className="cu-eyebrow">Get In Touch</span>
           <h1 className="cu-hero-headline">
             <span className="cu-hl-line">Let's Build</span>
-            <span className="cu-hl-line">Something <span className="cu-gold">Great.</span></span>
+            <span className="cu-hl-line">Something <span className="cu-gold">Great</span></span>
           </h1>
           <p className="cu-hero-sub">
             Tell us about your project and we'll get back to you within 24 hours

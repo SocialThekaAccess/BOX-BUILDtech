@@ -80,7 +80,7 @@
   font-family: 'Source Sans 3', sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,1);
   line-height: 1.85;
   margin-bottom: 18px;
 }
@@ -167,7 +167,7 @@
   font-family: 'Source Sans 3', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,1);
   max-width: 480px;
   line-height: 1.8;
   margin: 0;

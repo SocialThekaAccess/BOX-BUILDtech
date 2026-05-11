@@ -1,34 +1,33 @@
+import { useNavigate, useLocation } from 'react-router-dom';
+import {
+  Home, Info, Briefcase, FolderOpen, Phone,
+  Building2, HardHat, Settings2, Leaf, Factory,
+  User, MapPin, Mail, Globe,
+} from 'lucide-react';
 import boxLogo from '../../assets/BOX.png';
 import './Footer.css';
 
-const scrollTo = (id) => {
-  window.history.replaceState(null, '', '/');
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-};
-
 const QUICK_LINKS = [
-  { label: 'Home',         id: 'home'         },
-  { label: 'About Us',     id: 'about'        },
-  { label: 'Services',     id: 'services'     },
-  { label: 'Projects',     id: 'projects'     },
-  { label: 'Testimonials', id: 'testimonials' },
-  { label: 'Contact',      id: 'contact'      },
+  { label: 'Home',       Icon: Home,       type: 'scroll', id: 'home',     path: '/'       },
+  { label: 'About Us',   Icon: Info,       type: 'route',  path: '/about'                  },
+  { label: 'Services',   Icon: Briefcase,  type: 'scroll', id: 'services', path: '/'       },
+  { label: 'Projects',   Icon: FolderOpen, type: 'scroll', id: 'projects', path: '/'       },
+  { label: 'Contact Us', Icon: Phone,      type: 'route',  path: '/contact'                },
 ];
 
 const SERVICES = [
-  'Construction',
-  'Interior Design',
-  'Architecture',
-  'Renovation',
-  'Landscaping',
-  'Project Management',
+  { label: 'Commercial Construction', Icon: Building2, path: '/services/commercial-construction' },
+  { label: 'Luxury Residential',      Icon: HardHat,   path: '/services/luxury-residential'      },
+  { label: 'Premium Renovations',     Icon: Settings2, path: '/services/premium-renovations'     },
+  { label: 'Project Management',      Icon: Leaf,      path: '/services/project-management'      },
+  { label: 'Design-Build',            Icon: Factory,   path: '/services/design-build'            },
 ];
 
 const CONTACT_INFO = [
-  { icon: '👤', text: 'Pooja Yadav — Founder & Director' },
-  { icon: '📍', text: 'New Chandigarh, India'            },
-  { icon: '✉️', text: 'hello@boxbuildtech.com'           },
-  { icon: '🌐', text: 'www.boxbuildtech.com'             },
+  { Icon: User,   text: 'Pooja Yadav — Founder & Director' },
+  { Icon: MapPin, text: 'New Chandigarh, India'            },
+  { Icon: Mail,   text: 'hello@boxbuildtech.com'           },
+  { Icon: Globe,  text: 'www.boxbuildtech.com'             },
 ];
 
 /* SVG Social Icons */
@@ -69,6 +68,30 @@ const SOCIALS = [
 ];
 
 export default function Footer() {
+  const navigate  = useNavigate();
+  const location  = useLocation();
+
+  const handleQuickLink = (link) => {
+    if (link.type === 'route') {
+      navigate(link.path);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+        }, 120);
+      } else {
+        window.history.replaceState(null, '', '/');
+        document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleServiceLink = (path) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <footer className="footer">
 
@@ -108,13 +131,17 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-col-title">Quick Links</h4>
             <ul className="footer-links-list">
-              {QUICK_LINKS.map((l) => (
-                <li key={l.id}>
-                  <button className="footer-link" onClick={() => scrollTo(l.id)}>
-                    <span className="footer-link-arrow">→</span> {l.label}
-                  </button>
-                </li>
-              ))}
+              {QUICK_LINKS.map((l) => {
+                const Icon = l.Icon;
+                return (
+                  <li key={l.label}>
+                    <button className="footer-link" onClick={() => handleQuickLink(l)}>
+                      <Icon size={14} strokeWidth={1.8} className="footer-link-icon" />
+                      {l.label}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -122,13 +149,17 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-col-title">Our Services</h4>
             <ul className="footer-links-list">
-              {SERVICES.map((s) => (
-                <li key={s}>
-                  <button className="footer-link" onClick={() => scrollTo('services')}>
-                    <span className="footer-link-arrow">→</span> {s}
-                  </button>
-                </li>
-              ))}
+              {SERVICES.map((s) => {
+                const Icon = s.Icon;
+                return (
+                  <li key={s.label}>
+                    <button className="footer-link" onClick={() => handleServiceLink(s.path)}>
+                      <Icon size={14} strokeWidth={1.8} className="footer-link-icon" />
+                      {s.label}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -136,12 +167,17 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-col-title">Contact Us</h4>
             <ul className="footer-contact-list">
-              {CONTACT_INFO.map((c) => (
-                <li key={c.text} className="footer-contact-item">
-                  <span className="footer-contact-icon">{c.icon}</span>
-                  <span className="footer-contact-text">{c.text}</span>
-                </li>
-              ))}
+              {CONTACT_INFO.map((c) => {
+                const Icon = c.Icon;
+                return (
+                  <li key={c.text} className="footer-contact-item">
+                    <div className="footer-contact-icon-wrap">
+                      <Icon size={14} strokeWidth={1.8} />
+                    </div>
+                    <span className="footer-contact-text">{c.text}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
