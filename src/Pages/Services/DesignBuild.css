@@ -490,3 +490,142 @@
   .db-section { padding: 70px 0; }
   .db-img { height: 260px; }
 }
+
+/* ══════════════════════════════════════
+   PROCESS SECTION
+══════════════════════════════════════ */
+.db-process-section {
+  padding: 110px 0;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.db-process-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-top: 8px;
+}
+
+.db-process-title span { color: #E9A102; }
+
+.db-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.db-process-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(233,161,2,0.12);
+  border-radius: 8px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.db-process-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #E9A102, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.db-process-card:hover {
+  border-color: rgba(233,161,2,0.35);
+  transform: translateY(-4px);
+}
+
+.db-process-card:hover::before { opacity: 1; }
+
+.db-process-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(233,161,2,0.15);
+  line-height: 1;
+  display: block;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.db-process-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.db-process-desc {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+}
+
+/* ══════════════════════════════════════
+   FAQ SECTION
+══════════════════════════════════════ */
+.db-faq-section {
+  padding: 110px 0;
+  background: #0D1B2E;
+  position: relative;
+  overflow: hidden;
+}
+
+.db-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.db-faq-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(233,161,2,0.1);
+  border-radius: 8px;
+  padding: 28px 24px;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.db-faq-card:hover {
+  border-color: rgba(233,161,2,0.3);
+  background: rgba(233,161,2,0.03);
+}
+
+.db-faq-q {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.db-faq-a {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+}
+
+@media (max-width: 1024px) {
+  .db-process-grid { grid-template-columns: repeat(2, 1fr); }
+  .db-faq-grid     { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .db-process-grid { grid-template-columns: 1fr; }
+  .db-process-section,
+  .db-faq-section  { padding: 70px 0; }
+}

@@ -1,115 +1,74 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Factory, Layers, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import { Factory, Layers, Zap, CheckCircle, ArrowRight, Users, Shield, Clock, Star } from 'lucide-react';
 import './DesignBuild.css';
 
 /* ── Fade-up on scroll ── */
-const useFadeUp = (prefix) => {
+const useFadeUp = () => {
   const ref = useRef(null);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) el.classList.add(`${prefix}visible`); },
+      ([entry]) => { if (entry.isIntersecting) el.classList.add('db-visible'); },
       { threshold: 0.1 }
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, [prefix]);
+  }, []);
   return ref;
 };
 
 const Fade = ({ children, className = '' }) => {
-  const ref = useFadeUp('db-');
+  const ref = useFadeUp();
   return <div ref={ref} className={`db-fade ${className}`}>{children}</div>;
 };
 
-/* ── Data ── */
 const STATS = [
-  { value: '250+', label: 'Projects Delivered' },
-  { value: '10+',  label: 'Years Experience' },
-  { value: '100%', label: 'Quality Assured' },
+  { value: '250+', label: 'Villas Delivered'    },
+  { value: '10+',  label: 'Years Experience'    },
+  { value: '100%', label: 'Quality Assured'     },
   { value: '98%',  label: 'Client Satisfaction' },
 ];
 
-const SECTIONS = [
-  {
-    Icon: Factory,
-    title: 'Design & Build',
-    tag: 'Concept to Completion',
-    body: [
-      'Heavy-duty industrial construction with real-time tracking, milestone management, and zero-defect targets. Our Design-Build approach integrates design and construction into a single streamlined process.',
-      'From initial concept to final handover, one team handles everything — reducing delays, improving communication, and delivering better results.',
-    ],
-    points: [
-      'Single point of contact',
-      'Faster project delivery',
-      'Cost efficiency',
-      'Seamless coordination',
-    ],
-    img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80',
-  },
-  {
-    Icon: Layers,
-    title: 'Integrated Approach',
-    tag: 'Design + Build',
-    body: [
-      'Traditional construction separates design and build — leading to miscommunication, delays, and cost overruns. Our Design-Build model eliminates these issues by bringing architects, engineers, and builders together from day one.',
-      'The result? Faster timelines, better quality, and fewer surprises.',
-    ],
-    points: [
-      'Collaborative design process',
-      'Real-time problem solving',
-      'Value engineering',
-      'Quality control',
-    ],
-    img: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80',
-  },
-  {
-    Icon: Zap,
-    title: 'Why Design-Build',
-    tag: 'The Advantage',
-    body: [
-      'Design-Build projects are completed 30% faster on average compared to traditional methods. With one team responsible for both design and construction, accountability is clear and execution is efficient.',
-      'BOX Buildtech has delivered over 250 Design-Build projects across residential, commercial, and industrial sectors.',
-    ],
-    points: [
-      'Faster project completion',
-      'Single-source accountability',
-      'Cost predictability',
-      'Better quality outcomes',
-    ],
-    img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80',
-  },
+const PROCESS_STEPS = [
+  { n: '01', title: 'Understanding the Project',    desc: 'We study architect drawings, client expectations, project goals, and construction requirements carefully before anything begins.' },
+  { n: '02', title: 'Planning & Site Preparation',  desc: 'Project schedules, material planning, workforce coordination, and site preparation are handled before execution starts.' },
+  { n: '03', title: 'Construction Execution',       desc: 'Our engineers, supervisors, and workers begin construction while maintaining quality and safety standards at every stage.' },
+  { n: '04', title: 'Quality Inspection',           desc: 'Regular inspections during construction ensure structural strength, finishing quality, and proper workmanship throughout.' },
+  { n: '05', title: 'Final Finishing & Handover',   desc: 'Final inspections and finishing checks are completed before handover — delivering homes that meet design and quality standards.' },
+];
+
+const FAQS = [
+  { q: 'Does BOX Buildtech work with architects for villa projects?',  a: 'Yes, we mainly work with architects who need reliable construction execution support for residential villa projects.' },
+  { q: 'What type of residential projects do you handle?',               a: 'We specialise in luxury villas, designer homes, and premium residential projects of all scales.' },
+  { q: 'Do you provide complete Design & Build services?',               a: 'Yes, we manage planning, construction, coordination, and project execution for residential villa projects.' },
+  { q: 'Can you build custom-designed villas?',                          a: 'Yes, we build villas according to architectural designs, client preferences, and functional living requirements.' },
+  { q: 'How do you maintain construction quality?',                      a: 'We use experienced site teams, quality materials, proper supervision, and regular inspections throughout the construction process.' },
+  { q: 'Why should architects choose BOX Buildtech?',                  a: 'Architects choose us for professional execution, organised site management, quality workmanship, and smooth coordination from start to finish.' },
 ];
 
 export default function DesignBuild() {
   const navigate = useNavigate();
-
-  const goContact = () => {
-    navigate('/contact');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const goContact = () => { navigate('/contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
 
   return (
     <div className="db-page">
 
-      {/* ── HERO ── */}
+      {/* ══ HERO ══ */}
       <section className="db-hero">
-        <div
-          className="db-hero-bg"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80')" }}
-        />
+        <div className="db-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80')" }} />
         <div className="db-hero-overlay" />
         <div className="db-hero-inner">
           <Fade className="db-hero-content">
-            <span className="db-eyebrow">Design & Build</span>
+            <span className="db-eyebrow">Design &amp; Build</span>
             <h1 className="db-hero-headline">
-              <span className="db-hl">One Team</span>
-              <span className="db-hl db-hl-gold">One Vision</span>
+              <span className="db-hl"> Design &amp; Build</span>
+              <span className="db-hl db-hl-gold">Services for Luxury Villas.</span>
             </h1>
             <p className="db-hero-sub">
-              Heavy-duty construction with real-time tracking, milestone management, and zero-defect targets.
+              At BOX Buildtech, we help architects bring  villa projects to life
+              with strong construction support and professional execution — from foundation to final finish.
             </p>
             <button className="db-hero-btn" onClick={goContact}>
               Start Your Project <ArrowRight size={16} />
@@ -126,66 +85,193 @@ export default function DesignBuild() {
         </div>
       </section>
 
-      {/* ── SERVICE SECTIONS ── */}
-      {SECTIONS.map((svc, i) => {
-        const Icon = svc.Icon;
-        const isEven = i % 2 === 0;
-        return (
-          <section
-            key={svc.title}
-            className={`db-section ${isEven ? 'db-bg-dark' : 'db-bg-navy'}`}
-          >
-            <div className={`db-glow ${isEven ? 'db-glow-right' : 'db-glow-left'}`} />
-            <div className="db-container">
-              <div className={`db-grid ${isEven ? '' : 'db-reverse'}`}>
+      {/* ══ INTRO ══ */}
+      <section className="db-section db-bg-dark">
+        <div className="db-glow db-glow-right" />
+        <div className="db-container">
+          <div className="db-grid">
+            <Fade className="db-img-wrap">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Villa Construction" className="db-img" />
+              <div className="db-img-badge"><Factory size={16} strokeWidth={1.5} /><span>Foundation to Finish</span></div>
+              <div className="db-img-corner" />
+            </Fade>
+            <Fade className="db-content">
+              <div className="db-icon-wrap"><Factory size={24} strokeWidth={1.5} /></div>
+              <span className="db-tag">Our Approach</span>
+              <h2 className="db-title">Design &amp; Build for Residential Villas</h2>
+              <div className="db-gold-bar" />
+              <p className="db-body">
+                We mostly do construction work for homes and villas, and also help with the design part.
+                Our main goal is to help architects by taking care of the construction work in a professional
+                way and paying close attention to every detail.
+              </p>
+              <p className="db-body">
+                Building a villa is not about putting up walls and a roof. It is about making a home that
+                is comfortable, easy to use, modern, and will last for a long time. Every villa project
+                needs good materials, skilled workers, and strong teamwork between the people who design
+                it and the people who build it.
+              </p>
+              <ul className="db-points">
+                {['Villa construction execution','Site supervision','Material coordination','Structural work','Workforce management','Quality inspections','Finishing execution','Project coordination'].map(pt => (
+                  <li key={pt} className="db-point"><CheckCircle size={15} strokeWidth={2} className="db-point-icon" />{pt}</li>
+                ))}
+              </ul>
+              <button className="db-cta-btn" onClick={goContact}>Get A Quote <ArrowRight size={14} /></button>
+            </Fade>
+          </div>
+        </div>
+      </section>
 
-                {/* Image */}
-                <Fade className="db-img-wrap">
-                  <img src={svc.img} alt={svc.title} className="db-img" />
-                  <div className="db-img-badge">
-                    <Icon size={16} strokeWidth={1.5} />
-                    <span>{svc.tag}</span>
-                  </div>
-                  <div className="db-img-corner" />
-                </Fade>
+      {/* ══ RELIABLE PARTNER ══ */}
+      <section className="db-section db-bg-navy">
+        <div className="db-glow db-glow-left" />
+        <div className="db-container">
+          <div className="db-grid db-reverse">
+            <Fade className="db-img-wrap">
+              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Construction Partner" className="db-img" />
+              <div className="db-img-badge"><Users size={16} strokeWidth={1.5} /><span>Reliable Partner</span></div>
+              <div className="db-img-corner" />
+            </Fade>
+            <Fade className="db-content">
+              <div className="db-icon-wrap"><Users size={24} strokeWidth={1.5} /></div>
+              <span className="db-tag">For Architects</span>
+              <h2 className="db-title">A Reliable Construction Partner for Architects</h2>
+              <div className="db-gold-bar" />
+              <p className="db-body">
+                Architects take a lot of time to make layouts, plan spaces, and design homes that fit
+                what the client wants. When construction starts, many issues can come up if the team
+                building the project is not skilled or well-organised — coordination problems, delays,
+                low-quality work, and bad site management can ruin the final result.
+              </p>
+              <p className="db-body">
+                At BOX Buildtech, we know how crucial proper execution is for building villas. We focus
+                on villa projects and make sure they are done right — working as a dependable construction
+                partner for architects who want reliable support during construction.
+              </p>
+              <ul className="db-points">
+                {['Professional execution support','Attention to detail','Better coordination during construction','Quality construction standards','Timely project completion'].map(pt => (
+                  <li key={pt} className="db-point"><CheckCircle size={15} strokeWidth={2} className="db-point-icon" />{pt}</li>
+                ))}
+              </ul>
+              <button className="db-cta-btn" onClick={goContact}>Work With Us <ArrowRight size={14} /></button>
+            </Fade>
+          </div>
+        </div>
+      </section>
 
-                {/* Content */}
-                <Fade className="db-content">
-                  <div className="db-icon-wrap">
-                    <Icon size={24} strokeWidth={1.5} />
-                  </div>
-                  <span className="db-tag">{svc.tag}</span>
-                  <h2 className="db-title">{svc.title}</h2>
-                  <div className="db-gold-bar" />
-                  {svc.body.map((p, j) => (
-                    <p key={j} className="db-body">{p}</p>
-                  ))}
-                  <ul className="db-points">
-                    {svc.points.map((pt) => (
-                      <li key={pt} className="db-point">
-                        <CheckCircle size={15} strokeWidth={2} className="db-point-icon" />
-                        {pt}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="db-cta-btn" onClick={goContact}>
-                    Get A Quote <ArrowRight size={14} />
-                  </button>
-                </Fade>
+      {/* ══ COMPLETE D&B SOLUTIONS ══ */}
+      <section className="db-section db-bg-dark">
+        <div className="db-glow db-glow-right" />
+        <div className="db-container">
+          <div className="db-grid">
+            <Fade className="db-img-wrap">
+              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Design Build Solutions" className="db-img" />
+              <div className="db-img-badge"><Layers size={16} strokeWidth={1.5} /><span>Complete Solutions</span></div>
+              <div className="db-img-corner" />
+            </Fade>
+            <Fade className="db-content">
+              <div className="db-icon-wrap"><Layers size={24} strokeWidth={1.5} /></div>
+              <span className="db-tag">Design &amp; Build</span>
+              <h2 className="db-title">Complete Design &amp; Build Solutions for Villas</h2>
+              <div className="db-gold-bar" />
+              <p className="db-body">
+                For people who want to build a villa, we handle all the work under one roof. Instead of
+                talking to many different contractors, the homeowner and architect work with one team —
+                making communication easier, avoiding delays, and ensuring everything runs smoothly.
+              </p>
+              <ul className="db-points">
+                {['Construction planning','Structural execution','Site management','Material planning','Civil work','Finishing work','Coordination with architects','Project supervision'].map(pt => (
+                  <li key={pt} className="db-point"><CheckCircle size={15} strokeWidth={2} className="db-point-icon" />{pt}</li>
+                ))}
+              </ul>
+              <button className="db-cta-btn" onClick={goContact}>Get A Quote <ArrowRight size={14} /></button>
+            </Fade>
+          </div>
+        </div>
+      </section>
 
-              </div>
-            </div>
-          </section>
-        );
-      })}
+      {/* ══ MODERN + LUXURY ══ */}
+      <section className="db-section db-bg-navy">
+        <div className="db-glow db-glow-left" />
+        <div className="db-container">
+          <div className="db-grid db-reverse">
+            <Fade className="db-img-wrap">
+              <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Luxury Villa" className="db-img" />
+              <div className="db-img-badge"><Star size={16} strokeWidth={1.5} /><span>Luxury Standard</span></div>
+              <div className="db-img-corner" />
+            </Fade>
+            <Fade className="db-content">
+              <div className="db-icon-wrap"><Star size={24} strokeWidth={1.5} /></div>
+              <span className="db-tag">Modern &amp; Luxury</span>
+              <h2 className="db-title">Modern &amp; Luxury Villa Construction</h2>
+              <div className="db-gold-bar" />
+              <p className="db-body">
+                Modern villas need smart space planning, open layouts, and high-quality finishing.
+                Luxury villas require a higher level of detailing — every corner of the home should
+                reflect quality workmanship and careful planning.
+              </p>
+              <p className="db-body">
+                We help build premium residential villas, high-end modern homes, designer villa projects,
+                spacious luxury residences, multi-floor villas, and architect-designed homes.
+              </p>
+              <ul className="db-points">
+                {['Open layouts & smart space utilization','Natural lighting & proper ventilation','Modern finishing & clean structural execution','Premium residential villas','High-end modern homes','Custom-designed homes'].map(pt => (
+                  <li key={pt} className="db-point"><CheckCircle size={15} strokeWidth={2} className="db-point-icon" />{pt}</li>
+                ))}
+              </ul>
+              <button className="db-cta-btn" onClick={goContact}>Start Building <ArrowRight size={14} /></button>
+            </Fade>
+          </div>
+        </div>
+      </section>
 
-      {/* ── BOTTOM BANNER ── */}
+      {/* ══ PROCESS ══ */}
+      <section className="db-process-section">
+        <div className="db-glow db-glow-right" />
+        <div className="db-container">
+          <Fade>
+            <span className="db-tag">How We Work</span>
+            <h2 className="db-process-title">Our Residential <span>Construction Process</span></h2>
+            <div className="db-gold-bar" style={{ margin: '16px 0 48px' }} />
+          </Fade>
+          <div className="db-process-grid">
+            {PROCESS_STEPS.map((step) => (
+              <Fade key={step.n} className="db-process-card">
+                <span className="db-process-num">{step.n}</span>
+                <h3 className="db-process-name">{step.title}</h3>
+                <p className="db-process-desc">{step.desc}</p>
+              </Fade>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ FAQ ══ */}
+      <section className="db-faq-section">
+        <div className="db-container">
+          <Fade>
+            <span className="db-tag">FAQs</span>
+            <h2 className="db-process-title">Frequently Asked <span>Questions</span></h2>
+            <div className="db-gold-bar" style={{ margin: '16px 0 48px' }} />
+          </Fade>
+          <div className="db-faq-grid">
+            {FAQS.map((faq) => (
+              <Fade key={faq.q} className="db-faq-card">
+                <h4 className="db-faq-q">{faq.q}</h4>
+                <p className="db-faq-a">{faq.a}</p>
+              </Fade>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ BOTTOM BANNER ══ */}
       <section className="db-banner">
         <div className="db-banner-grid" />
         <div className="db-container db-banner-inner">
           <div>
-            <h2 className="db-banner-title">Start Your Design-Build Project</h2>
-            <p className="db-banner-sub">Get a free consultation and project estimate today.</p>
+            <h2 className="db-banner-title">Let's Build Better Residential Spaces Together</h2>
+            <p className="db-banner-sub">Talk to our team — free consultation, no obligations.</p>
           </div>
           <button className="db-banner-btn" onClick={goContact}>
             Contact Us Today <ArrowRight size={16} />
