@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  Building2,
-  Settings2,
   HardHat,
-  Leaf,
   Factory,
   Headphones,
 } from "lucide-react";
@@ -12,28 +9,10 @@ import "./Services.css";
 
 const SERVICES = [
   {
-    Icon: Building2,
-    title: "Commercial Construction",
-    desc: "End-to-end Commercial Construction services from foundation to finishing with uncompromising quality and precision.",
-    path: "/services/commercial-construction",
-  },
-  {
     Icon: HardHat,
     title: "Luxury Residential",
     desc: "Seamless project oversight ensuring timely delivery, budget adherence, and quality control at every stage.",
     path: "/services/luxury-residential",
-  },
-  {
-    Icon: Settings2,
-    title: "Premium Renovations",
-    desc: "Transform existing spaces with precision Premium Renovations that breathe new life into old structures.",
-    path: "/services/premium-renovations",
-  },
-  {
-    Icon: Leaf,
-    title: "Project Management",
-    desc: "Eco-first materials and green-certified processes that prove Project Management and performance go hand in hand.",
-    path: "/services/project-management",
   },
   {
     Icon: Factory,

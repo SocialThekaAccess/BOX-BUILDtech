@@ -10,10 +10,7 @@ import Contact      from './Components/Contact/Contact';
 import Footer       from './Components/Footer/Footer';
 import AboutPage               from './Pages/About/About';
 import ContactUsPage           from './Pages/ContactUs/ContactUs';
-import CommercialConstruction  from './Pages/Services/CommercialConstruction';
 import LuxuryResidential       from './Pages/Services/LuxuryResidential';
-import PremiumRenovations      from './Pages/Services/PremiumRenovations';
-import ProjectManagement       from './Pages/Services/ProjectManagement';
 import DesignBuild             from './Pages/Services/DesignBuild';
 import './styles/globals.css';
 
@@ -114,30 +111,9 @@ const ContactUsFullPage = () => (
   </>
 );
 
-const CommercialConstructionPage = () => (
-  <>
-    <CommercialConstruction />
-    <Footer />
-  </>
-);
-
 const LuxuryResidentialPage = () => (
   <>
     <LuxuryResidential />
-    <Footer />
-  </>
-);
-
-const PremiumRenovationsPage = () => (
-  <>
-    <PremiumRenovations />
-    <Footer />
-  </>
-);
-
-const ProjectManagementPage = () => (
-  <>
-    <ProjectManagement />
     <Footer />
   </>
 );
@@ -160,15 +136,12 @@ export default function App() {
     <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
       <Navbar />
       <Routes>
-        <Route path="/"                              element={<HomePage />}                />
-        <Route path="/about"                         element={<AboutFullPage />}           />
-        <Route path="/contact"                       element={<ContactUsFullPage />}       />
-        <Route path="/services/commercial-construction" element={<CommercialConstructionPage />} />
-        <Route path="/services/luxury-residential"   element={<LuxuryResidentialPage />}  />
-        <Route path="/services/premium-renovations"  element={<PremiumRenovationsPage />} />
-        <Route path="/services/project-management"   element={<ProjectManagementPage />}  />
-        <Route path="/services/design-build"         element={<DesignBuildPage />}        />
-        <Route path="*"                              element={<HomePage />}                />
+        <Route path="/"                              element={<HomePage />}               />
+        <Route path="/about"                         element={<AboutFullPage />}          />
+        <Route path="/contact"                       element={<ContactUsFullPage />}      />
+        <Route path="/services/luxury-residential"   element={<LuxuryResidentialPage />} />
+        <Route path="/services/design-build"         element={<DesignBuildPage />}       />
+        <Route path="*"                              element={<HomePage />}               />
       </Routes>
       <BackToTop />
     </div>

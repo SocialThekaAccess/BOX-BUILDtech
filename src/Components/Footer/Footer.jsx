@@ -1,26 +1,23 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
   Home, Info, Briefcase, FolderOpen, Phone,
-  Building2, HardHat, Settings2, Leaf, Factory,
+  HardHat, Factory,
   User, MapPin, Mail, Globe,
 } from 'lucide-react';
 import boxLogo from '../../assets/BOX.png';
 import './Footer.css';
 
 const QUICK_LINKS = [
-  { label: 'Home',       Icon: Home,       type: 'scroll', id: 'home',     path: '/'       },
-  { label: 'About Us',   Icon: Info,       type: 'route',  path: '/about'                  },
-  { label: 'Services',   Icon: Briefcase,  type: 'scroll', id: 'services', path: '/'       },
-  { label: 'Projects',   Icon: FolderOpen, type: 'scroll', id: 'projects', path: '/'       },
-  { label: 'Contact Us', Icon: Phone,      type: 'route',  path: '/contact'                },
+  { label: 'Home',       Icon: Home,       type: 'scroll', id: 'home',     path: '/'  },
+  { label: 'About Us',   Icon: Info,       type: 'route',  path: '/about'             },
+  { label: 'Services',   Icon: Briefcase,  type: 'scroll', id: 'services', path: '/' },
+  { label: 'Projects',   Icon: FolderOpen, type: 'scroll', id: 'projects', path: '/' },
+  { label: 'Contact Us', Icon: Phone,      type: 'route',  path: '/contact'           },
 ];
 
 const SERVICES = [
-  { label: 'Commercial Construction', Icon: Building2, path: '/services/commercial-construction' },
-  { label: 'Luxury Residential',      Icon: HardHat,   path: '/services/luxury-residential'      },
-  { label: 'Premium Renovations',     Icon: Settings2, path: '/services/premium-renovations'     },
-  { label: 'Project Management',      Icon: Leaf,      path: '/services/project-management'      },
-  { label: 'Design-Build',            Icon: Factory,   path: '/services/design-build'            },
+  { label: 'Luxury Residential', Icon: HardHat, path: '/services/luxury-residential' },
+  { label: 'Design-Build',       Icon: Factory, path: '/services/design-build'       },
 ];
 
 const CONTACT_INFO = [

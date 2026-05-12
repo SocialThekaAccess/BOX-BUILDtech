@@ -28,8 +28,6 @@
 }
 
 .footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 72px 5% 40px;
   position: relative;
   z-index: 1;
@@ -41,6 +39,7 @@
   grid-template-columns: 2fr 1fr 1fr 1.2fr;
   gap: 48px;
   margin-bottom: 56px;
+  align-items: start;
 }
 
 /* ── Brand Column ── */
@@ -113,6 +112,7 @@
 .footer-col {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer-col-title {

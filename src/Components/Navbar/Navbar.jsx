@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Building2, HardHat, Settings2, Leaf, Factory, ChevronDown } from 'lucide-react';
+import { HardHat, Factory, ChevronDown } from 'lucide-react';
 import boxLogo from '../../assets/BOX.png';
 import './Navbar.css';
 
@@ -8,16 +8,13 @@ const NAV_LINKS = [
   { label: 'Home',       section: 'home',     path: '/'        },
   { label: 'About Us',   section: null,       path: '/about'   },
   { label: 'Services',   section: 'services', path: '/',       hasDropdown: true },
-  { label: 'Portfolio',   section: 'portfolio', path: '/'        },
+  { label: 'Portfolio',  section: 'portfolio', path: '/'       },
   { label: 'Contact Us', section: null,       path: '/contact' },
 ];
 
 const SERVICE_ITEMS = [
-  { Icon: Building2, label: 'Commercial Construction', path: '/services/commercial-construction', desc: 'End-to-end building solutions' },
-  { Icon: HardHat,   label: 'Luxury Residential',      path: '/services/luxury-residential',      desc: 'Premium homes & interiors'    },
-  { Icon: Settings2, label: 'Premium Renovations',     path: '/services/premium-renovations',     desc: 'Transform existing spaces'    },
-  { Icon: Leaf,      label: 'Project Management',      path: '/services/project-management',      desc: 'Eco-first, on-time delivery'  },
-  { Icon: Factory,   label: 'Design-Build',            path: '/services/design-build',            desc: 'Concept to completion'        },
+  { Icon: HardHat,  label: 'Luxury Residential', path: '/services/luxury-residential', desc: 'Premium homes & interiors' },
+  { Icon: Factory,  label: 'Design-Build',        path: '/services/design-build',       desc: 'Concept to completion'    },
 ];
 
 const Navbar = () => {
