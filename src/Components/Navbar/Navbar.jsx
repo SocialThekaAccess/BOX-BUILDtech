@@ -13,8 +13,8 @@ const NAV_LINKS = [
 ];
 
 const SERVICE_ITEMS = [
-  { Icon: HardHat,  label: 'Luxury Residential', path: '/services/luxury-residential', desc: 'Premium homes & interiors' },
-  { Icon: Factory,  label: 'Design-Build',        path: '/services/design-build',       desc: 'Concept to completion'    },
+  { Icon: Factory, label: 'Design & Build',        path: '/services/design-build',       desc: 'Concept to completion'    },
+  { Icon: HardHat, label: 'High End Residential',  path: '/services/luxury-residential', desc: 'Premium homes & interiors' },
 ];
 
 const Navbar = () => {

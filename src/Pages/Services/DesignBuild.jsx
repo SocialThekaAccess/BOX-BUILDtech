@@ -35,7 +35,7 @@ const STATS = [
 const SECTIONS = [
   {
     Icon: Factory,
-    title: 'Design-Build',
+    title: 'Design & Build',
     tag: 'Concept to Completion',
     body: [
       'Heavy-duty industrial construction with real-time tracking, milestone management, and zero-defect targets. Our Design-Build approach integrates design and construction into a single streamlined process.',
@@ -103,7 +103,7 @@ export default function DesignBuild() {
         <div className="db-hero-overlay" />
         <div className="db-hero-inner">
           <Fade className="db-hero-content">
-            <span className="db-eyebrow">Design-Build</span>
+            <span className="db-eyebrow">Design & Build</span>
             <h1 className="db-hero-headline">
               <span className="db-hl">One Team</span>
               <span className="db-hl db-hl-gold">One Vision</span>

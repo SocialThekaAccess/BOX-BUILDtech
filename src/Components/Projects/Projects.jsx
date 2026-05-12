@@ -66,7 +66,7 @@ export default function Projects() {
             Featured <span>Projects</span>
           </h2>
           <p className="projects-subtitle">
-            From luxury residences to landmark commercial towers where every project
+            From luxury residences to Residential Villas towers where every project
             tells a story of precision and passion.
           </p>
           <a href="#contact" className="projects-view-all">

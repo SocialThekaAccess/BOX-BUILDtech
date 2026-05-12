@@ -16,8 +16,8 @@ const QUICK_LINKS = [
 ];
 
 const SERVICES = [
-  { label: 'Luxury Residential', Icon: HardHat, path: '/services/luxury-residential' },
-  { label: 'Design-Build',       Icon: Factory, path: '/services/design-build'       },
+  { label: 'Design & Build',       Icon: Factory, path: '/services/design-build'       },
+  { label: 'High End Residential', Icon: HardHat, path: '/services/luxury-residential' },
 ];
 
 const CONTACT_INFO = [

@@ -9,16 +9,16 @@ import "./Services.css";
 
 const SERVICES = [
   {
-    Icon: HardHat,
-    title: "Luxury Residential",
-    desc: "Seamless project oversight ensuring timely delivery, budget adherence, and quality control at every stage.",
-    path: "/services/luxury-residential",
-  },
-  {
     Icon: Factory,
-    title: "Design-Build",
+    title: "Design & Build",
     desc: "Heavy-duty industrial construction with real-time tracking, milestone management, and zero-defect targets.",
     path: "/services/design-build",
+  },
+  {
+    Icon: HardHat,
+    title: "High End Residential",
+    desc: "Seamless project oversight ensuring timely delivery, budget adherence, and quality control at every stage.",
+    path: "/services/luxury-residential",
   },
 ];
 

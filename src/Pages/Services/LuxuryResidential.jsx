@@ -35,7 +35,7 @@ const STATS = [
 const SECTIONS = [
   {
     Icon: HardHat,
-    title: 'Luxury Residential',
+    title: 'High End Residential',
     tag: 'Premium Homes',
     body: [
       'We design and build luxury residential spaces that combine elegance with functionality. Every home we create is a reflection of the client\'s vision — crafted with premium materials and meticulous attention to detail.',
@@ -103,7 +103,7 @@ export default function LuxuryResidential() {
         <div className="lr-hero-overlay" />
         <div className="lr-hero-inner">
           <Fade className="lr-hero-content">
-            <span className="lr-eyebrow">Luxury Residential</span>
+            <span className="lr-eyebrow">High End Residential</span>
             <h1 className="lr-hero-headline">
               <span className="lr-hl">Your Dream Home</span>
               <span className="lr-hl lr-hl-gold">Perfectly Built</span>
