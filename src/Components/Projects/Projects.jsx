@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Projects.css";
 
-const FILTERS = ["All", "Residential", "Commercial", "Industrial", "Interior"];
+const FILTERS = ["All", "Residential", "Interior"];
 
 const PROJECTS = [
   {
@@ -12,32 +12,11 @@ const PROJECTS = [
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80",
   },
   {
-    id: 2,
-    title: "Corporate Office",
-    category: "Commercial",
-    location: "KERALA, INDIA",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80",
-  },
-  {
     id: 3,
     title: "Luxury Apartment",
     category: "Residential",
     location: "CHANDIGARH, INDIA",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80",
-  },
-  {
-    id: 4,
-    title: "Shopping Mall",
-    category: "Commercial",
-    location: "GURUGRAM, INDIA",
-    image: "https://images.unsplash.com/photo-1555636222-cae831e670b3?w=700&q=80",
-  },
-  {
-    id: 5,
-    title: "Industrial Building",
-    category: "Industrial",
-    location: "MUMBAI, INDIA",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80",
   },
   {
     id: 6,
@@ -66,8 +45,7 @@ export default function Projects() {
             Featured <span>Projects</span>
           </h2>
           <p className="projects-subtitle">
-            From luxury residences to Residential Villas towers where every project
-            tells a story of precision and passion.
+            Specializing exclusively in residential villas, we create elegant living spaces crafted with quality, comfort, and modern design in every detail.
           </p>
           <a href="#contact" className="projects-view-all">
             View All Projects →
