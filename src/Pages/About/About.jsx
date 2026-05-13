@@ -70,10 +70,10 @@ export default function AboutPage() {
         <div className="ap-hero-inner">
           <FadeSection className="ap-hero-content">
             <span className="ap-eyebrow">About BOX Buildtech</span>
-            <h1 className="ap-hero-headline">
+            <h2 className="ap-hero-headline">
               <span className="ap-hl-line">We Turn Ideas</span>
               <span className="ap-hl-line">Into <span className="ap-hl-gold">Experiences</span></span>
-            </h1>
+            </h2>
             <p className="ap-hero-sub">
               We help transform concepts into well-built spaces through thoughtful
               design, quality construction, and smooth project execution.

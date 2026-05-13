@@ -66,10 +66,10 @@ export default function ServicePage({
         <div className="sp-hero-inner">
           <Fade className="sp-hero-content">
             <span className="sp-eyebrow">{eyebrow}</span>
-            <h1 className="sp-hero-headline">
+            <h2 className="sp-hero-headline">
               <span className="sp-hl">{headline.white}</span>
               <span className="sp-hl sp-hl-gold">{headline.gold}</span>
-            </h1>
+            </h2>
             <p className="sp-hero-sub">{heroSub}</p>
             <button className="sp-hero-btn" onClick={goContact}>
               Start Your Project <ArrowRight size={16} />

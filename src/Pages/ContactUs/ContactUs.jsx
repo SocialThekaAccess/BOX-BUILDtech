@@ -69,10 +69,10 @@ export default function ContactUsPage() {
         <div className="cu-hero-overlay" />
         <div className="cu-hero-inner">
           <span className="cu-eyebrow">Get In Touch</span>
-          <h1 className="cu-hero-headline">
+          <h2 className="cu-hero-headline">
             <span className="cu-hl-line">Let's Build</span>
             <span className="cu-hl-line">Something <span className="cu-gold">Great</span></span>
-          </h1>
+          </h2>
           <p className="cu-hero-sub">
             Tell us about your project and we'll get back to you within 24 hours
             with a tailored plan and free consultation.

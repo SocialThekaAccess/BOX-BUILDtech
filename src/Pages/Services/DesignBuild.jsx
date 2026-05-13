@@ -62,10 +62,10 @@ export default function DesignBuild() {
         <div className="db-hero-inner">
           <Fade className="db-hero-content">
             <span className="db-eyebrow">Design &amp; Build</span>
-            <h1 className="db-hero-headline">
+            <h2 className="db-hero-headline">
               <span className="db-hl"> Design &amp; Build</span>
               <span className="db-hl db-hl-gold">Services for Luxury Villas</span>
-            </h1>
+            </h2>
             <p className="db-hero-sub">
               At BOX Buildtech, we help architects bring  villa projects to life
               with strong construction support and professional execution — from foundation to final finish.
@@ -196,7 +196,7 @@ export default function DesignBuild() {
         <div className="db-container">
           <div className="db-grid db-reverse">
             <Fade className="db-img-wrap">
-              <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Luxury Villa" className="db-img" />
+              <img src="https://luxedesign-s3-beta.s3.ap-southeast-1.amazonaws.com/file/1750830136363-VIlla%20Construction%20Service.png" alt="Luxury Villa" className="db-img" />
               <div className="db-img-badge"><Star size={16} strokeWidth={1.5} /><span>Luxury Standard</span></div>
               <div className="db-img-corner" />
             </Fade>

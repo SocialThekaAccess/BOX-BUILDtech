@@ -63,10 +63,10 @@ export default function LuxuryResidential() {
         <div className="lr-hero-inner">
           <Fade className="lr-hero-content">
             <span className="lr-eyebrow">High End Residential</span>
-            <h1 className="lr-hero-headline">
+            <h2 className="lr-hero-headline">
               <span className="lr-hl">Luxury Villa</span>
-              <span className="lr-hl lr-hl-gold">Construction Services.</span>
-            </h1>
+              <span className="lr-hl lr-hl-gold">Construction Services</span>
+            </h2>
             <p className="lr-hero-sub">
               At BOX Buildtech, we are experts in building villas — working closely with architects
               to make sure every villa is built exactly like it was designed, with care and precision.
