@@ -1,10 +1,7 @@
 import { useState } from 'react';
 import {
-  Building2,
+  Factory,
   HardHat,
-  Wrench,
-  Leaf,
-  BarChart3,
   Phone,
   Mail,
   MapPin,
@@ -15,11 +12,8 @@ import {
 import './ContactUs.css';
 
 const SERVICES_OPTIONS = [
-  { Icon: Building2,  label: 'Commercial Construction' },
-  { Icon: HardHat,    label: 'Luxury Residential'      },
-  { Icon: Wrench,     label: 'Premium Renovations'     },
-  { Icon: Leaf,       label: 'Project Management'      },
-  { Icon: BarChart3,  label: 'Design-Build'            },
+  { Icon: Factory,  label: 'Design & Build'       },
+  { Icon: HardHat,  label: 'High End Residential'  },
 ];
 
 const CONTACT_DETAILS = [

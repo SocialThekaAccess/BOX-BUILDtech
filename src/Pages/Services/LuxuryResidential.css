@@ -125,7 +125,7 @@
   font-family: 'Source Sans 3', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: rgba(255,255,255,0.55);
+  color: #ffffff;
   max-width: 500px;
   line-height: 1.8;
   margin-bottom: 36px;
@@ -352,7 +352,7 @@
   font-family: 'Source Sans 3', sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: rgba(255,255,255,0.6);
+  color: #ffffff;
   line-height: 1.85;
   margin-bottom: 16px;
 }
@@ -372,7 +372,7 @@
   font-family: 'Source Sans 3', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: rgba(255,255,255,0.75);
+  color: #ffffff;
 }
 
 .lr-point-icon {
@@ -496,4 +496,143 @@
   .lr-hero-inner { padding: 120px 5% 60px; }
   .lr-section { padding: 70px 0; }
   .lr-img { height: 260px; }
+}
+
+/* ══════════════════════════════════════
+   PROCESS SECTION
+══════════════════════════════════════ */
+.lr-process-section {
+  padding: 110px 0;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.lr-process-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-top: 8px;
+}
+
+.lr-process-title span { color: #E9A102; }
+
+.lr-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.lr-process-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(233,161,2,0.12);
+  border-radius: 8px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.lr-process-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #E9A102, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lr-process-card:hover {
+  border-color: rgba(233,161,2,0.35);
+  transform: translateY(-4px);
+}
+
+.lr-process-card:hover::before { opacity: 1; }
+
+.lr-process-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(233,161,2,0.15);
+  line-height: 1;
+  display: block;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.lr-process-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.lr-process-desc {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+}
+
+/* ══════════════════════════════════════
+   FAQ SECTION
+══════════════════════════════════════ */
+.lr-faq-section {
+  padding: 110px 0;
+  background: #0D1B2E;
+  position: relative;
+  overflow: hidden;
+}
+
+.lr-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.lr-faq-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(233,161,2,0.1);
+  border-radius: 8px;
+  padding: 28px 24px;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.lr-faq-card:hover {
+  border-color: rgba(233,161,2,0.3);
+  background: rgba(233,161,2,0.03);
+}
+
+.lr-faq-q {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.lr-faq-a {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+}
+
+@media (max-width: 1024px) {
+  .lr-process-grid { grid-template-columns: repeat(2, 1fr); }
+  .lr-faq-grid     { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .lr-process-grid { grid-template-columns: 1fr; }
+  .lr-process-section,
+  .lr-faq-section  { padding: 70px 0; }
 }

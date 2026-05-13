@@ -64,7 +64,7 @@ export default function DesignBuild() {
             <span className="db-eyebrow">Design &amp; Build</span>
             <h1 className="db-hero-headline">
               <span className="db-hl"> Design &amp; Build</span>
-              <span className="db-hl db-hl-gold">Services for Luxury Villas.</span>
+              <span className="db-hl db-hl-gold">Services for Luxury Villas</span>
             </h1>
             <p className="db-hero-sub">
               At BOX Buildtech, we help architects bring  villa projects to life

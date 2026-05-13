@@ -10,11 +10,8 @@ const CONTACT_DETAILS = [
 ];
 
 const SERVICES_LIST = [
-  "Commercial Construction",
-  "Luxury Residential",
-  "Premium Renovations",
-  "Project Management",
-  "Design-Build",
+  "Design & Build",
+  "High End Residential",
 ];
 
 const scrollToContact = () =>
