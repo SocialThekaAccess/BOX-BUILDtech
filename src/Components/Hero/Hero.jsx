@@ -1,7 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Building2, Users, Award, HardHat } from 'lucide-react';
 import './Hero.css';
 import boxImg1 from '../../assets/BOXimg1.jpg';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
   { icon: Building2, value: 320, suffix: '+', label: 'Projects Built'   },
@@ -28,9 +32,9 @@ function useCounter(target, duration = 1800, start = false) {
   useEffect(() => {
     if (!start) return;
     let startTime = null;
-    const step = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
+    const step = (ts) => {
+      if (!startTime) startTime = ts;
+      const progress = Math.min((ts - startTime) / duration, 1);
       setCount(Math.floor(progress * target));
       if (progress < 1) requestAnimationFrame(step);
     };
@@ -51,54 +55,150 @@ function StatItem({ icon: Icon, value, suffix, label, animate }) {
 }
 
 const Hero = () => {
-  const headlineRef = useRef(null);
-  const eyebrowRef  = useRef(null);
-  const subRef      = useRef(null);
-  const actionsRef  = useRef(null);
-  const thumbsRef   = useRef(null);
-  const statsRef    = useRef(null);
+  const sectionRef    = useRef(null);
+  const bgRef         = useRef(null);
+  const overlayRef    = useRef(null);
+  const contentRef    = useRef(null);
+  const headlineRef   = useRef(null);
+  const eyebrowRef    = useRef(null);
+  const bottomRef     = useRef(null);
+  const statsRef      = useRef(null);
 
   const [statsVisible, setStatsVisible] = useState(false);
   const [wordIndex,    setWordIndex]    = useState(0);
   const [displayed,    setDisplayed]    = useState('');
   const [typing,       setTyping]       = useState(true);
 
-  // Scroll parallax
+  /* ── GSAP Scroll Animation ── */
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY    = window.scrollY;
-      const heroHeight = window.innerHeight;
-      if (scrollY > heroHeight) return;
-      const progress = scrollY / heroHeight;
-      const opacity  = Math.max(0, 1 - progress * 2.2);
+    const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia();
 
-      if (headlineRef.current) {
-        headlineRef.current.style.transform = `translateY(${progress * -40}px)`;
-        headlineRef.current.style.opacity   = opacity;
-      }
-      if (eyebrowRef.current) {
-        eyebrowRef.current.style.opacity   = opacity;
-        eyebrowRef.current.style.transform = `translateY(${progress * 20}px)`;
-      }
-      if (subRef.current) {
-        subRef.current.style.opacity   = Math.max(0, 1 - progress * 3);
-        subRef.current.style.transform = `translateY(${progress * 24}px)`;
-      }
-      if (actionsRef.current) {
-        actionsRef.current.style.opacity   = Math.max(0, 1 - progress * 3);
-        actionsRef.current.style.transform = `translateY(${progress * 24}px)`;
-      }
-      if (thumbsRef.current) {
-        thumbsRef.current.style.opacity   = Math.max(0, 1 - progress * 3.5);
-        thumbsRef.current.style.transform = `translateY(${progress * 20}px)`;
-      }
-    };
+      mm.add('(min-width: 768px)', () => {
+        // 1. Content fades + moves up first
+        gsap.to(contentRef.current, {
+          y: -120,
+          opacity: 0,
+          ease: 'power2.in',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top top',
+            end: '40% top',
+            scrub: 1.2,
+          },
+        });
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+        // 2. Headline slides out faster (cinematic)
+        gsap.to(headlineRef.current, {
+          y: -80,
+          opacity: 0,
+          ease: 'power3.in',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top top',
+            end: '30% top',
+            scrub: 0.8,
+          },
+        });
+
+        // 3. Stats bar fades out
+        gsap.to(statsRef.current, {
+          y: 60,
+          opacity: 0,
+          ease: 'power2.in',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: '5% top',
+            end: '35% top',
+            scrub: 1,
+          },
+        });
+
+        // 4. Background parallax — starts AFTER content moves
+        gsap.to(bgRef.current, {
+          y: '25%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: '25% top',
+            end: 'bottom top',
+            scrub: 1.5,
+          },
+        });
+
+        // 5. Overlay darkens as bg moves
+        gsap.to(overlayRef.current, {
+          opacity: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: '20% top',
+            end: '60% top',
+            scrub: 1,
+          },
+        });
+      });
+
+      // Mobile — lighter parallax only
+      mm.add('(max-width: 767px)', () => {
+        gsap.to(bgRef.current, {
+          y: '15%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 2,
+          },
+        });
+
+        gsap.to(contentRef.current, {
+          y: -60,
+          opacity: 0,
+          ease: 'power2.in',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top top',
+            end: '40% top',
+            scrub: 1,
+          },
+        });
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
 
-  // Typewriter
+  /* ── Entrance animations ── */
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+      tl.fromTo(eyebrowRef.current,
+        { y: 30, opacity: 0 },
+        { y: 0,  opacity: 1, duration: 0.8, delay: 0.2 }
+      )
+      .fromTo(headlineRef.current,
+        { y: 60, opacity: 0 },
+        { y: 0,  opacity: 1, duration: 1.0 },
+        '-=0.4'
+      )
+      .fromTo(bottomRef.current,
+        { y: 40, opacity: 0 },
+        { y: 0,  opacity: 1, duration: 0.8 },
+        '-=0.5'
+      )
+      .fromTo(statsRef.current,
+        { y: 30, opacity: 0 },
+        { y: 0,  opacity: 1, duration: 0.7 },
+        '-=0.4'
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  /* ── Typewriter ── */
   useEffect(() => {
     const word = WORDS[wordIndex];
     let timeout;
@@ -119,7 +219,7 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [displayed, typing, wordIndex]);
 
-  // Stats counter trigger
+  /* ── Stats counter trigger ── */
   useEffect(() => {
     const obs = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) setStatsVisible(true); },
@@ -130,15 +230,24 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero" ref={sectionRef}>
 
-      {/* Background */}
-      <div className="hero-bg" style={{ backgroundImage: `url(${boxImg1})` }} />
-      <div className="hero-overlay-dark" />
-      <div className="hero-overlay-vignette" />
-      <div className="hero-noise" />
+      {/* ── Fixed background layer ── */}
+      <div className="hero-bg-layer">
+        <div
+          className="hero-bg"
+          ref={bgRef}
+          style={{ backgroundImage: `url(${boxImg1})` }}
+        />
+        {/* Base dark overlay — always present */}
+        <div className="hero-overlay-base" />
+        {/* Scroll overlay — darkens as bg moves */}
+        <div className="hero-overlay-scroll" ref={overlayRef} />
+        <div className="hero-overlay-vignette" />
+        <div className="hero-noise" />
+      </div>
 
-      {/* Side labels */}
+      {/* ── Side labels ── */}
       <div className="hero-side-left">
         <span>BOX BUILDTECH</span>
         <div className="hero-side-line" />
@@ -148,23 +257,23 @@ const Hero = () => {
         <span>EST. 2005</span>
       </div>
 
-      {/* ── MAIN CONTENT ── */}
-      <div className="hero-center">
+      {/* ── Main content ── */}
+      <div className="hero-center" ref={contentRef}>
 
-        {/* Eyebrow — left */}
+        {/* Eyebrow */}
         <div className="hero-eyebrow" ref={eyebrowRef}>
           <span className="hero-eyebrow-line" />
           <span className="hero-eyebrow-text">Building The Future</span>
+          <span className="hero-eyebrow-line" />
         </div>
 
-        {/* BIG CENTERED HEADLINE */}
+        {/* Big centered headline */}
         <div className="hero-headline-wrap" ref={headlineRef}>
           <h1 className="hero-headline">
             <span className="hero-headline-line">We Build</span>
             <span className="hero-headline-line">Your Vision</span>
             <span className="hero-headline-line gold">Into Reality</span>
           </h1>
-          {/* Gold divider under headline */}
           <div className="hero-headline-divider">
             <span className="hero-hdiv-line" />
             <span className="hero-hdiv-diamond">◆</span>
@@ -172,23 +281,20 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Bottom row — left: typewriter + sub + buttons + thumbs */}
-        <div className="hero-bottom-row">
+        {/* Bottom row */}
+        <div className="hero-bottom-row" ref={bottomRef}>
           <div className="hero-bottom-left">
-            {/* Typewriter */}
             <p className="hero-typewriter">
               We deliver&nbsp;
               <span className="hero-typewriter-word">
                 {displayed}<span className="hero-cursor">|</span>
               </span>
             </p>
-
-            <p className="hero-sub" ref={subRef}>
+            <p className="hero-sub">
               A leading construction &amp; development company committed to delivering
               exceptional projects — on time, every time.
             </p>
-
-            <div className="hero-actions" ref={actionsRef}>
+            <div className="hero-actions">
               <button className="hero-btn-primary" onClick={() => scrollTo('contact')}>
                 Get A Quote <span className="btn-arrow">↗</span>
               </button>
@@ -198,8 +304,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: featured work thumbnails */}
-          <div className="hero-thumbs" ref={thumbsRef}>
+          <div className="hero-thumbs">
             <span className="hero-thumbs-label">Featured Work</span>
             <div className="hero-thumbs-row">
               {THUMBS.map((t) => (
@@ -218,14 +323,14 @@ const Hero = () => {
 
       </div>
 
-      {/* Stats bar */}
+      {/* ── Stats bar ── */}
       <div className="hero-stats" ref={statsRef}>
         {STATS.map((s) => (
           <StatItem key={s.label} {...s} animate={statsVisible} />
         ))}
       </div>
 
-      {/* Scroll hint */}
+      {/* ── Scroll hint ── */}
       <div className="hero-scroll-hint">
         <div className="hero-scroll-line" />
         <span>Scroll</span>

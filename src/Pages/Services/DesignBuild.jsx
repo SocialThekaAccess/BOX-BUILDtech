@@ -4,7 +4,7 @@ import { Factory, Layers, Zap, CheckCircle, ArrowRight, Users, Shield, Clock, St
 import './DesignBuild.css';
 import designImg1 from '../../assets/Designimg1.jpg';
 import BOXimg4 from '../../assets/BOXimg4.jpg';
-import BOXimg3 from '../../assets/BOXimg3.png';
+import BOXimg3 from '../../assets/BOXimg3_compressed.jpg';
 import BOXimg5 from '../../assets/BOXimg5.jpg';
 import BOXimg6 from '../../assets/BOXimg6.jpg';
 
