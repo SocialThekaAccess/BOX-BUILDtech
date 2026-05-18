@@ -257,7 +257,14 @@
 }
 
 @media (max-width: 600px) {
-  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer-inner { padding: 48px 5% 32px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
   .footer-legal  { flex-wrap: wrap; }
+  .footer-tagline { max-width: 100%; }
+}
+
+@media (max-width: 400px) {
+  .footer-inner { padding: 40px 4% 28px; }
+  .footer-grid { gap: 28px; }
 }

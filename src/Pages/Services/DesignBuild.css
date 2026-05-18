@@ -53,11 +53,13 @@
 .db-hero-overlay {
   position: absolute;
   inset: 0;
+  /* Strong dark at bottom for text, clear at top for image */
   background: linear-gradient(
     to top,
-    rgba(10,10,10,1)    0%,
-    rgba(10,10,10,0.78) 40%,
-    rgba(10,10,10,0.38) 100%
+    rgba(5,5,5,0.96)  0%,
+    rgba(5,5,5,0.7)   35%,
+    rgba(5,5,5,0.25)  65%,
+    rgba(5,5,5,0.05)  100%
   );
 }
 
@@ -70,22 +72,31 @@
   width: 100%;
 }
 
-.db-hero-content { max-width: 700px; }
-
-.db-eyebrow {
-  display: inline-block;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  color: #E9A102;
-  margin-bottom: 20px;
+.db-hero-content {
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+/* ── Eyebrow centered with lines ── */
+.db-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.db-hero-eyebrow-line {
+  flex: 0 0 36px;
+  height: 1px;
+  background: rgba(233,161,2,0.6);
+}
+
+/* ── Headline ── */
 .db-hero-headline {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(2.4rem, 5.5vw, 5rem);
+  font-size: clamp(2.8rem, 6.5vw, 6rem);
   font-weight: 900;
   color: #ffffff;
   line-height: 0.95;
@@ -95,33 +106,57 @@
 }
 
 .db-hl {
-   display: block;
+  display: block;
   font-family: var(--font-heading);
   font-weight: 900;
-  font-size: clamp(2.4rem, 5.5vw, 5rem);
+  font-size: clamp(2.8rem, 6.5vw, 6rem);
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #ffffff;
   line-height: 0.95;
-  will-change: transform, opacity;
-  transition: none;
+  /* text-shadow for white lines — readable over bright image */
+  text-shadow: 0 2px 24px rgba(0,0,0,0.6);
 }
 
 .db-hl-gold {
   color: #E9A102;
-  text-shadow: 0 0 80px rgba(233,161,2,0.3);
-  font-family: var(--font-heading);
+  text-shadow: 0 0 60px rgba(233,161,2,0.5), 0 2px 24px rgba(0,0,0,0.5);
+}
 
+/* ── Gold divider ── */
+.db-hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 28px;
+  width: 55%;
+}
+
+.db-hero-div-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(233,161,2,0.7), transparent);
+}
+
+.db-hero-div-line:last-child {
+  background: linear-gradient(90deg, transparent, rgba(233,161,2,0.7));
+}
+
+.db-hero-div-diamond {
+  color: #E9A102;
+  font-size: 8px;
+  opacity: 0.9;
 }
 
 .db-hero-sub {
   font-family: 'Source Sans 3', sans-serif;
   font-size: 16px;
-  font-weight: 300;
-  color: #ffffff;
-  max-width: 500px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.92);
+  max-width: 520px;
   line-height: 1.8;
   margin-bottom: 36px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
 }
 
 .db-hero-btn {
@@ -482,13 +517,24 @@
   .db-stats-bar { grid-template-columns: repeat(2, 1fr); }
   .db-stat:nth-child(2)::after { display: none; }
   .db-banner-inner { flex-direction: column; align-items: flex-start; }
-  .db-banner-btn { width: 100%; justify-content: center; }
+  .db-banner-btn { width: 100%; justify-content: center; clip-path: none; border-radius: 4px; }
 }
 
 @media (max-width: 600px) {
-  .db-hero-inner { padding: 120px 5% 60px; }
-  .db-section { padding: 70px 0; }
-  .db-img { height: 260px; }
+  .db-hero-inner { padding: 110px 4% 56px; }
+  .db-section { padding: 56px 0; }
+  .db-img { height: 240px; }
+  .db-img-corner { display: none; }
+  .db-hero-headline { font-size: clamp(2rem, 9vw, 3.5rem); }
+  .db-banner { padding: 56px 4%; }
+  .db-hero-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 400px) {
+  .db-hero-inner { padding: 90px 4% 48px; }
+  .db-hero-headline { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .db-img { height: 200px; }
+  .db-stat-value { font-size: 1.5rem; }
 }
 
 /* ══════════════════════════════════════
@@ -625,7 +671,14 @@
 }
 
 @media (max-width: 600px) {
-  .db-process-grid { grid-template-columns: 1fr; }
+  .db-process-grid { grid-template-columns: 1fr; gap: 16px; }
   .db-process-section,
-  .db-faq-section  { padding: 70px 0; }
+  .db-faq-section  { padding: 56px 0; }
+  .db-process-card { padding: 24px 20px; }
+  .db-faq-card     { padding: 22px 18px; }
+}
+
+@media (max-width: 400px) {
+  .db-process-section,
+  .db-faq-section  { padding: 48px 0; }
 }

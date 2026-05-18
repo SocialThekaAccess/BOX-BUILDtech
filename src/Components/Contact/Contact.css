@@ -328,10 +328,24 @@
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .cta-banner      { padding: 60px 5%; }
+  .cta-banner      { padding: 56px 5%; }
   .contact-section { padding: 70px 5%; }
-  .contact-grid    { grid-template-columns: 1fr; gap: 48px; }
+  .contact-grid    { grid-template-columns: 1fr; gap: 40px; }
   .form-row        { grid-template-columns: 1fr; }
   .cta-inner       { flex-direction: column; }
   .cta-btn         { width: 100%; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .cta-banner      { padding: 48px 4%; }
+  .contact-section { padding: 56px 4%; }
+  .contact-header  { margin-bottom: 40px; }
+  .cta-btn         { padding: 16px 32px; clip-path: none; border-radius: 4px; }
+  .btn-gold-submit { clip-path: none; border-radius: 4px; }
+  .form-success    { padding: 48px 24px; }
+}
+
+@media (max-width: 400px) {
+  .cta-banner      { padding: 40px 4%; }
+  .contact-section { padding: 48px 4%; }
 }

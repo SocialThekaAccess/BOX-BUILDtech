@@ -5,7 +5,7 @@ import "./Contact.css";
 const CONTACT_DETAILS = [
   { icon: "👤", lbl: "Contact",  val: "Pooja Yadav — Founder & Director" },
   { icon: "📍", lbl: "Address",  val: "New Chandigarh, India"             },
-  { icon: "✉️", lbl: "Email",    val: "hello@boxbuildtech.com"            },
+  { icon: "✉️", lbl: "Email",    val: "start@boxbuildtech.com"            },
   { icon: "🌐", lbl: "Website",  val: "www.boxbuildtech.com"              },
 ];
 
@@ -113,7 +113,7 @@ export default function Contact() {
                   <div className="form-row">
                     <div className="form-field">
                       <label className="form-label">Email Address *</label>
-                      <input className="form-input" type="email" placeholder="you@example.com"
+                      <input className="form-input" type="email" placeholder="your@email.com"
                         value={form.email} onChange={set("email")} />
                     </div>
                     <div className="form-field">

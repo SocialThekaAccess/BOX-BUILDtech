@@ -282,3 +282,38 @@ ul, ol { list-style: none; }
   filter: drop-shadow(0 8px 24px rgba(233,161,2,0.55));
   transform: translateY(-4px) scale(1.08) !important;
 }
+
+/* ============================================================
+   MOBILE RESPONSIVE — Global Fixes
+   ============================================================ */
+@media (max-width: 600px) {
+  html { font-size: 15px; }
+
+  .section-header { margin-bottom: 40px; }
+
+  .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 13px 28px;
+    font-size: 11px;
+  }
+
+  /* Back to top button — smaller on mobile */
+  .back-to-top-btn {
+    bottom: 20px !important;
+    right: 16px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  html { font-size: 14px; }
+
+  .section-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+}

@@ -1,5 +1,6 @@
 import './About.css';
 import { useEffect, useRef } from 'react';
+import boxImg1 from '../../assets/Aboutimg.jpg';
 
 const STATS = [
   { value: '10+',  label: 'Years of Experience' },
@@ -65,7 +66,7 @@ export default function AboutPage() {
           HERO — Full bleed statement
       ══════════════════════════════════════ */}
       <section className="ap-hero">
-        <div className="ap-hero-bg" />
+        <div className="ap-hero-bg" style={{ backgroundImage: `url(${boxImg1})` }} />
         <div className="ap-hero-overlay" />
         <div className="ap-hero-inner">
           <FadeSection className="ap-hero-content">
@@ -101,8 +102,8 @@ export default function AboutPage() {
             <FadeSection className="ap-intro-left">
               <span className="ap-tag">Our Story</span>
               <h2 className="ap-heading">
-                Built with creativity,<br />
-                driven by <span>functionality.</span>
+                Built with creativity<br />
+                driven by <span>functionality</span>
               </h2>
               <div className="ap-gold-bar" />
             </FadeSection>
@@ -154,7 +155,7 @@ export default function AboutPage() {
               <span className="ap-tag">Built on Trust</span>
               <h2 className="ap-heading">
                 A vision rooted in<br />
-                <span>people &amp; purpose.</span>
+                <span>people &amp; purpose</span>
               </h2>
               <div className="ap-gold-bar" />
               <p className="ap-body">

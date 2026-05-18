@@ -2,6 +2,11 @@ import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HardHat, Home, Star, Layers, CheckCircle, ArrowRight } from 'lucide-react';
 import './LuxuryResidential.css';
+import residentialImg1 from '../../assets/Residentialimg1.jpg';
+import BOXimg7 from '../../assets/BOXimg7.jpg';
+import BOXimg8 from '../../assets/BOXimg8.jpg';
+import BOXimg9 from '../../assets/BOXimg9.jpg';
+import BOXimg10 from '../../assets/BOXimg10.jpg';
 
 const useFadeUp = () => {
   const ref = useRef(null);
@@ -58,7 +63,7 @@ export default function LuxuryResidential() {
 
       {/* ══ HERO ══ */}
       <section className="lr-hero">
-        <div className="lr-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80')" }} />
+        <div className="lr-hero-bg" style={{ backgroundImage: `url(${residentialImg1})` }} />
         <div className="lr-hero-overlay" />
         <div className="lr-hero-inner">
           <Fade className="lr-hero-content">
@@ -92,7 +97,7 @@ export default function LuxuryResidential() {
         <div className="lr-container">
           <div className="lr-grid">
             <Fade className="lr-img-wrap">
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Luxury Villa" className="lr-img" />
+              <img src={BOXimg7} alt="Luxury Villa" className="lr-img" />
               <div className="lr-img-badge"><HardHat size={16} strokeWidth={1.5} /><span>Expert Villa Builders</span></div>
               <div className="lr-img-corner" />
             </Fade>
@@ -129,7 +134,7 @@ export default function LuxuryResidential() {
         <div className="lr-container">
           <div className="lr-grid lr-reverse">
             <Fade className="lr-img-wrap">
-              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" alt="Villa Detail" className="lr-img" />
+              <img src={BOXimg8} alt="Villa Detail" className="lr-img" />
               <div className="lr-img-badge"><Star size={16} strokeWidth={1.5} /><span>Attention to Detail</span></div>
               <div className="lr-img-corner" />
             </Fade>
@@ -164,7 +169,7 @@ export default function LuxuryResidential() {
         <div className="lr-container">
           <div className="lr-grid">
             <Fade className="lr-img-wrap">
-              <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Modern Villa" className="lr-img" />
+              <img src={BOXimg9} alt="Modern Villa" className="lr-img" />
               <div className="lr-img-badge"><Home size={16} strokeWidth={1.5} /><span>Modern & Custom</span></div>
               <div className="lr-img-corner" />
             </Fade>
@@ -201,7 +206,7 @@ export default function LuxuryResidential() {
         <div className="lr-container">
           <div className="lr-grid lr-reverse">
             <Fade className="lr-img-wrap">
-              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Why Choose BOX" className="lr-img" />
+              <img src={BOXimg10} alt="Why Choose BOX" className="lr-img" />
               <div className="lr-img-badge"><Layers size={16} strokeWidth={1.5} /><span>Why Choose Us</span></div>
               <div className="lr-img-corner" />
             </Fade>

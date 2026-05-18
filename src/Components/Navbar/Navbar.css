@@ -366,3 +366,11 @@
   .desktop-nav { display: none; }
   .hamburger   { display: flex; }
 }
+
+@media (max-width: 400px) {
+  .nav-root { padding: 0 4%; height: 64px; }
+  .nav-logo-img { height: 38px; }
+  .mobile-menu { top: 64px; padding: 16px 4% 24px; }
+  .mobile-nav-item { padding: 12px 0; font-size: 13px; }
+  .mobile-cta { padding: 12px; }
+}

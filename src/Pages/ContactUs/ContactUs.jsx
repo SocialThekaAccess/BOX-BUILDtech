@@ -10,6 +10,7 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import './ContactUs.css';
+import contactUsImg from '../../assets/ConactUsimg.jpg';
 
 const SERVICES_OPTIONS = [
   { Icon: Factory,  label: 'Design & Build'       },
@@ -26,7 +27,7 @@ const CONTACT_DETAILS = [
   {
     Icon: Mail,
     label: 'Email Us',
-    value: 'hello@boxbuildtech.com',
+    value: 'start@boxbuildtech.com',
     sub: 'We reply within 24 hours',
   },
   {
@@ -65,7 +66,7 @@ export default function ContactUsPage() {
           HERO
       ══════════════════════════════════════ */}
       <section className="cu-hero">
-        <div className="cu-hero-bg" />
+        <div className="cu-hero-bg" style={{ backgroundImage: `url(${contactUsImg})` }} />
         <div className="cu-hero-overlay" />
         <div className="cu-hero-inner">
           <span className="cu-eyebrow">Get In Touch</span>
@@ -174,7 +175,7 @@ export default function ContactUsPage() {
                         className="cu-input"
                         type="email"
                         name="email"
-                        placeholder="rahul@example.com"
+                        placeholder="your@email.com"
                         value={form.email}
                         onChange={handleChange}
                         required

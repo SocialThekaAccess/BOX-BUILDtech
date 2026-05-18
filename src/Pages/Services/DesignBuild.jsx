@@ -2,6 +2,11 @@ import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Factory, Layers, Zap, CheckCircle, ArrowRight, Users, Shield, Clock, Star } from 'lucide-react';
 import './DesignBuild.css';
+import designImg1 from '../../assets/Designimg1.jpg';
+import BOXimg4 from '../../assets/BOXimg4.jpg';
+import BOXimg3 from '../../assets/BOXimg3.png';
+import BOXimg5 from '../../assets/BOXimg5.jpg';
+import BOXimg6 from '../../assets/BOXimg6.jpg';
 
 /* ── Fade-up on scroll ── */
 const useFadeUp = () => {
@@ -57,24 +62,45 @@ export default function DesignBuild() {
 
       {/* ══ HERO ══ */}
       <section className="db-hero">
-        <div className="db-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80')" }} />
+        <div className="db-hero-bg" style={{ backgroundImage: `url(${designImg1})` }} />
         <div className="db-hero-overlay" />
+
         <div className="db-hero-inner">
           <Fade className="db-hero-content">
-            <span className="db-eyebrow">Design &amp; Build</span>
+
+            {/* Eyebrow */}
+            <div className="db-hero-eyebrow">
+              <span className="db-hero-eyebrow-line" />
+              <span className="db-eyebrow">Design &amp; Build</span>
+              <span className="db-hero-eyebrow-line" />
+            </div>
+
+            {/* Headline */}
             <h2 className="db-hero-headline">
-              <span className="db-hl"> Design &amp; Build</span>
-              <span className="db-hl db-hl-gold">Services for Luxury Villas</span>
+              <span className="db-hl">Design &amp; Build</span>
+              <span className="db-hl db-hl-gold">Services for</span>
+              <span className="db-hl db-hl-gold">Luxury Villas</span>
             </h2>
+
+            {/* Gold divider */}
+            <div className="db-hero-divider">
+              <span className="db-hero-div-line" />
+              <span className="db-hero-div-diamond">◆</span>
+              <span className="db-hero-div-line" />
+            </div>
+
+            {/* Sub + CTA */}
             <p className="db-hero-sub">
-              At BOX Buildtech, we help architects bring  villa projects to life
+              At BOX Buildtech, we help architects bring villa projects to life
               with strong construction support and professional execution — from foundation to final finish.
             </p>
             <button className="db-hero-btn" onClick={goContact}>
               Start Your Project <ArrowRight size={16} />
             </button>
+
           </Fade>
         </div>
+
         <div className="db-stats-bar">
           {STATS.map((s) => (
             <div key={s.label} className="db-stat">
@@ -91,7 +117,7 @@ export default function DesignBuild() {
         <div className="db-container">
           <div className="db-grid">
             <Fade className="db-img-wrap">
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Villa Construction" className="db-img" />
+              <img src={BOXimg3} alt="Villa Construction" className="db-img" />
               <div className="db-img-badge"><Factory size={16} strokeWidth={1.5} /><span>Foundation to Finish</span></div>
               <div className="db-img-corner" />
             </Fade>
@@ -128,7 +154,7 @@ export default function DesignBuild() {
         <div className="db-container">
           <div className="db-grid db-reverse">
             <Fade className="db-img-wrap">
-              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Construction Partner" className="db-img" />
+              <img src={BOXimg4} alt="Construction Partner" className="db-img" />
               <div className="db-img-badge"><Users size={16} strokeWidth={1.5} /><span>Reliable Partner</span></div>
               <div className="db-img-corner" />
             </Fade>
@@ -165,7 +191,7 @@ export default function DesignBuild() {
         <div className="db-container">
           <div className="db-grid">
             <Fade className="db-img-wrap">
-              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Design Build Solutions" className="db-img" />
+              <img src={BOXimg5} alt="Design Build Solutions" className="db-img" />
               <div className="db-img-badge"><Layers size={16} strokeWidth={1.5} /><span>Complete Solutions</span></div>
               <div className="db-img-corner" />
             </Fade>
@@ -196,7 +222,7 @@ export default function DesignBuild() {
         <div className="db-container">
           <div className="db-grid db-reverse">
             <Fade className="db-img-wrap">
-              <img src="https://luxedesign-s3-beta.s3.ap-southeast-1.amazonaws.com/file/1750830136363-VIlla%20Construction%20Service.png" alt="Luxury Villa" className="db-img" />
+              <img src={BOXimg6} alt="Luxury Villa" className="db-img" />
               <div className="db-img-badge"><Star size={16} strokeWidth={1.5} /><span>Luxury Standard</span></div>
               <div className="db-img-corner" />
             </Fade>

@@ -472,11 +472,22 @@
   .sp-stats-bar { grid-template-columns: repeat(2, 1fr); }
   .sp-stat:nth-child(2)::after { display: none; }
   .sp-banner-inner { flex-direction: column; align-items: flex-start; }
-  .sp-banner-btn { width: 100%; justify-content: center; }
+  .sp-banner-btn { width: 100%; justify-content: center; clip-path: none; border-radius: 4px; }
 }
 
 @media (max-width: 600px) {
-  .sp-hero-inner { padding: 120px 5% 60px; }
-  .sp-section { padding: 70px 0; }
-  .sp-img { height: 260px; }
+  .sp-hero-inner { padding: 110px 4% 56px; }
+  .sp-section { padding: 56px 0; }
+  .sp-img { height: 240px; }
+  .sp-img-corner { display: none; }
+  .sp-hero-headline { font-size: clamp(2rem, 9vw, 3.5rem); }
+  .sp-banner { padding: 56px 4%; }
+  .sp-hero-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 400px) {
+  .sp-hero-inner { padding: 90px 4% 48px; }
+  .sp-hero-headline { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .sp-img { height: 200px; }
+  .sp-stat-value { font-size: 1.5rem; }
 }

@@ -189,8 +189,16 @@
 
 @media (max-width: 900px) {
   .testimonials { padding: 70px 5%; }
+  .testimonials-header { margin-bottom: 48px; }
 }
 
 @media (max-width: 600px) {
-  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonials { padding: 56px 4%; }
+  .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
+  .testimonial-card { padding: 28px 24px; }
+}
+
+@media (max-width: 400px) {
+  .testimonials { padding: 48px 4%; }
+  .testimonial-card { padding: 24px 18px; }
 }

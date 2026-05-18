@@ -1,4 +1,5 @@
 import "./About.css";
+import boxImg4 from "../../assets/BOXimg4.jpg";
 
 const FEATURES = [
   { icon: "🏆", title: "Award Winning",    desc: "25+ industry awards" },
@@ -19,7 +20,7 @@ export default function About() {
         {/* Image */}
         <div className="about-image-wrap">
           <img
-           src="https://image.slidesdocs.com/responsive-images/background/3d-render-of-construction-site-featuring-residential-building-crane-and-excavator-powerpoint-background_ecf30e9cd2__960_540.jpg"
+           src={boxImg4}
             alt="Our team at work"
           />
         </div>

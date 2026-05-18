@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Building2, Users, Award, HardHat } from 'lucide-react';
 import './Hero.css';
+import boxImg1 from '../../assets/BOXimg1.jpg';
 
 const STATS = [
   { icon: Building2, value: 320, suffix: '+', label: 'Projects Built'   },
@@ -50,14 +51,12 @@ function StatItem({ icon: Icon, value, suffix, label, animate }) {
 }
 
 const Hero = () => {
-  const line1Ref   = useRef(null);
-  const line2Ref   = useRef(null);
-  const line3Ref   = useRef(null);
-  const eyebrowRef = useRef(null);
-  const subRef     = useRef(null);
-  const actionsRef = useRef(null);
-  const thumbsRef  = useRef(null);
-  const statsRef   = useRef(null);
+  const headlineRef = useRef(null);
+  const eyebrowRef  = useRef(null);
+  const subRef      = useRef(null);
+  const actionsRef  = useRef(null);
+  const thumbsRef   = useRef(null);
+  const statsRef    = useRef(null);
 
   const [statsVisible, setStatsVisible] = useState(false);
   const [wordIndex,    setWordIndex]    = useState(0);
@@ -70,25 +69,16 @@ const Hero = () => {
       const scrollY    = window.scrollY;
       const heroHeight = window.innerHeight;
       if (scrollY > heroHeight) return;
-
       const progress = scrollY / heroHeight;
       const opacity  = Math.max(0, 1 - progress * 2.2);
 
-      if (line1Ref.current) {
-        line1Ref.current.style.transform = `translateX(${progress * 160}px)`;
-        line1Ref.current.style.opacity   = opacity;
-      }
-      if (line2Ref.current) {
-        line2Ref.current.style.transform = `translateX(${progress * 260}px)`;
-        line2Ref.current.style.opacity   = opacity;
-      }
-      if (line3Ref.current) {
-        line3Ref.current.style.transform = `translateX(${progress * 360}px)`;
-        line3Ref.current.style.opacity   = opacity;
+      if (headlineRef.current) {
+        headlineRef.current.style.transform = `translateY(${progress * -40}px)`;
+        headlineRef.current.style.opacity   = opacity;
       }
       if (eyebrowRef.current) {
-        eyebrowRef.current.style.transform = `translateX(${progress * 60}px)`;
         eyebrowRef.current.style.opacity   = opacity;
+        eyebrowRef.current.style.transform = `translateY(${progress * 20}px)`;
       }
       if (subRef.current) {
         subRef.current.style.opacity   = Math.max(0, 1 - progress * 3);
@@ -142,11 +132,13 @@ const Hero = () => {
   return (
     <section id="home" className="hero">
 
-      <div className="hero-bg" />
+      {/* Background */}
+      <div className="hero-bg" style={{ backgroundImage: `url(${boxImg1})` }} />
       <div className="hero-overlay-dark" />
       <div className="hero-overlay-vignette" />
       <div className="hero-noise" />
 
+      {/* Side labels */}
       <div className="hero-side-left">
         <span>BOX BUILDTECH</span>
         <div className="hero-side-line" />
@@ -156,65 +148,84 @@ const Hero = () => {
         <span>EST. 2005</span>
       </div>
 
+      {/* ── MAIN CONTENT ── */}
       <div className="hero-center">
 
+        {/* Eyebrow — left */}
         <div className="hero-eyebrow" ref={eyebrowRef}>
           <span className="hero-eyebrow-line" />
           <span className="hero-eyebrow-text">Building The Future</span>
         </div>
 
-        <h1 className="hero-headline">
-          <span className="hero-headline-line"      ref={line1Ref}>We Build</span>
-          <span className="hero-headline-line"      ref={line2Ref}>Your Vision</span>
-          <span className="hero-headline-line gold" ref={line3Ref}>Into Reality</span>
-        </h1>
-
-        {/* Typewriter */}
-        <p className="hero-typewriter">
-          We deliver&nbsp;
-          <span className="hero-typewriter-word">
-            {displayed}<span className="hero-cursor">|</span>
-          </span>
-        </p>
-
-        <p className="hero-sub" ref={subRef}>
-          A leading construction &amp; development company committed to delivering
-          exceptional projects — on time, every time.
-        </p>
-
-        <div className="hero-actions" ref={actionsRef}>
-          <button className="hero-btn-primary" onClick={() => scrollTo('contact')}>
-            Get A Quote <span className="btn-arrow">↗</span>
-          </button>
-          <button className="hero-btn-secondary" onClick={() => scrollTo('projects')}>
-            Our Projects <span className="btn-arrow">↗</span>
-          </button>
+        {/* BIG CENTERED HEADLINE */}
+        <div className="hero-headline-wrap" ref={headlineRef}>
+          <h1 className="hero-headline">
+            <span className="hero-headline-line">We Build</span>
+            <span className="hero-headline-line">Your Vision</span>
+            <span className="hero-headline-line gold">Into Reality</span>
+          </h1>
+          {/* Gold divider under headline */}
+          <div className="hero-headline-divider">
+            <span className="hero-hdiv-line" />
+            <span className="hero-hdiv-diamond">◆</span>
+            <span className="hero-hdiv-line" />
+          </div>
         </div>
 
-        <div className="hero-thumbs" ref={thumbsRef}>
-          <span className="hero-thumbs-label">Featured Work</span>
-          <div className="hero-thumbs-row">
-            {THUMBS.map((t) => (
-              <button key={t.label} className="hero-thumb" onClick={() => scrollTo('projects')}>
-                <img src={t.img} alt={t.label} />
-                <span className="hero-thumb-label">{t.label}</span>
+        {/* Bottom row — left: typewriter + sub + buttons + thumbs */}
+        <div className="hero-bottom-row">
+          <div className="hero-bottom-left">
+            {/* Typewriter */}
+            <p className="hero-typewriter">
+              We deliver&nbsp;
+              <span className="hero-typewriter-word">
+                {displayed}<span className="hero-cursor">|</span>
+              </span>
+            </p>
+
+            <p className="hero-sub" ref={subRef}>
+              A leading construction &amp; development company committed to delivering
+              exceptional projects — on time, every time.
+            </p>
+
+            <div className="hero-actions" ref={actionsRef}>
+              <button className="hero-btn-primary" onClick={() => scrollTo('contact')}>
+                Get A Quote <span className="btn-arrow">↗</span>
               </button>
-            ))}
-            <button className="hero-thumb hero-thumb-more" onClick={() => scrollTo('projects')}>
-              <span className="hero-thumb-more-icon">→</span>
-              <span className="hero-thumb-label">View All</span>
-            </button>
+              <button className="hero-btn-secondary" onClick={() => scrollTo('projects')}>
+                Our Projects <span className="btn-arrow">↗</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Right: featured work thumbnails */}
+          <div className="hero-thumbs" ref={thumbsRef}>
+            <span className="hero-thumbs-label">Featured Work</span>
+            <div className="hero-thumbs-row">
+              {THUMBS.map((t) => (
+                <button key={t.label} className="hero-thumb" onClick={() => scrollTo('projects')}>
+                  <img src={t.img} alt={t.label} />
+                  <span className="hero-thumb-label">{t.label}</span>
+                </button>
+              ))}
+              <button className="hero-thumb hero-thumb-more" onClick={() => scrollTo('projects')}>
+                <span className="hero-thumb-more-icon">→</span>
+                <span className="hero-thumb-label">View All</span>
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
 
+      {/* Stats bar */}
       <div className="hero-stats" ref={statsRef}>
         {STATS.map((s) => (
           <StatItem key={s.label} {...s} animate={statsVisible} />
         ))}
       </div>
 
+      {/* Scroll hint */}
       <div className="hero-scroll-hint">
         <div className="hero-scroll-line" />
         <span>Scroll</span>

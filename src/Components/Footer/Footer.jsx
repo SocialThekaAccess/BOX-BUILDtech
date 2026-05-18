@@ -23,7 +23,7 @@ const SERVICES = [
 const CONTACT_INFO = [
   { Icon: User,   text: 'Pooja Yadav — Founder & Director' },
   { Icon: MapPin, text: 'New Chandigarh, India'            },
-  { Icon: Mail,   text: 'hello@boxbuildtech.com'           },
+  { Icon: Mail,   text: 'start@boxbuildtech.com'           },
   { Icon: Globe,  text: 'www.boxbuildtech.com'             },
 ];
 
