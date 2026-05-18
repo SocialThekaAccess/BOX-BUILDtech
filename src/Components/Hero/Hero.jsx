@@ -5,6 +5,8 @@ import { Building2, Users, Award, HardHat } from 'lucide-react';
 import './Hero.css';
 import boxImg1 from '../../assets/BOXimg1.jpg';
 
+const HERO_BG = 'https://t4.ftcdn.net/jpg/07/12/79/47/360_F_712794701_crhqxZnGqJaKudi7d9QKeFXevEW5C3mM.jpg';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
@@ -237,7 +239,7 @@ const Hero = () => {
         <div
           className="hero-bg"
           ref={bgRef}
-          style={{ backgroundImage: `url(${boxImg1})` }}
+          style={{ backgroundImage: `url(${HERO_BG})` }}
         />
         {/* Base dark overlay — always present */}
         <div className="hero-overlay-base" />
