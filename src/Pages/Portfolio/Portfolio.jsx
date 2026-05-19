@@ -224,9 +224,9 @@ export default function Portfolio() {
                       <span key={tag} className="pf-transform-tag">{tag}</span>
                     ))}
                   </div>
-                  <button className="pf-transform-btn" onClick={goContact}>
+                  {/* <button className="pf-transform-btn" onClick={goContact}>
                     Discuss This Project <ArrowRight size={14} />
-                  </button>
+                  </button> */}
                 </div>
 
               </Fade>
