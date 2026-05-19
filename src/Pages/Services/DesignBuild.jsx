@@ -45,12 +45,14 @@ const PROCESS_STEPS = [
 ];
 
 const FAQS = [
-  { q: 'Does BOX Buildtech work with architects for villa projects?',  a: 'Yes, we mainly work with architects who need reliable construction execution support for residential villa projects.' },
-  { q: 'What type of residential projects do you handle?',               a: 'We specialise in luxury villas, designer homes, and premium residential projects of all scales.' },
-  { q: 'Do you provide complete Design & Build services?',               a: 'Yes, we manage planning, construction, coordination, and project execution for residential villa projects.' },
-  { q: 'Can you build custom-designed villas?',                          a: 'Yes, we build villas according to architectural designs, client preferences, and functional living requirements.' },
-  { q: 'How do you maintain construction quality?',                      a: 'We use experienced site teams, quality materials, proper supervision, and regular inspections throughout the construction process.' },
-  { q: 'Why should architects choose BOX Buildtech?',                  a: 'Architects choose us for professional execution, organised site management, quality workmanship, and smooth coordination from start to finish.' },
+  { q: 'What are Design & Build services in villa construction?',              a: 'Design & Build services mean the design coordination and construction process are managed together in a more organized way. This helps improve communication, planning, and project execution.' },
+  { q: 'Why do architects prefer working with BOX Build Tech?',                a: 'Architects prefer working with us because we focus on proper execution, smooth coordination, professional site management, and maintaining the quality of the original design.' },
+  { q: 'Does BOX Build Tech provide support from planning to final handover?', a: 'Yes, our team supports the project from initial planning and site preparation to construction execution, finishing work, and final project handover.' },
+  { q: 'Can you build villas according to client lifestyle requirements?',      a: 'Yes, every family has different expectations, so we help build villas based on lifestyle needs, space usage, design preferences, and future plans.' },
+  { q: 'How do you manage coordination during construction projects?',         a: 'We maintain regular communication between architects, site teams, workers, vendors, and homeowners to keep the project running smoothly and avoid unnecessary delays.' },
+  { q: 'Do you focus on practical living spaces along with luxury design?',    a: 'Yes, we believe villas should not only look premium but should also feel comfortable, functional, and easy to maintain for everyday living.' },
+  { q: 'What type of finishing work do you handle in villa projects?',         a: 'We handle flooring work, wall finishes, ceiling detailing, staircase finishing, surface alignment, and other premium finishing elements required in luxury homes.' },
+  { q: 'How does proper planning help during villa construction?',             a: 'Good planning helps reduce delays, improve workflow, manage resources properly, and ensure the overall construction process stays organized from start to finish.' },
 ];
 
 export default function DesignBuild() {

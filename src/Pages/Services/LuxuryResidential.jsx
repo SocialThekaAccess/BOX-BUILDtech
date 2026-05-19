@@ -44,14 +44,14 @@ const PROCESS_STEPS = [
 ];
 
 const FAQS = [
-  { q: 'Does BOX Buildtech work with architects for villa projects?',  a: 'Yes, we mainly work with architects who need reliable construction execution support for luxury villa projects.' },
-  { q: 'What type of residential projects do you handle?',             a: 'We focus mainly on modern villas, luxury homes, and premium residential construction projects.' },
-  { q: 'Do you provide complete villa construction support?',          a: 'Yes, we manage site execution, supervision, coordination, quality checks, and overall construction support.' },
-  { q: 'Can you build custom-designed villas?',                        a: 'Yes, we build villas according to architectural designs, client preferences, and lifestyle needs.' },
-  { q: 'How do you maintain construction quality?',                    a: 'We use skilled teams, quality materials, proper supervision, and regular inspections throughout the construction process.' },
-  { q: 'Why is coordination important in villa construction?',         a: 'Good coordination helps reduce delays, improve workflow, and maintain overall project quality.' },
-  { q: 'Do you focus on modern luxury villas?',                        a: 'Yes, we specialise in modern and luxury villa projects with detailed finishing and strong construction quality.' },
-  { q: 'Why should architects choose BOX Buildtech?',                  a: 'Architects choose us because we provide dependable execution support, professional site management, smooth coordination, and quality workmanship throughout the project.' },
+  { q: 'What makes villa construction different from regular home construction?', a: 'Villa construction usually involves larger layouts, premium finishes, custom detailing, and better structural planning. It requires more attention to design execution, space planning, and finishing quality compared to standard residential projects.' },
+  { q: 'Does BOX Build Tech only work on luxury villa projects?',                 a: 'We mainly focus on luxury villas, modern homes, and premium residential projects where quality execution and detailed construction work are important.' },
+  { q: 'Can BOX Build Tech handle complete on-site construction management?',     a: 'Yes, our team manages day-to-day site activities, labour coordination, supervision, material handling, and overall project execution to keep the construction process organized.' },
+  { q: 'How do you ensure the villa matches the architect\'s design?',            a: 'We work closely with architects throughout the project and follow drawings carefully during execution. Regular coordination and inspections help maintain the original design vision.' },
+  { q: 'Do you help with modern villa construction styles?',                      a: 'Yes, we regularly work on modern villa projects that include open layouts, natural lighting, functional spaces, and contemporary finishing concepts.' },
+  { q: 'How important is finishing work in luxury villas?',                       a: 'Finishing plays a major role in the final appearance of a luxury villa. Proper flooring, wall finishes, ceiling work, staircase detailing, and overall craftsmanship can completely change how the home feels.' },
+  { q: 'Can BOX Build Tech manage large multi-floor villa projects?',             a: 'Yes, we have experience handling spacious and multi-level residential villa projects with proper planning, coordination, and execution support.' },
+  { q: 'What is the main goal of BOX Build Tech during villa construction?',      a: 'Our main goal is to help architects and homeowners complete villa projects smoothly while maintaining strong construction quality, proper execution, and long-term durability.' },
 ];
 
 export default function LuxuryResidential() {
