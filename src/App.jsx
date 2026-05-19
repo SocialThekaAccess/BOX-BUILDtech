@@ -12,6 +12,7 @@ import AboutPage               from './Pages/About/About';
 import ContactUsPage           from './Pages/ContactUs/ContactUs';
 import LuxuryResidential       from './Pages/Services/LuxuryResidential';
 import DesignBuild             from './Pages/Services/DesignBuild';
+import PortfolioPage           from './Pages/Portfolio/Portfolio';
 import './styles/globals.css';
 
 /* ── Back To Top Button ── */
@@ -125,6 +126,13 @@ const DesignBuildPage = () => (
   </>
 );
 
+const PortfolioFullPage = () => (
+  <>
+    <PortfolioPage />
+    <Footer />
+  </>
+);
+
 export default function App() {
   useEffect(() => {
     if (window.location.hash) {
@@ -141,6 +149,7 @@ export default function App() {
         <Route path="/contact"                       element={<ContactUsFullPage />}      />
         <Route path="/services/luxury-residential"   element={<LuxuryResidentialPage />} />
         <Route path="/services/design-build"         element={<DesignBuildPage />}       />
+        <Route path="/portfolio"                     element={<PortfolioFullPage />}     />
         <Route path="*"                              element={<HomePage />}               />
       </Routes>
       <BackToTop />

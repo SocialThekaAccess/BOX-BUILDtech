@@ -1,4 +1,4 @@
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import {
   Home, Info, Briefcase, FolderOpen, Phone,
   HardHat, Factory,
@@ -8,11 +8,11 @@ import boxLogo from '../../assets/BOX.png';
 import './Footer.css';
 
 const QUICK_LINKS = [
-  { label: 'Home',       Icon: Home,       type: 'scroll', id: 'home',     path: '/'  },
-  { label: 'About Us',   Icon: Info,       type: 'route',  path: '/about'             },
-  { label: 'Services',   Icon: Briefcase,  type: 'scroll', id: 'services', path: '/' },
-  { label: 'Projects',   Icon: FolderOpen, type: 'scroll', id: 'projects', path: '/' },
-  { label: 'Contact Us', Icon: Phone,      type: 'route',  path: '/contact'           },
+  { label: 'Home',       Icon: Home,       type: 'scroll', id: 'home',     path: '/'          },
+  { label: 'About Us',   Icon: Info,       type: 'route',  path: '/about'                       },
+  { label: 'Services',   Icon: Briefcase,  type: 'scroll', id: 'services', path: '/'            },
+  { label: 'Portfolio',  Icon: FolderOpen, type: 'route',  path: '/portfolio'                   },
+  { label: 'Contact Us', Icon: Phone,      type: 'route',  path: '/contact'                     },
 ];
 
 const SERVICES = [
@@ -132,10 +132,21 @@ export default function Footer() {
                 const Icon = l.Icon;
                 return (
                   <li key={l.label}>
-                    <button className="footer-link" onClick={() => handleQuickLink(l)}>
-                      <Icon size={14} strokeWidth={1.8} className="footer-link-icon" />
-                      {l.label}
-                    </button>
+                    {l.type === 'route' ? (
+                      <Link
+                        to={l.path}
+                        className="footer-link"
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                      >
+                        <Icon size={14} strokeWidth={1.8} className="footer-link-icon" />
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <button className="footer-link" onClick={() => handleQuickLink(l)}>
+                        <Icon size={14} strokeWidth={1.8} className="footer-link-icon" />
+                        {l.label}
+                      </button>
+                    )}
                   </li>
                 );
               })}
@@ -150,10 +161,14 @@ export default function Footer() {
                 const Icon = s.Icon;
                 return (
                   <li key={s.label}>
-                    <button className="footer-link" onClick={() => handleServiceLink(s.path)}>
+                    <Link
+                      to={s.path}
+                      className="footer-link"
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    >
                       <Icon size={14} strokeWidth={1.8} className="footer-link-icon" />
                       {s.label}
-                    </button>
+                    </Link>
                   </li>
                 );
               })}

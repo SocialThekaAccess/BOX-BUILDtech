@@ -1,20 +1,20 @@
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { HardHat, Factory, ChevronDown } from 'lucide-react';
 import boxLogo from '../../assets/BOX.png';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { label: 'Home',       section: 'home',     path: '/'        },
-  { label: 'About Us',   section: null,       path: '/about'   },
-  { label: 'Services',   section: 'services', path: '/',       hasDropdown: true },
-  { label: 'Portfolio',  section: 'portfolio', path: '/'       },
-  { label: 'Contact Us', section: null,       path: '/contact' },
+  { label: 'Home',       section: 'home',     path: '/'          },
+  { label: 'About Us',   section: null,       path: '/about'     },
+  { label: 'Services',   section: 'services', path: null,        hasDropdown: true },
+  { label: 'Portfolio',  section: null,       path: '/portfolio' },
+  { label: 'Contact Us', section: null,       path: '/contact'   },
 ];
 
 const SERVICE_ITEMS = [
-  { Icon: Factory, label: 'Design & Build',        path: '/services/design-build',       desc: 'Concept to completion'    },
-  { Icon: HardHat, label: 'High End Residential',  path: '/services/luxury-residential', desc: 'Premium homes & interiors' },
+  { Icon: Factory, label: 'Design & Build',       path: '/services/design-build',       desc: 'Concept to completion'    },
+  { Icon: HardHat, label: 'High End Residential', path: '/services/luxury-residential', desc: 'Premium homes & interiors' },
 ];
 
 const Navbar = () => {
@@ -23,20 +23,18 @@ const Navbar = () => {
   const [activeNav,      setActiveNav]      = useState('Home');
   const [servicesOpen,   setServicesOpen]   = useState(false);
   const [mobileServOpen, setMobileServOpen] = useState(false);
-  const dropdownRef  = useRef(null);
-  const closeTimer   = useRef(null);
-  const navigate     = useNavigate();
-  const location     = useLocation();
+  const dropdownRef = useRef(null);
+  const closeTimer  = useRef(null);
+  const navigate    = useNavigate();
+  const location    = useLocation();
 
   /* Mark active based on current route */
   useEffect(() => {
-    if (location.pathname === '/about') {
-      setActiveNav('About Us');
-    } else if (location.pathname === '/contact') {
-      setActiveNav('Contact Us');
-    } else if (location.pathname.startsWith('/services')) {
-      setActiveNav('Services');
-    }
+    if (location.pathname === '/about')           setActiveNav('About Us');
+    else if (location.pathname === '/contact')    setActiveNav('Contact Us');
+    else if (location.pathname === '/portfolio')  setActiveNav('Portfolio');
+    else if (location.pathname.startsWith('/services')) setActiveNav('Services');
+    else if (location.pathname === '/')           setActiveNav('Home');
   }, [location.pathname]);
 
   useEffect(() => {
@@ -48,9 +46,8 @@ const Navbar = () => {
   /* Close dropdown on outside click */
   useEffect(() => {
     const handleClick = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target))
         setServicesOpen(false);
-      }
     };
     document.addEventListener('mousedown', handleClick);
     return () => document.removeEventListener('mousedown', handleClick);
@@ -77,29 +74,18 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, [location]);
 
-  const handleNavClick = (link) => {
-    if (link.hasDropdown) {
-      setServicesOpen((o) => !o);
-      return;
-    }
+  /* Home section scroll */
+  const scrollToSection = (section) => {
     setMenuOpen(false);
     setServicesOpen(false);
-    setActiveNav(link.label);
-
-    if (link.path === '/about' || link.path === '/contact') {
-      navigate(link.path);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-
     if (location.pathname !== '/') {
       navigate('/', { replace: true });
       setTimeout(() => {
-        document.getElementById(link.section)?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
       }, 120);
     } else {
       window.history.replaceState(null, '', '/');
-      document.getElementById(link.section)?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -116,19 +102,8 @@ const Navbar = () => {
     setMenuOpen(false);
     setServicesOpen(false);
     setActiveNav('Home');
-    if (location.pathname !== '/') {
-      navigate('/');
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
-
-  const handleContactClick = () => {
-    setMenuOpen(false);
-    setServicesOpen(false);
-    setActiveNav('Contact Us');
-    navigate('/contact');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.pathname !== '/') navigate('/');
+    else window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -144,42 +119,34 @@ const Navbar = () => {
         <div className="desktop-nav">
           {NAV_LINKS.map((link) =>
             link.hasDropdown ? (
-              /* Services with dropdown */
+              /* Services dropdown */
               <div
                 key={link.label}
                 className="nav-dropdown-wrap"
                 ref={dropdownRef}
-                onMouseEnter={() => {
-                  clearTimeout(closeTimer.current);
-                  setServicesOpen(true);
-                }}
-                onMouseLeave={() => {
-                  closeTimer.current = setTimeout(() => setServicesOpen(false), 120);
-                }}
+                onMouseEnter={() => { clearTimeout(closeTimer.current); setServicesOpen(true); }}
+                onMouseLeave={() => { closeTimer.current = setTimeout(() => setServicesOpen(false), 120); }}
               >
                 <button
                   className={`nav-link nav-link-dropdown ${activeNav === 'Services' ? 'active' : ''}`}
-                  onClick={() => handleNavClick(link)}
+                  onClick={() => setServicesOpen((o) => !o)}
                   aria-expanded={servicesOpen}
                 >
                   {link.label}
-                  <ChevronDown
-                    size={13}
-                    strokeWidth={2.5}
-                    className={`nav-chevron ${servicesOpen ? 'open' : ''}`}
-                  />
+                  <ChevronDown size={13} strokeWidth={2.5} className={`nav-chevron ${servicesOpen ? 'open' : ''}`} />
                 </button>
 
-                {/* Dropdown panel */}
                 <div className={`nav-dropdown ${servicesOpen ? 'open' : ''}`}>
                   <div className="nav-dropdown-header">Our Services</div>
                   {SERVICE_ITEMS.map((item) => {
                     const Icon = item.Icon;
                     return (
-                      <button
+                      /* Link tag — supports Ctrl+Click / middle-click */
+                      <Link
                         key={item.label}
+                        to={item.path}
                         className="nav-dropdown-item"
-                        onClick={() => handleServiceItemClick(item)}
+                        onClick={() => { setServicesOpen(false); setMenuOpen(false); setActiveNav('Services'); }}
                       >
                         <div className="nav-dropdown-icon">
                           <Icon size={16} strokeWidth={1.5} />
@@ -188,24 +155,41 @@ const Navbar = () => {
                           <span className="nav-dropdown-label">{item.label}</span>
                           <span className="nav-dropdown-desc">{item.desc}</span>
                         </div>
-                      </button>
+                      </Link>
                     );
                   })}
                 </div>
               </div>
-            ) : (
+            ) : link.section ? (
+              /* Home scroll links — button only (no separate URL) */
               <button
                 key={link.label}
                 className={`nav-link ${activeNav === link.label ? 'active' : ''}`}
-                onClick={() => handleNavClick(link)}
+                onClick={() => { setActiveNav(link.label); scrollToSection(link.section); }}
               >
                 {link.label}
               </button>
+            ) : (
+              /* Page links — <Link> supports Ctrl+Click */
+              <Link
+                key={link.label}
+                to={link.path}
+                className={`nav-link ${activeNav === link.label ? 'active' : ''}`}
+                onClick={() => { setMenuOpen(false); setServicesOpen(false); setActiveNav(link.label); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              >
+                {link.label}
+              </Link>
             )
           )}
-          <button className="btn-gold" onClick={handleContactClick}>
+
+          {/* Get A Quote — Link */}
+          <Link
+            to="/contact"
+            className="btn-gold"
+            onClick={() => { setMenuOpen(false); setActiveNav('Contact Us'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+          >
             Get A Quote →
-          </button>
+          </Link>
         </div>
 
         {/* ── Hamburger ── */}
@@ -229,43 +213,53 @@ const Navbar = () => {
                 onClick={() => setMobileServOpen((o) => !o)}
               >
                 {link.label}
-                <ChevronDown
-                  size={14}
-                  strokeWidth={2.5}
-                  className={`nav-chevron ${mobileServOpen ? 'open' : ''}`}
-                />
+                <ChevronDown size={14} strokeWidth={2.5} className={`nav-chevron ${mobileServOpen ? 'open' : ''}`} />
               </button>
               {mobileServOpen && (
                 <div className="mobile-services-list">
                   {SERVICE_ITEMS.map((item) => {
                     const Icon = item.Icon;
                     return (
-                      <button
+                      <Link
                         key={item.label}
+                        to={item.path}
                         className="mobile-service-item"
-                        onClick={() => handleServiceItemClick(item)}
+                        onClick={() => { setMenuOpen(false); setMobileServOpen(false); setActiveNav('Services'); }}
                       >
                         <Icon size={14} strokeWidth={1.5} />
                         {item.label}
-                      </button>
+                      </Link>
                     );
                   })}
                 </div>
               )}
             </div>
-          ) : (
+          ) : link.section ? (
             <button
               key={link.label}
               className={`mobile-nav-item ${activeNav === link.label ? 'active' : ''}`}
-              onClick={() => handleNavClick(link)}
+              onClick={() => { setActiveNav(link.label); scrollToSection(link.section); }}
             >
               {link.label}
             </button>
+          ) : (
+            <Link
+              key={link.label}
+              to={link.path}
+              className={`mobile-nav-item ${activeNav === link.label ? 'active' : ''}`}
+              onClick={() => { setMenuOpen(false); setActiveNav(link.label); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+            >
+              {link.label}
+            </Link>
           )
         )}
-        <button className="btn-gold mobile-cta" onClick={handleContactClick}>
+        <Link
+          to="/contact"
+          className="btn-gold mobile-cta"
+          onClick={() => { setMenuOpen(false); setActiveNav('Contact Us'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+        >
           Get A Quote →
-        </button>
+        </Link>
       </div>
     </>
   );
