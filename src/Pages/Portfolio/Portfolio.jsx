@@ -207,14 +207,10 @@ export default function Portfolio() {
 
                 {/* Right — Info */}
                 <div className="pf-transform-info-col">
-                  <span className="pf-transform-num">0{p.id > 9 ? '' : '0'}{p.id}</span>
                   <h3 className="pf-transform-title">{p.title}</h3>
                   <div className="pf-transform-meta">
                     <span className="pf-transform-meta-item">
                       <MapPin size={13} /> {p.location}
-                    </span>
-                    <span className="pf-transform-meta-item">
-                      <Calendar size={13} /> {p.year}
                     </span>
                   </div>
                   <div className="pf-transform-divider" />
