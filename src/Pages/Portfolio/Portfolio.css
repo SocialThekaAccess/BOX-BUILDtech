@@ -195,7 +195,9 @@ font-family: var(--font-heading); }
   line-height: 1.05;
   margin-bottom: 12px;
 }
-.pf-section-title span { color: #E9A102; }
+.pf-section-title span { color: #E9A102;
+   font-family: var(--font-heading); }
+   
 .pf-section-sub {
   font-family: var(--font-body);
   font-size: 15px;
