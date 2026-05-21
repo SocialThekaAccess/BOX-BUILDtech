@@ -119,7 +119,6 @@ const Navbar = () => {
         <div className="desktop-nav">
           {NAV_LINKS.map((link) =>
             link.hasDropdown ? (
-              /* Services dropdown */
               <div
                 key={link.label}
                 className="nav-dropdown-wrap"
@@ -141,7 +140,6 @@ const Navbar = () => {
                   {SERVICE_ITEMS.map((item) => {
                     const Icon = item.Icon;
                     return (
-                      /* Link tag — supports Ctrl+Click / middle-click */
                       <Link
                         key={item.label}
                         to={item.path}
@@ -161,7 +159,6 @@ const Navbar = () => {
                 </div>
               </div>
             ) : link.section ? (
-              /* Home scroll links — button only (no separate URL) */
               <button
                 key={link.label}
                 className={`nav-link ${activeNav === link.label ? 'active' : ''}`}
@@ -170,7 +167,6 @@ const Navbar = () => {
                 {link.label}
               </button>
             ) : (
-              /* Page links — <Link> supports Ctrl+Click */
               <Link
                 key={link.label}
                 to={link.path}
@@ -182,7 +178,7 @@ const Navbar = () => {
             )
           )}
 
-          {/* Get A Quote — Link */}
+          {/* Desktop CTA */}
           <Link
             to="/contact"
             className="btn-gold"
@@ -192,18 +188,30 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* ── Hamburger ── */}
-        <button
-          className={`hamburger ${menuOpen ? 'open' : ''}`}
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-label="Toggle menu"
-          aria-expanded={menuOpen}
-        >
-          <span /><span /><span />
-        </button>
+        {/* ── Mobile Right Side: CTA + Hamburger ── */}
+        <div className="mobile-right">
+          {/* Mobile CTA — logo ke parallel, hamburger ke baaye */}
+          <Link
+            to="/contact"
+            className="btn-gold mobile-nav-cta"
+            onClick={() => { setMenuOpen(false); setActiveNav('Contact Us'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+          >
+            start your consulation journey  →
+          </Link>
+
+          {/* Hamburger */}
+          <button
+            className={`hamburger ${menuOpen ? 'open' : ''}`}
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+          >
+            <span /><span /><span />
+          </button>
+        </div>
       </nav>
 
-      {/* ── Mobile Menu ── */}
+      {/* ── Mobile Menu — NO CTA inside ── */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         {NAV_LINKS.map((link) =>
           link.hasDropdown ? (
@@ -253,13 +261,7 @@ const Navbar = () => {
             </Link>
           )
         )}
-        <Link
-          to="/contact"
-          className="btn-gold mobile-cta"
-          onClick={() => { setMenuOpen(false); setActiveNav('Contact Us'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-        >
-         start your consulation journey →
-        </Link>
+        {/* CTA intentionally removed from mobile menu */}
       </div>
     </>
   );
