@@ -272,9 +272,9 @@ const Hero = () => {
         {/* Big centered headline */}
         <div className="hero-headline-wrap" ref={headlineRef}>
           <h1 className="hero-headline">
-            <span className="hero-headline-line">We Build</span>
-            <span className="hero-headline-line">Your Vision</span>
-            <span className="hero-headline-line gold">Into Reality</span>
+            <span className="hero-headline-line">System Driven</span>
+            <span className="hero-headline-line">Construction Partner </span>
+            <span className="hero-headline-line gold">For Into Reality</span>
           </h1>
           <div className="hero-headline-divider">
             <span className="hero-hdiv-line" />

@@ -184,7 +184,7 @@ const Navbar = () => {
             className="btn-gold"
             onClick={() => { setMenuOpen(false); setActiveNav('Contact Us'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
-            start your consulation journey →
+            Connect for Construction →
           </Link>
         </div>
 
@@ -196,7 +196,7 @@ const Navbar = () => {
             className="btn-gold mobile-nav-cta"
             onClick={() => { setMenuOpen(false); setActiveNav('Contact Us'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
-            start your consulation journey  →
+            Connect for Construction →
           </Link>
 
           {/* Hamburger */}
