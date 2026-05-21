@@ -188,7 +188,7 @@ const Navbar = () => {
             className="btn-gold"
             onClick={() => { setMenuOpen(false); setActiveNav('Contact Us'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
-            Get A Quote →
+            start your consulation journey →
           </Link>
         </div>
 
@@ -258,7 +258,7 @@ const Navbar = () => {
           className="btn-gold mobile-cta"
           onClick={() => { setMenuOpen(false); setActiveNav('Contact Us'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
         >
-          Get A Quote →
+         start your consulation journey →
         </Link>
       </div>
     </>

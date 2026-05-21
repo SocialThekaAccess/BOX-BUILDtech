@@ -122,7 +122,7 @@ export default function LuxuryResidential() {
                   <li key={pt} className="lr-point"><CheckCircle size={15} strokeWidth={2} className="lr-point-icon" />{pt}</li>
                 ))}
               </ul>
-              <button className="lr-cta-btn" onClick={goContact}>Get A Quote <ArrowRight size={14} /></button>
+              <button className="lr-cta-btn" onClick={goContact}>start your consulation journey <ArrowRight size={14} /></button>
             </Fade>
           </div>
         </div>
@@ -230,7 +230,7 @@ export default function LuxuryResidential() {
                   <li key={pt} className="lr-point"><CheckCircle size={15} strokeWidth={2} className="lr-point-icon" />{pt}</li>
                 ))}
               </ul>
-              <button className="lr-cta-btn" onClick={goContact}>Get A Quote <ArrowRight size={14} /></button>
+              <button className="lr-cta-btn" onClick={goContact}>start your consulation journey<ArrowRight size={14} /></button>
             </Fade>
           </div>
         </div>

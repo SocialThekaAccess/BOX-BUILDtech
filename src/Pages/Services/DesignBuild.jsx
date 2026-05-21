@@ -144,7 +144,7 @@ export default function DesignBuild() {
                   <li key={pt} className="db-point"><CheckCircle size={15} strokeWidth={2} className="db-point-icon" />{pt}</li>
                 ))}
               </ul>
-              <button className="db-cta-btn" onClick={goContact}>Get A Quote <ArrowRight size={14} /></button>
+              <button className="db-cta-btn" onClick={goContact}>start your consulation journey <ArrowRight size={14} /></button>
             </Fade>
           </div>
         </div>
@@ -212,7 +212,7 @@ export default function DesignBuild() {
                   <li key={pt} className="db-point"><CheckCircle size={15} strokeWidth={2} className="db-point-icon" />{pt}</li>
                 ))}
               </ul>
-              <button className="db-cta-btn" onClick={goContact}>Get A Quote <ArrowRight size={14} /></button>
+              <button className="db-cta-btn" onClick={goContact}>start your consulation journey <ArrowRight size={14} /></button>
             </Fade>
           </div>
         </div>

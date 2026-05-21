@@ -298,7 +298,7 @@ const Hero = () => {
             </p>
             <div className="hero-actions">
               <button className="hero-btn-primary" onClick={() => scrollTo('contact')}>
-                Get A Quote <span className="btn-arrow">↗</span>
+                start your consulation journey <span className="btn-arrow">↗</span>
               </button>
               <button className="hero-btn-secondary" onClick={() => scrollTo('projects')}>
                 Our Projects <span className="btn-arrow">↗</span>
