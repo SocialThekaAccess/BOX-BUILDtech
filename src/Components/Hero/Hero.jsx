@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Building2, Users, Award, HardHat } from 'lucide-react';
+import { Building2, Award, HardHat } from 'lucide-react';
 import './Hero.css';
 import boxImg1 from '../../assets/BOXimg1.jpg';
 
@@ -10,10 +10,9 @@ const HERO_BG = 'https://t4.ftcdn.net/jpg/07/12/79/47/360_F_712794701_crhqxZnGqJ
 gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
-  { icon: Building2, value: 320, suffix: '+', label: 'Projects Built'   },
-  { icon: Users,     value: 85,  suffix: '+', label: 'Happy Clients'    },
-  { icon: Award,     value: 15,  suffix: '+', label: 'Years Experience' },
-  { icon: HardHat,   value: 50,  suffix: '+', label: 'Team Members'     },
+  { icon: Building2, value: 25, suffix: '+', label: 'Premium Projects Completed' },
+  { icon: HardHat,   value: 6,  suffix: '+', label: 'Ongoing Projects'            },
+  { icon: Award,     value: 14, suffix: '+', label: 'Years Experience'            },
 ];
 
 const THUMBS = [
