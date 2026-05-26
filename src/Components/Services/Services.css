@@ -139,6 +139,17 @@
   box-shadow: 0 0 20px rgba(233,161,2,0.2);
 }
 
+/* ── Audience label ── */
+.service-audience {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #E9A102;
+  margin-bottom: 14px;
+}
+
 /* ── Text ── */
 .service-card-title {
   font-family: 'Montserrat', sans-serif;
