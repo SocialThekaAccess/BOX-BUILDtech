@@ -554,8 +554,12 @@
   .hero-btn-secondary { padding: 13px 20px; font-size: 10px; }
   .hero-thumbs-row    { gap: 6px; flex-wrap: wrap; }
   .hero-thumb         { width: 68px; height: 48px; }
-  .hero-stats         { grid-template-columns: 1fr; margin-top: 24px; }
-  .hero-stat::after   { display: none; }
+  .hero-stats         { grid-template-columns: repeat(3, 1fr); margin-top: 24px; }
+  .hero-stat::after   { display: block; }
+  .hero-stat          { padding: 18px 4px 24px; }
+  .hero-stat-value    { font-size: 1.3rem; }
+  .hero-stat-label    { font-size: 7.5px; letter-spacing: 0.1em; }
+  .hero-stat-icon     { width: 18px; height: 18px; }
   .hero-sub           { font-size: 0.9rem; max-width: 100%; }
 }
 

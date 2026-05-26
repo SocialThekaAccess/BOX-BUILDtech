@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar       from './Components/Navbar/Navbar';
 import Hero         from './Components/Hero/Hero';
 import Services     from './Components/Services/Services';
+import WhyUs        from './Components/WhyUs/WhyUs';
 import Projects     from './Components/Projects/Projects';
 import About        from './Components/About/About';
 import Testimonials from './Components/Testimonials/Testimonials';
@@ -91,6 +92,7 @@ const HomePage = () => (
   <>
     <Hero />
     <Services />
+    <WhyUs />
     <Projects />
     <About />
     <Testimonials />

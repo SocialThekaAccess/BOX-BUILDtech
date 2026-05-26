@@ -76,66 +76,15 @@ const Hero = () => {
       const mm = gsap.matchMedia();
 
       mm.add('(min-width: 768px)', () => {
-        // 1. Content fades + moves up first
-        gsap.to(contentRef.current, {
-          y: -120,
-          opacity: 0,
-          ease: 'power2.in',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top top',
-            end: '40% top',
-            scrub: 1.2,
-          },
-        });
-
-        // 2. Headline slides out faster (cinematic)
-        gsap.to(headlineRef.current, {
-          y: -80,
-          opacity: 0,
-          ease: 'power3.in',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top top',
-            end: '30% top',
-            scrub: 0.8,
-          },
-        });
-
-        // 3. Stats bar fades out
-        gsap.to(statsRef.current, {
-          y: 60,
-          opacity: 0,
-          ease: 'power2.in',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: '5% top',
-            end: '35% top',
-            scrub: 1,
-          },
-        });
-
-        // 4. Background parallax — starts AFTER content moves
+        // Background parallax only
         gsap.to(bgRef.current, {
           y: '25%',
           ease: 'none',
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: '25% top',
+            start: 'top top',
             end: 'bottom top',
             scrub: 1.5,
-          },
-        });
-
-        // 5. Overlay darkens as bg moves
-        gsap.to(overlayRef.current, {
-          opacity: 1,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: '20% top',
-            end: '60% top',
-            scrub: 1,
           },
         });
       });
@@ -150,18 +99,6 @@ const Hero = () => {
             start: 'top top',
             end: 'bottom top',
             scrub: 2,
-          },
-        });
-
-        gsap.to(contentRef.current, {
-          y: -60,
-          opacity: 0,
-          ease: 'power2.in',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top top',
-            end: '40% top',
-            scrub: 1,
           },
         });
       });
@@ -273,7 +210,7 @@ const Hero = () => {
           <h1 className="hero-headline">
             <span className="hero-headline-line">System Driven</span>
             <span className="hero-headline-line">Construction Partner </span>
-            <span className="hero-headline-line gold">For Architects & Owners.</span>
+            <span className="hero-headline-line gold">For Into Reality</span>
           </h1>
           <div className="hero-headline-divider">
             <span className="hero-hdiv-line" />
@@ -285,19 +222,20 @@ const Hero = () => {
         {/* Bottom row */}
         <div className="hero-bottom-row" ref={bottomRef}>
           <div className="hero-bottom-left">
-            <p className="hero-typewriter">
+            {/* <p className="hero-typewriter">
               We deliver&nbsp;
               <span className="hero-typewriter-word">
                 {displayed}<span className="hero-cursor">|</span>
               </span>
-            </p>
-            <p className="hero-sub">
+            </p> */}
+
+            {/* <p className="hero-sub">
               A leading construction &amp; development company committed to delivering
               exceptional projects — on time, every time.
-            </p>
+            </p> */}
             <div className="hero-actions">
               <button className="hero-btn-primary" onClick={() => scrollTo('contact')}>
-                start your consulation journey <span className="btn-arrow">↗</span>
+                how project works <span className="btn-arrow">↗</span>
               </button>
               <button className="hero-btn-secondary" onClick={() => scrollTo('projects')}>
                 Our Projects <span className="btn-arrow">↗</span>
@@ -305,7 +243,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="hero-thumbs">
+          {/* <div className="hero-thumbs">
             <span className="hero-thumbs-label">Featured Work</span>
             <div className="hero-thumbs-row">
               {THUMBS.map((t) => (
@@ -319,7 +257,7 @@ const Hero = () => {
                 <span className="hero-thumb-label">View All</span>
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
 
       </div>
