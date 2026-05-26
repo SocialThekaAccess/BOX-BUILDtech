@@ -5,11 +5,12 @@ import boxLogo from '../../assets/BOX.png';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { label: 'Home',       section: 'home',     path: '/'          },
-  { label: 'About Us',   section: null,       path: '/about'     },
-  { label: 'Services',   section: 'services', path: null,        hasDropdown: true },
-  { label: 'Portfolio',  section: null,       path: '/portfolio' },
-  { label: 'Contact Us', section: null,       path: '/contact'   },
+  { label: 'Home',          section: 'home',     path: '/'               },
+  { label: 'About Us',      section: null,       path: '/about'          },
+  { label: 'Services',      section: 'services', path: null,        hasDropdown: true },
+  { label: 'Portfolio',     section: null,       path: '/portfolio'      },
+  { label: 'Client Portal', section: null,       path: '/client-portal'  },
+  { label: 'Contact Us',    section: null,       path: '/contact'        },
 ];
 
 const SERVICE_ITEMS = [
@@ -30,11 +31,12 @@ const Navbar = () => {
 
   /* Mark active based on current route */
   useEffect(() => {
-    if (location.pathname === '/about')           setActiveNav('About Us');
-    else if (location.pathname === '/contact')    setActiveNav('Contact Us');
-    else if (location.pathname === '/portfolio')  setActiveNav('Portfolio');
+    if (location.pathname === '/about')                setActiveNav('About Us');
+    else if (location.pathname === '/contact')         setActiveNav('Contact Us');
+    else if (location.pathname === '/portfolio')       setActiveNav('Portfolio');
+    else if (location.pathname === '/client-portal')   setActiveNav('Client Portal');
     else if (location.pathname.startsWith('/services')) setActiveNav('Services');
-    else if (location.pathname === '/')           setActiveNav('Home');
+    else if (location.pathname === '/')                setActiveNav('Home');
   }, [location.pathname]);
 
   useEffect(() => {
@@ -73,6 +75,9 @@ const Navbar = () => {
     sections.forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
   }, [location]);
+
+  /* Hide navbar entirely on client portal — AFTER all hooks */
+  if (location.pathname === '/client-portal') return null;
 
   /* Home section scroll */
   const scrollToSection = (section) => {

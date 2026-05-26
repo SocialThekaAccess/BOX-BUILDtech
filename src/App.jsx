@@ -14,7 +14,11 @@ import ContactUsPage           from './Pages/ContactUs/ContactUs';
 import LuxuryResidential       from './Pages/Services/LuxuryResidential';
 import DesignBuild             from './Pages/Services/DesignBuild';
 import PortfolioPage           from './Pages/Portfolio/Portfolio';
+<<<<<<< HEAD
 import PortalPage              from './Pages/Portal/Portal';
+=======
+import ClientPortalPage        from './Pages/ClientPortal/ClientPortal';
+>>>>>>> 047b5a0fac9ad5aae6f80b17e262281fc0b743fa
 import './styles/globals.css';
 
 /* ── Back To Top Button ── */
@@ -136,6 +140,9 @@ const PortfolioFullPage = () => (
   </>
 );
 
+/* Client Portal — no Navbar/Footer, full-screen portal layout */
+const ClientPortalFullPage = () => <ClientPortalPage />;
+
 export default function App() {
   useEffect(() => {
     if (window.location.hash) {
@@ -153,7 +160,11 @@ export default function App() {
         <Route path="/services/luxury-residential"   element={<LuxuryResidentialPage />} />
         <Route path="/services/design-build"         element={<DesignBuildPage />}       />
         <Route path="/portfolio"                     element={<PortfolioFullPage />}     />
+<<<<<<< HEAD
         <Route path="/portal"                        element={<PortalPage />}            />
+=======
+        <Route path="/client-portal"                 element={<ClientPortalFullPage />}  />
+>>>>>>> 047b5a0fac9ad5aae6f80b17e262281fc0b743fa
         <Route path="*"                              element={<HomePage />}               />
       </Routes>
       <BackToTop />
