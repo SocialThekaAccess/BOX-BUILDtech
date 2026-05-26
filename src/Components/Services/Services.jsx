@@ -10,6 +10,7 @@ import "./Services.css";
 const SERVICES = [
   {
     Icon: Factory,
+    audience: "Dear Architects",
     title: "Build your vision into reputation",
     desc: "We execute your design with precision, protect your architectural intent, and create completed projects that bring premium reputation and many more visionary projects.",
     cta: "Execution as Marketing →",
@@ -17,6 +18,7 @@ const SERVICES = [
   },
   {
     Icon: HardHat,
+    audience: "Dear Home Owners",
     title: "Build your dream home without losing peace",
     desc: "We deliver design perfection, premium construction quality, predictable coordination, and complete peace of mind throughout the construction journey.",
     cta: "Quality with Peace of Mind →",
@@ -68,6 +70,7 @@ export default function Services() {
                 <div className="service-icon-wrap">
                   <Icon size={26} strokeWidth={1.5} />
                 </div>
+                <div className="service-audience">{s.audience}</div>
                 <h3 className="service-card-title">{s.title}</h3>
                 <p className="service-card-desc">{s.desc}</p>
                 <button

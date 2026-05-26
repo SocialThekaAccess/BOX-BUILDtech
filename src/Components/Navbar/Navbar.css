@@ -94,6 +94,11 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .nav-chevron {

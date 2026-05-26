@@ -65,9 +65,8 @@ export default function WhyUs() {
             <span className="whyus-eyebrow-line" />
           </div>
           <h2 className="whyus-title">
-            A Construction Company For The{' '}
-            <span className="whyus-gold">Designers</span> Of The{' '}
-            <span className="whyus-gold">World</span>
+            A Construction Company For The
+            Designers Of The World
           </h2>
           <p className="whyus-subtitle">
             Three principles that set every BOX Buildtech project apart.

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar       from './Components/Navbar/Navbar';
 import Hero         from './Components/Hero/Hero';
+import MissionVision from './Components/MissionVision/MissionVision';
+import StatsBar      from './Components/StatsBar/StatsBar';
 import Services     from './Components/Services/Services';
 import WhyUs        from './Components/WhyUs/WhyUs';
 import Projects     from './Components/Projects/Projects';
@@ -91,6 +93,8 @@ const BackToTop = () => {
 const HomePage = () => (
   <>
     <Hero />
+    <MissionVision />
+    <StatsBar />
     <Services />
     <WhyUs />
     <Projects />

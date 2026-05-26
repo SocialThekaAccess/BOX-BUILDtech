@@ -1,76 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Building2, Award, HardHat } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './Hero.css';
-import boxImg1 from '../../assets/BOXimg1.jpg';
 
 const HERO_BG = 'https://t4.ftcdn.net/jpg/07/12/79/47/360_F_712794701_crhqxZnGqJaKudi7d9QKeFXevEW5C3mM.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const STATS = [
-  { icon: Building2, value: 25, suffix: '+', label: 'Premium Projects Completed' },
-  { icon: HardHat,   value: 6,  suffix: '+', label: 'Ongoing Projects'            },
-  { icon: Award,     value: 14, suffix: '+', label: 'Years Experience'            },
-];
-
-const THUMBS = [
-  { img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=300&q=80', label: 'Modern Villa' },
-  { img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=300&q=80', label: 'Corporate HQ' },
-  { img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=300&q=80',    label: 'Luxury Apt'   },
-];
-
-const WORDS = ['Excellence.', 'Precision.', 'Vision.', 'Reality.'];
 
 const scrollTo = (id) => {
   window.history.replaceState(null, '', '/');
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 };
 
-function useCounter(target, duration = 1800, start = false) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    if (!start) return;
-    let startTime = null;
-    const step = (ts) => {
-      if (!startTime) startTime = ts;
-      const progress = Math.min((ts - startTime) / duration, 1);
-      setCount(Math.floor(progress * target));
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }, [start, target, duration]);
-  return count;
-}
-
-function StatItem({ icon: Icon, value, suffix, label, animate }) {
-  const count = useCounter(value, 1800, animate);
-  return (
-    <div className="hero-stat">
-      <Icon size={22} strokeWidth={1.5} className="hero-stat-icon" />
-      <div className="hero-stat-value">{animate ? count : 0}{suffix}</div>
-      <div className="hero-stat-label">{label}</div>
-    </div>
-  );
-}
-
 const Hero = () => {
-  const navigate = useNavigate();
-  const sectionRef    = useRef(null);
-  const bgRef         = useRef(null);
-  const overlayRef    = useRef(null);
-  const contentRef    = useRef(null);
-  const headlineRef   = useRef(null);
-  const eyebrowRef    = useRef(null);
-  const bottomRef     = useRef(null);
-  const statsRef      = useRef(null);
-
-  const [statsVisible, setStatsVisible] = useState(false);
-  const [wordIndex,    setWordIndex]    = useState(0);
-  const [displayed,    setDisplayed]    = useState('');
-  const [typing,       setTyping]       = useState(true);
+  const navigate    = useNavigate();
+  const sectionRef  = useRef(null);
+  const bgRef       = useRef(null);
+  const overlayRef  = useRef(null);
+  const contentRef  = useRef(null);
+  const headlineRef = useRef(null);
+  const eyebrowRef  = useRef(null);
+  const bottomRef   = useRef(null);
 
   /* ── GSAP Scroll Animation ── */
   useEffect(() => {
@@ -114,59 +65,18 @@ const Hero = () => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-      tl.fromTo(eyebrowRef.current,
-        { y: 30, opacity: 0 },
-        { y: 0,  opacity: 1, duration: 0.8, delay: 0.2 }
-      )
-      .fromTo(headlineRef.current,
+      tl.fromTo(headlineRef.current,
         { y: 60, opacity: 0 },
-        { y: 0,  opacity: 1, duration: 1.0 },
-        '-=0.4'
+        { y: 0,  opacity: 1, duration: 1.0, delay: 0.2 }
       )
       .fromTo(bottomRef.current,
         { y: 40, opacity: 0 },
         { y: 0,  opacity: 1, duration: 0.8 },
         '-=0.5'
-      )
-      .fromTo(statsRef.current,
-        { y: 30, opacity: 0 },
-        { y: 0,  opacity: 1, duration: 0.7 },
-        '-=0.4'
       );
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
-
-  /* ── Typewriter ── */
-  useEffect(() => {
-    const word = WORDS[wordIndex];
-    let timeout;
-    if (typing) {
-      if (displayed.length < word.length) {
-        timeout = setTimeout(() => setDisplayed(word.slice(0, displayed.length + 1)), 80);
-      } else {
-        timeout = setTimeout(() => setTyping(false), 1800);
-      }
-    } else {
-      if (displayed.length > 0) {
-        timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 45);
-      } else {
-        setWordIndex((i) => (i + 1) % WORDS.length);
-        setTyping(true);
-      }
-    }
-    return () => clearTimeout(timeout);
-  }, [displayed, typing, wordIndex]);
-
-  /* ── Stats counter trigger ── */
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) setStatsVisible(true); },
-      { threshold: 0.3 }
-    );
-    if (statsRef.current) obs.observe(statsRef.current);
-    return () => obs.disconnect();
   }, []);
 
   return (
@@ -213,7 +123,7 @@ const Hero = () => {
             <span className="hero-headline-line">System Driven</span>
             <span className="hero-headline-line">Construction Partner </span>
             <span className="hero-headline-line gold"> for
-Architects & Owners.</span>
+Architects & Owners</span>
           </h1>
           <div className="hero-headline-divider">
             <span className="hero-hdiv-line" />
@@ -263,13 +173,6 @@ Architects & Owners.</span>
           </div> */}
         </div>
 
-      </div>
-
-      {/* ── Stats bar ── */}
-      <div className="hero-stats" ref={statsRef}>
-        {STATS.map((s) => (
-          <StatItem key={s.label} {...s} animate={statsVisible} />
-        ))}
       </div>
 
       {/* ── Scroll hint ── */}

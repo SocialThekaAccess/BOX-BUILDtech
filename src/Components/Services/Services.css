@@ -79,16 +79,15 @@
 /* ── Grid ── */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* 3 se 2 karo */
+  gap: 32px; /* space badao */
   margin-bottom: 32px;
 }
 
-/* ── Card ── */
 .service-card {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(233,161,2,0.15);
-  padding: 36px 32px 28px;
+  padding: 48px 40px 36px; /* padding badao — zyada space */
   transition: all 0.3s ease;
   cursor: default;
   border-radius: 6px;

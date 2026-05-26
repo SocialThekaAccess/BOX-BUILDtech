@@ -19,42 +19,46 @@ const PROJECTS = [
     location: "NEW CHANDIGARH, INDIA",
     image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&q=80",
   },
-  {
-    id: 4,
-    title: "Modern Courtyard Villa",
-    location: "CHANDIGARH, INDIA",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80",
-  },
-  {
-    id: 5,
-    title: "Private Estate Villa",
-    location: "MOHALI, INDIA",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80",
-  },
-  {
-    id: 6,
-    title: "Architect-Designed Villa",
-    location: "NEW CHANDIGARH, INDIA",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80",
-  },
-  {
-    id: 7,
-    title: "Tropical Garden Villa",
-    location: "CHANDIGARH, INDIA",
-    image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=700&q=80",
-  },
-  {
-    id: 8,
-    title: "Minimalist White Villa",
-    location: "MOHALI, INDIA",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80",
-  },
-  {
-    id: 9,
-    title: "Grand Heritage Villa",
-    location: "NEW CHANDIGARH, INDIA",
-    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=700&q=80",
-  },
+  
+  // {
+  //   id: 4,
+  //   title: "Modern Courtyard Villa",
+  //   location: "CHANDIGARH, INDIA",
+  //   image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80",
+  // },
+  // {
+  //   id: 5,
+  //   title: "Private Estate Villa",
+  //   location: "MOHALI, INDIA",
+  //   image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Architect-Designed Villa",
+  //   location: "NEW CHANDIGARH, INDIA",
+  //   image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80",
+  // },
+
+  // {
+  //   id: 7,
+  //   title: "Tropical Garden Villa",
+  //   location: "CHANDIGARH, INDIA",
+  //   image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=700&q=80",
+  // },
+
+  // {
+  //   id: 8,
+  //   title: "Minimalist White Villa",
+  //   location: "MOHALI, INDIA",
+  //   image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80",
+  // },
+
+  // {
+  //   id: 9,
+  //   title: "Grand Heritage Villa",
+  //   location: "NEW CHANDIGARH, INDIA",
+  //   image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=700&q=80",
+  // },
 ];
 
 export default function Projects() {

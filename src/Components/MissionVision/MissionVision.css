@@ -1,0 +1,151 @@
+/* ══════════════════════════════════════
+   MISSION / VISION — 2×2 Card Grid
+══════════════════════════════════════ */
+
+.mv-section {
+  background: #0b0e14;
+  padding: 100px 0 110px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* faint grid texture */
+.mv-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(233,161,2,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(233,161,2,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.mv-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 6%;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── 2×2 Grid ── */
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: rgba(233,161,2,0.08);
+  border: 1px solid rgba(233,161,2,0.12);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ── Card ── */
+.mv-card {
+  background: #0f1318;
+  padding: 52px 44px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+
+  /* entrance */
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease, background 0.3s ease;
+}
+
+.mv-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mv-card:hover {
+  background: #141920;
+}
+
+/* top-left corner accent */
+.mv-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mv-card:hover::before {
+  opacity: 1;
+}
+
+/* ── Icon ── */
+.mv-icon-wrap {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(233,161,2,0.25);
+  border-radius: 10px;
+  color: var(--gold);
+  background: rgba(233,161,2,0.07);
+  flex-shrink: 0;
+  margin-bottom: 4px;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.mv-card:hover .mv-icon-wrap {
+  background: rgba(233,161,2,0.14);
+  border-color: rgba(233,161,2,0.5);
+  transform: scale(1.06);
+}
+
+/* ── Tag ── */
+.mv-tag {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── Title ── */
+.mv-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+/* ── Desc ── */
+.mv-desc {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.85;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .mv-section { padding: 72px 0 80px; }
+  .mv-grid    { grid-template-columns: repeat(2, 1fr); }
+  .mv-card    { padding: 32px 20px; }
+}
+
+@media (max-width: 480px) {
+  .mv-section { padding: 56px 0 64px; }
+  .mv-grid    { grid-template-columns: repeat(2, 1fr); }
+  .mv-card    { padding: 24px 16px; gap: 10px; }
+  .mv-title   { font-size: 0.9rem; }
+  .mv-desc    { font-size: 0.78rem; }
+}
