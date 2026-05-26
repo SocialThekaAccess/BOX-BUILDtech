@@ -14,15 +14,16 @@ const CARDS = [
     desc: '100% adherence to the blueprint. We verify every dimension and finish to ensure the outcome matches the original design intent.',
   },
   {
-    Icon: Eye,
-    title: 'Radical Honesty',
-    desc: 'Real-time access to site logs, photos, and project financials via your dashboard. No hidden costs. Total accountability.',
-  },
-  {
     Icon: Zap,
     title: 'Lean Execution',
     desc: 'We manage all site labor, logic, and supply chains. You and your architect focus on design; we handle the structural soul.',
   },
+  {
+    Icon: Eye,
+    title: 'Radical Honesty',
+    desc: 'Real-time access to site logs, photos, and project financials via your dashboard. No hidden costs. Total accountability.',
+  },
+  
 ];
 
 const BG = 'https://t4.ftcdn.net/jpg/07/12/79/47/360_F_712794701_crhqxZnGqJaKudi7d9QKeFXevEW5C3mM.jpg';
