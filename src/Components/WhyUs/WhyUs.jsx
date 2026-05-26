@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Ruler, ShieldCheck, Layers3 } from 'lucide-react';
+import { Ruler, ShieldCheck, Layers3, ArrowRight } from 'lucide-react';
 import './WhyUs.css';
 
 const CARDS = [
@@ -7,7 +7,7 @@ const CARDS = [
     Icon: Ruler,
     number: '01',
     title: 'Design-Faithful Execution',
-    desc: 'No material substitutions. No contractor-style jugaad. Your architect\'s vision is protected on site — exactly as designed.',
+    desc: "No material substitutions. No contractor-style jugaad. Your architect's vision is protected on site — exactly as designed.",
   },
   {
     Icon: ShieldCheck,
@@ -19,9 +19,11 @@ const CARDS = [
     Icon: Layers3,
     number: '03',
     title: 'Hassle-Free Sync',
-    desc: 'We coordinate directly with your architect. You don\'t have to be the middleman for technical decisions.',
+    desc: "We coordinate directly with your architect. You don't have to be the middleman for technical decisions.",
   },
 ];
+
+const BG = 'https://t4.ftcdn.net/jpg/07/12/79/47/360_F_712794701_crhqxZnGqJaKudi7d9QKeFXevEW5C3mM.jpg';
 
 export default function WhyUs() {
   const cardsRef = useRef([]);
@@ -32,12 +34,12 @@ export default function WhyUs() {
       const obs = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            el.style.transitionDelay = `${i * 120}ms`;
+            el.style.transitionDelay = `${i * 140}ms`;
             el.classList.add('whyus-card--visible');
             obs.disconnect();
           }
         },
-        { threshold: 0.15 }
+        { threshold: 0.12 }
       );
       obs.observe(el);
       return obs;
@@ -48,8 +50,10 @@ export default function WhyUs() {
   return (
     <section className="whyus-section">
 
-      {/* ── top accent line ── */}
-      <div className="whyus-accent-line" />
+      {/* ── Background image + overlays ── */}
+      <div className="whyus-bg" style={{ backgroundImage: `url(${BG})` }} />
+      <div className="whyus-overlay" />
+      <div className="whyus-overlay-radial" />
 
       <div className="whyus-inner">
 
@@ -57,11 +61,13 @@ export default function WhyUs() {
         <div className="whyus-header">
           <div className="whyus-eyebrow">
             <span className="whyus-eyebrow-line" />
-            <span>Why Choose Us</span>
+            <span>Our Commitment</span>
             <span className="whyus-eyebrow-line" />
           </div>
           <h2 className="whyus-title">
-           A construction company for the designers of the world
+            A Construction Company For The{' '}
+            <span className="whyus-gold">Designers</span> Of The{' '}
+            <span className="whyus-gold">World</span>
           </h2>
           <p className="whyus-subtitle">
             Three principles that set every BOX Buildtech project apart.
@@ -76,21 +82,24 @@ export default function WhyUs() {
               className="whyus-card"
               ref={(el) => (cardsRef.current[i] = el)}
             >
-              {/* background number watermark */}
+              {/* watermark number */}
               <span className="whyus-card-number">{number}</span>
 
-              <div className="whyus-card-top">
-                <div className="whyus-icon-wrap">
-                  <Icon size={22} strokeWidth={1.5} />
-                </div>
-                <div className="whyus-card-divider" />
+              {/* circular icon */}
+              <div className="whyus-icon-wrap">
+                <Icon size={24} strokeWidth={1.5} />
               </div>
+
+              {/* gold underline */}
+              <div className="whyus-card-underline" />
 
               <h3 className="whyus-card-title">{title}</h3>
               <p className="whyus-card-desc">{desc}</p>
 
-              {/* bottom gold bar on hover */}
-              <div className="whyus-card-bar" />
+              {/* arrow button */}
+              <button className="whyus-card-arrow" aria-label="Learn more">
+                <ArrowRight size={16} strokeWidth={2} />
+              </button>
             </div>
           ))}
         </div>
