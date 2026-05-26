@@ -203,7 +203,7 @@ const Hero = () => {
         {/* Eyebrow */}
         <div className="hero-eyebrow" ref={eyebrowRef}>
           <span className="hero-eyebrow-line" />
-          <span className="hero-eyebrow-text">Building The Future</span>
+          {/* <span className="hero-eyebrow-text">Building The Future</span> */}
           <span className="hero-eyebrow-line" />
         </div>
 
@@ -212,7 +212,7 @@ const Hero = () => {
           <h1 className="hero-headline">
             <span className="hero-headline-line">System Driven</span>
             <span className="hero-headline-line">Construction Partner </span>
-            <span className="hero-headline-line gold">For Into Reality</span>
+            <span className="hero-headline-line gold"> Into Reality</span>
           </h1>
           <div className="hero-headline-divider">
             <span className="hero-hdiv-line" />
