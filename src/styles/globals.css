@@ -113,6 +113,11 @@ input, textarea, select {
   font-size: inherit;
 }
 
+/* Force browser form elements to use site fonts */
+input, textarea, select, button, optgroup, option {
+  font-family: var(--font-body) !important;
+}
+
 a {
   text-decoration: none;
   color: inherit;

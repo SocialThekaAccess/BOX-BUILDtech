@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Building2, Award, HardHat } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 import boxImg1 from '../../assets/BOXimg1.jpg';
 
@@ -56,6 +57,7 @@ function StatItem({ icon: Icon, value, suffix, label, animate }) {
 }
 
 const Hero = () => {
+  const navigate = useNavigate();
   const sectionRef    = useRef(null);
   const bgRef         = useRef(null);
   const overlayRef    = useRef(null);
@@ -234,12 +236,12 @@ const Hero = () => {
               exceptional projects — on time, every time.
             </p> */}
             <div className="hero-actions">
-              <button className="hero-btn-primary" onClick={() => scrollTo('contact')}>
+              <button className="hero-btn-primary" onClick={() => { navigate('/portal'); window.scrollTo({ top: 0 }); }}>
                 how project works <span className="btn-arrow">↗</span>
               </button>
-              <button className="hero-btn-secondary" onClick={() => scrollTo('projects')}>
+              {/* <button className="hero-btn-secondary" onClick={() => scrollTo('projects')}>
                 Our Projects <span className="btn-arrow">↗</span>
-              </button>
+              </button> */}
             </div>
           </div>
 

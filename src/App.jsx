@@ -6,7 +6,7 @@ import Services     from './Components/Services/Services';
 import WhyUs        from './Components/WhyUs/WhyUs';
 import Projects     from './Components/Projects/Projects';
 import About        from './Components/About/About';
-import Testimonials from './Components/Testimonials/Testimonials';
+// import Testimonials from './Components/Testimonials/Testimonials';
 import Contact      from './Components/Contact/Contact';
 import Footer       from './Components/Footer/Footer';
 import AboutPage               from './Pages/About/About';
@@ -14,6 +14,7 @@ import ContactUsPage           from './Pages/ContactUs/ContactUs';
 import LuxuryResidential       from './Pages/Services/LuxuryResidential';
 import DesignBuild             from './Pages/Services/DesignBuild';
 import PortfolioPage           from './Pages/Portfolio/Portfolio';
+import PortalPage              from './Pages/Portal/Portal';
 import './styles/globals.css';
 
 /* ── Back To Top Button ── */
@@ -94,7 +95,7 @@ const HomePage = () => (
     <WhyUs />
     <Projects />
     <About />
-    <Testimonials />
+    {/* <Testimonials /> */}
     <Contact />
     <Footer />
   </>
@@ -152,6 +153,7 @@ export default function App() {
         <Route path="/services/luxury-residential"   element={<LuxuryResidentialPage />} />
         <Route path="/services/design-build"         element={<DesignBuildPage />}       />
         <Route path="/portfolio"                     element={<PortfolioFullPage />}     />
+        <Route path="/portal"                        element={<PortalPage />}            />
         <Route path="*"                              element={<HomePage />}               />
       </Routes>
       <BackToTop />
