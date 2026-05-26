@@ -212,7 +212,8 @@ const Hero = () => {
           <h1 className="hero-headline">
             <span className="hero-headline-line">System Driven</span>
             <span className="hero-headline-line">Construction Partner </span>
-            <span className="hero-headline-line gold"> Turn Into Reality</span>
+            <span className="hero-headline-line gold"> for
+Architects & Owners.</span>
           </h1>
           <div className="hero-headline-divider">
             <span className="hero-hdiv-line" />
