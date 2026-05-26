@@ -14,7 +14,7 @@ import ContactUsPage           from './Pages/ContactUs/ContactUs';
 import LuxuryResidential       from './Pages/Services/LuxuryResidential';
 import DesignBuild             from './Pages/Services/DesignBuild';
 import PortfolioPage           from './Pages/Portfolio/Portfolio';
-import PortalPage              from './Pages/Portal/Portal';
+import ClientPortalPage        from './Pages/ClientPortal/ClientPortal';
 import './styles/globals.css';
 
 /* ── Back To Top Button ── */
@@ -129,6 +129,9 @@ const DesignBuildPage = () => (
   </>
 );
 
+/* Client Portal — no Navbar/Footer, full-screen portal layout */
+const ClientPortalFullPage = () => <ClientPortalPage />;
+
 const PortfolioFullPage = () => (
   <>
     <PortfolioPage />
@@ -153,7 +156,7 @@ export default function App() {
         <Route path="/services/luxury-residential"   element={<LuxuryResidentialPage />} />
         <Route path="/services/design-build"         element={<DesignBuildPage />}       />
         <Route path="/portfolio"                     element={<PortfolioFullPage />}     />
-        <Route path="/portal"                        element={<PortalPage />}            />
+        <Route path="/client-portal"                 element={<ClientPortalFullPage />}  />
         <Route path="*"                              element={<HomePage />}               />
       </Routes>
       <BackToTop />
