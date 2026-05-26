@@ -10,15 +10,17 @@ import "./Services.css";
 const SERVICES = [
   {
     Icon: Factory,
-    title: "Design & Build",
-    desc: "Heavy-duty industrial construction with real-time tracking, milestone management, and zero-defect targets.",
-    path: "/services/design-build",
+    title: "Build your vision into reputation",
+    desc: "We execute your design with precision, protect your architectural intent, and create completed projects that bring premium reputation and many more visionary projects.",
+    cta: "Execution as Marketing →",
+    // path: "/services/design-build",
   },
   {
     Icon: HardHat,
-    title: "High End Residential",
-    desc: "Seamless project oversight ensuring timely delivery, budget adherence, and quality control at every stage.",
-    path: "/services/luxury-residential",
+    title: "Build your dream home without losing peace",
+    desc: "We deliver design perfection, premium construction quality, predictable coordination, and complete peace of mind throughout the construction journey.",
+    cta: "Quality with Peace of Mind →",
+    // path: "/services/luxury-residential",
   },
 ];
 
@@ -72,7 +74,7 @@ export default function Services() {
                   className="service-card-link"
                   onClick={() => handleReadMore(s.path)}
                 >
-                  Read More →
+                 {s.cta}
                 </button>
               </div>
             );
