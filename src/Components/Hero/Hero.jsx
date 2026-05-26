@@ -201,18 +201,18 @@ const Hero = () => {
       <div className="hero-center" ref={contentRef}>
 
         {/* Eyebrow */}
-        <div className="hero-eyebrow" ref={eyebrowRef}>
-          <span className="hero-eyebrow-line" />
+        {/* <div className="hero-eyebrow" ref={eyebrowRef}> */}
+          {/* <span className="hero-eyebrow-line" /> */}
           {/* <span className="hero-eyebrow-text">Building The Future</span> */}
-          <span className="hero-eyebrow-line" />
-        </div>
+          {/* <span className="hero-eyebrow-line" /> */}
+        {/* </div> */}
 
         {/* Big centered headline */}
         <div className="hero-headline-wrap" ref={headlineRef}>
           <h1 className="hero-headline">
             <span className="hero-headline-line">System Driven</span>
             <span className="hero-headline-line">Construction Partner </span>
-            <span className="hero-headline-line gold"> Into Reality</span>
+            <span className="hero-headline-line gold"> Turn Into Reality</span>
           </h1>
           <div className="hero-headline-divider">
             <span className="hero-hdiv-line" />
