@@ -188,14 +188,14 @@ const Hero = () => {
       </div>
 
       {/* ── Side labels ── */}
-      <div className="hero-side-left">
+      {/* <div className="hero-side-left">
         <span>BOX BUILDTECH</span>
         <div className="hero-side-line" />
       </div>
       <div className="hero-side-right">
         <div className="hero-side-line" />
         <span>EST. 2005</span>
-      </div>
+      </div> */}
 
       {/* ── Main content ── */}
       <div className="hero-center" ref={contentRef}>
