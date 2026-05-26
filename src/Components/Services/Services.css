@@ -41,7 +41,7 @@
 
 .services-tag {
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.3em;
@@ -51,7 +51,7 @@
 }
 
 .services-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   font-weight: 900;
   letter-spacing: -0.01em;
@@ -63,11 +63,11 @@
 
 .services-title span {
   color: #E9A102;
-   font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .services-subtitle {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
   color: rgba(255,255,255,0.5);
@@ -141,7 +141,7 @@
 
 /* ── Audience label ── */
 .service-audience {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -152,7 +152,7 @@
 
 /* ── Text ── */
 .service-card-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
@@ -161,7 +161,7 @@
 }
 
 .service-card-desc {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   font-weight: 400;
   color: rgba(255,255,255,0.45);
@@ -174,7 +174,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -241,7 +241,7 @@
 }
 
 .services-cta-text h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -249,7 +249,7 @@
 }
 
 .services-cta-text p {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
   color: rgba(255,255,255,0.45);
   line-height: 1.4;
@@ -261,7 +261,7 @@
   gap: 10px;
   background: #E9A102;
   color: #000000;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   font-weight: 800;
   font-size: 12px;
   letter-spacing: 0.15em;

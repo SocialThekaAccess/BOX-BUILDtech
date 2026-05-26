@@ -3,13 +3,16 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar       from './Components/Navbar/Navbar';
 import Hero         from './Components/Hero/Hero';
 import MissionVision from './Components/MissionVision/MissionVision';
-import StatsBar      from './Components/StatsBar/StatsBar';
+// import StatsBar      from './Components/StatsBar/StatsBar';
 import Services     from './Components/Services/Services';
 import WhyUs        from './Components/WhyUs/WhyUs';
+import ChooseUs     from './Components/ChooseUs/ChooseUs';
+import PremiumResidencies from './Components/PremiumResidencies/PremiumResidencies';
 import Projects     from './Components/Projects/Projects';
 import About        from './Components/About/About';
 // import Testimonials from './Components/Testimonials/Testimonials';
 import Contact      from './Components/Contact/Contact';
+import StatsBar      from './Components/StatsBar/StatsBar';
 import Footer       from './Components/Footer/Footer';
 import AboutPage               from './Pages/About/About';
 import ContactUsPage           from './Pages/ContactUs/ContactUs';
@@ -95,13 +98,16 @@ const HomePage = () => (
   <>
     <Hero />
     <MissionVision />
-    <StatsBar />
+    {/* <StatsBar /> */}
     <Services />
     <WhyUs />
+    <ChooseUs />
+    <PremiumResidencies />
     <Projects />
     <About />
     {/* <Testimonials /> */}
     <Contact />
+     <StatsBar />
     <Footer />
   </>
 );
