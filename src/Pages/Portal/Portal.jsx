@@ -14,7 +14,7 @@ const SECTIONS = [
     sub: 'Favorite partner for architects & owners',
     content: {
       tag: 'THE ARCHITECT REVOLUTION',
-      headline: ['A smart digital platform where ', 'clients,', ' ', 'architects,', ' and ', 'site teams', ' stay connected throughout the project.'],
+      headline: ['A smart digital platform where ', 'clients,', ' ', 'architects,', ' and ', 'site teams', ' stay connected.'],
       body: 'BOX-BuildTech helps manage construction smoothly by combining smart planning with quality execution. This portal does more than provide project updates — it shares real on-site progress, photos, and reports to ensure the design is built exactly as planned.',
       highlights: [
         { label: 'More Transparent', desc: 'Get real-time project updates with clear site progress, reducing confusion and miscommunication.' },
