@@ -30,7 +30,7 @@ const Fade = ({ children, className = '' }) => {
 };
 
 const STATS = [
-  { value: '250+', label: 'Villas Delivered'    },
+  { value: '25+', label: 'Villas Delivered'    },
   { value: '14+',  label: 'Years Experience'    },
   { value: '100%', label: 'Quality Assured'     },
   { value: '100%',  label: 'Client Satisfaction' },
