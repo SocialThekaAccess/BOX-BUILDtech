@@ -241,7 +241,7 @@ export default function ContactUsPage() {
       <section className="cu-map-section">
         <div className="cu-map-overlay-text">
           <MapPin size={20} strokeWidth={1.5} />
-          New Delhi, India
+          New Chandigarh, India
         </div>
         <iframe
           title="BOX Buildtech Location"

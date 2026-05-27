@@ -52,10 +52,6 @@ export default function ChooseUs() {
 
   return (
     <section className="cu-section">
-      {/* bg image */}
-      <div className="cu-bg" style={{ backgroundImage: `url(${BG})` }} />
-      <div className="cu-overlay" />
-
       <div className="cu-inner">
 
         {/* ── Header ── */}
