@@ -256,10 +256,11 @@
 
 /* ── Form Column ── */
 .cu-form-col {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(233,161,2,0.12);
+  background: #ffffff;
+  border: 1px solid rgba(233,161,2,0.2);
   border-radius: 12px;
   padding: 48px 44px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
 .cu-form-header {
