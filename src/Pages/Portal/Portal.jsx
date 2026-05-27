@@ -14,12 +14,12 @@ const SECTIONS = [
     sub: 'Favorite partner for architects & owners',
     content: {
       tag: 'THE ARCHITECT REVOLUTION',
-      headline: ['A live digital command center where every ', 'client,', ' ', 'architect,', ' and ', 'site team', ' stays aligned.'],
-      body: 'BOX stands as a favorited, deeply integrated construction operating system. We bridge structural physics with beautiful blueprints. This portal is not just for timeline updates; it compiles raw on-site proof, protecting the pure geometry of your design.',
+      headline: ['A smart digital platform where ', 'clients,', ' ', 'architects,', ' and ', 'site teams', ' stay connected throughout the project.'],
+      body: 'BOX helps manage construction smoothly by combining smart planning with quality execution. This portal does more than provide project updates — it shares real on-site progress, photos, and reports to ensure the design is built exactly as planned.',
       highlights: [
-        { label: 'More Transparent', desc: 'Direct telemetry access leaves no space for site guesswork or fake status reports.' },
-        { label: 'More Controlled', desc: 'Every drawing update instantly propagates down to site tablets, syncing workforces.' },
-        { label: 'Faithful to Design', desc: 'Architects audit casting parameters live, validating the exact materials poured.' },
+        { label: 'More Transparent', desc: 'Get real-time project updates with clear site progress, reducing confusion and miscommunication.' },
+        { label: 'More Controlled', desc: 'Any drawing or design update is instantly shared with the site team, keeping everyone on the same page.' },
+        { label: 'Faithful to Design', desc: 'Architects can monitor construction progress live to ensure the right materials and design standards are followed.' },
       ],
       cta: 'Explore Project Evolution',
     },
@@ -31,12 +31,12 @@ const SECTIONS = [
     sub: 'Time, telemetry & live progress roadmap',
     content: {
       tag: 'LIVE PROGRESS ROADMAP',
-      headline: ['Real-time ', 'telemetry', ' and ', 'milestone', ' tracking at every phase.'],
-      body: 'Every project phase is mapped, timestamped, and verified. From foundation pour to final handover, BOX tracks structural milestones with precision — giving architects and owners a live window into site reality.',
+      headline: ['Every stage of the project is ', 'updated', ' all the ', 'time.'],
+      body: 'From the beginning when the foundation work starts to the handover, BOX keeps the architects and the clients informed about what is happening on the site and how the project is going — with accurate information and live updates.',
       highlights: [
-        { label: 'Phase Tracking', desc: 'Each construction phase is logged with timestamps and photographic proof.' },
-        { label: 'Live Milestones', desc: 'Milestone alerts notify all stakeholders the moment a phase is completed.' },
-        { label: 'Delay Forecasting', desc: 'Predictive analytics flag potential delays before they impact the schedule.' },
+        { label: 'Phase Tracking', desc: 'Each stage of construction is recorded with proper updates, timestamps, and site photos.' },
+        { label: 'Live Milestones', desc: 'Clients and stakeholders receive instant updates whenever a project milestone is completed.' },
+        { label: 'Delay Forecasting', desc: 'Smart tracking helps identify possible delays early, allowing teams to take action on time.' },
       ],
       cta: 'Explore Site Stewardship',
     },
@@ -48,12 +48,12 @@ const SECTIONS = [
     sub: 'Structural fidelity & real-site time-lapse',
     content: {
       tag: 'ON-SITE PROOF ENGINE',
-      headline: ['Structural ', 'fidelity', ' verified through ', 'real-time', ' site documentation.'],
-      body: 'BOX deploys a continuous documentation protocol on every site. Time-lapse footage, material test reports, and structural audits are compiled into a single verified record — accessible to architects and owners at any time.',
+      headline: ['Construction quality monitored through ', 'real-time', ' site ', 'documentation.'],
+      body: 'BOX keeps a complete record of site activities, material checks, and structural updates — allowing architects and clients to review project progress anytime, from anywhere.',
       highlights: [
-        { label: 'Time-Lapse Archive', desc: 'Continuous site footage compiled into a searchable visual timeline.' },
-        { label: 'Material Audits', desc: 'Every material batch is tested and logged before it touches the structure.' },
-        { label: 'Structural Reports', desc: 'Engineer-signed reports uploaded at every critical structural milestone.' },
+        { label: 'Time-Lapse Archive', desc: 'Site progress is recorded continuously and organized into an easy-to-view visual timeline.' },
+        { label: 'Material Audits', desc: 'All construction materials are checked and documented before being used on site.' },
+        { label: 'Structural Reports', desc: 'Important structural updates and engineer-approved reports are uploaded at every major construction stage.' },
       ],
       cta: 'Explore The Drawing Vault',
     },
@@ -65,12 +65,12 @@ const SECTIONS = [
     sub: 'Secure repository keeping designs faithful',
     content: {
       tag: 'DESIGN INTEGRITY SYSTEM',
-      headline: ['A secure ', 'vault', ' where every ', 'revision', ' is tracked and protected.'],
-      body: 'The Drawing Vault is BOX\'s secure design repository. Every drawing revision is version-controlled, architect-approved, and instantly distributed to site teams — ensuring zero deviation from the approved design intent.',
+      headline: ['A secure platform where all project ', 'drawings', ' and ', 'revisions', ' are safely stored.'],
+      body: 'The Drawing Vault helps architects and site teams stay updated with the latest approved drawings, reducing errors and ensuring accurate execution on site.',
       highlights: [
-        { label: 'Version Control', desc: 'Every drawing revision is logged with author, timestamp, and approval status.' },
-        { label: 'Instant Distribution', desc: 'Approved drawings reach site tablets within minutes of architect sign-off.' },
-        { label: 'Zero Deviation', desc: 'Site teams can only access the latest approved version — no outdated drawings.' },
+        { label: 'Version Control', desc: 'Every drawing update is recorded with details like revision history, approval status, and update time.' },
+        { label: 'Instant Distribution', desc: 'Approved drawings are quickly shared with site teams for smooth coordination.' },
+        { label: 'Zero Deviation', desc: 'Site teams always work with the latest approved drawings, avoiding confusion from outdated versions.' },
       ],
       cta: 'Explore Architect Sync',
     },
@@ -82,12 +82,12 @@ const SECTIONS = [
     sub: 'Connecting client & architect in high fidelity',
     content: {
       tag: 'HIGH-FIDELITY COLLABORATION',
-      headline: ['Client, ', 'architect,', ' and site — ', 'synchronized', ' in real time.'],
-      body: 'BOX eliminates the communication gap between design intent and site execution. Architects receive live feedback from site, clients get transparent progress updates, and the BOX team bridges every technical decision without friction.',
+      headline: ['Clients, ', 'architects,', ' and site teams — ', 'connected', ' with real-time updates.'],
+      body: 'BOX makes project coordination simple by ensuring everyone stays informed throughout the construction process — with clear communication between clients, architects, and site engineers.',
       highlights: [
-        { label: 'Direct Channel', desc: 'Architects communicate directly with BOX site engineers — no middlemen.' },
-        { label: 'Client Visibility', desc: 'Owners see exactly what architects see — full transparency, zero filtering.' },
-        { label: 'Decision Log', desc: 'Every technical decision is documented, attributed, and archived permanently.' },
+        { label: 'Direct Channel', desc: 'Architects can communicate directly with site engineers for faster and clearer coordination.' },
+        { label: 'Client Visibility', desc: 'Clients receive transparent project updates and can track progress at every stage.' },
+        { label: 'Decision Log', desc: 'All important project decisions and updates are properly recorded and stored for future reference.' },
       ],
       cta: 'Explore System Alignment',
     },
@@ -99,12 +99,12 @@ const SECTIONS = [
     sub: 'The designs-to-execution workflow',
     content: {
       tag: 'EXECUTION WORKFLOW',
-      headline: ['Where ', 'design intent', ' becomes ', 'built reality', ' — precisely.'],
-      body: 'System Alignment is the final layer of the BOX operating system. It ensures that every approved drawing, material specification, and structural parameter is faithfully executed on site — with zero tolerance for deviation.',
+      headline: ['Where approved ', 'designs', ' are executed ', 'accurately', ' on site.'],
+      body: 'System Alignment ensures that every drawing, material detail, and structural specification is followed correctly throughout the construction process — with no room for error.',
       highlights: [
-        { label: 'Parameter Lock', desc: 'Structural parameters are locked post-approval and cannot be altered on site.' },
-        { label: 'Execution Audit', desc: 'Every executed element is cross-referenced against the approved drawing set.' },
-        { label: 'Handover Package', desc: 'A complete as-built documentation package is delivered at project completion.' },
+        { label: 'Parameter Lock', desc: 'Approved structural details and specifications are fixed and cannot be changed without approval.' },
+        { label: 'Execution Audit', desc: 'All construction work is checked and compared with the approved drawings to maintain accuracy.' },
+        { label: 'Handover Package', desc: 'A complete set of final project documents and records is provided after project completion.' },
       ],
       cta: 'Get Started',
     },
@@ -221,11 +221,10 @@ export default function Portal() {
 
           <h2 className="portal-content-headline">
             {section.content.headline.map((part, i) => {
-              if (part === 'client,' || part === 'architect,' || part === 'site team'
-                || part === 'telemetry' || part === 'milestone' || part === 'fidelity'
-                || part === 'real-time' || part === 'vault' || part === 'revision'
-                || part === 'architect,' || part === 'synchronized' || part === 'design intent'
-                || part === 'built reality') {
+              if (part === 'clients,' || part === 'architects,' || part === 'site teams'
+                || part === 'updated' || part === 'time.' || part === 'real-time'
+                || part === 'documentation.' || part === 'drawings' || part === 'revisions'
+                || part === 'connected' || part === 'designs' || part === 'accurately') {
                 return <span key={i} className="portal-headline-gold">{part}</span>;
               }
               return <span key={i}>{part}</span>;
