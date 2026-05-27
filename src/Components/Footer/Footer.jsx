@@ -58,9 +58,9 @@ const YouTubeIcon = () => (
 );
 
 const SOCIALS = [
-  { label: 'Instagram', Icon: InstagramIcon, href: 'https://instagram.com' },
+  { label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/boxbuildtech?igsh=emdxNGxrNXBwNmQ1' },
   { label: 'LinkedIn',  Icon: LinkedInIcon,  href: 'https://linkedin.com'  },
-  { label: 'Facebook',  Icon: FacebookIcon,  href: 'https://facebook.com'  },
+  { label: 'Facebook',  Icon: FacebookIcon,  href: 'https://www.facebook.com/profile.php?id=61590636021805'       },
   { label: 'YouTube',   Icon: YouTubeIcon,   href: 'https://youtube.com'   },
 ];
 

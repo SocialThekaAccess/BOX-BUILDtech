@@ -21,7 +21,7 @@ const CONTACT_DETAILS = [
   {
     Icon: Phone,
     label: 'Call Us',
-    value: '+91 98765 43210',
+    value: '+91  7657945469',
     sub: 'Mon – Sat, 9am – 7pm',
   },
   {
@@ -33,7 +33,7 @@ const CONTACT_DETAILS = [
   {
     Icon: MapPin,
     label: 'Visit Us',
-    value: 'New Delhi, India',
+    value: 'New Chandigarh, India',
     sub: 'By appointment only',
   },
   {
@@ -237,7 +237,7 @@ export default function ContactUsPage() {
 
       {/* ══════════════════════════════════════
           MAP STRIP
-      ══════════════════════════════════════ */}
+      ══════════════════════════════════════ */}ss
       <section className="cu-map-section">
         <div className="cu-map-overlay-text">
           <MapPin size={20} strokeWidth={1.5} />
