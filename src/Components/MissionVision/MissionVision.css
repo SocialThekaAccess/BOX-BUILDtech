@@ -107,9 +107,9 @@
 /* ── Tag ── */
 .mv-tag {
   font-family: var(--font-body);
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
 }

@@ -9,6 +9,9 @@ const ARCHITECTS = [
   { id: 2, name: 'Studio Ardete',           city: 'Chandigarh',      desc: 'Bold contemporary architecture rooted in context.',           img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&q=80' },
   { id: 3, name: 'SD Sharma & Associates',  city: 'Mohali',          desc: 'Decades of precision-driven residential excellence.',         img: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=300&q=80' },
   { id: 4, name: 'Areté Design Studio',     city: 'New Chandigarh',  desc: 'Luxury homes crafted with design integrity.',                 img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=300&q=80' },
+  { id: 5, name: 'Devra Architects',        city: 'Chandigarh',      desc: 'Contemporary design with a focus on sustainable living.',     img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=300&q=80' },
+  { id: 6, name: 'Sanjay Puri Architects',  city: 'Chandigarh',      desc: 'Award-winning firm with over 200 international projects.',    img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=300&q=80' },
+  { id: 7, name: 'The Design Studio',       city: 'Chandigarh',      desc: 'Innovative residential architecture with spatial precision.',  img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=300&q=80' },
 ];
 
 const ROUTES = [
