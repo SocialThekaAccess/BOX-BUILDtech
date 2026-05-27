@@ -184,25 +184,38 @@ const Navbar = () => {
           )}
 
           {/* Desktop CTA */}
-          <Link
-            to="/contact"
+          <button
             className="btn-gold"
-            onClick={() => { setMenuOpen(false); setActiveNav('Contact Us'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+            onClick={() => {
+              setMenuOpen(false);
+              setActiveNav('Contact Us');
+              if (window.location.pathname !== '/') {
+                window.location.href = '/#contact';
+              } else {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             Connect for Construction →
-          </Link>
+          </button>
         </div>
 
         {/* ── Mobile Right Side: CTA + Hamburger ── */}
         <div className="mobile-right">
-          {/* Mobile CTA — logo ke parallel, hamburger ke baaye */}
-          <Link
-            to="/contact"
+          <button
             className="btn-gold mobile-nav-cta"
-            onClick={() => { setMenuOpen(false); setActiveNav('Contact Us'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+            onClick={() => {
+              setMenuOpen(false);
+              setActiveNav('Contact Us');
+              if (window.location.pathname !== '/') {
+                window.location.href = '/#contact';
+              } else {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             Connect for Construction →
-          </Link>
+          </button>
 
           {/* Hamburger */}
           <button

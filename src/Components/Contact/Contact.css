@@ -154,9 +154,9 @@
   font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(0,0,0,0.3);
+  color: rgba(0,0,0,0.55);
   padding: 20px 0 14px;
-  border-top: 1px solid rgba(0,0,0,0.08);
+  border-top: 1px solid rgba(0,0,0,0.1);
   margin-top: 4px;
 }
 
@@ -210,7 +210,7 @@
 
 .align-input:focus { border-bottom-color: var(--gold); }
 .align-input.error { border-bottom-color: #e53e3e; }
-.align-input::placeholder { color: rgba(0,0,0,0.3); font-weight: 300; }
+.align-input::placeholder { color: rgba(0,0,0,0.5); font-weight: 400; }
 
 .align-select { cursor: pointer; }
 .align-select option { background: #fff; color: #111; }
@@ -229,7 +229,7 @@
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(0,0,0,0.3);
+  color: rgba(0,0,0,0.55);
   margin-bottom: 6px;
 }
 
