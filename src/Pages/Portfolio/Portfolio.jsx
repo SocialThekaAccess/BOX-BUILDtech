@@ -115,8 +115,8 @@ const BeforeAfterSlider = ({ before, after, title }) => {
 
 /* ── Data ── */
 const STATS = [
-  { icon: '🏗️', value: '120+', label: 'Projects Completed' },
-  { icon: '👷', value: '15+',  label: 'Years Experience'   },
+  { icon: '🏗️', value: '25+', label: 'Projects Completed' },
+  { icon: '👷', value: '14+',  label: 'Years Experience'   },
   { icon: '🏆', value: '40+',  label: 'Expert Architects'  },
 ];
 

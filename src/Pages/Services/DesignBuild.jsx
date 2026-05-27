@@ -31,9 +31,9 @@ const Fade = ({ children, className = '' }) => {
 
 const STATS = [
   { value: '250+', label: 'Villas Delivered'    },
-  { value: '10+',  label: 'Years Experience'    },
+  { value: '14+',  label: 'Years Experience'    },
   { value: '100%', label: 'Quality Assured'     },
-  { value: '98%',  label: 'Client Satisfaction' },
+  { value: '100%',  label: 'Client Satisfaction' },
 ];
 
 const PROCESS_STEPS = [

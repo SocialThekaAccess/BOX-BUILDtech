@@ -3,8 +3,8 @@ import { useEffect, useRef } from 'react';
 import boxImg1 from '../../assets/Aboutimg.jpg';
 
 const STATS = [
-  { value: '10+',  label: 'Years of Experience' },
-  { value: '320+', label: 'Projects Completed'  },
+  { value: '14+',  label: 'Years of Experience' },
+  { value: '25+', label: 'Projects Completed'  },
   { value: '85+',  label: 'Happy Clients'        },
   { value: '6',    label: 'Core Services'        },
 ];
