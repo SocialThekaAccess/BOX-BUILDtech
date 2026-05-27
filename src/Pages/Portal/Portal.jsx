@@ -15,7 +15,7 @@ const SECTIONS = [
     content: {
       tag: 'THE ARCHITECT REVOLUTION',
       headline: ['A smart digital platform where ', 'clients,', ' ', 'architects,', ' and ', 'site teams', ' stay connected throughout the project.'],
-      body: 'BOX helps manage construction smoothly by combining smart planning with quality execution. This portal does more than provide project updates — it shares real on-site progress, photos, and reports to ensure the design is built exactly as planned.',
+      body: 'BOX-BuildTech helps manage construction smoothly by combining smart planning with quality execution. This portal does more than provide project updates — it shares real on-site progress, photos, and reports to ensure the design is built exactly as planned.',
       highlights: [
         { label: 'More Transparent', desc: 'Get real-time project updates with clear site progress, reducing confusion and miscommunication.' },
         { label: 'More Controlled', desc: 'Any drawing or design update is instantly shared with the site team, keeping everyone on the same page.' },
@@ -32,7 +32,7 @@ const SECTIONS = [
     content: {
       tag: 'LIVE PROGRESS ROADMAP',
       headline: ['Every stage of the project is ', 'updated', ' all the ', 'time.'],
-      body: 'From the beginning when the foundation work starts to the handover, BOX keeps the architects and the clients informed about what is happening on the site and how the project is going — with accurate information and live updates.',
+      body: 'From the beginning when the foundation work starts to the handover, BOX-BuildTech keeps the architects and the clients informed about what is happening on the site and how the project is going — with accurate information and live updates.',
       highlights: [
         { label: 'Phase Tracking', desc: 'Each stage of construction is recorded with proper updates, timestamps, and site photos.' },
         { label: 'Live Milestones', desc: 'Clients and stakeholders receive instant updates whenever a project milestone is completed.' },
@@ -49,7 +49,7 @@ const SECTIONS = [
     content: {
       tag: 'ON-SITE PROOF ENGINE',
       headline: ['Construction quality monitored through ', 'real-time', ' site ', 'documentation.'],
-      body: 'BOX keeps a complete record of site activities, material checks, and structural updates — allowing architects and clients to review project progress anytime, from anywhere.',
+      body: 'BOX-BuildTech keeps a complete record of site activities, material checks, and structural updates — allowing architects and clients to review project progress anytime, from anywhere.',
       highlights: [
         { label: 'Time-Lapse Archive', desc: 'Site progress is recorded continuously and organized into an easy-to-view visual timeline.' },
         { label: 'Material Audits', desc: 'All construction materials are checked and documented before being used on site.' },
@@ -83,7 +83,7 @@ const SECTIONS = [
     content: {
       tag: 'HIGH-FIDELITY COLLABORATION',
       headline: ['Clients, ', 'architects,', ' and site teams — ', 'connected', ' with real-time updates.'],
-      body: 'BOX makes project coordination simple by ensuring everyone stays informed throughout the construction process — with clear communication between clients, architects, and site engineers.',
+      body: 'BOX-BuildTech makes project coordination simple by ensuring everyone stays informed throughout the construction process — with clear communication between clients, architects, and site engineers.',
       highlights: [
         { label: 'Direct Channel', desc: 'Architects can communicate directly with site engineers for faster and clearer coordination.' },
         { label: 'Client Visibility', desc: 'Clients receive transparent project updates and can track progress at every stage.' },
