@@ -150,7 +150,7 @@
 }
 
 .align-step-label {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -193,13 +193,13 @@
 /* ── Inputs ── */
 .align-input {
   width: 100%;
-  padding: 0 0 10px;
+  padding: 0 0 12px;
   background: transparent;
   border: none;
   border-bottom: 1.5px solid rgba(0,0,0,0.15);
   color: #111;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
   outline: none;
   transition: border-color 0.2s;
   border-radius: 0;
@@ -210,7 +210,7 @@
 
 .align-input:focus { border-bottom-color: var(--gold); }
 .align-input.error { border-bottom-color: #e53e3e; }
-.align-input::placeholder { color: rgba(0,0,0,0.5); font-weight: 400; }
+.align-input::placeholder { color: rgba(0,0,0,0.5); font-weight: 400; font-size: 16px; }
 
 .align-select { cursor: pointer; }
 .align-select option { background: #fff; color: #111; }
@@ -225,7 +225,7 @@
 
 /* ── Role toggle ── */
 .align-role-label {
-  font-size: 8.5px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -246,7 +246,7 @@
   background: transparent;
   border: none;
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;

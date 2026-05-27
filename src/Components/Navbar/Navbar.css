@@ -55,7 +55,7 @@
 .nav-link {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   color: rgba(255,255,255,0.75);
   padding: 8px 14px;
@@ -65,6 +65,10 @@
   background: none;
   border: none;
   text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .nav-link::after {
@@ -96,9 +100,10 @@
   gap: 5px;
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .nav-chevron {
@@ -313,15 +318,16 @@
   pointer-events: all;
 }
 
+/* ── FIX: Uniform mobile nav items ── */
 .mobile-nav-item {
   display: block;
   width: 100%;
   padding: 14px 0;
   border-bottom: 1px solid rgba(255,255,255,0.06);
-  font-family: var(--font-heading);
+  font-family: var(--font-body);       /* ← was font-heading — now uniform */
   font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.08em;
+  font-size: 13px;                     /* ← same size for all */
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.75);
   cursor: pointer;
@@ -342,11 +348,16 @@
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
+/* ── FIX: Services dropdown button same as other items ── */
 .mobile-nav-item-dropdown {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: none !important;
+  font-family: var(--font-body);       /* ← uniform */
+  font-weight: 600;
+  font-size: 13px;                     /* ← uniform */
+  letter-spacing: 0.12em;
 }
 
 .mobile-services-list {
@@ -356,6 +367,7 @@
   gap: 2px;
 }
 
+/* ── FIX: Service sub-items uniform ── */
 .mobile-service-item {
   display: flex;
   align-items: center;
@@ -366,8 +378,8 @@
   border-left: 2px solid rgba(233,161,2,0.25);
   border-radius: 0 6px 6px 0;
   color: rgba(255,255,255,0.6);
-  font-family: var(--font-heading);
-  font-size: 14px;
+  font-family: var(--font-body);       /* ← uniform */
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
