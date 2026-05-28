@@ -85,7 +85,7 @@
 
 .lr-hero-headline {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(2.4rem, 5.5vw, 5rem);
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
   font-weight: 900;
   color: #ffffff;
   line-height: 0.95;
@@ -99,7 +99,7 @@
   line-height: 1.05;
    font-family: var(--font-heading);
    font-weight: 900;
-  font-size: clamp(2.4rem, 5.5vw, 5rem);
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #ffffff;
@@ -112,7 +112,7 @@
   color: #E9A102;
   text-shadow: 0 0 80px rgba(233,161,2,0.3);
   font-weight: 900;
-  font-size: clamp(2.4rem, 5.5vw, 5rem);
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
   letter-spacing: -0.03em;
   text-transform: uppercase;
   /* color: #ffffff; */
