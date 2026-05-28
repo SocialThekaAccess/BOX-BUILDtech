@@ -3,8 +3,9 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useNavigate } from 'react-router-dom';
 import './Hero.css';
+import BG from '../../assets/homepageslider.png';
 
-const HERO_BG = 'https://t4.ftcdn.net/jpg/07/12/79/47/360_F_712794701_crhqxZnGqJaKudi7d9QKeFXevEW5C3mM.jpg';
+const HERO_BG = BG;
 
 gsap.registerPlugin(ScrollTrigger);
 
