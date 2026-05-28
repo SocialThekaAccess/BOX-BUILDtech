@@ -23,7 +23,7 @@ const CONTACT_DETAILS = [
   { Icon: Phone,  label: 'Call Us',       value: '+91 7657945469',         sub: 'Mon – Sat, 9am – 7pm'    },
   { Icon: Mail,   label: 'Email Us',      value: 'start@boxbuildtech.com', sub: 'We reply within 24 hours' },
   { Icon: MapPin, label: 'Visit Us',      value: 'New Chandigarh, India',  sub: 'By appointment only'     },
-  { Icon: Clock,  label: 'Working Hours', value: 'Mon – Sat: 9am – 7pm',  sub: 'Sunday: Closed'          },
+  // { Icon: Clock,  label: 'Working Hours', value: 'Mon – Sat: 9am – 7pm',  sub: 'Sunday: Closed'          },
 ];
 
 /* ── Wizard Steps ── */
@@ -218,7 +218,7 @@ export default function ContactUsPage() {
       </section>
 
       {/* MAP */}
-      <section className="cu-map-section">
+      {/* <section className="cu-map-section">
         <div className="cu-map-overlay-text">
           <MapPin size={20} strokeWidth={1.5} />
           New Chandigarh, India
@@ -231,7 +231,7 @@ export default function ContactUsPage() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
-      </section>
+      </section> */}
 
     </div>
   );
