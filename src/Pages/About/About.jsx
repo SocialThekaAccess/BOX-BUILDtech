@@ -5,8 +5,8 @@ import boxImg1 from '../../assets/Aboutimg.jpg';
 const STATS = [
   { value: '14+',  label: 'Years of Experience' },
   { value: '25+', label: 'Projects Completed'  },
-  { value: '85+',  label: 'Happy Clients'        },
-  { value: '6',    label: 'Core Services'        },
+  { value: '45+',  label: 'Happy Clients'        },
+  { value: '6+',    label: 'Ongoing projects'  },
 ];
 
 const VALUES = [
