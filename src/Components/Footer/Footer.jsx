@@ -102,7 +102,16 @@ export default function Footer() {
 
           {/* Col 1 — Brand */}
           <div className="footer-brand-col">
-            <img src={boxLogo} alt="BOX Built Tech" className="footer-logo" />
+           <img
+  src={boxLogo}
+  alt="BOX Built Tech"
+  className="footer-logo"
+  style={{ cursor: 'pointer' }}
+  onClick={() => {
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }}
+/>
             <p className="footer-tagline">
               Building Output eXcellence — a leading construction &amp; development
               company committed to delivering exceptional projects, on time, every time.
