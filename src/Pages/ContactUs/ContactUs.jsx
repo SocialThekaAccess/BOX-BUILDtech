@@ -185,23 +185,6 @@ export default function ContactUsPage() {
   return (
     <div className="cu-page">
 
-      {/* HERO */}
-      <section className="cu-hero">
-        <div className="cu-hero-bg" style={{ backgroundImage: `url(${contactUsImg})` }} />
-        <div className="cu-hero-overlay" />
-        <div className="cu-hero-inner">
-          <span className="cu-eyebrow">Get In Touch</span>
-          <h2 className="cu-hero-headline">
-            <span className="cu-hl-line">Let's Build</span>
-            <span className="cu-hl-line">Something <span className="cu-gold">Great</span></span>
-          </h2>
-          <p className="cu-hero-sub">
-            Tell us about your project and we'll get back to you within 24 hours
-            with a tailored plan and free consultation.
-          </p>
-        </div>
-      </section>
-
       {/* MAIN */}
       <section className="cu-main">
         <div className="cu-container">

@@ -13,7 +13,7 @@ const SERVICES = [
     audience: "Dear Architects",
     title: "Build your vision into reputation",
     desc: "We execute your design with precision, protect your architectural intent, and create completed projects that bring premium reputation and many more visionary projects.",
-    cta: "Execution as Marketing →",
+    cta: "Execution as Marketing",
     // path: "/services/design-build",
   },
   {
@@ -21,7 +21,7 @@ const SERVICES = [
     audience: "Dear Home Owners",
     title: "Build your dream home without losing peace",
     desc: "We deliver design perfection, premium construction quality, predictable coordination, and complete peace of mind throughout the construction journey.",
-    cta: "Quality with Peace of Mind →",
+    cta: "Quality with Peace of Mind",
     // path: "/services/luxury-residential",
   },
 ];
