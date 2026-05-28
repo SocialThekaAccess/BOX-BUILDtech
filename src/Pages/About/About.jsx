@@ -223,7 +223,7 @@ export default function AboutPage() {
       {/* ══════════════════════════════════════
           LEADERSHIP — Driven by Experience
       ══════════════════════════════════════ */}
-      <section className="ap-leadership">
+      {/* <section className="ap-leadership">
         <div className="ap-container">
           <FadeSection className="ap-leadership-inner">
             <div className="ap-leadership-left">
@@ -253,7 +253,7 @@ export default function AboutPage() {
             </div>
           </FadeSection>
         </div>
-      </section>
+      </section> */}
 
     </div>
   );
