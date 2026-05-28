@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Ruler, ShieldCheck, Layers3, ArrowRight } from 'lucide-react';
+import { Ruler, ShieldCheck, Layers3 } from 'lucide-react';
 import './WhyUs.css';
 
 const CARDS = [
@@ -94,11 +94,6 @@ export default function WhyUs() {
 
               <h3 className="whyus-card-title">{title}</h3>
               <p className="whyus-card-desc">{desc}</p>
-
-              {/* arrow button */}
-              <button className="whyus-card-arrow" aria-label="Learn more">
-                <ArrowRight size={16} strokeWidth={2} />
-              </button>
             </div>
           ))}
         </div>

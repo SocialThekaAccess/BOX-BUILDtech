@@ -29,10 +29,9 @@ const Fade = ({ children, className = '' }) => {
 };
 
 const STATS = [
-  { value: '150+', label: 'Villas Delivered'    },
-  { value: '14+',  label: 'Years Experience'    },
-  { value: '100%',  label: 'Client Satisfaction' },
-  { value: '5★',   label: 'Average Rating'      },
+  { value: '14+', label: 'Years of Experience'        },
+  { value: '25+', label: 'Premium Projects Completed' },
+  { value: '6+',  label: 'Ongoing Projects'           },
 ];
 
 const PROCESS_STEPS = [

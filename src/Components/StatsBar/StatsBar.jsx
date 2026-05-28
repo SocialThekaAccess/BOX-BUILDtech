@@ -3,9 +3,9 @@ import { Building2, HardHat, Award } from 'lucide-react';
 import './StatsBar.css';
 
 const STATS = [
+  { Icon: Award,     value: 14, suffix: '+', label: 'Years of Experience'        },
   { Icon: Building2, value: 25, suffix: '+', label: 'Premium Projects Completed' },
   { Icon: HardHat,   value: 6,  suffix: '+', label: 'Ongoing Projects'           },
-  { Icon: Award,     value: 14, suffix: '+', label: 'Years Experience'            },
 ];
 
 function useCounter(target, duration = 1800, start = false) {
