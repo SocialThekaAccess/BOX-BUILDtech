@@ -476,7 +476,8 @@
 ══════════════════════════════════════ */
 @media (max-width: 1024px) {
   .cu-grid { grid-template-columns: 1fr; gap: 48px; }
-  .cu-info-col { position: static; }
+  .cu-info-col { position: static; order: 2; }
+  .cu-form-col { order: 1; }
 }
 
 @media (max-width: 768px) {
