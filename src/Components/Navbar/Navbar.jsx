@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { label: 'Services',      section: 'services', path: null,        hasDropdown: true },
   { label: 'Portfolio',     section: null,       path: '/portfolio'      },
   { label: 'Client Portal', section: null,       path: '/client-portal'  },
-  { label: 'Contact Us',    section: null,       path: '/contact'        },
 ];
 
 const SERVICE_ITEMS = [
@@ -189,11 +188,8 @@ const Navbar = () => {
             onClick={() => {
               setMenuOpen(false);
               setActiveNav('Contact Us');
-              if (window.location.pathname !== '/') {
-                window.location.href = '/#contact';
-              } else {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }
+              navigate('/contact');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
             Connect for Construction →
@@ -207,11 +203,8 @@ const Navbar = () => {
             onClick={() => {
               setMenuOpen(false);
               setActiveNav('Contact Us');
-              if (window.location.pathname !== '/') {
-                window.location.href = '/#contact';
-              } else {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }
+              navigate('/contact');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
             Connect for Construction →
