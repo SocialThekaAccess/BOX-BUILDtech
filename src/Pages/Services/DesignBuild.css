@@ -96,7 +96,7 @@
 /* ── Headline ── */
 .db-hero-headline {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(2.8rem, 6.5vw, 6rem);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
   font-weight: 900;
   color: #ffffff;
   line-height: 0.95;
@@ -109,7 +109,7 @@
   display: block;
   font-family: var(--font-heading);
   font-weight: 900;
-  font-size: clamp(2.8rem, 6.5vw, 6rem);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #ffffff;
