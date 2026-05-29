@@ -996,7 +996,13 @@ function ArchitectSync() {
   const [messages, setMessages] = useState(INITIAL_MESSAGES);
   const [inputVal, setInputVal] = useState('');
   const [activePerson, setActivePerson] = useState('sk');
-  const messagesEndRef = useState(null);
+  const messagesEndRef = useRef(null);
+  const activeContact =
+    PROJECT_CIRCLE.find((person) => person.id === activePerson) ?? PROJECT_CIRCLE[0];
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }, [messages, activePerson]);
 
   const handleSend = () => {
     const text = inputVal.trim();
@@ -1075,27 +1081,20 @@ function ArchitectSync() {
 
           {/* Chat header */}
           <div className="as-chat-header">
-            {(() => {
-              const person = PROJECT_CIRCLE.find((p) => p.id === activePerson);
-              return (
-                <>
-                  <div className="as-chat-avatar">
-                    <span>{person.initials}</span>
-                    {person.online && <span className="as-online-dot as-online-dot-sm" />}
-                  </div>
-                  <div className="as-chat-header-info">
-                    <span className="as-chat-name">{person.name}</span>
-                    <span className="as-chat-status">
-                      <span className="as-status-dot" />
-                      ON SITE NOW
-                    </span>
-                  </div>
-                  <button className="as-chat-more" aria-label="More options">
-                    <MoreHorizontal size={16} strokeWidth={1.8} />
-                  </button>
-                </>
-              );
-            })()}
+            <div className="as-chat-avatar">
+              <span>{activeContact.initials}</span>
+              {activeContact.online && <span className="as-online-dot as-online-dot-sm" />}
+            </div>
+            <div className="as-chat-header-info">
+              <span className="as-chat-name">{activeContact.name}</span>
+              <span className="as-chat-status">
+                <span className="as-status-dot" />
+                ON SITE NOW
+              </span>
+            </div>
+            <button className="as-chat-more" aria-label="More options">
+              <MoreHorizontal size={16} strokeWidth={1.8} />
+            </button>
           </div>
 
           {/* Messages */}
@@ -1121,7 +1120,7 @@ function ArchitectSync() {
                 </div>
               </div>
             ))}
-            <div ref={messagesEndRef[0]} />
+            <div ref={messagesEndRef} />
           </div>
 
           {/* Input */}
