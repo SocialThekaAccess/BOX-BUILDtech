@@ -99,7 +99,7 @@ export default function Services() {
             className="services-cta-btn"
             onClick={() => scrollTo("contact")}
           >
-            Get Free Consultation →
+           Connect for Construction →
           </button>
         </div>
 

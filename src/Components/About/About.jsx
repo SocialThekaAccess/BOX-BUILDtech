@@ -1,9 +1,10 @@
 import "./About.css";
+import { Helmet } from 'react-helmet-async';
 import boxImg4 from "../../assets/BOXimg4.jpg";
 
 const FEATURES = [
-  { icon: "🏆", title: "Award Winning",    desc: "25+ industry awards" },
-  { icon: "🤝", title: "Trusted Partners", desc: "100+ global vendors"  },
+  { icon: "🏆", title: "Award Winning",    desc: "10+ industry awards" },
+  { icon: "🤝", title: "Trusted Partners", desc: "100+ vendors"        },
   { icon: "♻️", title: "Sustainable",      desc: "Green certified builds"},
 ];
 
@@ -29,12 +30,12 @@ export default function About() {
         <div className="about-content">
           <span className="about-tag">Our Story</span>
           <h2 className="about-heading">
-            Two Decades of Crafting <span>Excellence</span>
+            14+ Years of Crafting <span>Excellence</span>
           </h2>
           <div className="about-gold-line" />
 
           <p className="about-body">
-            Founded in 2005, BOX Buildtech has grown from a small construction firm
+            Founded in 2012, BOX Buildtech has grown from a small construction firm
             into one of the region's most trusted names in premium real estate
             development and design.
           </p>

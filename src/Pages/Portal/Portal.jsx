@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -130,6 +131,17 @@ export default function Portal() {
   const handleNext = () => {
     setActive((prev) => (prev + 1) % SECTIONS.length);
   };
+
+  return (
+    <>
+      <Helmet>
+        <title>Client Portal | BOX Buildtech – Project Operating System</title>
+        <meta name="description" content="The BOX Buildtech Client Portal — a smart digital platform connecting clients, architects, and site teams with real-time project updates, drawing vault, site stewardship, and live progress tracking." />
+        <meta property="og:title" content="Client Portal | BOX Buildtech" />
+        <meta property="og:description" content="Stay connected with your construction project. Real-time updates, drawing management, and site monitoring — all in one place." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.boxbuildtech.com/portal" />
+      </Helmet>
 
   return (
     <div className="portal-root">
@@ -274,5 +286,6 @@ export default function Portal() {
       </div>
 
     </div>
+    </>
   );
 }

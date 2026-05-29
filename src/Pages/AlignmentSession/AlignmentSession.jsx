@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CheckCircle, ChevronRight, ArrowLeft } from 'lucide-react';
@@ -345,6 +346,14 @@ export default function AlignmentSession() {
 
   return (
     <div className="as-root">
+      <Helmet>
+        <title>Alignment Session | BOX Buildtech – Start Your Project</title>
+        <meta name="description" content="Begin your construction journey with BOX Buildtech. Register your villa project, select your route, and connect with our trusted architect network in Chandigarh, Mohali & New Chandigarh." />
+        <meta property="og:title" content="Alignment Session | BOX Buildtech" />
+        <meta property="og:description" content="Start the alignment between architect, client, and steward. Professional project registration for luxury villa construction." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.boxbuildtech.com/alignment-session" />
+      </Helmet>
       <LeftPanel step={done ? 3 : step} role={form.role} />
 
       <div className="as-right">

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import './About.css';
 import { useEffect, useRef } from 'react';
 import boxImg1 from '../../assets/Aboutimg.jpg';
@@ -61,6 +62,14 @@ const FadeSection = ({ children, className = '' }) => {
 export default function AboutPage() {
   return (
     <div className="about-page">
+      <Helmet>
+        <title>About Us | BOX Buildtech – Premium Construction & Design</title>
+        <meta name="description" content="Learn about BOX Buildtech — founded by Pooja Yadav, we deliver premium villa construction, interior design, and architecture services across Chandigarh, Mohali & New Chandigarh with 14+ years of experience." />
+        <meta property="og:title" content="About Us | BOX Buildtech" />
+        <meta property="og:description" content="BOX Buildtech turns ideas into experiences. Quality-first construction, client-centered approach, and honest work since day one." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.boxbuildtech.com/about" />
+      </Helmet>
 
       {/* ══════════════════════════════════════
           HERO — Full bleed statement
@@ -121,12 +130,6 @@ export default function AboutPage() {
                 is laid. Our goal is simple — work that makes our clients genuinely
                 happy, every time.
               </p>
-              {/* Services chips */}
-              <div className="ap-chips">
-                {SERVICES_LIST.map((s) => (
-                  <span key={s} className="ap-chip">{s}</span>
-                ))}
-              </div>
             </FadeSection>
 
           </div>

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, MapPin, Calendar } from 'lucide-react';
@@ -148,6 +149,14 @@ export default function Portfolio() {
 
   return (
     <div className="pf-page">
+      <Helmet>
+        <title>Portfolio | BOX Buildtech – Before & After Project Transformations</title>
+        <meta name="description" content="Explore BOX Buildtech's portfolio of 25+ premium construction projects across Chandigarh, Mohali & New Chandigarh. See stunning before & after transformations of luxury villas and residences." />
+        <meta property="og:title" content="Portfolio | BOX Buildtech" />
+        <meta property="og:description" content="25+ premium projects completed. Drag the slider to see our before & after construction transformations." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.boxbuildtech.com/portfolio" />
+      </Helmet>
 
       {/* ══ HERO ══ */}
       <section className="pf-hero">

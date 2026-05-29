@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, CheckCircle, ArrowLeft } from 'lucide-react';
 import './ContactUs.css';
@@ -184,6 +185,14 @@ const AlignmentWizard = () => {
 export default function ContactUsPage() {
   return (
     <div className="cu-page">
+      <Helmet>
+        <title>Contact Us | BOX Buildtech – Start Your Project</title>
+        <meta name="description" content="Get in touch with BOX Buildtech. Call +91 7657945469, email start@boxbuildtech.com, or fill out our project form. We're based in New Chandigarh and serve Mohali & Chandigarh." />
+        <meta property="og:title" content="Contact BOX Buildtech" />
+        <meta property="og:description" content="Ready to build? Reach out to BOX Buildtech and start your luxury villa or residential project today." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.boxbuildtech.com/contact" />
+      </Helmet>
 
       {/* MAIN */}
       <section className="cu-main">

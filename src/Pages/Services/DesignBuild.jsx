@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Factory, Layers, Zap, CheckCircle, ArrowRight, Users, Shield, Clock, Star } from 'lucide-react';
@@ -60,6 +61,14 @@ export default function DesignBuild() {
 
   return (
     <div className="db-page">
+      <Helmet>
+        <title>Design & Build Services | BOX Buildtech – Luxury Villa Construction</title>
+        <meta name="description" content="BOX Buildtech offers complete Design & Build services for luxury villas. We partner with architects to handle construction from planning to final handover — Chandigarh, Mohali & New Chandigarh." />
+        <meta property="og:title" content="Design & Build | BOX Buildtech" />
+        <meta property="og:description" content="One team, total accountability. BOX Buildtech manages design coordination and construction execution for premium residential villas." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.boxbuildtech.com/services/design-build" />
+      </Helmet>
 
       {/* ══ HERO ══ */}
       <section className="db-hero">

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HardHat, Home, Star, Layers, CheckCircle, ArrowRight } from 'lucide-react';
@@ -59,6 +60,14 @@ export default function LuxuryResidential() {
 
   return (
     <div className="lr-page">
+      <Helmet>
+        <title>Luxury Villa Construction | BOX Buildtech – High End Residential Services</title>
+        <meta name="description" content="BOX Buildtech specialises in luxury villa construction across Chandigarh, Mohali & New Chandigarh. We work closely with architects to deliver premium residential projects with quality finishing and structural precision." />
+        <meta property="og:title" content="Luxury Villa Construction | BOX Buildtech" />
+        <meta property="og:description" content="Expert villa builders with 14+ years of experience. From foundation to final finish — quality construction for luxury homes." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.boxbuildtech.com/services/luxury-residential" />
+      </Helmet>
 
       {/* ══ HERO ══ */}
       <section className="lr-hero">
