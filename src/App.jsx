@@ -204,22 +204,29 @@ export default function App() {
   }, []);
 
   return (
-    <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
-      <Navbar />
-      <Routes>
-        <Route path="/"                              element={<HomePage />}               />
-        <Route path="/about"                         element={<AboutFullPage />}          />
-        <Route path="/contact"                       element={<ContactUsFullPage />}      />
-        <Route path="/services/luxury-residential"   element={<LuxuryResidentialPage />} />
-        <Route path="/services/design-build"         element={<DesignBuildPage />}       />
-        <Route path="/portfolio"                     element={<PortfolioFullPage />}     />
-        <Route path="/portal"                        element={<PortalPage />}            />
-        <Route path="/client-portal"                 element={<ClientPortalPage />}      />
-        <Route path="/alignment-session"             element={<AlignmentSession />}      />
-        <Route path="*"                              element={<HomePage />}               />
-      </Routes>
-      <BackToTop />
-      <WhatsAppButton />
-    </div>
+    <Routes>
+      {/* Client Portal — no main Navbar, has its own sidebar nav */}
+      <Route path="/client-portal" element={<ClientPortalPage />} />
+
+      {/* All other pages — with main Navbar */}
+      <Route path="*" element={
+        <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
+          <Navbar />
+          <Routes>
+            <Route path="/"                              element={<HomePage />}               />
+            <Route path="/about"                         element={<AboutFullPage />}          />
+            <Route path="/contact"                       element={<ContactUsFullPage />}      />
+            <Route path="/services/luxury-residential"   element={<LuxuryResidentialPage />} />
+            <Route path="/services/design-build"         element={<DesignBuildPage />}       />
+            <Route path="/portfolio"                     element={<PortfolioFullPage />}     />
+            <Route path="/portal"                        element={<PortalPage />}            />
+            <Route path="/alignment-session"             element={<AlignmentSession />}      />
+            <Route path="*"                              element={<HomePage />}               />
+          </Routes>
+          <BackToTop />
+          <WhatsAppButton />
+        </div>
+      } />
+    </Routes>
   );
 }

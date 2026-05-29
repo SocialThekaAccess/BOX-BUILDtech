@@ -159,7 +159,7 @@ export default function Portfolio() {
       </Helmet>
 
       {/* ══ HERO ══ */}
-      <section className="pf-hero">
+      {/* <section className="pf-hero">
         <div className="pf-hero-bg" style={{ backgroundImage: `url(${Portfolioimg})` }} />
         <div className="pf-hero-overlay" />
         <div className="pf-hero-inner">
@@ -189,7 +189,7 @@ export default function Portfolio() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ══ TRANSFORMATION SECTION ══ */}
       <section className="pf-transform-section">

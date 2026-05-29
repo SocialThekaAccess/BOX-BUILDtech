@@ -161,7 +161,7 @@ export default function AboutPage() {
                 <span>people &amp; purpose</span>
               </h2>
               <div className="ap-gold-bar" />
-              <p className="ap-body">
+              {/* <p className="ap-body">
                 BOX Buildtech was founded by Pooja Yadav with the idea of creating
                 spaces that feel thoughtfully built and genuinely useful for the
                 people who use them every day.
@@ -171,6 +171,10 @@ export default function AboutPage() {
                 projects. It has always been about understanding what the client
                 truly wants and turning that vision into a space that feels right
                 in every way — visually, practically, and structurally.
+              </p> */}
+              
+              <p className="ap-body">
+                At the heart of our company lies a simple belief that great construction is not just about building structures, but about building trust that lasts for generations. With a vision rooted in precision craftsmanship and uncompromised technical standards, we ensure every project is executed with complete transparency, accountability, and real-time management. From planning to completion, we redefine execution by making every detail visible, verifiable, and dependable. Our commitment is to create spaces that stand strong not only in design and engineering, but also in integrity — leaving behind a legacy of excellence that remains unaffected by time.
               </p>
 
               {/* Vision & Mission */}
@@ -179,17 +183,14 @@ export default function AboutPage() {
                   <div className="ap-vm-icon">◈</div>
                   <h4 className="ap-vm-title">Our Vision</h4>
                   <p className="ap-vm-text">
-                    To create modern and meaningful spaces that combine quality,
-                    functionality, and lasting value.
+                    To remain the uncompromised standard of technical stewardship; preventing dimension drift, material substitution, and site compromise to leave a legacy of precision craftsmanship.
                   </p>
                 </div>
                 <div className="ap-vm-card">
                   <div className="ap-vm-icon">◉</div>
                   <h4 className="ap-vm-title">Our Mission</h4>
                   <p className="ap-vm-text">
-                    To deliver construction and development solutions with honesty,
-                    creativity, attention to detail, and a strong commitment to
-                    quality work.
+                    To deliver every project through a real-time construction management system that makes execution visible, verifiable, accountable, and trusted.
                   </p>
                 </div>
               </div>

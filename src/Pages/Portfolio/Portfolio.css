@@ -10,12 +10,22 @@
 
 .pf-fade {
   opacity: 0;
-  transform: translateY(32px);
+  transform: translateX(-40px);
   transition: opacity 0.75s ease, transform 0.75s ease;
 }
+
 .pf-fade.pf-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
+}
+
+/* Reverse cards slide from right */
+.pf-transform-card.pf-reverse .pf-fade {
+  transform: translateX(40px);
+}
+
+.pf-transform-card.pf-reverse .pf-fade.pf-visible {
+  transform: translateX(0);
 }
 
 .pf-container {
@@ -39,16 +49,9 @@
 .pf-hero-bg {
   position: absolute;
   inset: 0;
-  background-size: cover;        /* ← contain tha, cover karo */
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  transform: scale(1.0);
-  animation: pfZoom 14s ease-out forwards;
-}
-
-@keyframes pfZoom {
-  from { transform: scale(1.05); }
-  to   { transform: scale(1.0);  }
 }
 
 .pf-hero-overlay {

@@ -148,7 +148,7 @@ Architects & Owners</span>
               exceptional projects — on time, every time.
             </p> */}
             <div className="hero-actions">
-              <button className="hero-btn-primary" onClick={() => { navigate('/portal'); window.scrollTo({ top: 0 }); }}>
+             <button className="hero-btn-primary" onClick={() => { navigate('/client-portal'); window.scrollTo({ top: 0 }); }}>
                 how project works <span className="btn-arrow">↗</span>
               </button>
               {/* <button className="hero-btn-secondary" onClick={() => scrollTo('projects')}>

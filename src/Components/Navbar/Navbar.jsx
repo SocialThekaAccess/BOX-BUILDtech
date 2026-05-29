@@ -5,11 +5,10 @@ import boxLogo from '../../assets/BOX.png';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { label: 'Home',          section: 'home',     path: '/'               },
-  { label: 'About Us',      section: null,       path: '/about'          },
-  { label: 'Services',      section: 'services', path: null,        hasDropdown: true },
-  { label: 'Portfolio',     section: null,       path: '/portfolio'      },
-  { label: 'Client Portal', section: null,       path: '/client-portal'  },
+  { label: 'Home',      section: 'home',     path: '/'          },
+  { label: 'About Us',  section: null,       path: '/about'     },
+  { label: 'Services',  section: 'services', path: null,   hasDropdown: true },
+  { label: 'Portfolio', section: null,       path: '/portfolio' },
 ];
 
 const SERVICE_ITEMS = [
@@ -28,14 +27,12 @@ const Navbar = () => {
   const navigate    = useNavigate();
   const location    = useLocation();
 
-  /* Mark active based on current route */
   useEffect(() => {
-    if (location.pathname === '/about')                setActiveNav('About Us');
-    else if (location.pathname === '/contact')         setActiveNav('Contact Us');
-    else if (location.pathname === '/portfolio')       setActiveNav('Portfolio');
-    else if (location.pathname === '/client-portal')   setActiveNav('Client Portal');
+    if (location.pathname === '/about')                 setActiveNav('About Us');
+    else if (location.pathname === '/contact')          setActiveNav('Contact Us');
+    else if (location.pathname === '/portfolio')        setActiveNav('Portfolio');
     else if (location.pathname.startsWith('/services')) setActiveNav('Services');
-    else if (location.pathname === '/')                setActiveNav('Home');
+    else if (location.pathname === '/')                 setActiveNav('Home');
   }, [location.pathname]);
 
   useEffect(() => {
@@ -44,7 +41,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  /* Close dropdown on outside click */
   useEffect(() => {
     const handleClick = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target))
@@ -54,7 +50,6 @@ const Navbar = () => {
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  /* Highlight active section on scroll — only on home page */
   useEffect(() => {
     if (location.pathname !== '/') return;
     const sections = NAV_LINKS
@@ -75,10 +70,6 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, [location]);
 
-  /* Hide navbar entirely on client portal — AFTER all hooks */
-  if (location.pathname === '/client-portal') return null;
-
-  /* Home section scroll */
   const scrollToSection = (section) => {
     setMenuOpen(false);
     setServicesOpen(false);
@@ -210,7 +201,6 @@ const Navbar = () => {
             Connect for Construction →
           </button>
 
-          {/* Hamburger */}
           <button
             className={`hamburger ${menuOpen ? 'open' : ''}`}
             onClick={() => setMenuOpen((o) => !o)}
@@ -222,7 +212,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* ── Mobile Menu — NO CTA inside ── */}
+      {/* ── Mobile Menu ── */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         {NAV_LINKS.map((link) =>
           link.hasDropdown ? (
@@ -272,7 +262,6 @@ const Navbar = () => {
             </Link>
           )
         )}
-        {/* CTA intentionally removed from mobile menu */}
       </div>
     </>
   );
