@@ -3,16 +3,17 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CheckCircle, ChevronRight, ArrowLeft } from 'lucide-react';
 import './AlignmentSession.css';
+import AreteImg from '../../assets/AreteDesignStudio.png';
+import ChargedVoidsImg from '../../assets/ChargedVoids.png';
+import SanjayPuriImg from '../../assets/SanjayPuriArchitects.jpeg';
 
 /* ── Architect data ── */
 const ARCHITECTS = [
-  { id: 1, ownerName: 'Tripat Girdhar',   name: 'Areté Design Studio',    city: 'New Chandigarh', desc: 'Luxury homes crafted with design integrity.',                img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=300&q=80' },
-  { id: 2, ownerName: 'Aman Aggarwal',    name: 'Charged Voids',          city: 'Chandigarh',     desc: 'Minimalist spatial design with structural clarity.',         img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&q=80' },
-  { id: 3, ownerName: 'Coming Soon',      name: 'Coming Soon',            city: 'Chandigarh',     desc: 'Details will be updated soon.',                             img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=300&q=80' },
-  { id: 4, ownerName: 'Coming Soon',      name: 'Coming Soon',            city: 'Chandigarh',     desc: 'Details will be updated soon.',                             img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=300&q=80' },
-  { id: 5, ownerName: 'Sanjay Puri',      name: 'Sanjay Puri Architects', city: 'Chandigarh',     desc: 'Award-winning firm with over 200 international projects.',   img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=300&q=80' },
-  { id: 6, ownerName: 'Sangeet Sharma',   name: 'SD Sharma & Associates', city: 'Mohali',         desc: 'Decades of precision-driven residential excellence.',        img: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=300&q=80' },
-  { id: 7, ownerName: 'Badrinath Kaleru', name: 'Studio Ardete',          city: 'Chandigarh',     desc: 'Bold contemporary architecture rooted in context.',          img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&q=80' },
+  { id: 1, ownerName: 'Tripat Girdhar',   name: 'Areté Design Studio',    city: 'New Chandigarh', desc: 'Luxury homes crafted with design integrity.',              img: AreteImg },
+  { id: 2, ownerName: 'Aman Aggarwal',    name: 'Charged Voids',          city: 'Chandigarh',     desc: 'Minimalist spatial design with structural clarity.',       img: ChargedVoidsImg },
+  { id: 3, ownerName: 'Sanjay Puri',      name: 'Sanjay Puri Architects', city: 'Chandigarh',     desc: 'Award-winning firm with over 200 international projects.', img: SanjayPuriImg },
+  { id: 4, ownerName: 'Sangeet Sharma',   name: 'SD Sharma & Associates', city: 'Mohali',         desc: 'Decades of precision-driven residential excellence.',      img: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=300&q=80' },
+  { id: 5, ownerName: 'Badrinath Kaleru', name: 'Studio Ardete',          city: 'Chandigarh',     desc: 'Bold contemporary architecture rooted in context.',        img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&q=80' },
 ];
 
 /* ── Left panel ── */
