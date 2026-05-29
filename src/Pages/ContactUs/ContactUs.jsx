@@ -6,14 +6,16 @@ import contactUsImg from '../../assets/ConactUsimg.jpg';
 import AreteImg from '../../assets/AreteDesignStudio.png';
 import ChargedVoidsImg from '../../assets/ChargedVoids.png';
 import SanjayPuriImg from '../../assets/SanjayPuriArchitects.jpeg';
+import SDSharmaImg from '../../assets/SDsharma.jpg';
+import KalerouImg from '../../assets/kalerou.jpg';
 
 /* ── Architect data ── */
 const ARCHITECTS = [
-  { id: 1, ownerName: 'Tripat Girdhar',   name: 'Areté Design Studio',    city: 'New Chandigarh', desc: 'Luxury homes crafted with design integrity.',              img: AreteImg },
-  { id: 2, ownerName: 'Aman Aggarwal',    name: 'Charged Voids',          city: 'Chandigarh',     desc: 'Minimalist spatial design with structural clarity.',       img: ChargedVoidsImg },
-  { id: 3, ownerName: 'Sanjay Puri',      name: 'Sanjay Puri Architects', city: 'Chandigarh',     desc: 'Award-winning firm with over 200 international projects.', img: SanjayPuriImg },
-  { id: 4, ownerName: 'Sangeet Sharma',   name: 'SD Sharma & Associates', city: 'Mohali',         desc: 'Decades of precision-driven residential excellence.',      img: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=300&q=80' },
-  { id: 5, ownerName: 'Badrinath Kaleru', name: 'Studio Ardete',          city: 'Chandigarh',     desc: 'Bold contemporary architecture rooted in context.',        img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&q=80' },
+  { id: 1, ownerName: 'Tripat Girdhar',                    name: 'Areté Design Studio',    city: 'New Chandigarh', desc: 'Luxury homes crafted with design integrity.',              img: AreteImg },
+  { id: 2, ownerName: 'Aman Aggarwal',                     name: 'Charged Voids',          city: 'Chandigarh',     desc: 'Minimalist spatial design with structural clarity.',       img: ChargedVoidsImg },
+  { id: 3, ownerName: 'Sanjay Puri',                       name: 'Sanjay Puri Architects', city: 'Chandigarh',     desc: 'Award-winning firm with over 200 international projects.', img: SanjayPuriImg },
+  { id: 4, ownerName: 'Sangeet Sharma',                    name: 'SD Sharma & Associates', city: 'Mohali',         desc: 'Decades of precision-driven residential excellence.',      img: SDSharmaImg },
+  { id: 5, ownerName: 'Badrinath Kaleru & Prerna Kaleru',  name: 'Studio Ardete',          city: 'Chandigarh',     desc: 'Bold contemporary architecture rooted in context.',        img: KalerouImg },
 ];
 
 const ROUTES = [
@@ -145,7 +147,12 @@ const Step3 = ({ selected, onSelect, onNext, onBack }) => (
       {ARCHITECTS.map(a => (
         <div key={a.id} className={`align-arch-card${selected === a.id ? ' selected' : ''}`} onClick={() => onSelect(a.id)}>
           <div className="align-arch-img-wrap">
-            <img src={a.img} alt={a.ownerName} className="align-arch-img" />
+            <img
+              src={a.img}
+              alt={a.ownerName}
+              className="align-arch-img"
+              style={{ objectFit: 'contain', background: '#f5f5f5' }}
+            />
             {selected === a.id && <div className="align-arch-badge"><CheckCircle size={16} /></div>}
           </div>
           <div className="align-arch-info">

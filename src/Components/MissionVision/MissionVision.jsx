@@ -5,15 +5,15 @@ import './MissionVision.css';
 const CARDS = [
   {
     Icon: Eye,
-    tag: 'THE MISSION',
-    title: 'Execution Redefined',
-    desc: 'To deliver every project through a real-time construction management system that makes execution visible, verifiable, accountable, and trusted.',
+    tag: 'THE VISION',
+    title: 'The Favorite Partner',
+    desc: 'The favorite system-driven construction partner for architects and owners.',
   },
   {
     Icon: Compass,
-    tag: 'THE VISION',
-    title: 'Legacy Unaffected',
-    desc: 'The favorite system-driven construction partner for architects and owners.',
+    tag: 'THE MISSION',
+    title: 'Execution Redefined',
+    desc: 'To deliver every project through a real-time construction management system that makes execution visible, verifiable, accountable, and trusted.',
   },
 ];
 

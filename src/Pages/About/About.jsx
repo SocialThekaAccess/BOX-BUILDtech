@@ -183,7 +183,7 @@ export default function AboutPage() {
                   <div className="ap-vm-icon">◈</div>
                   <h4 className="ap-vm-title">Our Vision</h4>
                   <p className="ap-vm-text">
-                    To remain the uncompromised standard of technical stewardship; preventing dimension drift, material substitution, and site compromise to leave a legacy of precision craftsmanship.
+                    The favorite system-driven construction partner for architects and owners.
                   </p>
                 </div>
                 <div className="ap-vm-card">

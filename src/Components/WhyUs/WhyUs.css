@@ -233,18 +233,7 @@
 
 /* gold underline below icon */
 .whyus-card-underline {
-  width: 36px;
-  height: 2px;
-  background: var(--gold);
-  border-radius: 2px;
-  margin-bottom: 20px;
-  opacity: 0.7;
-  transition: width 0.35s ease, opacity 0.35s ease;
-}
-
-.whyus-card:hover .whyus-card-underline {
-  width: 52px;
-  opacity: 1;
+  display: none;
 }
 
 /* title */
