@@ -13,7 +13,7 @@ const CARDS = [
     Icon: Compass,
     tag: 'THE VISION',
     title: 'Legacy Unaffected',
-    desc: 'To remain the uncompromised standard of technical stewardship; preventing dimension drift, material substitution, and site compromise to leave a legacy of precision craftsmanship.',
+    desc: 'The favorite system-driven construction partner for architects and owners.',
   },
 ];
 

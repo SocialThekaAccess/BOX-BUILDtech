@@ -1,19 +1,20 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
-import { HardHat, Factory, ChevronDown } from 'lucide-react';
+import { HardHat, Factory, Home, ChevronDown } from 'lucide-react';
 import boxLogo from '../../assets/BOX.png';
 import './Navbar.css';
 
 const NAV_LINKS = [
   { label: 'Home',      section: 'home',     path: '/'          },
   { label: 'About Us',  section: null,       path: '/about'     },
-  { label: 'Services',  section: 'services', path: null,   hasDropdown: true },
+  { label: 'Services',  section: null,       path: null,   hasDropdown: true },
   { label: 'Portfolio', section: null,       path: '/portfolio' },
 ];
 
 const SERVICE_ITEMS = [
-  { Icon: Factory, label: 'Design & Build',       path: '/services/design-build',       desc: 'Concept to completion'    },
-  { Icon: HardHat, label: 'High End Residential', path: '/services/luxury-residential', desc: 'Premium homes & interiors' },
+  { Icon: Home,    label: 'Premium Plotted Residences', path: '/services/premium-plotted-residences', desc: 'Exclusive plotted developments'  },
+  { Icon: HardHat, label: 'Luxury Palace Houses',       path: '/services/luxury-palace-houses',       desc: 'Grand palace-style homes'         },
+  { Icon: Factory, label: 'Large Luxury Farm Houses',   path: '/services/large-luxury-farm-houses',   desc: 'Sprawling luxury farm estates'    },
 ];
 
 const Navbar = () => {
@@ -27,6 +28,7 @@ const Navbar = () => {
   const navigate    = useNavigate();
   const location    = useLocation();
 
+  /* Mark active based on current route */
   useEffect(() => {
     if (location.pathname === '/about')                 setActiveNav('About Us');
     else if (location.pathname === '/contact')          setActiveNav('Contact Us');
@@ -41,6 +43,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  /* Close dropdown on outside click */
   useEffect(() => {
     const handleClick = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target))
@@ -50,6 +53,7 @@ const Navbar = () => {
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
+  /* Highlight active section on scroll — only on home page */
   useEffect(() => {
     if (location.pathname !== '/') return;
     const sections = NAV_LINKS
@@ -70,6 +74,7 @@ const Navbar = () => {
     return () => observer.disconnect();
   }, [location]);
 
+  /* Home section scroll */
   const scrollToSection = (section) => {
     setMenuOpen(false);
     setServicesOpen(false);
@@ -201,6 +206,7 @@ const Navbar = () => {
             Connect for Construction →
           </button>
 
+          {/* Hamburger */}
           <button
             className={`hamburger ${menuOpen ? 'open' : ''}`}
             onClick={() => setMenuOpen((o) => !o)}
@@ -212,7 +218,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* ── Mobile Menu ── */}
+      {/* ── Mobile Menu — NO CTA inside ── */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         {NAV_LINKS.map((link) =>
           link.hasDropdown ? (
@@ -262,6 +268,7 @@ const Navbar = () => {
             </Link>
           )
         )}
+        {/* CTA intentionally removed from mobile menu */}
       </div>
     </>
   );
