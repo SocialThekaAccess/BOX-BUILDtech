@@ -433,8 +433,8 @@
 .align-arch-card:hover { border-color: rgba(233,161,2,0.5); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
 .align-arch-card.selected { border-color: #E9A102; box-shadow: 0 0 0 2px rgba(233,161,2,0.3); }
 
-.align-arch-img-wrap { position: relative; height: 120px; overflow: hidden; }
-.align-arch-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+.align-arch-img-wrap { position: relative; height: 160px; overflow: hidden; }
+.align-arch-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform 0.4s; }
 .align-arch-card:hover .align-arch-img { transform: scale(1.05); }
 
 .align-arch-badge {
