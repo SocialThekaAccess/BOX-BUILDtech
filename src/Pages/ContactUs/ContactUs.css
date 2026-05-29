@@ -257,10 +257,10 @@
 /* ── Form Column ── */
 .cu-form-col {
   background: #ffffff;
-  border: 1px solid rgba(233,161,2,0.2);
-  border-radius: 12px;
+  border: 1px solid rgba(233,161,2,0.15);
+  border-radius: 20px;
   padding: 48px 44px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
 }
 
 .cu-form-header {

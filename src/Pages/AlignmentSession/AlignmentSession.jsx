@@ -4,36 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import { CheckCircle, ChevronRight, ArrowLeft } from 'lucide-react';
 import './AlignmentSession.css';
 
-/* ── Architect cards data ── */
+/* ── Architect data ── */
 const ARCHITECTS = [
-  {
-    id: 1,
-    name: 'Charged Voids',
-    city: 'Chandigarh',
-    desc: 'Minimalist spatial design with structural clarity.',
-    img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&q=80',
-  },
-  {
-    id: 2,
-    name: 'Studio Ardete',
-    city: 'Chandigarh',
-    desc: 'Bold contemporary architecture rooted in context.',
-    img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&q=80',
-  },
-  {
-    id: 3,
-    name: 'SD Sharma & Associates',
-    city: 'Mohali',
-    desc: 'Decades of precision-driven residential excellence.',
-    img: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=300&q=80',
-  },
-  {
-    id: 4,
-    name: 'Areté Design Studio',
-    city: 'New Chandigarh',
-    desc: 'Luxury homes crafted with design integrity.',
-    img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=300&q=80',
-  },
+  { id: 1, ownerName: 'Tripat Girdhar',   name: 'Areté Design Studio',    city: 'New Chandigarh', desc: 'Luxury homes crafted with design integrity.',                img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=300&q=80' },
+  { id: 2, ownerName: 'Aman Aggarwal',    name: 'Charged Voids',          city: 'Chandigarh',     desc: 'Minimalist spatial design with structural clarity.',         img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&q=80' },
+  { id: 3, ownerName: 'Coming Soon',      name: 'Coming Soon',            city: 'Chandigarh',     desc: 'Details will be updated soon.',                             img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=300&q=80' },
+  { id: 4, ownerName: 'Coming Soon',      name: 'Coming Soon',            city: 'Chandigarh',     desc: 'Details will be updated soon.',                             img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=300&q=80' },
+  { id: 5, ownerName: 'Sanjay Puri',      name: 'Sanjay Puri Architects', city: 'Chandigarh',     desc: 'Award-winning firm with over 200 international projects.',   img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=300&q=80' },
+  { id: 6, ownerName: 'Sangeet Sharma',   name: 'SD Sharma & Associates', city: 'Mohali',         desc: 'Decades of precision-driven residential excellence.',        img: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=300&q=80' },
+  { id: 7, ownerName: 'Badrinath Kaleru', name: 'Studio Ardete',          city: 'Chandigarh',     desc: 'Bold contemporary architecture rooted in context.',          img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&q=80' },
 ];
 
 /* ── Left panel ── */
@@ -89,52 +68,39 @@ const Step1 = ({ data, onChange, onNext }) => {
     <div className="as-form-body">
       <div className="as-step-label">01. YOUR IDENTITY &amp; CONTACT INFO</div>
 
-      <div className="as-field-row">
-        <div className="as-field as-field-grow">
-          <input
-            className={`as-input ${errors.name ? 'error' : ''}`}
-            placeholder="Full Name"
-            value={data.name}
-            onChange={e => onChange('name', e.target.value)}
-          />
-          {errors.name && <span className="as-error">{errors.name}</span>}
-        </div>
-        <div className="as-field">
-          <div className="as-role-label">YOUR ROLE</div>
-          <div className="as-toggle">
-            <button
-              type="button"
-              className={`as-toggle-btn ${data.role === 'owner' ? 'active' : ''}`}
-              onClick={() => onChange('role', 'owner')}
-            >Owner</button>
-            <button
-              type="button"
-              className={`as-toggle-btn ${data.role === 'architect' ? 'active' : ''}`}
-              onClick={() => onChange('role', 'architect')}
-            >Architect</button>
-          </div>
-        </div>
+      <div className="as-field">
+        <label className="as-field-heading">Name</label>
+        <input className={`as-input ${errors.name ? 'error' : ''}`} placeholder="Enter your full name" value={data.name} onChange={e => onChange('name', e.target.value)} />
+        {errors.name && <span className="as-error">{errors.name}</span>}
       </div>
 
-      <div className="as-field-row">
-        <div className="as-field as-field-grow">
-          <input
-            className={`as-input ${errors.mobile ? 'error' : ''}`}
-            placeholder="Mobile Number"
-            value={data.mobile}
-            onChange={e => onChange('mobile', e.target.value)}
-          />
-          {errors.mobile && <span className="as-error">{errors.mobile}</span>}
-        </div>
-        <div className="as-field as-field-grow">
-          <input
-            className={`as-input ${errors.email ? 'error' : ''}`}
-            type="email"
-            placeholder="Email Address"
-            value={data.email}
-            onChange={e => onChange('email', e.target.value)}
-          />
-          {errors.email && <span className="as-error">{errors.email}</span>}
+      <div className="as-field">
+        <label className="as-field-heading">Contact Number</label>
+        <input className={`as-input ${errors.mobile ? 'error' : ''}`} placeholder="Enter your mobile number" value={data.mobile} onChange={e => onChange('mobile', e.target.value)} />
+        {errors.mobile && <span className="as-error">{errors.mobile}</span>}
+      </div>
+
+      <div className="as-field">
+        <label className="as-field-heading">Email Address</label>
+        <input className={`as-input ${errors.email ? 'error' : ''}`} type="email" placeholder="Enter your email address" value={data.email} onChange={e => onChange('email', e.target.value)} />
+        {errors.email && <span className="as-error">{errors.email}</span>}
+      </div>
+
+      <div className="as-field">
+        <label className="as-field-heading">Are you an Owner or Architect?</label>
+        <div className="as-radio-group">
+          <label className="as-radio-option" onClick={() => onChange('role', 'owner')}>
+            <span className={`as-radio-circle${data.role === 'owner' ? ' checked' : ''}`}>
+              {data.role === 'owner' && <span className="as-radio-tick">✓</span>}
+            </span>
+            <span className="as-radio-text">Owner</span>
+          </label>
+          <label className="as-radio-option" onClick={() => onChange('role', 'architect')}>
+            <span className={`as-radio-circle${data.role === 'architect' ? ' checked' : ''}`}>
+              {data.role === 'architect' && <span className="as-radio-tick">✓</span>}
+            </span>
+            <span className="as-radio-text">Architect</span>
+          </label>
         </div>
       </div>
 
@@ -142,20 +108,12 @@ const Step1 = ({ data, onChange, onNext }) => {
 
       <div className="as-field-row">
         <div className="as-field as-field-grow">
-          <input
-            className="as-input"
-            placeholder="Plot Size / Area"
-            value={data.plotSize}
-            onChange={e => onChange('plotSize', e.target.value)}
-          />
+          <label className="as-field-heading">Plot Size / Area</label>
+          <input className="as-input" placeholder="e.g. 200 sq yards" value={data.plotSize} onChange={e => onChange('plotSize', e.target.value)} />
         </div>
         <div className="as-field as-field-grow">
-          <input
-            className="as-input"
-            placeholder="City / Region"
-            value={data.city}
-            onChange={e => onChange('city', e.target.value)}
-          />
+          <label className="as-field-heading">City / Region</label>
+          <input className="as-input" placeholder="e.g. Chandigarh" value={data.city} onChange={e => onChange('city', e.target.value)} />
         </div>
       </div>
 
@@ -165,19 +123,10 @@ const Step1 = ({ data, onChange, onNext }) => {
           <div className="as-step-label" style={{ marginTop: '8px' }}>03. FIRM DETAILS</div>
           <div className="as-field-row">
             <div className="as-field as-field-grow">
-              <input
-                className="as-input"
-                placeholder="Architecture Firm Name"
-                value={data.firm || ''}
-                onChange={e => onChange('firm', e.target.value)}
-              />
+              <input className="as-input" placeholder="Architecture Firm Name" value={data.firm || ''} onChange={e => onChange('firm', e.target.value)} />
             </div>
             <div className="as-field as-field-grow">
-              <select
-                className="as-input as-select"
-                value={data.projectType || ''}
-                onChange={e => onChange('projectType', e.target.value)}
-              >
+              <select className="as-input as-select" value={data.projectType || ''} onChange={e => onChange('projectType', e.target.value)}>
                 <option value="">Project Type...</option>
                 <option>Concept / Schematic</option>
                 <option>Design Development</option>
@@ -269,7 +218,8 @@ const Step3Owner = ({ selected, onSelect, onNext, onBack }) => (
             )}
           </div>
           <div className="as-arch-info">
-            <div className="as-arch-name">{a.name}</div>
+            <div className="as-arch-name">{a.ownerName}</div>
+            <div className="as-arch-company">{a.name}</div>
             <div className="as-arch-city">{a.city}</div>
             <div className="as-arch-desc">{a.desc}</div>
           </div>
@@ -336,7 +286,7 @@ export default function AlignmentSession() {
 
   const handleStep1Next = () => {
     if (form.role === 'architect') { setDone(true); }
-    else { setStep(2); }
+    else { setStep(3); }
   };
 
   const reset = () => {
@@ -362,19 +312,12 @@ export default function AlignmentSession() {
             <SuccessScreen onReset={reset} />
           ) : step === 1 ? (
             <Step1 data={form} onChange={update} onNext={handleStep1Next} />
-          ) : step === 2 ? (
-            <Step2Owner
-              selected={route}
-              onSelect={setRoute}
-              onNext={() => setStep(3)}
-              onBack={() => setStep(1)}
-            />
           ) : (
             <Step3Owner
               selected={arch}
               onSelect={setArch}
               onNext={() => setDone(true)}
-              onBack={() => setStep(2)}
+              onBack={() => setStep(1)}
             />
           )}
         </div>
