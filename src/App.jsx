@@ -22,6 +22,7 @@ import PortfolioPage           from './Pages/Portfolio/Portfolio';
 import PortalPage              from './Pages/Portal/Portal';
 import ClientPortalPage        from './Pages/ClientPortal/ClientPortal';
 import AlignmentSession        from './Pages/AlignmentSession/AlignmentSession';
+import PremiumPlottedResidences from './Pages/Services/PremiumPlottedResidences';
 import './styles/globals.css';
 
 /* ── WhatsApp Float Button ── */
@@ -216,8 +217,9 @@ export default function App() {
             <Route path="/"                              element={<HomePage />}               />
             <Route path="/about"                         element={<AboutFullPage />}          />
             <Route path="/contact"                       element={<ContactUsFullPage />}      />
-            <Route path="/services/luxury-residential"   element={<LuxuryResidentialPage />} />
-            <Route path="/services/design-build"         element={<DesignBuildPage />}       />
+            <Route path="/services/luxury-residential"        element={<LuxuryResidentialPage />}        />
+            <Route path="/services/design-build"               element={<DesignBuildPage />}               />
+            <Route path="/services/premium-plotted-residences" element={<PremiumPlottedResidences />}      />
             <Route path="/portfolio"                     element={<PortfolioFullPage />}     />
             <Route path="/portal"                        element={<PortalPage />}            />
             <Route path="/alignment-session"             element={<AlignmentSession />}      />

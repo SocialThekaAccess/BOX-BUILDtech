@@ -263,21 +263,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ══ CTA ══ */}
-      <section className="pf-cta">
-        <div className="pf-cta-grid" />
-        <div className="pf-cta-inner">
-          <div>
-            <div className="pf-cta-icon">🏗️</div>
-            <h2 className="pf-cta-title">Let's Build Your Next Project</h2>
-            <p className="pf-cta-sub">Ready to turn your vision into reality? Let's create something extraordinary together.</p>
-          </div>
-          <button className="pf-cta-btn" onClick={goContact}>
-            Get A Quote <ArrowRight size={16} />
-          </button>
-        </div>
-      </section>
-
     </div>
   );
 }

@@ -1725,15 +1725,15 @@
 ══════════════════════════════════════ */
 
 .as-root {
-  height: calc(100vh - 60px - 64px);
+  height: calc(100vh - 60px - 64px); /* viewport minus topbar minus body padding */
   display: flex;
   flex-direction: column;
 }
 
 .as-grid {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 16px;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
   flex: 1;
   min-height: 0;
 }
@@ -1774,7 +1774,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 14px;
+  padding: 10px 12px;
   border-radius: 8px;
   background: none;
   border: 1px solid transparent;
@@ -1797,9 +1797,9 @@
 /* Avatar */
 .as-person-avatar {
   position: relative;
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
   background: var(--deep-blue);
   border: 1px solid rgba(255,255,255,0.1);
   display: flex;
@@ -1810,7 +1810,7 @@
 
 .as-avatar-initials {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   color: var(--white);
   letter-spacing: 0.05em;
@@ -1835,7 +1835,7 @@
 .as-person-info {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 
 .as-person-name {
@@ -1850,7 +1850,7 @@
   font-family: var(--font-body);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.3);
 }
@@ -1876,7 +1876,7 @@
 
 .as-access-eyebrow {
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -1886,9 +1886,8 @@
 .as-access-text {
   font-family: var(--font-body);
   font-size: 12px;
-  color: rgba(255,255,255,0.4);
-  line-height: 1.7;
-  display: block;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.75;
 }
 
 /* ── Chat panel ── */
@@ -1987,7 +1986,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   min-height: 0;
 }
 
@@ -2021,7 +2020,7 @@
   font-weight: 800;
   color: rgba(255,255,255,0.6);
   flex-shrink: 0;
-  margin-top: 4px;
+  margin-top: 18px;
 }
 
 /* Bubble column */
@@ -2097,18 +2096,18 @@
   padding: 12px 16px;
   font-family: var(--font-body);
   font-size: 13px;
-  color: #ffffff;
+  color: var(--white);
   outline: none;
   transition: border-color 0.2s ease;
 }
 
 .as-input::placeholder {
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.2);
 }
 
 .as-input:focus {
   border-color: rgba(233,161,2,0.3);
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.04);
 }
 
 .as-send-btn {
@@ -2138,7 +2137,7 @@
 /* ── Responsive ── */
 @media (max-width: 1000px) {
   .as-grid {
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 260px 1fr;
   }
 }
 
