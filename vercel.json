@@ -1,3 +1,15 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "boxbuildtech.com"
+        }
+      ],
+      "destination": "https://www.boxbuildtech.com/:path*",
+      "permanent": true
+    }
+  ]
 }
