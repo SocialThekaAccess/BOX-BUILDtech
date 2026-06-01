@@ -44,7 +44,7 @@ const FEATURES = [
   { Icon: Zap,        n: '06', title: 'Modern Lifestyle',     desc: 'Open floor plans, natural light, smart storage and outdoor spaces — designed for the way modern families actually live.' },
 ];
 
-const GALLERY = [BOXimg4, BOXimg5, BOXimg6, BOXimg7, BOXimg8, BOXimg9];
+const GALLERY = [BOXimg5, BOXimg6, BOXimg7];
 
 const FAQS = [
   { q: 'What are premium plotted residences?',            a: 'Premium plotted residences give you ownership of a piece of land in a well-planned area. Unlike apartments, you can build your home exactly the way you want — your design, your timeline.' },

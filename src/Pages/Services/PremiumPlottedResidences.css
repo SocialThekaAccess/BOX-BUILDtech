@@ -551,7 +551,7 @@
 .pp-gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 300px 300px;
+  grid-template-rows: 360px;
   gap: 3px;
   margin-top: 64px;
 }
@@ -561,7 +561,7 @@
   overflow: hidden;
 }
 
-.pp-gallery-item:first-child { grid-column: span 2; }
+.pp-gallery-item:first-child { grid-column: span 1; }
 
 .pp-gallery-item img {
   width: 100%;
