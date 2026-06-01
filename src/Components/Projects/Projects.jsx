@@ -1,17 +1,20 @@
 import "./Projects.css";
+import heroproject1 from "../../assets/heroproject1.png";
+import heroproject2 from "../../assets/heroproject2.png";
 
 const PROJECTS = [
   {
     id: 1,
     title: "Hillside Luxury Villa",
     location: "CHANDIGARH, INDIA",
-    image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=700&q=80",
+    image: heroproject1,
   },
   {
     id: 2,
     title: "Contemporary Pool Villa",
     location: "MOHALI, INDIA",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80",
+    image: heroproject2,
+    imgPosition: "top center",
   },
   {
     id: 3,
@@ -83,7 +86,12 @@ export default function Projects() {
           {PROJECTS.map((p) => (
             <div key={p.id} className="project-card">
               <div className="project-img-wrap">
-                <img src={p.image} alt={p.title} loading="lazy" />
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  style={p.imgPosition ? { objectPosition: p.imgPosition } : {}}
+                />
                 <div className="project-overlay">
                   <span className="project-overlay-cta">View Project →</span>
                 </div>
