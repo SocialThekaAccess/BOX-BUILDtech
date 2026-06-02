@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Home, Layers, Star, CheckCircle, ArrowRight, MapPin, TrendingUp, Shield, Zap } from 'lucide-react';
 import './PremiumPlottedResidences.css';
 import BOXimg1  from '../../assets/BOXimg1.jpg';
@@ -61,6 +62,25 @@ export default function PremiumPlottedResidences() {
 
   return (
     <div className="pp-page">
+
+      <Helmet>
+        <title>Premium Plotted Residences in Chandigarh | BOX Buildtech</title>
+        <meta name="description" content="Explore premium plotted residences by BOX Buildtech in Chandigarh, Mohali & New Chandigarh. Own your land, build your dream home your way — with freedom, privacy, and strong long-term investment value." />
+        <meta name="keywords" content="premium plotted residences Chandigarh, residential plots Mohali, plots New Chandigarh, buy residential plot Chandigarh, plotted development BOX Buildtech, luxury plots near Chandigarh" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.boxbuildtech.com/services/premium-plotted-residences" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boxbuildtech.com/services/premium-plotted-residences" />
+        <meta property="og:title" content="Premium Plotted Residences in Chandigarh | BOX Buildtech" />
+        <meta property="og:description" content="Own your land, build your dream home your way. Premium plotted residences by BOX Buildtech — freedom, privacy, and quality living in Chandigarh, Mohali & New Chandigarh." />
+        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+        <meta property="og:site_name" content="Box BuildTech" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.boxbuildtech.com/services/premium-plotted-residences" />
+        <meta name="twitter:title" content="Premium Plotted Residences in Chandigarh | BOX Buildtech" />
+        <meta name="twitter:description" content="Own your land, build your dream home your way. Premium plotted residences in Chandigarh, Mohali & New Chandigarh." />
+        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+      </Helmet>
 
       {/* ══ HERO ══ */}
       <section className="pp-hero">

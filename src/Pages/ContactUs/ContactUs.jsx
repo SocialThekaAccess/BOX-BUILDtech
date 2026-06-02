@@ -210,12 +210,22 @@ export default function ContactUsPage() {
   return (
     <div className="cu-page">
       <Helmet>
-        <title>Contact Us | BOX Buildtech – Start Your Project</title>
-        <meta name="description" content="Get in touch with BOX Buildtech. Call +91 7657945469, email start@boxbuildtech.com, or fill out our project form. We're based in New Chandigarh and serve Mohali & Chandigarh." />
-        <meta property="og:title" content="Contact BOX Buildtech" />
-        <meta property="og:description" content="Ready to build? Reach out to BOX Buildtech and start your luxury villa or residential project today." />
-        <meta property="og:type" content="website" />
+        <title>Contact BOX Buildtech | Start Your Construction Project Today</title>
+        <meta name="description" content="Get in touch with BOX Buildtech. Call +91 7657945469, email start@boxbuildtech.com, or fill out our project form. Serving Chandigarh, Mohali & New Chandigarh." />
+        <meta name="keywords" content="contact BOX Buildtech, construction company contact Chandigarh, start construction project, building contractor inquiry, villa construction Mohali" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boxbuildtech.com/contact" />
+        <meta property="og:title" content="Contact BOX Buildtech | Start Your Construction Project Today" />
+        <meta property="og:description" content="Ready to build? Reach out to BOX Buildtech and start your luxury villa or residential project today. Based in New Chandigarh, serving Mohali & Chandigarh." />
+        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+        <meta property="og:site_name" content="Box BuildTech" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.boxbuildtech.com/contact" />
+        <meta name="twitter:title" content="Contact BOX Buildtech | Start Your Construction Project Today" />
+        <meta name="twitter:description" content="Ready to build? Reach out to BOX Buildtech and start your luxury villa or residential project today." />
+        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
       </Helmet>
 
       {/* MAIN */}

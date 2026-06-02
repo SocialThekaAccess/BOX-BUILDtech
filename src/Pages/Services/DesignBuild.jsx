@@ -62,12 +62,22 @@ export default function DesignBuild() {
   return (
     <div className="db-page">
       <Helmet>
-        <title>Design & Build Services | BOX Buildtech – Luxury Villa Construction</title>
-        <meta name="description" content="BOX Buildtech offers complete Design & Build services for luxury villas. We partner with architects to handle construction from planning to final handover — Chandigarh, Mohali & New Chandigarh." />
-        <meta property="og:title" content="Design & Build | BOX Buildtech" />
-        <meta property="og:description" content="One team, total accountability. BOX Buildtech manages design coordination and construction execution for premium residential villas." />
-        <meta property="og:type" content="website" />
+        <title>Design & Build Services in Chandigarh | BOX Buildtech</title>
+        <meta name="description" content="BOX Buildtech offers complete Design & Build services for luxury villas in Chandigarh, Mohali & New Chandigarh. We partner with architects to handle construction from planning to final handover." />
+        <meta name="keywords" content="design build services Chandigarh, design and build villa Mohali, construction partner for architects, luxury villa design build, end to end construction Chandigarh, BOX Buildtech" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/services/design-build" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boxbuildtech.com/services/design-build" />
+        <meta property="og:title" content="Design & Build Services in Chandigarh | BOX Buildtech" />
+        <meta property="og:description" content="One team, total accountability. BOX Buildtech manages design coordination and construction execution for premium residential villas in Chandigarh, Mohali & New Chandigarh." />
+        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+        <meta property="og:site_name" content="Box BuildTech" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.boxbuildtech.com/services/design-build" />
+        <meta name="twitter:title" content="Design & Build Services in Chandigarh | BOX Buildtech" />
+        <meta name="twitter:description" content="One team, total accountability. BOX Buildtech manages design coordination and construction execution for premium residential villas." />
+        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
       </Helmet>
 
       {/* ══ HERO ══ */}

@@ -63,12 +63,22 @@ export default function AboutPage() {
   return (
     <div className="about-page">
       <Helmet>
-        <title>About Us | BOX Buildtech – Premium Construction & Design</title>
-        <meta name="description" content="Learn about BOX Buildtech — founded by Pooja Yadav, we deliver premium villa construction, interior design, and architecture services across Chandigarh, Mohali & New Chandigarh with 14+ years of experience." />
-        <meta property="og:title" content="About Us | BOX Buildtech" />
-        <meta property="og:description" content="BOX Buildtech turns ideas into experiences. Quality-first construction, client-centered approach, and honest work since day one." />
-        <meta property="og:type" content="website" />
+        <title>About BOX Buildtech | Premium Construction Company in Chandigarh</title>
+        <meta name="description" content="Learn about BOX Buildtech — a system-driven construction company with 14+ years of experience delivering premium villa construction, interior design, and architecture services across Chandigarh, Mohali & New Chandigarh." />
+        <meta name="keywords" content="about BOX Buildtech, construction company Chandigarh, premium villa builders, Pooja Yadav, building contractor Mohali, New Chandigarh construction" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boxbuildtech.com/about" />
+        <meta property="og:title" content="About BOX Buildtech | Premium Construction Company in Chandigarh" />
+        <meta property="og:description" content="BOX Buildtech turns ideas into experiences. Quality-first construction, client-centered approach, and honest work with 14+ years of experience in Chandigarh, Mohali & New Chandigarh." />
+        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+        <meta property="og:site_name" content="Box BuildTech" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.boxbuildtech.com/about" />
+        <meta name="twitter:title" content="About BOX Buildtech | Premium Construction Company in Chandigarh" />
+        <meta name="twitter:description" content="BOX Buildtech turns ideas into experiences. Quality-first construction, client-centered approach, and honest work since day one." />
+        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
       </Helmet>
 
       {/* ══════════════════════════════════════

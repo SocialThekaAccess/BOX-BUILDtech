@@ -150,12 +150,22 @@ export default function Portfolio() {
   return (
     <div className="pf-page">
       <Helmet>
-        <title>Portfolio | BOX Buildtech – Before & After Project Transformations</title>
+        <title>Portfolio | BOX Buildtech – Before & After Construction Transformations</title>
         <meta name="description" content="Explore BOX Buildtech's portfolio of 25+ premium construction projects across Chandigarh, Mohali & New Chandigarh. See stunning before & after transformations of luxury villas and residences." />
-        <meta property="og:title" content="Portfolio | BOX Buildtech" />
-        <meta property="og:description" content="25+ premium projects completed. Drag the slider to see our before & after construction transformations." />
-        <meta property="og:type" content="website" />
+        <meta name="keywords" content="construction portfolio Chandigarh, before after villa transformation, luxury villa projects Mohali, premium residential construction, BOX Buildtech projects" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boxbuildtech.com/portfolio" />
+        <meta property="og:title" content="Portfolio | BOX Buildtech – Before & After Construction Transformations" />
+        <meta property="og:description" content="25+ premium projects completed across Chandigarh & Mohali. Drag the slider to see our before & after construction transformations." />
+        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+        <meta property="og:site_name" content="Box BuildTech" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.boxbuildtech.com/portfolio" />
+        <meta name="twitter:title" content="Portfolio | BOX Buildtech – Before & After Construction Transformations" />
+        <meta name="twitter:description" content="25+ premium projects completed. Drag the slider to see our before & after construction transformations." />
+        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
       </Helmet>
 
       {/* ══ HERO ══ */}

@@ -135,15 +135,24 @@ export default function Portal() {
   return (
     <>
       <Helmet>
-        <title>Client Portal | BOX Buildtech – Project Operating System</title>
+        <title>Client Portal & Project Operating System | BOX Buildtech</title>
         <meta name="description" content="The BOX Buildtech Client Portal — a smart digital platform connecting clients, architects, and site teams with real-time project updates, drawing vault, site stewardship, and live progress tracking." />
-        <meta property="og:title" content="Client Portal | BOX Buildtech" />
-        <meta property="og:description" content="Stay connected with your construction project. Real-time updates, drawing management, and site monitoring — all in one place." />
-        <meta property="og:type" content="website" />
+        <meta name="keywords" content="construction client portal, project management portal, real time construction updates, drawing vault, site stewardship, BOX Buildtech portal" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/portal" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boxbuildtech.com/portal" />
+        <meta property="og:title" content="Client Portal & Project Operating System | BOX Buildtech" />
+        <meta property="og:description" content="Stay connected with your construction project. Real-time updates, drawing management, and site monitoring — all in one place." />
+        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+        <meta property="og:site_name" content="Box BuildTech" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.boxbuildtech.com/portal" />
+        <meta name="twitter:title" content="Client Portal & Project Operating System | BOX Buildtech" />
+        <meta name="twitter:description" content="Stay connected with your construction project. Real-time updates, drawing management, and site monitoring — all in one place." />
+        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
       </Helmet>
 
-  return (
     <div className="portal-root">
 
       {/* ══ TOP BAR ══ */}
