@@ -11,5 +11,11 @@
       "destination": "https://www.boxbuildtech.com/:path*",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
