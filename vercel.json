@@ -14,6 +14,34 @@
   ],
   "rewrites": [
     {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/portfolio/index.html"
+    },
+    {
+      "source": "/services/luxury-residential",
+      "destination": "/services/luxury-residential/index.html"
+    },
+    {
+      "source": "/services/design-build",
+      "destination": "/services/design-build/index.html"
+    },
+    {
+      "source": "/services/premium-plotted-residences",
+      "destination": "/services/premium-plotted-residences/index.html"
+    },
+    {
+      "source": "/portal",
+      "destination": "/portal/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

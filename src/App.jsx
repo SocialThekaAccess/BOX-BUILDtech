@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Navbar       from './Components/Navbar/Navbar';
 import Hero         from './Components/Hero/Hero';
 import MissionVision from './Components/MissionVision/MissionVision';
@@ -146,6 +147,11 @@ const BackToTop = () => {
 /* ── Page Layout ── */
 const HomePage = () => (
   <>
+    <Helmet>
+      <title>Box BuildTech | Smart Construction &amp; Building Solutions in Chandigarh</title>
+      <meta name="description" content="BOX Buildtech is a trusted construction company in Chandigarh offering luxury villa construction, design & build services, and system-driven project management across Chandigarh, Mohali & New Chandigarh." />
+      <link rel="canonical" href="https://www.boxbuildtech.com/" />
+    </Helmet>
     <Hero />
     <MissionVision />
     {/* <StatsBar /> */}
