@@ -243,27 +243,24 @@ font-family: var(--font-heading); }
 
 .pf-slider-before-clip {
   position: absolute;
-  inset: 0 auto 0 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
   overflow: hidden;
   z-index: 2;
+  /* width is set inline via JS — clip grows/shrinks */
 }
 
-.pf-slider-before-clip .pf-slider-img {
-  width: auto;
-  min-width: 100%;
-  /* keep image full width inside clip */
-  max-width: none;
-}
-
-/* Fix: before image should always be full viewport width */
+/* The before image must always match the full slider wrapper width, not the clip width */
 .pf-slider-before-clip img {
   position: absolute;
-  left: 0;
   top: 0;
-  width: 100%;
+  left: 0;
+  width: var(--slider-width, 100%);
   height: 100%;
   object-fit: cover;
-  min-width: unset;
+  max-width: none;
+  pointer-events: none;
 }
 
 .pf-slider-line {

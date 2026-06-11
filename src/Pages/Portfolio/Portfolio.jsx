@@ -53,9 +53,22 @@ const Fade = ({ children, className = '' }) => {
    DRAGGABLE BEFORE/AFTER SLIDER
 ══════════════════════════════════════ */
 const BeforeAfterSlider = ({ before, after, title }) => {
-  const [pos, setPos]       = useState(50);
-  const [dragging, setDrag] = useState(false);
-  const wrapRef             = useRef(null);
+  const [pos, setPos]         = useState(50);
+  const [dragging, setDrag]   = useState(false);
+  const [wrapWidth, setWrapWidth] = useState(0);
+  const wrapRef               = useRef(null);
+
+  /* Track wrapper width so the before-image always fills it */
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => {
+      setWrapWidth(entry.contentRect.width);
+    });
+    ro.observe(el);
+    setWrapWidth(el.getBoundingClientRect().width);
+    return () => ro.disconnect();
+  }, []);
 
   const getPos = useCallback((clientX) => {
     const rect = wrapRef.current.getBoundingClientRect();
@@ -89,8 +102,14 @@ const BeforeAfterSlider = ({ before, after, title }) => {
     <div className="pf-slider-wrap" ref={wrapRef}>
       {/* After (full) */}
       <img src={after}  alt={`${title} after`}  className="pf-slider-img pf-slider-after"  loading="lazy" />
-      {/* Before (clipped) */}
-      <div className="pf-slider-before-clip" style={{ width: `${pos}%` }}>
+      {/* Before (clipped) — clip shrinks/grows, image stays full wrapper width */}
+      <div
+        className="pf-slider-before-clip"
+        style={{
+          width: `${pos}%`,
+          '--slider-width': wrapWidth ? `${wrapWidth}px` : '100%',
+        }}
+      >
         <img src={before} alt={`${title} before`} className="pf-slider-img pf-slider-before" loading="lazy" />
       </div>
       {/* Divider line */}

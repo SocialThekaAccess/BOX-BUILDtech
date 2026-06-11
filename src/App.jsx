@@ -17,8 +17,10 @@ import StatsBar      from './Components/StatsBar/StatsBar';
 import Footer       from './Components/Footer/Footer';
 import AboutPage               from './Pages/About/About';
 import ContactUsPage           from './Pages/ContactUs/ContactUs';
-// import LuxuryResidential       from './Pages/Services/LuxuryResidential';
-// import DesignBuild             from './Pages/Services/DesignBuild';
+import LuxuryResidential       from './Pages/Services/LuxuryResidential';
+import DesignBuild             from './Pages/Services/DesignBuild';
+import LuxuryPalaceHouses      from './Pages/Services/LuxuryPalaceHouses';
+import LargeLuxuryFarmHouses   from './Pages/Services/LargeLuxuryFarmHouses';
 import PortfolioPage           from './Pages/Portfolio/Portfolio';
 import PortalPage              from './Pages/Portal/Portal';
 import ClientPortalPage        from './Pages/ClientPortal/ClientPortal';
@@ -196,6 +198,27 @@ const DesignBuildPage = () => (
   </>
 );
 
+const LuxuryPalaceHousesPage = () => (
+  <>
+    <LuxuryPalaceHouses />
+    <Footer />
+  </>
+);
+
+const LargeLuxuryFarmHousesPage = () => (
+  <>
+    <LargeLuxuryFarmHouses />
+    <Footer />
+  </>
+);
+
+const PremiumPlottedResidencesPage = () => (
+  <>
+    <PremiumPlottedResidences />
+    <Footer />
+  </>
+);
+
 const PortfolioFullPage = () => (
   <>
     <PortfolioPage />
@@ -225,7 +248,9 @@ export default function App() {
             <Route path="/contact"                       element={<ContactUsFullPage />}      />
             <Route path="/services/luxury-residential"        element={<LuxuryResidentialPage />}        />
             <Route path="/services/design-build"               element={<DesignBuildPage />}               />
-            <Route path="/services/premium-plotted-residences" element={<PremiumPlottedResidences />}      />
+            <Route path="/services/luxury-palace-houses"       element={<LuxuryPalaceHousesPage />}       />
+            <Route path="/services/large-luxury-farm-houses"  element={<LargeLuxuryFarmHousesPage />}    />
+            <Route path="/services/premium-plotted-residences" element={<PremiumPlottedResidencesPage />} />
             <Route path="/portfolio"                     element={<PortfolioFullPage />}     />
             <Route path="/portal"                        element={<PortalPage />}            />
             <Route path="/alignment-session"             element={<AlignmentSession />}      />
