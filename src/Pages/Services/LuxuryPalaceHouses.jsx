@@ -132,35 +132,23 @@ export default function LuxuryPalaceHouses() {
   return (
     <div className="pp-page">
       <Helmet>
-        <title>Luxury Palace Houses in Chandigarh | BOX Buildtech</title>
-        <meta
-          name="description"
-          content="Discover luxury palace houses by BOX Buildtech in Chandigarh, Mohali and New Chandigarh. Spacious layouts, elegant design, peaceful living and long-term value for modern families."
-        />
-        <meta
-          name="keywords"
-          content="luxury palace houses Chandigarh, luxury homes Mohali, palace style house New Chandigarh, premium family homes Chandigarh, spacious luxury houses, BOX Buildtech"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.boxbuildtech.com/services/luxury-palace-houses" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.boxbuildtech.com/services/luxury-palace-houses" />
-        <meta property="og:title" content="Luxury Palace Houses in Chandigarh | BOX Buildtech" />
-        <meta
-          property="og:description"
-          content="Experience royal living with luxury palace houses crafted for modern families by BOX Buildtech."
-        />
-        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
-        <meta property="og:site_name" content="Box BuildTech" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.boxbuildtech.com/services/luxury-palace-houses" />
-        <meta name="twitter:title" content="Luxury Palace Houses in Chandigarh | BOX Buildtech" />
-        <meta
-          name="twitter:description"
-          content="Luxury palace houses with elegant spaces, peaceful surroundings and long-term value for modern families."
-        />
-        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
-      </Helmet>
+  <title>Luxury Palace Houses Chandigarh &amp; Mohali | Box Build Tech</title>
+  <meta name="description" content="Box Build Tech builds luxury palace houses in Chandigarh & Mohali. Grand spacious homes with elegant design, premium finishes and peaceful family living." />
+  <meta name="keywords" content="luxury palace houses Chandigarh, palace house builders Mohali, grand villa construction Punjab, luxury homes Chandigarh, Box Build Tech" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.boxbuildtech.com/luxury-palace-houses-chandigarh-mohali" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.boxbuildtech.com/luxury-palace-houses-chandigarh-mohali" />
+  <meta property="og:title" content="Luxury Palace Houses Chandigarh & Mohali | Box Build Tech" />
+  <meta property="og:description" content="Box Build Tech builds luxury palace houses in Chandigarh & Mohali. Grand spacious homes with elegant design and premium finishes." />
+  <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+  <meta property="og:site_name" content="Box Build Tech" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.boxbuildtech.com/luxury-palace-houses-chandigarh-mohali" />
+  <meta name="twitter:title" content="Luxury Palace Houses Chandigarh & Mohali | Box Build Tech" />
+  <meta name="twitter:description" content="Box Build Tech builds luxury palace houses in Chandigarh & Mohali. Grand spacious homes with elegant design and premium finishes." />
+  <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+</Helmet>
 
       <section className="pp-hero">
         <div className="pp-hero-bg" style={{ backgroundImage: `url(${BOXimg8})` }} />

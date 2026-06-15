@@ -12,9 +12,11 @@ const NAV_LINKS = [
 ];
 
 const SERVICE_ITEMS = [
-  { Icon: Home,    label: 'Premium Plotted Residences', path: '/services/premium-plotted-residences', desc: 'Exclusive plotted developments'  },
-  { Icon: HardHat, label: 'Luxury Palace Houses',       path: '/services/luxury-palace-houses',       desc: 'Grand palace-style homes'         },
-  { Icon: Factory, label: 'Large Luxury Farm Houses',   path: '/services/large-luxury-farm-houses',   desc: 'Sprawling luxury farm estates'    },
+  { Icon: Home,    label: 'Premium Plotted Residences', path: '/services/premium-plotted-residences', desc: 'Exclusive plotted developments'       },
+  { Icon: HardHat, label: 'Luxury Palace Houses',       path: '/services/luxury-palace-houses',       desc: 'Grand palace-style homes'             },
+  { Icon: Factory, label: 'Large Luxury Farm Houses',   path: '/services/large-luxury-farm-houses',   desc: 'Sprawling luxury farm estates'        },
+  { Icon: HardHat, label: 'Luxury Residential',         path: '/services/luxury-residential',         desc: 'High-end residential construction'    },
+  { Icon: Factory, label: 'Design & Build',             path: '/services/design-build',               desc: 'End-to-end design & build services'   },
 ];
 
 const Navbar = () => {

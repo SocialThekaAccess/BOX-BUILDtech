@@ -131,36 +131,24 @@ export default function LargeLuxuryFarmHouses() {
 
   return (
     <div className="pp-page">
-      <Helmet>
-        <title>Large Luxury Farm Houses in Chandigarh | BOX Buildtech</title>
-        <meta
-          name="description"
-          content="Explore large luxury farm houses by BOX Buildtech in Chandigarh, Mohali and New Chandigarh. Experience open-space living, privacy, elegant comfort and long-term value."
-        />
-        <meta
-          name="keywords"
-          content="large luxury farm houses Chandigarh, luxury farm house Mohali, farm house living New Chandigarh, premium farm house builders, private luxury estates, BOX Buildtech"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.boxbuildtech.com/services/large-luxury-farm-houses" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.boxbuildtech.com/services/large-luxury-farm-houses" />
-        <meta property="og:title" content="Large Luxury Farm Houses in Chandigarh | BOX Buildtech" />
-        <meta
-          property="og:description"
-          content="Large luxury farm houses for those who want more than just a home — more space, privacy, comfort and a different way of living."
-        />
-        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
-        <meta property="og:site_name" content="Box BuildTech" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.boxbuildtech.com/services/large-luxury-farm-houses" />
-        <meta name="twitter:title" content="Large Luxury Farm Houses in Chandigarh | BOX Buildtech" />
-        <meta
-          name="twitter:description"
-          content="Discover spacious luxury farm houses with privacy, family comfort, open surroundings and lasting value."
-        />
-        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
-      </Helmet>
+     <Helmet>
+  <title>Farm House Construction Punjab &amp; Luxury Farm House Builders Mohali | Box Build Tech</title>
+  <meta name="description" content="Box Build Tech offers farm house construction in Punjab and luxury farm house building in Mohali. Sprawling luxury estates with spacious layouts, open surroundings and premium construction." />
+  <meta name="keywords" content="farm house construction Punjab, luxury farm house builders Mohali, farm house Chandigarh, luxury farm house Punjab, Box Build Tech farm house" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.boxbuildtech.com/farm-house-construction-punjab-mohali" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.boxbuildtech.com/farm-house-construction-punjab-mohali" />
+  <meta property="og:title" content="Farm House Construction Punjab & Luxury Farm House Builders Mohali | Box Build Tech" />
+  <meta property="og:description" content="Box Build Tech offers farm house construction in Punjab and luxury farm house building in Mohali. Sprawling estates with premium construction." />
+  <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+  <meta property="og:site_name" content="Box Build Tech" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.boxbuildtech.com/farm-house-construction-punjab-mohali" />
+  <meta name="twitter:title" content="Farm House Construction Punjab & Luxury Farm House Builders Mohali | Box Build Tech" />
+  <meta name="twitter:description" content="Box Build Tech offers farm house construction in Punjab and luxury farm house building in Mohali. Sprawling estates with premium construction." />
+  <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+</Helmet>
 
       <section className="pp-hero">
         <div className="pp-hero-bg" style={{ backgroundImage: `url(${BOXimg8})` }} />

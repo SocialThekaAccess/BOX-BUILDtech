@@ -16,9 +16,11 @@ const QUICK_LINKS = [
 ];
 
 const SERVICES = [
-  { label: 'Premium Plotted Residences', Icon: Home, path: '/services/premium-plotted-residences' },
-  { label: 'Luxury Palace Houses', Icon: HardHat, path: '/services/luxury-palace-houses' },
-  { label: 'Large Luxury Farm Houses', Icon: Factory, path: '/services/large-luxury-farm-houses' },
+  { label: 'Premium Plotted Residences', Icon: Home,    path: '/services/premium-plotted-residences' },
+  { label: 'Luxury Palace Houses',       Icon: HardHat, path: '/services/luxury-palace-houses'       },
+  { label: 'Large Luxury Farm Houses',   Icon: Factory, path: '/services/large-luxury-farm-houses'   },
+  { label: 'Luxury Residential',         Icon: HardHat, path: '/services/luxury-residential'         },
+  { label: 'Design & Build',             Icon: Factory, path: '/services/design-build'               },
 ];
 
 const CONTACT_INFO = [
