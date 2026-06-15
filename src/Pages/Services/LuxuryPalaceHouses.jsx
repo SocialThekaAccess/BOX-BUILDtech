@@ -259,7 +259,7 @@ export default function LuxuryPalaceHouses() {
           <F className="pp-section-head">
             <span className="pp-tag">What You Get</span>
             <h2 className="pp-h2">
-              Everything You Need for <span className="pp-gold-text">Elevated Living</span>
+              Everything You Need for Elevated Living
             </h2>
             <div className="pp-bar" />
           </F>
@@ -332,7 +332,7 @@ export default function LuxuryPalaceHouses() {
         <F className="pp-section-head pp-container">
           <span className="pp-tag">Our Work</span>
           <h2 className="pp-h2">
-            Built with <span className="pp-gold-text">Precision & Pride</span>
+            Built with Precision & Pride
           </h2>
           <div className="pp-bar" />
         </F>
@@ -401,7 +401,7 @@ export default function LuxuryPalaceHouses() {
           <F className="pp-section-head">
             <span className="pp-tag">FAQs</span>
             <h2 className="pp-h2">
-              Frequently Asked <span className="pp-gold-text">Questions</span>
+              Frequently Asked Questions
             </h2>
             <div className="pp-bar" />
           </F>
