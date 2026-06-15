@@ -10,92 +10,92 @@ const toAbsolute = (p) => path.resolve(__dirname, p);
 const ROUTES = [
   {
     url: '/',
-    title: 'Box BuildTech | Smart Construction & Building Solutions in Chandigarh',
-    description: 'BOX Buildtech is a trusted construction company in Chandigarh offering luxury villa construction, design & build services, and system-driven project management across Chandigarh, Mohali & New Chandigarh.',
-    keywords: 'construction company Chandigarh, luxury villa builders Mohali, design build services Chandigarh, building contractors New Chandigarh, premium residential construction, BOX Buildtech',
+    title: 'Construction Company in Mohali & Luxury Home Builders Chandigarh | Box Build Tech',
+    description: 'Box Build Tech is a construction company in Mohali offering luxury home building in Chandigarh. We deliver premium plotted residences, luxury villas, farm houses and design build services across Punjab.',
+    keywords: 'construction company Mohali, luxury home builders Chandigarh, construction company Chandigarh, home builders Punjab, BOX Buildtech, luxury villa construction Mohali',
     canonical: 'https://www.boxbuildtech.com/',
-    ogTitle: 'Box BuildTech | Smart Construction & Building Solutions in Chandigarh',
-    ogDescription: 'BOX Buildtech is a leading construction and development company delivering innovative, reliable, and system-driven construction solutions. We turn your vision into reality with quality and excellence.',
+    ogTitle: 'Construction Company in Mohali & Luxury Home Builders Chandigarh | Box Build Tech',
+    ogDescription: 'Box Build Tech is a construction company in Mohali offering luxury home building in Chandigarh. Premium plotted residences, luxury villas and farm houses across Punjab.',
   },
   {
     url: '/about',
-    title: 'About BOX Buildtech | Premium Construction Company in Chandigarh',
-    description: 'Learn about BOX Buildtech — a system-driven construction company with 14+ years of experience delivering premium villa construction, interior design, and architecture services across Chandigarh, Mohali & New Chandigarh.',
-    keywords: 'about BOX Buildtech, construction company Chandigarh, premium villa builders, building contractor Mohali, New Chandigarh construction',
+    title: 'About Box Build Tech | Construction Company in Chandigarh & Mohali',
+    description: 'Learn about Box Build Tech — a system-driven construction company delivering luxury villa construction, premium plotted residences and farm house projects across Chandigarh, Mohali & Punjab.',
+    keywords: 'about Box Build Tech, construction company Chandigarh, luxury home builders Mohali, building contractor Punjab, premium construction New Chandigarh',
     canonical: 'https://www.boxbuildtech.com/about',
-    ogTitle: 'About BOX Buildtech | Premium Construction Company in Chandigarh',
-    ogDescription: 'BOX Buildtech turns ideas into experiences. Quality-first construction, client-centered approach, and honest work with 14+ years of experience.',
+    ogTitle: 'About Box Build Tech | Construction Company in Chandigarh & Mohali',
+    ogDescription: 'Box Build Tech turns ideas into experiences. Quality-first construction with 14+ years of experience across Chandigarh, Mohali & Punjab.',
   },
   {
     url: '/contact',
-    title: 'Contact BOX Buildtech | Start Your Construction Project Today',
-    description: 'Get in touch with BOX Buildtech. Call +91 7657945469, email start@boxbuildtech.com, or fill out our project form. Serving Chandigarh, Mohali & New Chandigarh.',
-    keywords: 'contact BOX Buildtech, construction company contact Chandigarh, start construction project, building contractor inquiry, villa construction Mohali',
+    title: 'Contact Box Build Tech | Start Your Construction Project Today',
+    description: 'Get in touch with Box Build Tech. Call +91 7657945469, email start@boxbuildtech.com. Construction company serving Chandigarh, Mohali & New Chandigarh for luxury villas and farm houses.',
+    keywords: 'contact Box Build Tech, construction company contact Chandigarh, start construction project Mohali, luxury villa inquiry Punjab, farm house construction contact',
     canonical: 'https://www.boxbuildtech.com/contact',
-    ogTitle: 'Contact BOX Buildtech | Start Your Construction Project Today',
-    ogDescription: 'Ready to build? Reach out to BOX Buildtech and start your luxury villa or residential project today. Based in New Chandigarh, serving Mohali & Chandigarh.',
+    ogTitle: 'Contact Box Build Tech | Start Your Construction Project Today',
+    ogDescription: 'Ready to build? Reach out to Box Build Tech and start your luxury villa, farm house or plotted residence project today.',
   },
   {
     url: '/portfolio',
-    title: 'Portfolio | BOX Buildtech – Before & After Construction Transformations',
-    description: "Explore BOX Buildtech's portfolio of 25+ premium construction projects across Chandigarh, Mohali & New Chandigarh. See stunning before & after transformations of luxury villas and residences.",
-    keywords: 'construction portfolio Chandigarh, before after villa transformation, luxury villa projects Mohali, premium residential construction, BOX Buildtech projects',
+    title: 'Portfolio | Box Build Tech – Before & After Construction Transformations',
+    description: "Explore Box Build Tech's portfolio of 25+ premium construction projects across Chandigarh, Mohali & New Chandigarh. See stunning before & after transformations of luxury villas and residences.",
+    keywords: 'construction portfolio Chandigarh, before after villa transformation, luxury villa projects Mohali, premium residential construction, Box Build Tech projects',
     canonical: 'https://www.boxbuildtech.com/portfolio',
-    ogTitle: 'Portfolio | BOX Buildtech – Before & After Construction Transformations',
+    ogTitle: 'Portfolio | Box Build Tech – Before & After Construction Transformations',
     ogDescription: '25+ premium projects completed across Chandigarh & Mohali. Drag the slider to see our before & after construction transformations.',
   },
   {
     url: '/services/luxury-residential',
-    title: 'Luxury Villa Construction in Chandigarh | BOX Buildtech',
-    description: 'BOX Buildtech specialises in luxury villa construction across Chandigarh, Mohali & New Chandigarh. We work closely with architects to deliver premium residential projects with quality finishing and structural precision.',
-    keywords: 'luxury villa construction Chandigarh, high end residential builders, villa construction Mohali, premium home builders New Chandigarh, villa architects Chandigarh',
+    title: 'Luxury Residential Projects Chandigarh & Premium Residential Construction | Box Build Tech',
+    description: 'Box Build Tech creates luxury residential projects in Chandigarh and premium residential construction across Mohali & Punjab. Expert builders for high-end homes and residences.',
+    keywords: 'luxury residential projects Chandigarh, premium residential construction Mohali, luxury home builders Punjab, high end residential construction, Box Build Tech',
     canonical: 'https://www.boxbuildtech.com/services/luxury-residential',
-    ogTitle: 'Luxury Villa Construction in Chandigarh | BOX Buildtech',
-    ogDescription: 'Expert villa builders with 14+ years of experience. From foundation to final finish — quality construction for luxury homes in Chandigarh, Mohali & New Chandigarh.',
+    ogTitle: 'Luxury Residential Projects Chandigarh & Premium Residential Construction | Box Build Tech',
+    ogDescription: 'Expert luxury residential builders with 14+ years of experience. Premium residential construction across Chandigarh, Mohali & Punjab.',
   },
   {
     url: '/services/design-build',
-    title: 'Design & Build Services in Chandigarh | BOX Buildtech',
-    description: 'BOX Buildtech offers complete Design & Build services for luxury villas in Chandigarh, Mohali & New Chandigarh. We partner with architects to handle construction from planning to final handover.',
-    keywords: 'design build services Chandigarh, design and build villa Mohali, construction partner for architects, luxury villa design build, end to end construction Chandigarh',
+    title: 'Design Build Contractors Chandigarh & Residential Design Build Services | Box Build Tech',
+    description: 'Box Build Tech offers design build contractors in Chandigarh and residential design build services across Mohali & Punjab. One team managing design and construction end to end.',
+    keywords: 'design build contractors Chandigarh, residential design build services Mohali, design build company Punjab, design and build Chandigarh, Box Build Tech',
     canonical: 'https://www.boxbuildtech.com/services/design-build',
-    ogTitle: 'Design & Build Services in Chandigarh | BOX Buildtech',
-    ogDescription: 'One team, total accountability. BOX Buildtech manages design coordination and construction execution for premium residential villas.',
+    ogTitle: 'Design Build Contractors Chandigarh & Residential Design Build Services | Box Build Tech',
+    ogDescription: 'One team, total accountability. Box Build Tech manages design and construction for premium residential projects across Chandigarh & Mohali.',
   },
   {
     url: '/services/premium-plotted-residences',
-    title: 'Premium Plotted Residences in Chandigarh | BOX Buildtech',
-    description: 'Explore premium plotted residences by BOX Buildtech in Chandigarh, Mohali & New Chandigarh. Own your land, build your dream home your way — with freedom, privacy, and strong long-term investment value.',
-    keywords: 'premium plotted residences Chandigarh, residential plots Mohali, plots New Chandigarh, buy residential plot Chandigarh, plotted development BOX Buildtech',
+    title: 'Premium Plotted Development Chandigarh & Luxury Plotted Residences Mohali | Box Build Tech',
+    description: 'Box Build Tech offers premium plotted development in Chandigarh and luxury plotted residences in Mohali. Own your land and build your dream home across Punjab with freedom and privacy.',
+    keywords: 'premium plotted development Chandigarh, luxury plotted residences Mohali, residential plots Punjab, buy plot Chandigarh, plotted development Box Build Tech',
     canonical: 'https://www.boxbuildtech.com/services/premium-plotted-residences',
-    ogTitle: 'Premium Plotted Residences in Chandigarh | BOX Buildtech',
-    ogDescription: 'Own your land, build your dream home your way. Premium plotted residences in Chandigarh, Mohali & New Chandigarh.',
+    ogTitle: 'Premium Plotted Development Chandigarh & Luxury Plotted Residences Mohali | Box Build Tech',
+    ogDescription: 'Own your land, build your dream home. Premium plotted development in Chandigarh & luxury plotted residences in Mohali.',
   },
   {
     url: '/services/luxury-palace-houses',
-    title: 'Luxury Palace Houses in Chandigarh | BOX Buildtech',
-    description: 'Discover luxury palace houses by BOX Buildtech in Chandigarh, Mohali and New Chandigarh. Spacious layouts, elegant design, peaceful living and long-term value for modern families.',
-    keywords: 'luxury palace houses Chandigarh, luxury homes Mohali, palace style house New Chandigarh, premium family homes Chandigarh, spacious luxury houses, BOX Buildtech',
+    title: 'Luxury Villa Construction Chandigarh & Palace House Builders Punjab | Box Build Tech',
+    description: 'Box Build Tech provides luxury villa construction in Chandigarh and palace house building in Punjab. Grand spacious homes with elegant design, premium finishes and peaceful living.',
+    keywords: 'luxury villa construction Chandigarh, palace house builders Punjab, luxury palace houses Mohali, grand villa construction Punjab, Box Build Tech',
     canonical: 'https://www.boxbuildtech.com/services/luxury-palace-houses',
-    ogTitle: 'Luxury Palace Houses in Chandigarh | BOX Buildtech',
-    ogDescription: 'Experience royal living with luxury palace houses crafted for modern families by BOX Buildtech.',
+    ogTitle: 'Luxury Villa Construction Chandigarh & Palace House Builders Punjab | Box Build Tech',
+    ogDescription: 'Box Build Tech delivers luxury villa construction in Chandigarh and palace house building across Punjab with grand design and premium finishes.',
   },
   {
     url: '/services/large-luxury-farm-houses',
-    title: 'Large Luxury Farm Houses in Chandigarh | BOX Buildtech',
-    description: 'Explore large luxury farm houses by BOX Buildtech in Chandigarh, Mohali and New Chandigarh. Experience open-space living, privacy, elegant comfort and long-term value.',
-    keywords: 'large luxury farm houses Chandigarh, luxury farm house Mohali, farm house living New Chandigarh, premium farm house builders, private luxury estates, BOX Buildtech',
+    title: 'Farm House Construction Punjab & Luxury Farm House Builders Mohali | Box Build Tech',
+    description: 'Box Build Tech offers farm house construction in Punjab and luxury farm house builders in Mohali. Sprawling luxury estates with spacious layouts, open surroundings and premium construction.',
+    keywords: 'farm house construction Punjab, luxury farm house builders Mohali, farm house Chandigarh, luxury farm house Punjab, Box Build Tech farm house',
     canonical: 'https://www.boxbuildtech.com/services/large-luxury-farm-houses',
-    ogTitle: 'Large Luxury Farm Houses in Chandigarh | BOX Buildtech',
-    ogDescription: 'Large luxury farm houses for those who want more than just a home — more space, privacy, comfort and a different way of living.',
+    ogTitle: 'Farm House Construction Punjab & Luxury Farm House Builders Mohali | Box Build Tech',
+    ogDescription: 'Box Build Tech offers farm house construction in Punjab and luxury farm house building in Mohali. Sprawling estates with premium construction.',
   },
   {
     url: '/portal',
-    title: 'Client Portal & Project Operating System | BOX Buildtech',
-    description: 'The BOX Buildtech Client Portal — a smart digital platform connecting clients, architects, and site teams with real-time project updates, drawing vault, site stewardship, and live progress tracking.',
-    keywords: 'construction client portal, project management portal, real time construction updates, drawing vault, site stewardship, BOX Buildtech portal',
+    title: 'Client Portal & Project Operating System | Box Build Tech',
+    description: 'The Box Build Tech Client Portal — a smart digital platform connecting clients, architects, and site teams with real-time project updates, drawing vault, site stewardship, and live progress tracking.',
+    keywords: 'construction client portal, project management portal, real time construction updates, drawing vault, site stewardship, Box Build Tech portal',
     canonical: 'https://www.boxbuildtech.com/portal',
-    ogTitle: 'Client Portal & Project Operating System | BOX Buildtech',
+    ogTitle: 'Client Portal & Project Operating System | Box Build Tech',
     ogDescription: 'Stay connected with your construction project. Real-time updates, drawing management, and site monitoring — all in one place.',
   },
 ];
@@ -103,23 +103,13 @@ const ROUTES = [
 // Read the built client index.html as the template
 const rawTemplate = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');
 
-/**
- * Strip ALL variable meta/title/link tags from the base index.html head
- * so each route gets a clean slate with only its own tags.
- */
 function stripBaseHeadTags(html) {
   return html
-    // <title>...</title>
     .replace(/<title>[\s\S]*?<\/title>/g, '')
-    // <meta name="description|keywords|robots" ...>
     .replace(/<meta\s+name="(description|keywords|robots)"[^>]*\/?>/gi, '')
-    // <meta property="og:*" ...>  — covers og:type, og:url, og:title, og:description, og:image, og:site_name, og:locale
     .replace(/<meta\s+property="og:[^"]*"[^>]*\/?>/gi, '')
-    // <meta name="twitter:*" ...> — covers twitter:card, twitter:url, twitter:title, twitter:description, twitter:image
     .replace(/<meta\s+name="twitter:[^"]*"[^>]*\/?>/gi, '')
-    // <link rel="canonical" ...>
     .replace(/<link\s+rel="canonical"[^>]*\/?>/gi, '')
-    // Clean up blank lines left behind
     .replace(/\n\s*\n\s*\n/g, '\n\n');
 }
 
@@ -137,7 +127,7 @@ for (const route of ROUTES) {
     <meta property="og:title" content="${route.ogTitle}" />
     <meta property="og:description" content="${route.ogDescription}" />
     <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
-    <meta property="og:site_name" content="Box BuildTech" />
+    <meta property="og:site_name" content="Box Build Tech" />
     <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="${route.canonical}" />

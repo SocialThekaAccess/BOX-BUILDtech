@@ -150,8 +150,8 @@ const BackToTop = () => {
 const HomePage = () => (
   <>
     <Helmet>
-      <title>Box BuildTech | Smart Construction &amp; Building Solutions in Chandigarh</title>
-      <meta name="description" content="BOX Buildtech is a trusted construction company in Chandigarh offering luxury villa construction, design & build services, and system-driven project management across Chandigarh, Mohali & New Chandigarh." />
+      <title>Construction Company in Mohali &amp; Luxury Home Builders Chandigarh | Box Build Tech</title>
+      <meta name="description" content="Box Build Tech is a construction company in Mohali offering luxury home building in Chandigarh. We deliver premium plotted residences, luxury villas, farm houses and design build services across Punjab." />
       <link rel="canonical" href="https://www.boxbuildtech.com/" />
     </Helmet>
     <Hero />

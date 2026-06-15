@@ -34,6 +34,14 @@
       "destination": "/services/design-build/index.html"
     },
     {
+      "source": "/services/luxury-palace-houses",
+      "destination": "/services/luxury-palace-houses/index.html"
+    },
+    {
+      "source": "/services/large-luxury-farm-houses",
+      "destination": "/services/large-luxury-farm-houses/index.html"
+    },
+    {
       "source": "/services/premium-plotted-residences",
       "destination": "/services/premium-plotted-residences/index.html"
     },
