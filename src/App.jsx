@@ -4,14 +4,12 @@ import { Helmet } from 'react-helmet-async';
 import Navbar       from './Components/Navbar/Navbar';
 import Hero         from './Components/Hero/Hero';
 import MissionVision from './Components/MissionVision/MissionVision';
-// import StatsBar      from './Components/StatsBar/StatsBar';
 import Services     from './Components/Services/Services';
 import WhyUs        from './Components/WhyUs/WhyUs';
 import ChooseUs     from './Components/ChooseUs/ChooseUs';
 import PremiumResidencies from './Components/PremiumResidencies/PremiumResidencies';
 import Projects     from './Components/Projects/Projects';
 import About        from './Components/About/About';
-// import Testimonials from './Components/Testimonials/Testimonials';
 import Contact      from './Components/Contact/Contact';
 import StatsBar      from './Components/StatsBar/StatsBar';
 import Footer       from './Components/Footer/Footer';
@@ -121,26 +119,9 @@ const BackToTop = () => {
         xmlns="http://www.w3.org/2000/svg"
         style={{ display: 'block', overflow: 'visible' }}
       >
-        {/* Outer rotating ring */}
-        <circle
-          cx="26" cy="26" r="24"
-          stroke="rgba(233,161,2,0.25)"
-          strokeWidth="1"
-          fill="none"
-        />
-        {/* Gold filled circle */}
-        <circle
-          cx="26" cy="26" r="20"
-          fill="#E9A102"
-        />
-        {/* Arrow up */}
-        <path
-          d="M26 33 L26 19 M19 26 L26 19 L33 26"
-          stroke="#000000"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+        <circle cx="26" cy="26" r="24" stroke="rgba(233,161,2,0.25)" strokeWidth="1" fill="none" />
+        <circle cx="26" cy="26" r="20" fill="#E9A102" />
+        <path d="M26 33 L26 19 M19 26 L26 19 L33 26" stroke="#000000" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </button>
   );
@@ -156,16 +137,14 @@ const HomePage = () => (
     </Helmet>
     <Hero />
     <MissionVision />
-    {/* <StatsBar /> */}
     <Services />
     <WhyUs />
     <ChooseUs />
     <PremiumResidencies />
     <Projects />
     <About />
-    {/* <Testimonials /> */}
     <Contact />
-     <StatsBar />
+    <StatsBar />
     <Footer />
   </>
 );
@@ -243,18 +222,18 @@ export default function App() {
         <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
           <Navbar />
           <Routes>
-            <Route path="/"                              element={<HomePage />}               />
-            <Route path="/about"                         element={<AboutFullPage />}          />
-            <Route path="/contact"                       element={<ContactUsFullPage />}      />
-            <Route path="/services/luxury-residential"        element={<LuxuryResidentialPage />}        />
-            <Route path="/services/design-build"               element={<DesignBuildPage />}               />
-            <Route path="/services/luxury-palace-houses"       element={<LuxuryPalaceHousesPage />}       />
-            <Route path="/services/large-luxury-farm-houses"  element={<LargeLuxuryFarmHousesPage />}    />
-            <Route path="/services/premium-plotted-residences" element={<PremiumPlottedResidencesPage />} />
-            <Route path="/portfolio"                     element={<PortfolioFullPage />}     />
-            <Route path="/portal"                        element={<PortalPage />}            />
-            <Route path="/alignment-session"             element={<AlignmentSession />}      />
-            <Route path="*"                              element={<HomePage />}               />
+            <Route path="/"                                                    element={<HomePage />}                     />
+            <Route path="/about"                                               element={<AboutFullPage />}                />
+            <Route path="/contact"                                             element={<ContactUsFullPage />}            />
+            <Route path="/services/luxury-residential"                         element={<LuxuryResidentialPage />}        />
+            <Route path="/services/design-build"                               element={<DesignBuildPage />}               />
+            <Route path="/services/luxury-palace-houses"                       element={<LuxuryPalaceHousesPage />}       />
+            <Route path="/services/large-luxury-farm-houses"                   element={<LargeLuxuryFarmHousesPage />}    />
+            <Route path="/services/premium-plotted-residences"                 element={<PremiumPlottedResidencesPage />} />
+            <Route path="/portfolio"                                            element={<PortfolioFullPage />}            />
+            <Route path="/portal"                                               element={<PortalPage />}                   />
+            <Route path="/alignment-session"                                    element={<AlignmentSession />}             />
+            <Route path="*"                                                     element={<HomePage />}                     />
           </Routes>
           <BackToTop />
           <WhatsAppButton />
