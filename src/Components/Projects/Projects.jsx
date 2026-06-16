@@ -1,26 +1,28 @@
 import "./Projects.css";
 import heroproject1 from "../../assets/heroproject1.png";
 import heroproject2 from "../../assets/heroproject2.png";
+import heroproject3 from "../../assets/heroproject3.jpeg";
 
 const PROJECTS = [
   {
     id: 1,
-    title: "Hillside Luxury Villa",
+    title: "Villa 361 ",
     location: "CHANDIGARH, INDIA",
     image: heroproject1,
   },
   {
     id: 2,
-    title: "Contemporary Pool Villa",
+    title: "Villa 58 ",
     location: "MOHALI, INDIA",
     image: heroproject2,
-    imgPosition: "top center",
+    imgPosition: "center 68%",
   },
   {
     id: 3,
-    title: "Panoramic View Villa",
+    title: "Villa 303",
     location: "NEW CHANDIGARH, INDIA",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&q=80",
+    image: heroproject3,
+    imgPosition: "center 35%",
   },
   
   // {
