@@ -22,7 +22,7 @@ const PROJECTS = [
     title: "Villa 303",
     location: "NEW CHANDIGARH, INDIA",
     image: heroproject3,
-    imgPosition: "center 35%",
+    imgPosition: "center 15%",
   },
   
   // {
