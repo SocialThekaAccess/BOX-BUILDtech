@@ -74,7 +74,7 @@ const ROUTES = [
   },
   {
     url: '/services/large-luxury-farm-houses',
-    title: 'Farm House Construction Punjab & Luxury Farm House Builders Mohali | Box Build Tech',
+    title: 'Farm House Construction Chandigarh & Luxury Farm House Builders Mohali | Box Build Tech',
     description: 'Box Build Tech offers farm house construction in Punjab, luxury farm house builders in Mohali, and custom farm house design.',
     keywords: 'farm house construction Punjab, luxury farm house builders Mohali, farm house Chandigarh, luxury farm house Punjab, Box Build Tech farm house',
     canonical: 'https://www.boxbuildtech.com/services/large-luxury-farm-houses',
