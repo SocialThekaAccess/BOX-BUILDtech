@@ -61,21 +61,21 @@ export default function LuxuryResidential() {
   return (
     <div className="lr-page">
       <Helmet>
-        <title>Luxury Villa Construction in Chandigarh | BOX Buildtech</title>
-        <meta name="description" content="BOX Buildtech specialises in luxury villa construction across Chandigarh, Mohali & New Chandigarh. We work closely with architects to deliver premium residential projects with quality finishing and structural precision." />
-        <meta name="keywords" content="luxury villa construction Chandigarh, high end residential builders, villa construction Mohali, premium home builders New Chandigarh, villa architects Chandigarh, BOX Buildtech" />
+        <title>Luxury Residential Projects Chandigarh &amp; Premium Residential Construction | Box Build Tech</title>
+        <meta name="description" content="Box Build Tech creates luxury residential projects in Chandigarh and premium residential construction across Mohali & Punjab. Expert builders for high-end homes and residences." />
+        <meta name="keywords" content="luxury residential projects Chandigarh, premium residential construction Mohali, luxury home builders Punjab, high end residential construction, Box Build Tech" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/services/luxury-residential" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.boxbuildtech.com/services/luxury-residential" />
-        <meta property="og:title" content="Luxury Villa Construction in Chandigarh | BOX Buildtech" />
-        <meta property="og:description" content="Expert villa builders with 14+ years of experience. From foundation to final finish — quality construction for luxury homes in Chandigarh, Mohali & New Chandigarh." />
+        <meta property="og:title" content="Luxury Residential Projects Chandigarh & Premium Residential Construction | Box Build Tech" />
+        <meta property="og:description" content="Expert luxury residential builders with 14+ years of experience. Premium residential construction across Chandigarh, Mohali & Punjab." />
         <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
-        <meta property="og:site_name" content="Box BuildTech" />
+        <meta property="og:site_name" content="Box Build Tech" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://www.boxbuildtech.com/services/luxury-residential" />
-        <meta name="twitter:title" content="Luxury Villa Construction in Chandigarh | BOX Buildtech" />
-        <meta name="twitter:description" content="Expert villa builders with 14+ years of experience. From foundation to final finish — quality construction for luxury homes." />
+        <meta name="twitter:title" content="Luxury Residential Projects Chandigarh & Premium Residential Construction | Box Build Tech" />
+        <meta name="twitter:description" content="Expert luxury residential builders with 14+ years of experience. Premium residential construction across Chandigarh, Mohali & Punjab." />
         <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
       </Helmet>
 
