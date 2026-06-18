@@ -139,13 +139,13 @@ export default function LargeLuxuryFarmHouses() {
   <link rel="canonical" href="https://www.boxbuildtech.com/farm-house-construction-punjab-mohali" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.boxbuildtech.com/farm-house-construction-punjab-mohali" />
-  <meta property="og:title" content="Farm House Construction Punjab & Luxury Farm House Builders Mohali | Box Build Tech" />
+  <meta property="og:title" content="Farm House Construction Mohali & Luxury Farm House Builders Mohali | Box Build Tech" />
   <meta property="og:description" content="Box Build Tech offers farm house construction in Punjab and luxury farm house building in Mohali. Sprawling estates with premium construction." />
   <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
   <meta property="og:site_name" content="Box Build Tech" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.boxbuildtech.com/farm-house-construction-punjab-mohali" />
-  <meta name="twitter:title" content="Farm House Construction Punjab & Luxury Farm House Builders Mohali | Box Build Tech" />
+  <meta name="twitter:title" content="Farm House Construction Mohali & Luxury Farm House Builders Mohali | Box Build Tech" />
   <meta name="twitter:description" content="Box Build Tech offers farm house construction in Punjab and luxury farm house building in Mohali. Sprawling estates with premium construction." />
   <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
 </Helmet>
