@@ -12,9 +12,9 @@ const NAV_LINKS = [
 ];
 
 const SERVICE_ITEMS = [
-  { Icon: HardHat, label: 'Luxury Palace Houses',     path: '/services/luxury-palace-houses',     desc: 'Grand palace-style homes'          },
-  { Icon: Factory, label: 'Large Luxury Farm Houses', path: '/services/large-luxury-farm-houses', desc: 'Sprawling luxury farm estates'     },
-  { Icon: HardHat, label: 'Luxury Residential',       path: '/services/luxury-residential',       desc: 'High-end residential construction' },
+  { Icon: HardHat, label: 'Luxury Palace Houses',     path: '/services/luxury-palace-houses',     desc: 'Luxury villa construction Chandigarh & Mohali'  },
+  { Icon: Factory, label: 'Large Luxury Farm Houses', path: '/services/large-luxury-farm-houses', desc: 'Farm house construction Punjab & Mohali'          },
+  { Icon: HardHat, label: 'Luxury Residential',       path: '/services/luxury-residential',       desc: 'Premium residential projects Chandigarh & Mohali' },
 ];
 
 const Navbar = () => {
