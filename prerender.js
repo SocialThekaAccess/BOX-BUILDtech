@@ -1,4 +1,5 @@
 // prerender.js — injects correct meta tags into each route's static HTML at build time
+// v2 - updated descriptions and H1 tags for service pages
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
