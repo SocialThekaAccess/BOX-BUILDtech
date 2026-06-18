@@ -133,7 +133,7 @@ export default function LuxuryPalaceHouses() {
     <div className="pp-page">
       <Helmet>
         <title>Luxury Villa Construction Chandigarh &amp; Palace House Builders Punjab | Box Build Tech</title>
-        <meta name="description" content="Box Build Tech provides luxury villa construction in Chandigarh and palace house building in Punjab. Grand spacious homes with elegant design, premium finishes and peaceful living." />
+        <meta name="description" content="Box Build Tech provides luxury villa construction in Chandigarh, palace house building in Punjab. Mohali luxury villa construction and palace house builders." />
         <meta name="keywords" content="luxury villa construction Chandigarh, palace house builders Punjab, luxury palace houses Mohali, grand villa construction Punjab, Box Build Tech" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/services/luxury-palace-houses" />
@@ -158,11 +158,10 @@ export default function LuxuryPalaceHouses() {
           <F className="pp-hero-content">
             <span className="pp-eyebrow-pill">Luxury Palace Houses</span>
 
-            <h2 className="pp-hero-h1">
-              Royal Living
-              Modern Comfort
-              Timeless Pride
-            </h2>
+            <h1 className="pp-hero-h1">
+              Luxury Villa Construction
+              in Chandigarh &amp; Mohali
+            </h1>
 
             <div className="pp-hero-divider">
               <span className="pp-hero-divider-line" />

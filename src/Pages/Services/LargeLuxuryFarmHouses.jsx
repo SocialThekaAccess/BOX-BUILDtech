@@ -133,7 +133,7 @@ export default function LargeLuxuryFarmHouses() {
     <div className="pp-page">
       <Helmet>
         <title>Farm House Construction Punjab &amp; Luxury Farm House Builders Mohali | Box Build Tech</title>
-        <meta name="description" content="Box Build Tech offers farm house construction in Punjab and luxury farm house builders in Mohali. Sprawling luxury estates with spacious layouts, open surroundings and premium construction." />
+        <meta name="description" content="Box Build Tech offers farm house construction in Punjab, luxury farm house builders in Mohali, and custom farm house design." />
         <meta name="keywords" content="farm house construction Punjab, luxury farm house builders Mohali, farm house Chandigarh, luxury farm house Punjab, Box Build Tech farm house" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/services/large-luxury-farm-houses" />
@@ -158,11 +158,10 @@ export default function LargeLuxuryFarmHouses() {
           <F className="pp-hero-content">
             <span className="pp-eyebrow-pill">Large Luxury Farm Houses</span>
 
-            <h2 className="pp-hero-h1">
-              More Space
-              More Privacy
-              More Life
-            </h2>
+            <h1 className="pp-hero-h1">
+              Farm House Construction
+              in Punjab &amp; Mohali
+            </h1>
 
             <div className="pp-hero-divider">
               <span className="pp-hero-divider-line" />

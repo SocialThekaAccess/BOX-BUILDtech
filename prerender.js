@@ -47,7 +47,7 @@ const ROUTES = [
   {
     url: '/services/luxury-residential',
     title: 'Luxury Residential Projects Chandigarh & Premium Residential Construction | Box Build Tech',
-    description: 'Box Build Tech creates luxury residential projects in Chandigarh and premium residential construction across Mohali & Punjab. Expert builders for high-end homes and residences.',
+    description: 'Box Build Tech creates luxury residential projects in Chandigarh, premium residential construction, and bespoke luxury homes in Mohali.',
     keywords: 'luxury residential projects Chandigarh, premium residential construction Mohali, luxury home builders Punjab, high end residential construction, Box Build Tech',
     canonical: 'https://www.boxbuildtech.com/services/luxury-residential',
     ogTitle: 'Luxury Residential Projects Chandigarh & Premium Residential Construction | Box Build Tech',
@@ -65,7 +65,7 @@ const ROUTES = [
   {
     url: '/services/luxury-palace-houses',
     title: 'Luxury Villa Construction Chandigarh & Palace House Builders Punjab | Box Build Tech',
-    description: 'Box Build Tech provides luxury villa construction in Chandigarh and palace house building in Punjab. Grand spacious homes with elegant design, premium finishes and peaceful living.',
+    description: 'Box Build Tech provides luxury villa construction in Chandigarh, palace house building in Punjab. Mohali luxury villa construction and palace house builders.',
     keywords: 'luxury villa construction Chandigarh, palace house builders Punjab, luxury palace houses Mohali, grand villa construction Punjab, Box Build Tech',
     canonical: 'https://www.boxbuildtech.com/services/luxury-palace-houses',
     ogTitle: 'Luxury Villa Construction Chandigarh & Palace House Builders Punjab | Box Build Tech',
@@ -74,7 +74,7 @@ const ROUTES = [
   {
     url: '/services/large-luxury-farm-houses',
     title: 'Farm House Construction Punjab & Luxury Farm House Builders Mohali | Box Build Tech',
-    description: 'Box Build Tech offers farm house construction in Punjab and luxury farm house builders in Mohali. Sprawling luxury estates with spacious layouts, open surroundings and premium construction.',
+    description: 'Box Build Tech offers farm house construction in Punjab, luxury farm house builders in Mohali, and custom farm house design.',
     keywords: 'farm house construction Punjab, luxury farm house builders Mohali, farm house Chandigarh, luxury farm house Punjab, Box Build Tech farm house',
     canonical: 'https://www.boxbuildtech.com/services/large-luxury-farm-houses',
     ogTitle: 'Farm House Construction Punjab & Luxury Farm House Builders Mohali | Box Build Tech',
