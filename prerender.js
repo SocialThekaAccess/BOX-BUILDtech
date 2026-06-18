@@ -54,15 +54,6 @@ const ROUTES = [
     ogDescription: 'Expert luxury residential builders with 14+ years of experience. Premium residential construction across Chandigarh, Mohali & Punjab.',
   },
   {
-    url: '/services/design-build',
-    title: 'Design Build Contractors Chandigarh & Residential Design Build Services | Box Build Tech',
-    description: 'Box Build Tech offers design build contractors in Chandigarh and residential design build services across Mohali & Punjab. One team managing design and construction end to end.',
-    keywords: 'design build contractors Chandigarh, residential design build services Mohali, design build company Punjab, design and build Chandigarh, Box Build Tech',
-    canonical: 'https://www.boxbuildtech.com/services/design-build',
-    ogTitle: 'Design Build Contractors Chandigarh & Residential Design Build Services | Box Build Tech',
-    ogDescription: 'One team, total accountability. Box Build Tech manages design and construction for premium residential projects across Chandigarh & Mohali.',
-  },
-  {
     url: '/services/premium-plotted-residences',
     title: 'Premium Plotted Development Chandigarh & Luxury Plotted Residences Mohali | Box Build Tech',
     description: 'Box Build Tech offers premium plotted development in Chandigarh and luxury plotted residences in Mohali. Own your land and build your dream home across Punjab with freedom and privacy.',

@@ -30,10 +30,6 @@
       "destination": "/services/luxury-residential/index.html"
     },
     {
-      "source": "/services/design-build",
-      "destination": "/services/design-build/index.html"
-    },
-    {
       "source": "/services/luxury-palace-houses",
       "destination": "/services/luxury-palace-houses/index.html"
     },

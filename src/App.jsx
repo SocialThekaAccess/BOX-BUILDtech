@@ -16,7 +16,6 @@ import Footer       from './Components/Footer/Footer';
 import AboutPage               from './Pages/About/About';
 import ContactUsPage           from './Pages/ContactUs/ContactUs';
 import LuxuryResidential       from './Pages/Services/LuxuryResidential';
-import DesignBuild             from './Pages/Services/DesignBuild';
 import LuxuryPalaceHouses      from './Pages/Services/LuxuryPalaceHouses';
 import LargeLuxuryFarmHouses   from './Pages/Services/LargeLuxuryFarmHouses';
 import PortfolioPage           from './Pages/Portfolio/Portfolio';
@@ -170,13 +169,6 @@ const LuxuryResidentialPage = () => (
   </>
 );
 
-const DesignBuildPage = () => (
-  <>
-    <DesignBuild />
-    <Footer />
-  </>
-);
-
 const LuxuryPalaceHousesPage = () => (
   <>
     <LuxuryPalaceHouses />
@@ -226,7 +218,6 @@ export default function App() {
             <Route path="/about"                                               element={<AboutFullPage />}                />
             <Route path="/contact"                                             element={<ContactUsFullPage />}            />
             <Route path="/services/luxury-residential"                         element={<LuxuryResidentialPage />}        />
-            <Route path="/services/design-build"                               element={<DesignBuildPage />}               />
             <Route path="/services/luxury-palace-houses"                       element={<LuxuryPalaceHousesPage />}       />
             <Route path="/services/large-luxury-farm-houses"                   element={<LargeLuxuryFarmHousesPage />}    />
             <Route path="/services/premium-plotted-residences"                 element={<PremiumPlottedResidencesPage />} />
