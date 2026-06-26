@@ -23,6 +23,8 @@ import PortalPage              from './Pages/Portal/Portal';
 import ClientPortalPage        from './Pages/ClientPortal/ClientPortal';
 import AlignmentSession        from './Pages/AlignmentSession/AlignmentSession';
 import PremiumPlottedResidences from './Pages/Services/PremiumPlottedResidences';
+import Blog                    from './Components/BlogPage/Blog';
+import BlogDetail              from './Components/BlogPage/BlogDetail';
 import './styles/globals.css';
 
 /* ── WhatsApp Float Button ── */
@@ -197,6 +199,20 @@ const PortfolioFullPage = () => (
   </>
 );
 
+const BlogPage = () => (
+  <>
+    <Blog />
+    <Footer />
+  </>
+);
+
+const BlogDetailPage = () => (
+  <>
+    <BlogDetail />
+    <Footer />
+  </>
+);
+
 export default function App() {
   useEffect(() => {
     if (window.location.hash) {
@@ -222,6 +238,8 @@ export default function App() {
             <Route path="/services/large-luxury-farm-houses"                   element={<LargeLuxuryFarmHousesPage />}    />
             <Route path="/services/premium-plotted-residences"                 element={<PremiumPlottedResidencesPage />} />
             <Route path="/portfolio"                                            element={<PortfolioFullPage />}            />
+            <Route path="/blog"                                                 element={<BlogPage />}                     />
+            <Route path="/blog/:slug"                                           element={<BlogDetailPage />}               />
             <Route path="/portal"                                               element={<PortalPage />}                   />
             <Route path="/alignment-session"                                    element={<AlignmentSession />}             />
             <Route path="*"                                                     element={<HomePage />}                     />
