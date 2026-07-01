@@ -226,3 +226,169 @@
   .projects-section { padding: 48px 4%; }
   .projects-main-title { font-size: 1.7rem; }
 }
+
+/* ── Modal Popup Styling ── */
+.project-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.project-modal-content {
+  background: transparent;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(233, 161, 2, 0.9);
+  color: #0D182E;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.project-modal-close:hover {
+  background: #E9A102;
+  transform: rotate(90deg);
+}
+
+.project-modal-image {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-modal-info {
+  padding: 32px;
+  background: #16273E;
+  border-radius: 0 0 12px 12px;
+}
+
+.project-modal-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.project-modal-location {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.95rem;
+  color: #E9A102;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.project-modal-description {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Modal Responsive */
+@media (max-width: 768px) {
+  .project-modal-image {
+    height: 300px;
+  }
+
+  .project-modal-info {
+    padding: 24px;
+  }
+
+  .project-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .project-modal-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-modal-overlay {
+    padding: 10px;
+  }
+
+  .project-modal-image {
+    height: 250px;
+  }
+
+  .project-modal-info {
+    padding: 20px;
+  }
+
+  .project-modal-title {
+    font-size: 1.3rem;
+  }
+
+  .project-modal-close {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+    top: 12px;
+    right: 12px;
+  }
+}

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Projects.css";
 import heroproject1 from "../../assets/heroproject1.png";
 import heroproject2 from "../../assets/heroproject2.png";
@@ -9,6 +10,7 @@ const PROJECTS = [
     title: "Villa 361 ",
     location: "CHANDIGARH, INDIA",
     image: heroproject1,
+    description: "A stunning modern villa featuring contemporary architecture with clean lines and luxurious finishes. This premium residence combines elegant design with functional spaces, creating a perfect harmony of style and comfort in the heart of Chandigarh."
   },
   {
     id: 2,
@@ -16,6 +18,7 @@ const PROJECTS = [
     location: "MOHALI, INDIA",
     image: heroproject2,
     imgPosition: "center 68%",
+    description: "An architectural masterpiece showcasing innovative design and superior craftsmanship. Villa 58 represents the perfect blend of modern aesthetics and practical living, with spacious interiors and premium amenities that redefine luxury residential living in Mohali."
   },
   {
     id: 3,
@@ -23,6 +26,7 @@ const PROJECTS = [
     location: "NEW CHANDIGARH, INDIA",
     image: heroproject3,
     imgPosition: "center 15%",
+    description: "A contemporary residential marvel featuring bold architectural elements and sophisticated design. This villa exemplifies precision construction and attention to detail, offering expansive living spaces and state-of-the-art facilities that set new standards in luxury housing."
   },
   
   // {
@@ -67,6 +71,16 @@ const PROJECTS = [
 ];
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <section id="projects" className="projects-section">
       <div className="projects-inner">
@@ -86,7 +100,7 @@ export default function Projects() {
         {/* Grid */}
         <div className="projects-grid">
           {PROJECTS.map((p) => (
-            <div key={p.id} className="project-card">
+            <div key={p.id} className="project-card" onClick={() => handleProjectClick(p)}>
               <div className="project-img-wrap">
                 <img
                   src={p.image}
@@ -108,6 +122,29 @@ export default function Projects() {
         </div>
 
       </div>
+
+      {/* Modal Popup */}
+      {selectedProject && (
+        <div className="project-modal-overlay" onClick={closeModal}>
+          <div className="project-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="project-modal-close" onClick={closeModal}>
+              ✕
+            </button>
+            <div className="project-modal-image">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                style={selectedProject.imgPosition ? { objectPosition: selectedProject.imgPosition } : {}}
+              />
+            </div>
+            <div className="project-modal-info">
+              <h3 className="project-modal-title">{selectedProject.title}</h3>
+              <p className="project-modal-location">📍 {selectedProject.location}</p>
+              <p className="project-modal-description">{selectedProject.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
