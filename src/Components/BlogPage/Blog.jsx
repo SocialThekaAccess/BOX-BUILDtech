@@ -3,15 +3,67 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { BookOpen, TrendingUp, Lightbulb, Award } from 'lucide-react';
 import './Blog.css';
+import professionalConstructionImage from '../../assets/blogs/Why Choosing a Professional Construction Company in Chandigarh Matters for Luxury Home Projects.jpg.jpeg';
+import luxuryVillaImage from '../../assets/blogs/Luxury Villa Construction Chandigarh A Complete Guide to Building Your Dream Home.jpg.jpeg';
 
 const blogData = [
+  {
+    id: 7,
+    category: 'CONSTRUCTION MANAGEMENT',
+    title: 'Construction Management Company in Panchkula: Complete B2B Construction Solutions',
+    excerpt: 'Professional construction management brings planning, coordination, outsourcing, architect collaboration, and execution control into one structured process...',
+    slug: 'construction-management-company-panchkula-b2b-construction-services',
+    image: null,
+    date: '08 JULY, 2026',
+    readTime: '8 MIN READ',
+  },
+  {
+    id: 6,
+    category: 'PLOTTED DEVELOPMENT',
+    title: 'Premium Plotted Development in Chandigarh: A Complete Guide to Luxury Residential Projects',
+    excerpt: 'Premium plotted developments give homeowners architectural freedom, planned infrastructure, and long-term value across Chandigarh and the Tricity region...',
+    slug: 'premium-plotted-development-chandigarh-luxury-residential-plots',
+    image: null,
+    date: '08 JULY, 2026',
+    readTime: '8 MIN READ',
+  },
+  {
+    id: 5,
+    category: 'LUXURY HOMES',
+    title: 'Luxury Home Builders in Chandigarh: Creating Villas, Farmhouses and Heritage Homes',
+    excerpt: 'Building a luxury home is about far more than creating a beautiful structure. It is about designing a space that reflects your lifestyle...',
+    slug: 'luxury-home-builders-chandigarh',
+    image: null,
+    date: '08 JULY, 2026',
+    readTime: '8 MIN READ',
+  },
+  {
+    id: 4,
+    category: 'TURNKEY CONSTRUCTION',
+    title: 'How a Turnkey Construction Company in Chandigarh Simplifies Your Entire Project',
+    excerpt: 'Constructing a home, commercial building, or luxury property involves much more than hiring a contractor. Turnkey construction brings every stage under one roof...',
+    slug: 'turnkey-construction-company-chandigarh',
+    image: null,
+    date: '08 JULY, 2026',
+    readTime: '8 MIN READ',
+  },
+  {
+    id: 3,
+    category: 'CONSTRUCTION',
+    title: 'Why Choosing the Right Construction Company in Chandigarh Makes All the Difference',
+    excerpt: 'Building a home or commercial property is one of the most significant investments you will ever make. The right construction partner can determine quality...',
+    slug: 'construction-company-chandigarh-building-contractors',
+    image: null,
+    date: '08 JULY, 2026',
+    readTime: '8 MIN READ',
+  },
   {
     id: 1,
     category: 'CONSTRUCTION',
     title: 'Why Choosing a Professional Construction Company in Chandigarh Matters for Luxury Home Projects',
     excerpt: 'Building a luxury home is one of the most significant investments a family can make. Choosing the right construction partner can determine the success...',
     slug: 'professional-construction-company-chandigarh',
-    image: null,
+    image: professionalConstructionImage,
     date: '26 JUNE, 2026',
     readTime: '6 MIN READ',
   },
@@ -21,7 +73,7 @@ const blogData = [
     title: 'Luxury Villa Construction Chandigarh: A Complete Guide to Building Your Dream Home',
     excerpt: 'The demand for luxury villas across Chandigarh and Mohali continues to rise as homeowners seek personalized living spaces...',
     slug: 'luxury-villa-construction-chandigarh-guide',
-    image: null,
+    image: luxuryVillaImage,
     date: '26 JUNE, 2026',
     readTime: '6 MIN READ',
   },
@@ -107,6 +159,10 @@ const Blog = () => {
                     </div>
                   )}
                   <div className="blog-card-content">
+                    <div className="blog-card-meta">
+                      <span className="blog-card-date">{blog.date}</span>
+                      <span className="blog-card-read">{blog.readTime}</span>
+                    </div>
                     <h2 className="blog-card-title">{blog.title}</h2>
                     <p className="blog-card-excerpt">{blog.excerpt}</p>
                     <Link to={`/blog/${blog.slug}`} className="blog-card-link">
