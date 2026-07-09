@@ -3,8 +3,14 @@ import { Helmet } from 'react-helmet-async';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import './BlogDetail.css';
-import professionalConstructionImage from '../../assets/blogs/Why Choosing a Professional Construction Company in Chandigarh Matters for Luxury Home Projects.jpg.jpeg';
-import luxuryVillaImage from '../../assets/blogs/Luxury Villa Construction Chandigarh A Complete Guide to Building Your Dream Home.jpg.jpeg';
+import heroBackgroundImage from '../../assets/heroproject1.png';
+import professionalConstructionImage from '../../assets/WhyChoosingAProfessionalConstruction.png';
+import luxuryVillaImage from '../../assets/LuxuryVillaConstruction.png';
+import luxuryHomeBuildersImage from '../../assets/LuxuryHomeBuilders.png';
+import turnkeyConstructionImage from '../../assets/HowTurnkey.png';
+import whyChoosingRightImage from '../../assets/WhyChoosingTheConstructionCompany.png';
+import premiumPlottedImage from '../../assets/PremimumPlottedDevelopment.png';
+import constructionManagementImage from '../../assets/ConstructionManagementPanchkula.png';
 
 const blogContent = {
   'luxury-home-builders-chandigarh': {
@@ -13,6 +19,7 @@ const blogContent = {
     author: 'Box Buildtech Team',
     date: '08 July, 2026',
     readTime: '8 min read',
+    image: luxuryHomeBuildersImage,
     content: (
       <>
         <p className="lead-paragraph">Building a luxury home is about far more than creating a beautiful structure. It's about designing a space that reflects your lifestyle, personality, and long-term aspirations. Every detail, from the architectural style to the choice of materials and interior finishes, contributes to a home that is both functional and timeless.</p>
@@ -201,6 +208,7 @@ const blogContent = {
     author: 'Box Buildtech Team',
     date: '08 July, 2026',
     readTime: '8 min read',
+    image: turnkeyConstructionImage,
     content: (
       <>
         <p className="lead-paragraph">Constructing a home, commercial building, or luxury property involves much more than hiring a contractor. From design approvals and material procurement to site supervision and finishing work, every stage requires careful planning and coordination. Managing multiple vendors and teams can quickly become overwhelming, especially if you have little experience in construction.</p>
@@ -540,6 +548,7 @@ const blogContent = {
     author: 'Box Buildtech Team',
     date: '08 July, 2026',
     readTime: '8 min read',
+    image: whyChoosingRightImage,
     content: (
       <>
         <p className="lead-paragraph">Building a home or commercial property is one of the most significant investments you will ever make. Whether you're planning a luxury residence, a farmhouse, or a commercial space, choosing the right construction company in Chandigarh plays a major role in determining the quality, durability, and overall success of your project.</p>
@@ -700,6 +709,7 @@ const blogContent = {
     author: 'Box Buildtech Team',
     date: '08 July, 2026',
     readTime: '8 min read',
+    image: premiumPlottedImage,
     content: (
       <>
         <p className="lead-paragraph">The demand for premium plotted developments has grown significantly across Chandigarh and the Tricity region over the past few years. Homebuyers today are no longer looking for standard housing solutions. They want the freedom to build homes that reflect their lifestyle, preferences, and long-term aspirations.</p>
@@ -889,6 +899,7 @@ const blogContent = {
     author: 'Box Buildtech Team',
     date: '08 July, 2026',
     readTime: '8 min read',
+    image: constructionManagementImage,
     content: (
       <>
         <p className="lead-paragraph">The construction industry has evolved significantly over the past decade. Today's projects demand more than skilled labour and quality materials. They require strategic planning, efficient coordination, risk management, budget control, and seamless communication between architects, consultants, contractors, and clients.</p>
@@ -1170,26 +1181,16 @@ const BlogDetail = () => {
       </Helmet>
 
       <div className="blog-detail-page">
-        {/* Hero Section */}
-        <div className={`blog-detail-hero ${blog.image ? 'blog-detail-hero-with-image' : ''}`}>
-          {blog.image && (
+        {/* Hero Image Section */}
+        {blog.image && (
+          <div className="blog-detail-hero-image-section">
             <img
               className="blog-detail-hero-image"
               src={blog.image}
-              alt=""
-              aria-hidden="true"
+              alt={blog.title}
             />
-          )}
-          <div className="blog-detail-hero-overlay"></div>
-          <div className="blog-detail-hero-content">
-            <Link to="/blog" className="back-link">
-              <ArrowLeft size={18} />
-              Back to Blog
-            </Link>
-            <span className="blog-detail-category">{blog.category}</span>
-            <h1 className="blog-detail-hero-title">{blog.title}</h1>
           </div>
-        </div>
+        )}
 
         {/* Content Section */}
         <div className="blog-detail-wrapper">

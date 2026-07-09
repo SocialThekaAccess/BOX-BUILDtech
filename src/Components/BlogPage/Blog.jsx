@@ -3,8 +3,14 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { BookOpen, TrendingUp, Lightbulb, Award } from 'lucide-react';
 import './Blog.css';
-import professionalConstructionImage from '../../assets/blogs/Why Choosing a Professional Construction Company in Chandigarh Matters for Luxury Home Projects.jpg.jpeg';
-import luxuryVillaImage from '../../assets/blogs/Luxury Villa Construction Chandigarh A Complete Guide to Building Your Dream Home.jpg.jpeg';
+import blogHeroImage from '../../assets/heroproject1.png';
+import professionalConstructionImage from '../../assets/WhyChoosingAProfessionalConstruction.png';
+import luxuryVillaImage from '../../assets/LuxuryVillaConstruction.png';
+import luxuryHomeBuildersImage from '../../assets/LuxuryHomeBuilders.png';
+import turnkeyConstructionImage from '../../assets/HowTurnkey.png';
+import whyChoosingRightImage from '../../assets/WhyChoosingTheConstructionCompany.png';
+import premiumPlottedImage from '../../assets/PremimumPlottedDevelopment.png';
+import constructionManagementImage from '../../assets/ConstructionManagementPanchkula.png';
 
 const blogData = [
   {
@@ -13,7 +19,7 @@ const blogData = [
     title: 'Construction Management Company in Panchkula: Complete B2B Construction Solutions',
     excerpt: 'Professional construction management brings planning, coordination, outsourcing, architect collaboration, and execution control into one structured process...',
     slug: 'construction-management-company-panchkula-b2b-construction-services',
-    image: null,
+    image: constructionManagementImage,
     date: '08 JULY, 2026',
     readTime: '8 MIN READ',
   },
@@ -23,7 +29,7 @@ const blogData = [
     title: 'Premium Plotted Development in Chandigarh: A Complete Guide to Luxury Residential Projects',
     excerpt: 'Premium plotted developments give homeowners architectural freedom, planned infrastructure, and long-term value across Chandigarh and the Tricity region...',
     slug: 'premium-plotted-development-chandigarh-luxury-residential-plots',
-    image: null,
+    image: premiumPlottedImage,
     date: '08 JULY, 2026',
     readTime: '8 MIN READ',
   },
@@ -33,7 +39,7 @@ const blogData = [
     title: 'Luxury Home Builders in Chandigarh: Creating Villas, Farmhouses and Heritage Homes',
     excerpt: 'Building a luxury home is about far more than creating a beautiful structure. It is about designing a space that reflects your lifestyle...',
     slug: 'luxury-home-builders-chandigarh',
-    image: null,
+    image: luxuryHomeBuildersImage,
     date: '08 JULY, 2026',
     readTime: '8 MIN READ',
   },
@@ -43,7 +49,7 @@ const blogData = [
     title: 'How a Turnkey Construction Company in Chandigarh Simplifies Your Entire Project',
     excerpt: 'Constructing a home, commercial building, or luxury property involves much more than hiring a contractor. Turnkey construction brings every stage under one roof...',
     slug: 'turnkey-construction-company-chandigarh',
-    image: null,
+    image: turnkeyConstructionImage,
     date: '08 JULY, 2026',
     readTime: '8 MIN READ',
   },
@@ -53,7 +59,7 @@ const blogData = [
     title: 'Why Choosing the Right Construction Company in Chandigarh Makes All the Difference',
     excerpt: 'Building a home or commercial property is one of the most significant investments you will ever make. The right construction partner can determine quality...',
     slug: 'construction-company-chandigarh-building-contractors',
-    image: null,
+    image: whyChoosingRightImage,
     date: '08 JULY, 2026',
     readTime: '8 MIN READ',
   },
@@ -90,7 +96,7 @@ const Blog = () => {
   useEffect(() => {
     // Add class to body for blog page styling
     document.body.classList.add('blog-page-active');
-    
+
     return () => {
       document.body.classList.remove('blog-page-active');
     };
@@ -106,7 +112,7 @@ const Blog = () => {
 
       <div className="blog-page">
         {/* Hero Section */}
-        <div className="blog-hero">
+        <div className="blog-hero" style={{ backgroundImage: `url(${blogHeroImage})` }}>
           <div className="blog-hero-overlay"></div>
           <div className="blog-hero-content">
             <span className="blog-hero-badge">OUR BLOG</span>
@@ -118,7 +124,7 @@ const Blog = () => {
               smarter, better, and beyond expectations.
             </p>
             <div className="blog-hero-divider"></div>
-            
+
             {/* Feature Icons */}
             <div className="blog-hero-features">
               <div className="blog-hero-feature">
@@ -147,29 +153,31 @@ const Blog = () => {
             {/* Blog Cards */}
             <div className="blog-grid">
               {blogData.map((blog) => (
-                <article key={blog.id} className="blog-card">
-                  {blog.image ? (
-                    <div className="blog-card-image">
-                      <img src={blog.image} alt={blog.title} />
-                      <span className="blog-card-category-badge">{blog.category}</span>
+                <Link key={blog.id} to={`/blog/${blog.slug}`} className="blog-card-wrapper">
+                  <article className="blog-card">
+                    {blog.image ? (
+                      <div className="blog-card-image">
+                        <img src={blog.image} alt={blog.title} loading="lazy" />
+                        <span className="blog-card-category-badge">{blog.category}</span>
+                      </div>
+                    ) : (
+                      <div className="blog-card-image blog-card-image-placeholder">
+                        <span className="blog-card-category-badge">{blog.category}</span>
+                      </div>
+                    )}
+                    <div className="blog-card-content">
+                      <div className="blog-card-meta">
+                        <span className="blog-card-date">{blog.date}</span>
+                        <span className="blog-card-read">{blog.readTime}</span>
+                      </div>
+                      <h2 className="blog-card-title">{blog.title}</h2>
+                      <p className="blog-card-excerpt">{blog.excerpt}</p>
+                      <span className="blog-card-link">
+                        READ MORE →
+                      </span>
                     </div>
-                  ) : (
-                    <div className="blog-card-image blog-card-image-placeholder">
-                      <span className="blog-card-category-badge">{blog.category}</span>
-                    </div>
-                  )}
-                  <div className="blog-card-content">
-                    <div className="blog-card-meta">
-                      <span className="blog-card-date">{blog.date}</span>
-                      <span className="blog-card-read">{blog.readTime}</span>
-                    </div>
-                    <h2 className="blog-card-title">{blog.title}</h2>
-                    <p className="blog-card-excerpt">{blog.excerpt}</p>
-                    <Link to={`/blog/${blog.slug}`} className="blog-card-link">
-                      READ MORE →
-                    </Link>
-                  </div>
-                </article>
+                  </article>
+                </Link>
               ))}
             </div>
 
