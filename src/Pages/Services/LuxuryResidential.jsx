@@ -3,11 +3,11 @@ import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HardHat, Home, Star, Layers, CheckCircle, ArrowRight } from 'lucide-react';
 import './LuxuryResidential.css';
-import residentialImg1 from '../../assets/Residentialimg1.jpg';
-import BOXimg7 from '../../assets/BOXimg7.jpg';
-import BOXimg8 from '../../assets/BOXimg8.jpg';
-import BOXimg9 from '../../assets/BOXimg9.jpg';
-import BOXimg10 from '../../assets/BOXimg10.jpg';
+import residentialImg1 from '../../assets/Boxser1.png';
+import BOXimg7 from '../../assets/Boxserv9.png';
+import BOXimg8 from '../../assets/Boxserv10.png';
+import BOXimg9 from '../../assets/Boxserv2.png';
+import BOXimg10 from '../../assets/Boxserv3.png';
 
 const useFadeUp = () => {
   const ref = useRef(null);

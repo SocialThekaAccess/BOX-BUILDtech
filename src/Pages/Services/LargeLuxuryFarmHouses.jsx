@@ -14,13 +14,13 @@ import {
   Waves,
 } from 'lucide-react';
 import './PremiumPlottedResidences.css';
-import BOXimg10 from '../../assets/BOXimg10.jpg';
-import BOXimg4 from '../../assets/BOXimg4.jpg';
-import BOXimg5 from '../../assets/BOXimg5.jpg';
-import BOXimg6 from '../../assets/BOXimg6.jpg';
-import BOXimg7 from '../../assets/BOXimg7.jpg';
-import BOXimg8 from '../../assets/BOXimg8.jpg';
-import BOXimg9 from '../../assets/BOXimg9.jpg';
+import BOXimg10 from '../../assets/Boxserv2.png';
+import BOXimg4 from '../../assets/Boxserv3.png';
+import BOXimg5 from '../../assets/Boxserv4.png';
+import BOXimg6 from '../../assets/Boxserv5.png';
+import BOXimg7 from '../../assets/Boxserv6.png';
+import BOXimg8 from '../../assets/Boxserv7.png';
+import BOXimg9 from '../../assets/Boxserv8.png';
 
 const useFade = () => {
   const ref = useRef(null);
