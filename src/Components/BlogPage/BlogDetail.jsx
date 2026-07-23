@@ -11,7 +11,7 @@ import turnkeyConstructionImage from '../../assets/HowTurnkey.png';
 import whyChoosingRightImage from '../../assets/WhyChoosingTheConstructionCompany.png';
 import premiumPlottedImage from '../../assets/PremimumPlottedDevelopment.png';
 import constructionManagementImage from '../../assets/ConstructionManagementPanchkula.png';
-import farmhouseMohaliImage from '../../assets/heroproject1.png'; // Replace with actual farmhouse image
+import farmhouseMohaliImage from '../../assets/BoxbuildtechblogimgNew.png';
 
 const blogContent = {
   'luxury-farm-house-builders-mohali-turnkey-construction': {
