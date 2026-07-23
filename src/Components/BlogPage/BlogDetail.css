@@ -257,6 +257,18 @@
   font-size: 1.2em;
 }
 
+/* Link Styling */
+.blog-detail-content a {
+  color: #0066cc;
+  text-decoration: underline;
+  font-weight: inherit;
+}
+
+.blog-detail-content strong a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
 /* Share Section */
 .blog-detail-share {
   background: #16273E;

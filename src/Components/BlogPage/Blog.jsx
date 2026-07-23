@@ -11,8 +11,19 @@ import turnkeyConstructionImage from '../../assets/HowTurnkey.png';
 import whyChoosingRightImage from '../../assets/WhyChoosingTheConstructionCompany.png';
 import premiumPlottedImage from '../../assets/PremimumPlottedDevelopment.png';
 import constructionManagementImage from '../../assets/ConstructionManagementPanchkula.png';
+import farmhouseMohaliImage from '../../assets/heroproject1.png'; // Replace with actual farmhouse image
 
 const blogData = [
+  {
+    id: 8,
+    category: 'FARM HOUSE',
+    title: 'Luxury Farm House Builders in Mohali | Turnkey Construction by BOX Buildtech',
+    excerpt: 'Build your dream farmhouse with BOX Buildtech, leading luxury farm house builders in Mohali. We specialize in turnkey construction, premium residential plots, heritage homes, and high-quality residential construction...',
+    slug: 'luxury-farm-house-builders-mohali-turnkey-construction',
+    image: farmhouseMohaliImage,
+    date: '23 JULY, 2026',
+    readTime: '10 MIN READ',
+  },
   {
     id: 7,
     category: 'CONSTRUCTION MANAGEMENT',
