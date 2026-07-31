@@ -12,6 +12,7 @@ import whyChoosingRightImage from '../../assets/WhyChoosingTheConstructionCompan
 import premiumPlottedImage from '../../assets/PremimumPlottedDevelopment.png';
 import constructionManagementImage from '../../assets/ConstructionManagementPanchkula.png';
 import farmhouseMohaliImage from '../../assets/BoxbuildtechblogimgNew.png';
+import howToChooseConstructionImage from '../../assets/HowtoChoosetheRightConstructionCompanyinChandigarh.png';
 
 const blogData = [
   {
@@ -20,7 +21,7 @@ const blogData = [
     title: 'How to Choose the Right Construction Company in Chandigarh for Your Dream Home',
     excerpt: 'Building a home is one of those decisions people research for months and then still second-guess. Learn what separates great contractors from average ones and make the right choice...',
     slug: 'how-to-choose-right-construction-company-chandigarh',
-    image: whyChoosingRightImage,
+    image: howToChooseConstructionImage,
     date: '31 JULY, 2026',
     readTime: '12 MIN READ',
   },

@@ -52,25 +52,25 @@
 .blog-detail-hero-image-section {
   position: relative;
   width: 100%;
+  max-width: 1400px;
+  margin: 40px auto 0;
+  padding: 0 5%;
   background: #0D182E;
   overflow: hidden;
 }
 
 .blog-detail-hero-image {
   position: relative;
-  width: 100vw;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  max-height: 600px;
   object-fit: contain;
   object-position: center;
-  border-radius: 0;
+  border-radius: 12px;
   background: #0D182E;
-  margin: 0;
+  margin: 0 auto;
   display: block;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .blog-detail-hero-overlay {
@@ -398,8 +398,9 @@
 
   .blog-detail-hero-image {
     height: auto;
+    max-height: 400px;
     margin-top: 30px;
-    border-radius: 0;
+    border-radius: 8px;
     object-fit: contain;
   }
 

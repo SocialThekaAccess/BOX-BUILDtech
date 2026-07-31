@@ -12,6 +12,7 @@ import whyChoosingRightImage from '../../assets/WhyChoosingTheConstructionCompan
 import premiumPlottedImage from '../../assets/PremimumPlottedDevelopment.png';
 import constructionManagementImage from '../../assets/ConstructionManagementPanchkula.png';
 import farmhouseMohaliImage from '../../assets/BoxbuildtechblogimgNew.png';
+import howToChooseConstructionImage from '../../assets/HowtoChoosetheRightConstructionCompanyinChandigarh.png';
 
 const blogContent = {
   'how-to-choose-right-construction-company-chandigarh': {
@@ -20,7 +21,7 @@ const blogContent = {
     author: 'Box Buildtech Team',
     date: '31 July, 2026',
     readTime: '12 min read',
-    image: whyChoosingRightImage,
+    image: howToChooseConstructionImage,
     content: (
       <>
         <p className="lead-paragraph">Building a home is one of those decisions people research for months and then still second-guess right up until they sign the contract. That's understandable — you're not picking a paint color, you're trusting someone with the single biggest investment most families make in their lifetime. If you've been going back and forth between contractors, comparing quotes, and reading reviews that all sound suspiciously similar, this post is meant to cut through some of that noise.</p>
