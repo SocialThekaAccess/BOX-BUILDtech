@@ -15,6 +15,16 @@ import farmhouseMohaliImage from '../../assets/BoxbuildtechblogimgNew.png';
 
 const blogData = [
   {
+    id: 9,
+    category: 'CONSTRUCTION GUIDE',
+    title: 'How to Choose the Right Construction Company in Chandigarh for Your Dream Home',
+    excerpt: 'Building a home is one of those decisions people research for months and then still second-guess. Learn what separates great contractors from average ones and make the right choice...',
+    slug: 'how-to-choose-right-construction-company-chandigarh',
+    image: whyChoosingRightImage,
+    date: '31 JULY, 2026',
+    readTime: '12 MIN READ',
+  },
+  {
     id: 8,
     category: 'FARM HOUSE',
     title: 'Luxury Farm House Builders in Mohali | Turnkey Construction by BOX Buildtech',
