@@ -13,8 +13,19 @@ import premiumPlottedImage from '../../assets/PremimumPlottedDevelopment.png';
 import constructionManagementImage from '../../assets/ConstructionManagementPanchkula.png';
 import farmhouseMohaliImage from '../../assets/BoxbuildtechblogimgNew.png';
 import howToChooseConstructionImage from '../../assets/HowtoChoosetheRightConstructionCompanyinChandigarh.png';
+import preConstructionPlanningImage from '../../assets/Construction Company in Chandigarh Why Pre-Construction Planning Is the Foundation of Every Successful Project.png';
 
 const blogData = [
+  {
+    id: 10,
+    category: 'CONSTRUCTION PLANNING',
+    title: 'Construction Company in Chandigarh: Why Pre-Construction Planning Is the Foundation of Every Successful Project',
+    excerpt: 'Learn why pre-construction planning is the key to successful projects. Discover how a trusted construction company in Chandigarh ensures quality, cost control, and timely delivery...',
+    slug: 'construction-company-chandigarh-pre-construction-planning',
+    image: preConstructionPlanningImage,
+    date: '07 AUGUST, 2026',
+    readTime: '15 MIN READ',
+  },
   {
     id: 9,
     category: 'CONSTRUCTION GUIDE',
