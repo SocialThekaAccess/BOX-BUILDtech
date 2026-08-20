@@ -12,6 +12,7 @@ import whyChoosingRightImage from '../../assets/WhyChoosingTheConstructionCompan
 import premiumPlottedImage from '../../assets/PremimumPlottedDevelopment.png';
 import constructionManagementImage from '../../assets/ConstructionManagementPanchkula.png';
 import farmhouseMohaliImage from '../../assets/BoxbuildtechblogimgNew.png';
+import customFarmHouseImage from '../../assets/From Plot to Finished Home Planning a Custom Farm House Design in Chandigarh Without Costly Mistakes (2).png';
 import howToChooseConstructionImage from '../../assets/HowtoChoosetheRightConstructionCompanyinChandigarh.png';
 import preConstructionPlanningImage from '../../assets/Construction Company in Chandigarh Why Pre-Construction Planning Is the Foundation of Every Successful Project.png';
 
@@ -22,7 +23,7 @@ const blogData = [
     title: 'From Plot to Finished Home: Planning a Custom Farm House Design in Chandigarh Without Costly Mistakes',
     excerpt: 'Planning a Custom Farm House Design in Chandigarh? Learn how to manage design, structure, contractors, site execution, costs and quality before construction begins...',
     slug: 'custom-farm-house-design-chandigarh',
-    image: farmhouseMohaliImage,
+    image: customFarmHouseImage,
     date: '20 AUGUST, 2026',
     readTime: '18 MIN READ',
   },

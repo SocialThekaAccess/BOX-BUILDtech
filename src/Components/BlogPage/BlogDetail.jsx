@@ -12,6 +12,7 @@ import whyChoosingRightImage from '../../assets/WhyChoosingTheConstructionCompan
 import premiumPlottedImage from '../../assets/PremimumPlottedDevelopment.png';
 import constructionManagementImage from '../../assets/ConstructionManagementPanchkula.png';
 import farmhouseMohaliImage from '../../assets/BoxbuildtechblogimgNew.png';
+import customFarmHouseImage from '../../assets/From Plot to Finished Home Planning a Custom Farm House Design in Chandigarh Without Costly Mistakes (2).png';
 import howToChooseConstructionImage from '../../assets/HowtoChoosetheRightConstructionCompanyinChandigarh.png';
 import preConstructionPlanningImage from '../../assets/Construction Company in Chandigarh Why Pre-Construction Planning Is the Foundation of Every Successful Project.png';
 
@@ -22,7 +23,7 @@ const blogContent = {
     author: 'BOX BUILDtech',
     date: '20 August, 2026',
     readTime: '18 min read',
-    image: farmhouseMohaliImage,
+    image: customFarmHouseImage,
     content: (
       <>
         <p className="lead-paragraph">Buying land is only the first major decision in a property journey. The next one—deciding what to build and how to build it—can be even more demanding.</p>
