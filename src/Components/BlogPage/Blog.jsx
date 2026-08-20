@@ -17,6 +17,16 @@ import preConstructionPlanningImage from '../../assets/Construction Company in C
 
 const blogData = [
   {
+    id: 11,
+    category: 'FARM HOUSE DESIGN',
+    title: 'From Plot to Finished Home: Planning a Custom Farm House Design in Chandigarh Without Costly Mistakes',
+    excerpt: 'Planning a Custom Farm House Design in Chandigarh? Learn how to manage design, structure, contractors, site execution, costs and quality before construction begins...',
+    slug: 'custom-farm-house-design-chandigarh',
+    image: farmhouseMohaliImage,
+    date: '20 AUGUST, 2026',
+    readTime: '18 MIN READ',
+  },
+  {
     id: 10,
     category: 'CONSTRUCTION PLANNING',
     title: 'Construction Company in Chandigarh: Why Pre-Construction Planning Is the Foundation of Every Successful Project',
