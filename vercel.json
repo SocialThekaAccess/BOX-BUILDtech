@@ -1,3 +1,55 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "boxbuildtech.com"
+        }
+      ],
+      "destination": "https://www.boxbuildtech.com/:path*",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/portfolio/index.html"
+    },
+    {
+      "source": "/services/luxury-residential",
+      "destination": "/services/luxury-residential/index.html"
+    },
+    {
+      "source": "/services/luxury-palace-houses",
+      "destination": "/services/luxury-palace-houses/index.html"
+    },
+    {
+      "source": "/services/large-luxury-farm-houses",
+      "destination": "/services/large-luxury-farm-houses/index.html"
+    },
+    {
+      "source": "/services/premium-plotted-residences",
+      "destination": "/services/premium-plotted-residences/index.html"
+    },
+    {
+      "source": "/portal",
+      "destination": "/portal/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }

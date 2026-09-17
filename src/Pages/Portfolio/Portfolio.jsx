@@ -53,9 +53,22 @@ const Fade = ({ children, className = '' }) => {
    DRAGGABLE BEFORE/AFTER SLIDER
 ══════════════════════════════════════ */
 const BeforeAfterSlider = ({ before, after, title }) => {
-  const [pos, setPos]       = useState(50);
-  const [dragging, setDrag] = useState(false);
-  const wrapRef             = useRef(null);
+  const [pos, setPos]         = useState(50);
+  const [dragging, setDrag]   = useState(false);
+  const [wrapWidth, setWrapWidth] = useState(0);
+  const wrapRef               = useRef(null);
+
+  /* Track wrapper width so the before-image always fills it */
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => {
+      setWrapWidth(entry.contentRect.width);
+    });
+    ro.observe(el);
+    setWrapWidth(el.getBoundingClientRect().width);
+    return () => ro.disconnect();
+  }, []);
 
   const getPos = useCallback((clientX) => {
     const rect = wrapRef.current.getBoundingClientRect();
@@ -89,8 +102,14 @@ const BeforeAfterSlider = ({ before, after, title }) => {
     <div className="pf-slider-wrap" ref={wrapRef}>
       {/* After (full) */}
       <img src={after}  alt={`${title} after`}  className="pf-slider-img pf-slider-after"  loading="lazy" />
-      {/* Before (clipped) */}
-      <div className="pf-slider-before-clip" style={{ width: `${pos}%` }}>
+      {/* Before (clipped) — clip shrinks/grows, image stays full wrapper width */}
+      <div
+        className="pf-slider-before-clip"
+        style={{
+          width: `${pos}%`,
+          '--slider-width': wrapWidth ? `${wrapWidth}px` : '100%',
+        }}
+      >
         <img src={before} alt={`${title} before`} className="pf-slider-img pf-slider-before" loading="lazy" />
       </div>
       {/* Divider line */}
@@ -150,12 +169,22 @@ export default function Portfolio() {
   return (
     <div className="pf-page">
       <Helmet>
-        <title>Portfolio | BOX Buildtech – Before & After Project Transformations</title>
+        <title>Portfolio | BOX Buildtech – Before & After Construction Transformations</title>
         <meta name="description" content="Explore BOX Buildtech's portfolio of 25+ premium construction projects across Chandigarh, Mohali & New Chandigarh. See stunning before & after transformations of luxury villas and residences." />
-        <meta property="og:title" content="Portfolio | BOX Buildtech" />
-        <meta property="og:description" content="25+ premium projects completed. Drag the slider to see our before & after construction transformations." />
-        <meta property="og:type" content="website" />
+        <meta name="keywords" content="construction portfolio Chandigarh, before after villa transformation, luxury villa projects Mohali, premium residential construction, BOX Buildtech projects" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boxbuildtech.com/portfolio" />
+        <meta property="og:title" content="Portfolio | BOX Buildtech – Before & After Construction Transformations" />
+        <meta property="og:description" content="25+ premium projects completed across Chandigarh & Mohali. Drag the slider to see our before & after construction transformations." />
+        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+        <meta property="og:site_name" content="Box BuildTech" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.boxbuildtech.com/portfolio" />
+        <meta name="twitter:title" content="Portfolio | BOX Buildtech – Before & After Construction Transformations" />
+        <meta name="twitter:description" content="25+ premium projects completed. Drag the slider to see our before & after construction transformations." />
+        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
       </Helmet>
 
       {/* ══ HERO ══ */}

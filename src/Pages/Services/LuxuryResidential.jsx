@@ -3,11 +3,11 @@ import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HardHat, Home, Star, Layers, CheckCircle, ArrowRight } from 'lucide-react';
 import './LuxuryResidential.css';
-import residentialImg1 from '../../assets/Residentialimg1.jpg';
-import BOXimg7 from '../../assets/BOXimg7.jpg';
-import BOXimg8 from '../../assets/BOXimg8.jpg';
-import BOXimg9 from '../../assets/BOXimg9.jpg';
-import BOXimg10 from '../../assets/BOXimg10.jpg';
+import residentialImg1 from '../../assets/Boxser1.png';
+import BOXimg7 from '../../assets/Boxserv9.png';
+import BOXimg8 from '../../assets/Boxserv10.png';
+import BOXimg9 from '../../assets/Boxserv2.png';
+import BOXimg10 from '../../assets/Boxserv3.png';
 
 const useFadeUp = () => {
   const ref = useRef(null);
@@ -61,12 +61,22 @@ export default function LuxuryResidential() {
   return (
     <div className="lr-page">
       <Helmet>
-        <title>Luxury Villa Construction | BOX Buildtech – High End Residential Services</title>
-        <meta name="description" content="BOX Buildtech specialises in luxury villa construction across Chandigarh, Mohali & New Chandigarh. We work closely with architects to deliver premium residential projects with quality finishing and structural precision." />
-        <meta property="og:title" content="Luxury Villa Construction | BOX Buildtech" />
-        <meta property="og:description" content="Expert villa builders with 14+ years of experience. From foundation to final finish — quality construction for luxury homes." />
-        <meta property="og:type" content="website" />
+        <title>Luxury Residential Projects Chandigarh &amp; Premium Residential Construction | Box Build Tech</title>
+        <meta name="description" content="Box Build Tech creates luxury residential projects in Chandigarh, premium residential construction, and bespoke luxury homes in Mohali." />
+        <meta name="keywords" content="luxury residential projects Chandigarh, premium residential construction Mohali, luxury home builders Punjab, high end residential construction, Box Build Tech" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/services/luxury-residential" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boxbuildtech.com/services/luxury-residential" />
+        <meta property="og:title" content="Luxury Residential Projects Chandigarh & Premium Residential Construction | Box Build Tech" />
+        <meta property="og:description" content="Expert luxury residential builders with 14+ years of experience. Premium residential construction across Chandigarh, Mohali & Punjab." />
+        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+        <meta property="og:site_name" content="Box Build Tech" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.boxbuildtech.com/services/luxury-residential" />
+        <meta name="twitter:title" content="Luxury Residential Projects Chandigarh & Premium Residential Construction | Box Build Tech" />
+        <meta name="twitter:description" content="Expert luxury residential builders with 14+ years of experience. Premium residential construction across Chandigarh, Mohali & Punjab." />
+        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
       </Helmet>
 
       {/* ══ HERO ══ */}
@@ -76,10 +86,10 @@ export default function LuxuryResidential() {
         <div className="lr-hero-inner">
           <Fade className="lr-hero-content">
             <span className="lr-eyebrow">High End Residential</span>
-            <h2 className="lr-hero-headline">
-              <span className="lr-hl">Luxury Villa</span>
-              <span className="lr-hl lr-hl-gold">Construction Services</span>
-            </h2>
+            <h1 className="lr-hero-headline">
+              <span className="lr-hl">Luxury Residential Projects</span>
+              <span className="lr-hl lr-hl-gold">in Chandigarh &amp; Mohali</span>
+            </h1>
             <p className="lr-hero-sub">
               At BOX Buildtech, we are experts in building villas — working closely with architects
               to make sure every villa is built exactly like it was designed, with care and precision.

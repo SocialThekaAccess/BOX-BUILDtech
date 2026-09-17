@@ -9,12 +9,13 @@ const NAV_LINKS = [
   { label: 'About Us',  section: null,       path: '/about'     },
   { label: 'Services',  section: null,       path: null,   hasDropdown: true },
   { label: 'Portfolio', section: null,       path: '/portfolio' },
+  { label: 'Blog',      section: null,       path: '/blog'      },
 ];
 
 const SERVICE_ITEMS = [
-  { Icon: Home,    label: 'Premium Plotted Residences', path: '/services/premium-plotted-residences', desc: 'Exclusive plotted developments'  },
-  { Icon: HardHat, label: 'Luxury Palace Houses',       path: '/services/luxury-palace-houses',       desc: 'Grand palace-style homes'         },
-  { Icon: Factory, label: 'Large Luxury Farm Houses',   path: '/services/large-luxury-farm-houses',   desc: 'Sprawling luxury farm estates'    },
+  { Icon: HardHat, label: 'Luxury Palace Houses',     path: '/services/luxury-palace-houses',     desc: 'Luxury villa construction Chandigarh & Mohali'  },
+  { Icon: Factory, label: 'Large Luxury Farm Houses', path: '/services/large-luxury-farm-houses', desc: 'Farm house construction Punjab & Mohali'          },
+  { Icon: HardHat, label: 'Luxury Residential',       path: '/services/luxury-residential',       desc: 'Premium residential projects Chandigarh & Mohali' },
 ];
 
 const Navbar = () => {
@@ -33,6 +34,7 @@ const Navbar = () => {
     if (location.pathname === '/about')                 setActiveNav('About Us');
     else if (location.pathname === '/contact')          setActiveNav('Contact Us');
     else if (location.pathname === '/portfolio')        setActiveNav('Portfolio');
+    else if (location.pathname === '/blog')             setActiveNav('Blog');
     else if (location.pathname.startsWith('/services')) setActiveNav('Services');
     else if (location.pathname === '/')                 setActiveNav('Home');
   }, [location.pathname]);

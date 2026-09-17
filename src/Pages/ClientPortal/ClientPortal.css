@@ -2161,3 +2161,109 @@
     max-width: 88%;
   }
 }
+
+/* Scoped Architect Sync overrides
+   Prevent collisions with AlignmentSession.css generic .as-* selectors. */
+.cp-body .as-root {
+  height: calc(100vh - 60px - 64px);
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  padding-top: 0;
+}
+
+.cp-body .as-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 376px) minmax(0, 1fr);
+  gap: 24px;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+}
+
+.cp-body .as-left {
+  width: auto;
+  min-height: 0;
+  height: auto;
+  background: transparent;
+  position: static;
+  top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  padding: 0;
+  border-right: none;
+  flex-shrink: 1;
+}
+
+.cp-body .as-circle-card,
+.cp-body .as-access-card,
+.cp-body .as-chat-panel {
+  width: 100%;
+}
+
+.cp-body .as-circle-card {
+  padding: 26px 26px 24px;
+}
+
+.cp-body .as-circle-list {
+  gap: 12px;
+}
+
+.cp-body .as-person-row {
+  padding: 14px 16px;
+}
+
+.cp-body .as-access-card {
+  padding: 24px 26px 26px;
+}
+
+.cp-body .as-chat-panel {
+  min-height: 0;
+}
+
+.cp-body .as-messages {
+  padding: 26px 24px 22px;
+}
+
+.cp-body .as-msg-bubble-col {
+  max-width: min(74%, 800px);
+}
+
+.cp-body .as-input-row {
+  margin-top: auto;
+  padding: 20px 24px;
+}
+
+.cp-body .as-input {
+  height: 56px;
+  padding: 0 18px;
+}
+
+.cp-body .as-send-btn {
+  width: 56px;
+  height: 56px;
+}
+
+@media (max-width: 800px) {
+  .cp-body .as-root {
+    height: auto;
+  }
+
+  .cp-body .as-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .cp-body .as-left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .cp-body .as-msg-bubble-col {
+    max-width: 88%;
+  }
+}

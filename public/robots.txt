@@ -3,5 +3,4 @@ Allow: /
 Disallow: /client-portal
 Disallow: /alignment-session
 
-# Sitemap
 Sitemap: https://www.boxbuildtech.com/sitemap.xml

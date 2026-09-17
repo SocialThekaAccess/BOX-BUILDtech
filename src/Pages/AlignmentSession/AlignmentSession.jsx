@@ -305,12 +305,22 @@ export default function AlignmentSession() {
   return (
     <div className="as-root">
       <Helmet>
-        <title>Alignment Session | BOX Buildtech – Start Your Project</title>
-        <meta name="description" content="Begin your construction journey with BOX Buildtech. Register your villa project, select your route, and connect with our trusted architect network in Chandigarh, Mohali & New Chandigarh." />
-        <meta property="og:title" content="Alignment Session | BOX Buildtech" />
-        <meta property="og:description" content="Start the alignment between architect, client, and steward. Professional project registration for luxury villa construction." />
-        <meta property="og:type" content="website" />
+        <title>Start Your Project | BOX Buildtech Alignment Session</title>
+        <meta name="description" content="Begin your construction journey with BOX Buildtech. Register your villa project, select your route — Design & Build or Execution Only — and connect with our trusted architect network in Chandigarh, Mohali & New Chandigarh." />
+        <meta name="keywords" content="start construction project Chandigarh, villa project registration, alignment session BOX Buildtech, architect network Chandigarh, design build Mohali, execution only construction" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.boxbuildtech.com/alignment-session" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boxbuildtech.com/alignment-session" />
+        <meta property="og:title" content="Start Your Project | BOX Buildtech Alignment Session" />
+        <meta property="og:description" content="Start the alignment between architect, client, and steward. Professional project registration for luxury villa construction in Chandigarh, Mohali & New Chandigarh." />
+        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+        <meta property="og:site_name" content="Box BuildTech" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.boxbuildtech.com/alignment-session" />
+        <meta name="twitter:title" content="Start Your Project | BOX Buildtech Alignment Session" />
+        <meta name="twitter:description" content="Start the alignment between architect, client, and steward. Professional project registration for luxury villa construction." />
+        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
       </Helmet>
       <LeftPanel step={done ? 3 : step} role={form.role} />
 
