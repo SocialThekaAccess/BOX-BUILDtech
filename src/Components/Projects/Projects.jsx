@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Projects.css";
-import heroproject1 from "../../assets/heroproject1.png";
-import heroproject2 from "../../assets/heroproject2.png";
-import heroproject3 from "../../assets/HeroProject3.jpeg";
+import heroproject1 from "../../assets/heroproject1.webp";
+import heroproject2 from "../../assets/heroproject2.webp";
+import heroproject3 from "../../assets/heroproject3.webp";
 
 const PROJECTS = [
   {
