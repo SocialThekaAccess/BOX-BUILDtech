@@ -1,29 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import PageLoader from './Components/Shared/PageLoader';
 import Navbar       from './Components/Navbar/Navbar';
 import Hero         from './Components/Hero/Hero';
 import MissionVision from './Components/MissionVision/MissionVision';
-// import StatsBar      from './Components/StatsBar/StatsBar';
 import Services     from './Components/Services/Services';
 import WhyUs        from './Components/WhyUs/WhyUs';
 import ChooseUs     from './Components/ChooseUs/ChooseUs';
 import PremiumResidencies from './Components/PremiumResidencies/PremiumResidencies';
 import Projects     from './Components/Projects/Projects';
 import About        from './Components/About/About';
-// import Testimonials from './Components/Testimonials/Testimonials';
 import Contact      from './Components/Contact/Contact';
 import StatsBar      from './Components/StatsBar/StatsBar';
 import Footer       from './Components/Footer/Footer';
-import AboutPage               from './Pages/About/About';
-import ContactUsPage           from './Pages/ContactUs/ContactUs';
-// import LuxuryResidential       from './Pages/Services/LuxuryResidential';
-// import DesignBuild             from './Pages/Services/DesignBuild';
-import PortfolioPage           from './Pages/Portfolio/Portfolio';
-import PortalPage              from './Pages/Portal/Portal';
-import ClientPortalPage        from './Pages/ClientPortal/ClientPortal';
-import AlignmentSession        from './Pages/AlignmentSession/AlignmentSession';
-import PremiumPlottedResidences from './Pages/Services/PremiumPlottedResidences';
 import './styles/globals.css';
+
+/* ── Lazy loaded pages ── */
+const AboutPage               = lazy(() => import('./Pages/About/About'));
+const ContactUsPage           = lazy(() => import('./Pages/ContactUs/ContactUs'));
+const PortfolioPage           = lazy(() => import('./Pages/Portfolio/Portfolio'));
+const PortalPage              = lazy(() => import('./Pages/Portal/Portal'));
+const ClientPortalPage        = lazy(() => import('./Pages/ClientPortal/ClientPortal'));
+const AlignmentSession        = lazy(() => import('./Pages/AlignmentSession/AlignmentSession'));
+const PremiumPlottedResidences = lazy(() => import('./Pages/Services/PremiumPlottedResidences'));
 
 /* ── WhatsApp Float Button ── */
 const WhatsAppButton = () => {
@@ -164,71 +163,65 @@ const HomePage = () => (
 
 const AboutFullPage = () => (
   <>
-    <AboutPage />
+    <Suspense fallback={null}><AboutPage /></Suspense>
     <Footer />
   </>
 );
 
 const ContactUsFullPage = () => (
   <>
-    <ContactUsPage />
-    <Footer />
-  </>
-);
-
-const LuxuryResidentialPage = () => (
-  <>
-    <LuxuryResidential />
-    <Footer />
-  </>
-);
-
-const DesignBuildPage = () => (
-  <>
-    <DesignBuild />
+    <Suspense fallback={null}><ContactUsPage /></Suspense>
     <Footer />
   </>
 );
 
 const PortfolioFullPage = () => (
   <>
-    <PortfolioPage />
+    <Suspense fallback={null}><PortfolioPage /></Suspense>
     <Footer />
   </>
 );
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     if (window.location.hash) {
       window.history.replaceState(null, '', '/');
     }
+    // Hide loader after 2s max (covers fonts + first paint)
+    const t = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(t);
   }, []);
 
   return (
-    <Routes>
-      {/* Client Portal — no main Navbar, has its own sidebar nav */}
-      <Route path="/client-portal" element={<ClientPortalPage />} />
+    <>
+      {loading && <PageLoader />}
+      <Routes>
+        {/* Client Portal — no main Navbar, has its own sidebar nav */}
+        <Route path="/client-portal" element={
+          <Suspense fallback={null}><ClientPortalPage /></Suspense>
+        } />
 
-      {/* All other pages — with main Navbar */}
-      <Route path="*" element={
-        <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
-          <Navbar />
-          <Routes>
-            <Route path="/"                              element={<HomePage />}               />
-            <Route path="/about"                         element={<AboutFullPage />}          />
-            <Route path="/contact"                       element={<ContactUsFullPage />}      />
-            <Route path="/services/luxury-residential"        element={<LuxuryResidentialPage />}        />
-            <Route path="/services/design-build"               element={<DesignBuildPage />}               />
-            <Route path="/services/premium-plotted-residences" element={<PremiumPlottedResidences />}      />
-            <Route path="/portfolio"                     element={<PortfolioFullPage />}     />
-            <Route path="/portal"                        element={<PortalPage />}            />
-            <Route path="/alignment-session"             element={<AlignmentSession />}      />
-            <Route path="*"                              element={<HomePage />}               />
-          </Routes>
-          <BackToTop />
-          <WhatsAppButton />
-        </div>
-      } />
-    </Routes>
+        {/* All other pages — with main Navbar */}
+        <Route path="*" element={
+          <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
+            <Navbar />
+            <Routes>
+              <Route path="/"                                    element={<HomePage />}               />
+              <Route path="/about"                               element={<Suspense fallback={null}><AboutFullPage /></Suspense>}     />
+              <Route path="/contact"                             element={<Suspense fallback={null}><ContactUsFullPage /></Suspense>} />
+              <Route path="/services/premium-plotted-residences" element={<Suspense fallback={null}><PremiumPlottedResidences /></Suspense>} />
+              <Route path="/portfolio"                           element={<Suspense fallback={null}><PortfolioFullPage /></Suspense>} />
+              <Route path="/portal"                              element={<Suspense fallback={null}><PortalPage /></Suspense>}        />
+              <Route path="/alignment-session"                   element={<Suspense fallback={null}><AlignmentSession /></Suspense>}  />
+              <Route path="*"                                    element={<HomePage />}               />
+            </Routes>
+            <BackToTop />
+            <WhatsAppButton />
+          </div>
+        } />
+      </Routes>
+    </>
   );
 }
