@@ -72,7 +72,7 @@
   <!-- Blog -->
   <url>
     <loc>https://www.boxbuildtech.com/blog</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -152,6 +152,42 @@
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- New Blogs — September 2026 -->
+  <url>
+    <loc>https://www.boxbuildtech.com/blog/luxury-farm-house-builders-mohali</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.boxbuildtech.com/blog/turnkey-project-execution-company-in-chandigarh</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.boxbuildtech.com/blog/heritage-home-construction-chandigarh-palace-house-builders-punjab</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.boxbuildtech.com/blog/affordable-residential-construction-chandigarh</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.boxbuildtech.com/blog/premium-residential-plots-chandigarh-luxury-plotted-residences-mohali</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>

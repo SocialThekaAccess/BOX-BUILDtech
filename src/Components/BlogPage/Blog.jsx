@@ -15,8 +15,63 @@ import farmhouseMohaliImage from '../../assets/BoxbuildtechblogimgNew.png';
 import customFarmHouseImage from '../../assets/From Plot to Finished Home Planning a Custom Farm House Design in Chandigarh Without Costly Mistakes (2).png';
 import howToChooseConstructionImage from '../../assets/HowtoChoosetheRightConstructionCompanyinChandigarh.png';
 import preConstructionPlanningImage from '../../assets/Construction Company in Chandigarh Why Pre-Construction Planning Is the Foundation of Every Successful Project.png';
+import luxuryFarmBuildersMohaliImage from '../../assets/Luxury Farm House Builders Mohali Complete Guide to Farm House Construction in Punjab.png';
+import turnkeyExecutionImage from '../../assets/Turnkey Project Execution Company in Chandigarh Project Management and Construction Chandigarh Guide.png';
+import heritageHomeImage from '../../assets/Heritage Home Construction in Chandigarh.png';
+import affordableResidentialImage from '../../assets/Affordable Residential Construction Chandigarh.png';
+import premiumPlotsImage from '../../assets/Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali.png';
 
 const blogData = [
+  {
+    id: 16,
+    category: 'PREMIUM PLOTS',
+    title: 'Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali and Premium Plotted Development: A Construction Guide',
+    excerpt: 'Exploring Premium Residential Plots in Chandigarh or Luxury Plotted Residences in Mohali? Learn what to check before planning and constructing your premium custom home...',
+    slug: 'premium-residential-plots-chandigarh-luxury-plotted-residences-mohali',
+    image: premiumPlotsImage,
+    date: '28 SEPTEMBER, 2026',
+    readTime: '16 MIN READ',
+  },
+  {
+    id: 15,
+    category: 'AFFORDABLE CONSTRUCTION',
+    title: 'Affordable Residential Construction Chandigarh: Choosing an Experienced Civil Contractor for End to End Construction Services',
+    excerpt: 'Explore affordable residential construction Chandigarh with an experienced civil contractor offering transparent, end-to-end construction services without compromising quality...',
+    slug: 'affordable-residential-construction-chandigarh',
+    image: affordableResidentialImage,
+    date: '25 SEPTEMBER, 2026',
+    readTime: '15 MIN READ',
+  },
+  {
+    id: 14,
+    category: 'HERITAGE HOMES',
+    title: 'Heritage Home Construction in Chandigarh and Palace House Builders in Punjab: Building Timeless Luxury',
+    excerpt: 'Explore Heritage Home Construction in Chandigarh and Palace House Builders in Punjab for timeless residences combining traditional character with modern construction excellence...',
+    slug: 'heritage-home-construction-chandigarh-palace-house-builders-punjab',
+    image: heritageHomeImage,
+    date: '22 SEPTEMBER, 2026',
+    readTime: '14 MIN READ',
+  },
+  {
+    id: 13,
+    category: 'TURNKEY EXECUTION',
+    title: 'Turnkey Project Execution Company in Chandigarh: Project Management and Construction Chandigarh Guide',
+    excerpt: 'Choose a turnkey project execution company in Chandigarh for systematic project management, construction coordination, quality control and transparent end-to-end delivery...',
+    slug: 'turnkey-project-execution-company-in-chandigarh',
+    image: turnkeyExecutionImage,
+    date: '18 SEPTEMBER, 2026',
+    readTime: '14 MIN READ',
+  },
+  {
+    id: 12,
+    category: 'FARM HOUSE',
+    title: 'Luxury Farm House Builders Mohali: Complete Guide to Farm House Construction in Punjab',
+    excerpt: 'Looking for Luxury Farm House Builders Mohali? Explore planning, design, budgeting and end-to-end Farm House Construction in Punjab with expert execution and premium results...',
+    slug: 'luxury-farm-house-builders-mohali',
+    image: luxuryFarmBuildersMohaliImage,
+    date: '15 SEPTEMBER, 2026',
+    readTime: '14 MIN READ',
+  },
   {
     id: 11,
     category: 'FARM HOUSE DESIGN',

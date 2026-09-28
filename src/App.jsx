@@ -27,6 +27,8 @@ const LuxuryPalaceHouses      = lazy(() => import('./Pages/Services/LuxuryPalace
 const LargeLuxuryFarmHouses   = lazy(() => import('./Pages/Services/LargeLuxuryFarmHouses'));
 const LuxuryResidential       = lazy(() => import('./Pages/Services/LuxuryResidential'));
 const ProjectDetailPage       = lazy(() => import('./Pages/ProjectDetail/ProjectDetail'));
+const BlogPage                = lazy(() => import('./Components/BlogPage/Blog'));
+const BlogDetailPage          = lazy(() => import('./Components/BlogPage/BlogDetail'));
 
 /* ── WhatsApp Float Button ── */
 const WhatsAppButton = () => {
@@ -228,6 +230,8 @@ export default function App() {
               <Route path="/services/premium-plotted-residences" element={<Suspense fallback={null}><PremiumPlottedResidences /></Suspense>} />
               <Route path="/portfolio"                           element={<Suspense fallback={null}><PortfolioFullPage /></Suspense>} />
               <Route path="/projects/:slug"                      element={<ProjectDetailFullPage />} />
+              <Route path="/blog"                                element={<Suspense fallback={null}><BlogPage /></Suspense>} />
+              <Route path="/blog/:slug"                          element={<Suspense fallback={null}><BlogDetailPage /></Suspense>} />
               
               <Route path="/portal"                              element={<Suspense fallback={null}><PortalPage /></Suspense>}        />
               <Route path="/alignment-session"                   element={<Suspense fallback={null}><AlignmentSession /></Suspense>}  />
