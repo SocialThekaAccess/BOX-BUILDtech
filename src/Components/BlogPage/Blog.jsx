@@ -20,8 +20,30 @@ import turnkeyExecutionImage from '../../assets/Turnkey Project Execution Compan
 import heritageHomeImage from '../../assets/Heritage Home Construction in Chandigarh.png';
 import affordableResidentialImage from '../../assets/Affordable Residential Construction Chandigarh.png';
 import premiumPlotsImage from '../../assets/Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali.png';
+import constructionBudgetMohaliImage from '../../assets/heroproject1.png';
+import civilContractorsChandigarhImage from '../../assets/heroproject1.png';
 
 const blogData = [
+  {
+    id: 18,
+    category: 'CONSTRUCTION PLANNING',
+    title: 'Construction Company in Mohali: How to Plan Your Build Budget',
+    excerpt: 'Planning a build in Mohali? Learn how a construction company in Mohali estimates costs, phases work, handles approvals and keeps your budget on track from day one.',
+    slug: 'construction-company-mohali-build-budget',
+    image: constructionBudgetMohaliImage,
+    date: '06 OCTOBER, 2026',
+    readTime: '14 MIN READ',
+  },
+  {
+    id: 17,
+    category: 'CIVIL CONTRACTORS',
+    title: 'Civil Contractors Chandigarh: Contracts, Quality and Site Checks',
+    excerpt: 'Hiring civil contractors Chandigarh? Learn what to put in your contract, how to check site quality at each stage and how to avoid delays, disputes and cost overruns.',
+    slug: 'civil-contractors-chandigarh-contracts-quality-site-checks',
+    image: civilContractorsChandigarhImage,
+    date: '06 OCTOBER, 2026',
+    readTime: '13 MIN READ',
+  },
   {
     id: 16,
     category: 'PREMIUM PLOTS',

@@ -20,8 +20,243 @@ import turnkeyExecutionImage from '../../assets/Turnkey Project Execution Compan
 import heritageHomeImage from '../../assets/Heritage Home Construction in Chandigarh.png';
 import affordableResidentialImage from '../../assets/Affordable Residential Construction Chandigarh.png';
 import premiumPlotsImage from '../../assets/Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali.png';
+import constructionBudgetMohaliImage from '../../assets/heroproject1.png';
+import civilContractorsChandigarhImage from '../../assets/heroproject1.png';
 
 const blogContent = {
+  'construction-company-mohali-build-budget': {
+    category: 'CONSTRUCTION PLANNING',
+    title: 'Construction Company in Mohali: How to Plan Your Build Budget',
+    author: 'BOX BUILDtech',
+    date: '06 October, 2026',
+    readTime: '14 min read',
+    image: constructionBudgetMohaliImage,
+    content: (
+      <>
+        <p className="lead-paragraph">Most construction budgets don't fail because of one big mistake. They fail through small gaps: an unmeasured plot, an unclear finish level, a missing approval fee or a monsoon delay nobody planned for. By the time these add up, the project is over budget and the owner is arguing about who agreed to what.</p>
+        <p>This guide takes a planning-first view. Whether you're building a family home, a small commercial unit or an office, it shows how to define your scope, understand the cost structure and prepare questions for any construction company in Mohali before work begins.</p>
+
+        <h3>Step 1: Define What You Are Actually Building</h3>
+        <p>A budget starts with clarity. Before you ask anyone for a quote, write down:</p>
+        <ul>
+          <li><strong>Purpose:</strong> Residence, rental units, shop, office or mixed use?</li>
+          <li><strong>Size:</strong> Plot area, number of floors and approximate built-up area.</li>
+          <li><strong>Quality level:</strong> Basic, standard or premium finishes for flooring, kitchens, bathrooms, doors, windows and fittings.</li>
+          <li><strong>Services:</strong> Plumbing, electrical load, air conditioning provisions, solar readiness, lift and fire safety where applicable.</li>
+          <li><strong>Future plans:</strong> Will you add a floor later? If so, the foundation and columns may need to be designed for it now.</li>
+        </ul>
+        <p>Two quotes are only comparable if they describe the same project. Many price gaps come from different assumptions, not different efficiency.</p>
+
+        <h3>Step 2: Understand Your Site Before Anyone Digs</h3>
+        <p>The ground under your plot affects cost more than most owners realise. A few early checks protect your budget:</p>
+        <ul>
+          <li><strong>Soil investigation.</strong> A soil test helps the structural engineer decide the foundation type and depth.</li>
+          <li><strong>Levels and drainage.</strong> A plot below the road level can mean extra filling, plinth costs and drainage planning.</li>
+          <li><strong>Water table.</strong> Where groundwater is high, excavation and waterproofing need more care.</li>
+          <li><strong>Access.</strong> Narrow lanes or limited storage space on site can slow deliveries and add handling costs.</li>
+          <li><strong>Utilities.</strong> Check where water, sewer and electricity connections will come from.</li>
+        </ul>
+        <p>The region also sits in a seismic zone, so structural design should follow current Indian standards and be prepared by a qualified engineer.</p>
+
+        <h3>Step 3: Sort Out Approvals Early</h3>
+        <p>Building plans generally need approval from the relevant authority before construction starts. In Mohali, that usually means the development authority or municipal body that governs your plot. Rules on setbacks, height, coverage and parking vary by area and plot type.</p>
+        <p>Budget for:</p>
+        <ul>
+          <li>Plan approval and scrutiny fees</li>
+          <li>Architect and structural engineer fees</li>
+          <li>Possible revisions if the first submission needs changes</li>
+          <li>Completion or occupancy certificate processes at the end</li>
+        </ul>
+        <p>Starting without approvals can lead to stop-work notices, penalties and trouble when you sell or take a loan.</p>
+
+        <h3>Step 4: Break the Budget into Real Categories</h3>
+        <p>A single "per square foot" number hides what you are paying for. Ask for a structured estimate that separates:</p>
+        <ol>
+          <li>Site preparation and excavation</li>
+          <li>Foundation and structure (concrete, reinforcement steel, shuttering, labour)</li>
+          <li>Masonry and plastering</li>
+          <li>Plumbing and drainage</li>
+          <li>Electrical work</li>
+          <li>Waterproofing and insulation</li>
+          <li>Flooring, tiling and carpentry</li>
+          <li>Painting and external finishes</li>
+          <li>Boundary wall, gate, landscaping and external works</li>
+          <li>Professional fees, approvals and utility connections</li>
+        </ol>
+
+        <h3>Step 5: Add a Contingency, and Keep It Separate</h3>
+        <p>Every real project meets surprises: a hidden pipe, a design change, a material price rise or a few weeks lost to heavy rain. Set aside a contingency reserve, commonly in the range of 10 to 15 per cent for new builds, and treat it as a separate pot rather than part of the main budget.</p>
+
+        <h3>Step 6: Choose a Pricing Model That Fits</h3>
+        <ul>
+          <li><strong>Fixed price (lump sum).</strong> One price for a defined scope. Works best when drawings and specifications are complete.</li>
+          <li><strong>Item-rate (BOQ-based).</strong> Each work item has a rate and quantity, and you pay for measured work.</li>
+          <li><strong>Cost-plus.</strong> You pay actual costs plus a fee or percentage. Flexible but needs strong tracking.</li>
+        </ul>
+
+        <h3>Step 7: Plan the Timeline Around the Weather</h3>
+        <p>Construction in North India follows the seasons. Heavy monsoon rain can slow excavation, concrete work and external finishes. Ask for a milestone schedule with dates for each phase and tie payments to completed milestones instead of calendar dates.</p>
+
+        <h3>Step 8: Evaluate the Company, Not Only the Quote</h3>
+        <p>When you meet any construction company in Mohali, ask:</p>
+        <ul>
+          <li>Can I visit two completed projects and one ongoing site?</li>
+          <li>Who will supervise my site daily, and how often will the engineer visit?</li>
+          <li>Which materials and brands are included, and can I see the specification in writing?</li>
+          <li>How are payments linked to progress?</li>
+          <li>What warranty or defect-liability period do you offer?</li>
+        </ul>
+
+        <h3>Common Budget Leaks to Watch</h3>
+        <ul>
+          <li>Vague specifications — "Good quality tiles" means different things to different people.</li>
+          <li>Late design changes — altering layouts after structure starts can be expensive.</li>
+          <li>Unclear exclusions — boundary walls, water tanks and external drainage are often left out of quotes.</li>
+          <li>No measurement records — without measured quantities, disputes are hard to settle.</li>
+          <li>Paying ahead of progress — advances beyond the work completed reduce your leverage.</li>
+          <li>Skipping professional design — saving on design fees often costs more in rework.</li>
+        </ul>
+
+        <h3>A Simple Pre-Construction Checklist</h3>
+        <ol>
+          <li>Approved drawings and structural design</li>
+          <li>A written scope with specifications for each material and finish</li>
+          <li>A bill of quantities or itemised estimate</li>
+          <li>A milestone-based payment plan</li>
+          <li>A timeline with key dates</li>
+          <li>A contingency reserve set aside</li>
+          <li>A named site supervisor and communication routine</li>
+        </ol>
+
+        <h3>Final Thoughts</h3>
+        <p>A good build is mostly decided before the first excavator arrives. Clear scope, sound site checks, proper approvals and an honest budget structure turn construction from a gamble into a managed process. Choose a partner who is comfortable discussing these details openly, and put everything that matters in writing.</p>
+        <p>If you're planning a project and want a clear, itemised discussion of scope and costs, the BoxBuildTech team can walk you through your options. Visit <a href="https://www.boxbuildtech.com" target="_blank" rel="noopener noreferrer">boxbuildtech.com</a> to get in touch.</p>
+      </>
+    ),
+  },
+
+  'civil-contractors-chandigarh-contracts-quality-site-checks': {
+    category: 'CIVIL CONTRACTORS',
+    title: 'Civil Contractors Chandigarh: Contracts, Quality and Site Checks',
+    author: 'BOX BUILDtech',
+    date: '06 October, 2026',
+    readTime: '13 min read',
+    image: civilContractorsChandigarhImage,
+    content: (
+      <>
+        <p className="lead-paragraph">Hiring a contractor is not the end of your responsibility. It is the start of a working relationship that needs structure. Many disputes on building sites have little to do with dishonesty. They come from vague agreements, unrecorded changes and quality problems noticed too late.</p>
+        <p>This guide focuses on what happens after you've chosen your team. It explains what to put in the contract, which site checks matter at each stage and how to keep the project on track.</p>
+
+        <h3>Know Who Is Responsible for What</h3>
+        <ul>
+          <li><strong>The owner</strong> — funds the project and makes decisions</li>
+          <li><strong>The architect</strong> — designs the layout and elevations</li>
+          <li><strong>The structural engineer</strong> — designs the foundation, columns, beams and slabs</li>
+          <li><strong>The main contractor</strong> — executes the work and manages sub-trades</li>
+          <li><strong>Specialist sub-contractors</strong> — plumbing, electrical, waterproofing and carpentry teams</li>
+        </ul>
+
+        <h3>What a Good Contract Contains</h3>
+        <ol>
+          <li><strong>Scope of work.</strong> A precise description of what is included and excluded, supported by approved drawings.</li>
+          <li><strong>Specifications.</strong> Material grades, brands or equivalents, finishes and standards.</li>
+          <li><strong>Rates and quantities.</strong> Bill of quantities for item-rate contracts, or detailed scope for lump sum.</li>
+          <li><strong>Payment schedule.</strong> Payments linked to completed milestones — foundation, plinth, slabs, brickwork, finishing.</li>
+          <li><strong>Retention.</strong> A small portion held back until final completion and defect rectification.</li>
+          <li><strong>Timeline and delay terms.</strong> Start date, milestones and completion date.</li>
+          <li><strong>Variations.</strong> Changes in scope must be agreed in writing before work proceeds.</li>
+          <li><strong>Defect liability period.</strong> A defined period after handover during which contractor fixes defects at their own cost.</li>
+          <li><strong>Labour, safety and insurance.</strong> Responsibility for workers' safety and statutory compliance.</li>
+          <li><strong>Dispute resolution.</strong> Meetings, written notices, mediation or arbitration.</li>
+        </ol>
+
+        <h3>Site Quality Checks by Stage</h3>
+
+        <h4>Excavation and foundation</h4>
+        <ul>
+          <li>Confirm depth and dimensions match the approved drawings.</li>
+          <li>Check the base is clean and compacted before concrete is placed.</li>
+          <li>Make sure the plain cement concrete layer is done before reinforcement.</li>
+        </ul>
+
+        <h4>Reinforcement steel</h4>
+        <ul>
+          <li>Verify bar diameters, spacing and cover against the structural drawings.</li>
+          <li>Check that steel is clean, properly tied and supported on cover blocks.</li>
+          <li>Ask for supplier bills or test certificates for steel.</li>
+        </ul>
+
+        <h4>Concrete pouring</h4>
+        <ul>
+          <li>Confirm the specified mix and strength grade.</li>
+          <li>Ask for cube samples to be taken and tested at 7 and 28 days.</li>
+          <li>Watch for excess water added on site, which weakens concrete.</li>
+        </ul>
+
+        <h4>Curing</h4>
+        <ul>
+          <li>Concrete needs to be kept moist for the specified days after pouring. Skipped curing is a common cause of weak structure and cracks.</li>
+        </ul>
+
+        <h4>Brickwork and plaster</h4>
+        <ul>
+          <li>Check alignment, thickness and joint quality.</li>
+          <li>Confirm that walls are plumb and plaster is even.</li>
+        </ul>
+
+        <h4>Plumbing and electrical</h4>
+        <ul>
+          <li>Pressure-test water lines before covering them.</li>
+          <li>Check conduit routing and take photos before walls are closed.</li>
+        </ul>
+
+        <h4>Waterproofing</h4>
+        <ul>
+          <li>Insist on proper application on terraces, bathrooms and sunken areas, with a water-ponding test where appropriate.</li>
+        </ul>
+
+        <h4>Finishing</h4>
+        <ul>
+          <li>Inspect flooring levels, tile alignment, door and window operation, paint finish and fittings before final payment.</li>
+        </ul>
+        <p>Keep dated photos at every stage — they are cheap to take and very useful if questions arise later.</p>
+
+        <h3>Build a Routine of Communication</h3>
+        <ul>
+          <li>A weekly site meeting to review progress and issues.</li>
+          <li>A shared record for decisions and instructions.</li>
+          <li>Written confirmations for every change, even small ones.</li>
+          <li>Measurement sheets signed by both sides before each payment.</li>
+        </ul>
+
+        <h3>Questions to Ask Any Contractor</h3>
+        <ul>
+          <li>Which of your recent projects are similar to mine, and can I visit them?</li>
+          <li>Who will be on site every day, and what is their experience?</li>
+          <li>How do you document progress and quality?</li>
+          <li>What happens if materials rise in price during the project?</li>
+          <li>How do you handle defects after handover?</li>
+        </ul>
+
+        <h3>Red Flags During Execution</h3>
+        <ul>
+          <li>Refusal to share drawings or specifications.</li>
+          <li>Pressure to pay ahead of progress.</li>
+          <li>Frequent changes of site supervisor.</li>
+          <li>Skipping tests or curing to save time.</li>
+          <li>No written records of variations.</li>
+          <li>Poor site safety and untidy storage of materials.</li>
+        </ul>
+
+        <h3>The Handover Checklist</h3>
+        <p>At completion, do a formal inspection with your architect or engineer. Check each room, test all fixtures, review the electrical and plumbing, inspect terraces for leaks and note every defect on a snag list. Request completion drawings, warranty documents, material brochures and utility connection details. Release the retention only after defects are fixed.</p>
+
+        <h3>Final Thoughts</h3>
+        <p>A well-built structure is the result of clear agreements, regular checks and honest communication. Choose partners who welcome that kind of transparency.</p>
+        <p>If you would like to discuss your project with a team that values clear scope and documented quality, BoxBuildTech can help you plan your next steps. Visit <a href="https://www.boxbuildtech.com" target="_blank" rel="noopener noreferrer">boxbuildtech.com</a> to start the conversation.</p>
+      </>
+    ),
+  },
   'custom-farm-house-design-chandigarh': {
     category: 'FARM HOUSE DESIGN',
     title: 'From Plot to Finished Home: Planning a Custom Farm House Design in Chandigarh Without Costly Mistakes',
