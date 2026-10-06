@@ -21,7 +21,7 @@ import heritageHomeImage from '../../assets/Heritage Home Construction in Chandi
 import affordableResidentialImage from '../../assets/Affordable Residential Construction Chandigarh.png';
 import premiumPlotsImage from '../../assets/Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali.png';
 import constructionBudgetMohaliImage from '../../assets/Construction Budget Planning in Mohali.png';
-import civilContractorsChandigarhImage from '../../assets/heroproject1.png';
+import civilContractorsChandigarhImage from '../../assets/Chandigarh civil contractors at work.png';
 
 const blogContent = {
   'construction-company-mohali-build-budget': {
