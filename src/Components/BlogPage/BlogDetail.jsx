@@ -20,7 +20,7 @@ import turnkeyExecutionImage from '../../assets/Turnkey Project Execution Compan
 import heritageHomeImage from '../../assets/Heritage Home Construction in Chandigarh.png';
 import affordableResidentialImage from '../../assets/Affordable Residential Construction Chandigarh.png';
 import premiumPlotsImage from '../../assets/Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali.png';
-import constructionBudgetMohaliImage from '../../assets/heroproject1.png';
+import constructionBudgetMohaliImage from '../../assets/Construction Budget Planning in Mohali.png';
 import civilContractorsChandigarhImage from '../../assets/heroproject1.png';
 
 const blogContent = {
