@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -354,6 +355,24 @@ export default function ClientPortal() {
 
   return (
     <div className="cp-root">
+      <Helmet>
+        <title>Client Portal | BOX Buildtech – Real-Time Project Management</title>
+        <meta name="description" content="Access your construction project dashboard with BOX Buildtech's Client Portal. View real-time progress, site photos, drawings, and architect sync updates." />
+        <meta name="keywords" content="client portal BOX Buildtech, construction project dashboard, real-time site updates, project management portal, architect sync" />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href="https://www.boxbuildtech.com/client-portal" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.boxbuildtech.com/client-portal" />
+        <meta property="og:title" content="Client Portal | BOX Buildtech – Real-Time Project Management" />
+        <meta property="og:description" content="Access your construction project dashboard. View real-time progress, site photos, and drawings." />
+        <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+        <meta property="og:site_name" content="Box BuildTech" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.boxbuildtech.com/client-portal" />
+        <meta name="twitter:title" content="Client Portal | BOX Buildtech – Real-Time Project Management" />
+        <meta name="twitter:description" content="Access your construction project dashboard with real-time updates." />
+        <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />
+      </Helmet>
 
       {/* ══════════════════════════════════
           SIDEBAR

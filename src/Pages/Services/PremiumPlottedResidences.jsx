@@ -68,15 +68,15 @@ export default function PremiumPlottedResidences() {
   <meta name="description" content="Explore premium plotted development by BOX Buildtech in Chandigarh & Mohali. Own your land, build your dream home your way — freedom, privacy, and strong long-term investment value." />
   <meta name="keywords" content="premium plotted development Chandigarh, residential plots Mohali, plots New Chandigarh, buy residential plot Chandigarh, plotted development BOX Buildtech" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.boxbuildtech.com/premium-plotted-development-chandigarh-mohali" />
+  <link rel="canonical" href="https://www.boxbuildtech.com/services/premium-plotted-residences" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.boxbuildtech.com/premium-plotted-development-chandigarh-mohali" />
+  <meta property="og:url" content="https://www.boxbuildtech.com/services/premium-plotted-residences" />
   <meta property="og:title" content="Premium Plotted Development Chandigarh & Mohali | BOX Buildtech" />
   <meta property="og:description" content="Own your land, build your dream home your way. Premium plotted development by BOX Buildtech — freedom, privacy, and quality living in Chandigarh & Mohali." />
   <meta property="og:image" content="https://www.boxbuildtech.com/og-image.jpg" />
   <meta property="og:site_name" content="Box BuildTech" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://www.boxbuildtech.com/premium-plotted-development-chandigarh-mohali" />
+  <meta name="twitter:url" content="https://www.boxbuildtech.com/services/premium-plotted-residences" />
   <meta name="twitter:title" content="Premium Plotted Development Chandigarh & Mohali | BOX Buildtech" />
   <meta name="twitter:description" content="Own your land, build your dream home your way. Premium plotted development in Chandigarh & Mohali." />
   <meta name="twitter:image" content="https://www.boxbuildtech.com/og-image.jpg" />

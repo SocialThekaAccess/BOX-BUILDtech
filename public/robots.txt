@@ -1,6 +1,12 @@
+# Robots.txt for BOX BuildTech
+# Updated: October 2026
+
 User-agent: *
 Allow: /
+
+# Block private and internal pages
 Disallow: /client-portal
 Disallow: /alignment-session
 
+# Sitemap location
 Sitemap: https://www.boxbuildtech.com/sitemap.xml

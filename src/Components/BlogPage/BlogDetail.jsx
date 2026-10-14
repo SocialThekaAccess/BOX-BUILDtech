@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import './BlogDetail.css';
+import { BLOGS } from '../../data/constants';
 import heroBackgroundImage from '../../assets/heroproject1.png';
 import professionalConstructionImage from '../../assets/WhyChoosingAProfessionalConstruction.png';
 import luxuryVillaImage from '../../assets/LuxuryVillaConstruction.png';
@@ -15,6 +16,27 @@ import farmhouseMohaliImage from '../../assets/BoxbuildtechblogimgNew.png';
 import customFarmHouseImage from '../../assets/From Plot to Finished Home Planning a Custom Farm House Design in Chandigarh Without Costly Mistakes (2).png';
 import howToChooseConstructionImage from '../../assets/HowtoChoosetheRightConstructionCompanyinChandigarh.png';
 import preConstructionPlanningImage from '../../assets/Construction Company in Chandigarh Why Pre-Construction Planning Is the Foundation of Every Successful Project.png';
+
+// Image mapping for blogs
+const imageMap = {
+  'custom-farm-house-design-chandigarh': customFarmHouseImage,
+  'construction-company-chandigarh-pre-construction-planning': preConstructionPlanningImage,
+  'how-to-choose-right-construction-company-chandigarh': howToChooseConstructionImage,
+  'luxury-farm-house-builders-mohali-turnkey-construction': farmhouseMohaliImage,
+  'construction-management-company-panchkula-b2b-construction-services': constructionManagementImage,
+  'premium-plotted-development-chandigarh-luxury-residential-plots': premiumPlottedImage,
+  'luxury-home-builders-chandigarh': luxuryHomeBuildersImage,
+  'turnkey-construction-company-chandigarh': turnkeyConstructionImage,
+  'construction-company-chandigarh-building-contractors': whyChoosingRightImage,
+  'professional-construction-company-chandigarh': professionalConstructionImage,
+  'luxury-villa-construction-chandigarh-guide': luxuryVillaImage,
+  'luxury-farm-house-builders-mohali': farmhouseMohaliImage,
+  'turnkey-project-execution-company-in-chandigarh': turnkeyConstructionImage,
+  'heritage-home-construction-chandigarh-palace-house-builders-punjab': luxuryHomeBuildersImage,
+  'premium-residential-plots-chandigarh-luxury-plotted-residences-mohali': premiumPlottedImage,
+  'affordable-residential-construction-chandigarh': professionalConstructionImage,
+};
+
 
 const blogContent = {
   'custom-farm-house-design-chandigarh': {
@@ -1735,7 +1757,18 @@ const blogContent = {
 
 const BlogDetail = () => {
   const { slug } = useParams();
-  const blog = blogContent[slug];
+  
+  // Try to find blog in BLOGS from constants first
+  const blogFromConstants = BLOGS.find(b => b.id === slug);
+  const blog = blogFromConstants ? {
+    category: blogFromConstants.category.toUpperCase(),
+    title: blogFromConstants.title,
+    author: blogFromConstants.author,
+    date: blogFromConstants.date,
+    readTime: '10 min read',
+    image: imageMap[blogFromConstants.id] || professionalConstructionImage,
+    content: <div dangerouslySetInnerHTML={{ __html: blogFromConstants.content }} />
+  } : blogContent[slug];
 
   // Force navbar to scrolled state
   useEffect(() => {
@@ -1749,6 +1782,14 @@ const BlogDetail = () => {
 
   // Custom meta data for specific blogs
   const getMetaData = (slug) => {
+    // Check if blog is from constants first
+    if (blogFromConstants) {
+      return {
+        title: blogFromConstants.metaTitle,
+        description: blogFromConstants.metaDescription
+      };
+    }
+    
     const metaData = {
       'construction-company-chandigarh-pre-construction-planning': {
         title: 'Construction Company in Chandigarh: Why Pre-Construction Planning Matters',
