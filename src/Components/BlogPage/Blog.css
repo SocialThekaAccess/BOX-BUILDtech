@@ -176,15 +176,14 @@ body.blog-page-active .nav-root.top {
   border-color: rgba(233, 161, 2, 0.3);
 }
 
-/* FIX: no forced height/aspect-ratio and no cropping. The image
-   renders at its own natural ratio, so baked-in text is never cut
-   off and there's no dark letterbox gap either. */
+/* FIX: enforce a consistent image height so all grid cards align.
+   The image is cropped to fill the fixed container without distortion. */
 .blog-card-image {
   position: relative;
   background: #0D182E;
   overflow: hidden;
   width: 100%;
-  height: auto;
+  height: 240px;
   display: block;
   line-height: 0;
 }
@@ -192,8 +191,9 @@ body.blog-page-active .nav-root.top {
 .blog-card-image img {
   display: block;
   width: 100%;
-  height: auto;
-  object-fit: initial;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   transition: transform 0.5s ease, filter 0.3s ease;
   filter: brightness(1);
 }

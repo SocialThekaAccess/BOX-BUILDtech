@@ -1,0 +1,90 @@
+/* ============================================================
+   PAGE LOADER — BOX Buildtech
+   ============================================================ */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0D1B2E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loader-fadeout 0.5s ease 1.8s forwards;
+}
+
+.page-loader__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Logo */
+.page-loader__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  animation: loader-slidein 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.page-loader__logo-box {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #E9A102;
+  line-height: 1;
+}
+
+.page-loader__logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.45em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+}
+
+/* Gold progress bar */
+.page-loader__bar-track {
+  width: 160px;
+  height: 2px;
+  background: rgba(233, 161, 2, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+  animation: loader-slidein 0.6s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.page-loader__bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #E9A102;
+  border-radius: 2px;
+  animation: loader-bar 1.6s ease 0.3s forwards;
+}
+
+/* Animations */
+@keyframes loader-slidein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loader-bar {
+  0%   { width: 0%; }
+  60%  { width: 75%; }
+  100% { width: 100%; }
+}
+
+@keyframes loader-fadeout {
+  to {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}

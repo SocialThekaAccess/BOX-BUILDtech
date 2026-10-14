@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import PageLoader from './Components/Shared/PageLoader';
 import Navbar       from './Components/Navbar/Navbar';
 import Hero         from './Components/Hero/Hero';
 import MissionVision from './Components/MissionVision/MissionVision';
@@ -13,19 +13,22 @@ import About        from './Components/About/About';
 import Contact      from './Components/Contact/Contact';
 import StatsBar      from './Components/StatsBar/StatsBar';
 import Footer       from './Components/Footer/Footer';
-import AboutPage               from './Pages/About/About';
-import ContactUsPage           from './Pages/ContactUs/ContactUs';
-import LuxuryResidential       from './Pages/Services/LuxuryResidential';
-import LuxuryPalaceHouses      from './Pages/Services/LuxuryPalaceHouses';
-import LargeLuxuryFarmHouses   from './Pages/Services/LargeLuxuryFarmHouses';
-import PortfolioPage           from './Pages/Portfolio/Portfolio';
-import PortalPage              from './Pages/Portal/Portal';
-import ClientPortalPage        from './Pages/ClientPortal/ClientPortal';
-import AlignmentSession        from './Pages/AlignmentSession/AlignmentSession';
-import PremiumPlottedResidences from './Pages/Services/PremiumPlottedResidences';
-import Blog                    from './Components/BlogPage/Blog';
-import BlogDetail              from './Components/BlogPage/BlogDetail';
 import './styles/globals.css';
+
+/* ── Lazy loaded pages ── */
+const AboutPage               = lazy(() => import('./Pages/About/About'));
+const ContactUsPage           = lazy(() => import('./Pages/ContactUs/ContactUs'));
+const PortfolioPage           = lazy(() => import('./Pages/Portfolio/Portfolio'));
+const PortalPage              = lazy(() => import('./Pages/Portal/Portal'));
+const ClientPortalPage        = lazy(() => import('./Pages/ClientPortal/ClientPortal'));
+const AlignmentSession        = lazy(() => import('./Pages/AlignmentSession/AlignmentSession'));
+const PremiumPlottedResidences = lazy(() => import('./Pages/Services/PremiumPlottedResidences'));
+const LuxuryPalaceHouses      = lazy(() => import('./Pages/Services/LuxuryPalaceHouses'));
+const LargeLuxuryFarmHouses   = lazy(() => import('./Pages/Services/LargeLuxuryFarmHouses'));
+const LuxuryResidential       = lazy(() => import('./Pages/Services/LuxuryResidential'));
+const ProjectDetailPage       = lazy(() => import('./Pages/ProjectDetail/ProjectDetail'));
+const BlogPage                = lazy(() => import('./Components/BlogPage/Blog'));
+const BlogDetailPage          = lazy(() => import('./Components/BlogPage/BlogDetail'));
 
 /* ── WhatsApp Float Button ── */
 const WhatsAppButton = () => {
@@ -120,9 +123,26 @@ const BackToTop = () => {
         xmlns="http://www.w3.org/2000/svg"
         style={{ display: 'block', overflow: 'visible' }}
       >
-        <circle cx="26" cy="26" r="24" stroke="rgba(233,161,2,0.25)" strokeWidth="1" fill="none" />
-        <circle cx="26" cy="26" r="20" fill="#E9A102" />
-        <path d="M26 33 L26 19 M19 26 L26 19 L33 26" stroke="#000000" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Outer rotating ring */}
+        <circle
+          cx="26" cy="26" r="24"
+          stroke="rgba(233,161,2,0.25)"
+          strokeWidth="1"
+          fill="none"
+        />
+        {/* Gold filled circle */}
+        <circle
+          cx="26" cy="26" r="20"
+          fill="#E9A102"
+        />
+        {/* Arrow up */}
+        <path
+          d="M26 33 L26 19 M19 26 L26 19 L33 26"
+          stroke="#000000"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     </button>
   );
@@ -131,123 +151,97 @@ const BackToTop = () => {
 /* ── Page Layout ── */
 const HomePage = () => (
   <>
-    <Helmet>
-      <title>Construction Company in Mohali &amp; Luxury Home Builders Chandigarh | Box Build Tech</title>
-      <meta name="description" content="Box Build Tech is a construction company in Mohali offering luxury home building in Chandigarh. We deliver premium plotted residences, luxury villas, farm houses and design build services across Punjab." />
-      <link rel="canonical" href="https://www.boxbuildtech.com/" />
-    </Helmet>
     <Hero />
     <MissionVision />
+    {/* <StatsBar /> */}
     <Services />
     <WhyUs />
     <ChooseUs />
     <PremiumResidencies />
     <Projects />
     <About />
+    {/* <Testimonials /> */}
     <Contact />
-    <StatsBar />
+     <StatsBar />
     <Footer />
   </>
 );
 
 const AboutFullPage = () => (
   <>
-    <AboutPage />
+    <Suspense fallback={null}><AboutPage /></Suspense>
     <Footer />
   </>
 );
 
 const ContactUsFullPage = () => (
   <>
-    <ContactUsPage />
-    <Footer />
-  </>
-);
-
-const LuxuryResidentialPage = () => (
-  <>
-    <LuxuryResidential />
-    <Footer />
-  </>
-);
-
-const LuxuryPalaceHousesPage = () => (
-  <>
-    <LuxuryPalaceHouses />
-    <Footer />
-  </>
-);
-
-const LargeLuxuryFarmHousesPage = () => (
-  <>
-    <LargeLuxuryFarmHouses />
-    <Footer />
-  </>
-);
-
-const PremiumPlottedResidencesPage = () => (
-  <>
-    <PremiumPlottedResidences />
+    <Suspense fallback={null}><ContactUsPage /></Suspense>
     <Footer />
   </>
 );
 
 const PortfolioFullPage = () => (
   <>
-    <PortfolioPage />
+    <Suspense fallback={null}><PortfolioPage /></Suspense>
     <Footer />
   </>
 );
 
-const BlogPage = () => (
+const ProjectDetailFullPage = () => (
   <>
-    <Blog />
-    <Footer />
-  </>
-);
-
-const BlogDetailPage = () => (
-  <>
-    <BlogDetail />
+    <Suspense fallback={null}><ProjectDetailPage /></Suspense>
     <Footer />
   </>
 );
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     if (window.location.hash) {
       window.history.replaceState(null, '', '/');
     }
+    // Hide loader after 2s max (covers fonts + first paint)
+    const t = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(t);
   }, []);
 
   return (
-    <Routes>
-      {/* Client Portal — no main Navbar, has its own sidebar nav */}
-      <Route path="/client-portal" element={<ClientPortalPage />} />
+    <>
+      {loading && <PageLoader />}
+      <Routes>
+        {/* Client Portal — no main Navbar, has its own sidebar nav */}
+        <Route path="/client-portal" element={
+          <Suspense fallback={null}><ClientPortalPage /></Suspense>
+        } />
 
-      {/* All other pages — with main Navbar */}
-      <Route path="*" element={
-        <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
-          <Navbar />
-          <Routes>
-            <Route path="/"                                                    element={<HomePage />}                     />
-            <Route path="/about"                                               element={<AboutFullPage />}                />
-            <Route path="/contact"                                             element={<ContactUsFullPage />}            />
-            <Route path="/services/luxury-residential"                         element={<LuxuryResidentialPage />}        />
-            <Route path="/services/luxury-palace-houses"                       element={<LuxuryPalaceHousesPage />}       />
-            <Route path="/services/large-luxury-farm-houses"                   element={<LargeLuxuryFarmHousesPage />}    />
-            <Route path="/services/premium-plotted-residences"                 element={<PremiumPlottedResidencesPage />} />
-            <Route path="/portfolio"                                            element={<PortfolioFullPage />}            />
-            <Route path="/blog"                                                 element={<BlogPage />}                     />
-            <Route path="/blog/:slug"                                           element={<BlogDetailPage />}               />
-            <Route path="/portal"                                               element={<PortalPage />}                   />
-            <Route path="/alignment-session"                                    element={<AlignmentSession />}             />
-            <Route path="*"                                                     element={<HomePage />}                     />
-          </Routes>
-          <BackToTop />
-          <WhatsAppButton />
-        </div>
-      } />
-    </Routes>
+        {/* All other pages — with main Navbar */}
+        <Route path="*" element={
+          <div style={{ background: '#0a0a0a', color: '#ffffff', overflowX: 'hidden' }}>
+            <Navbar />
+            <Routes>
+              <Route path="/"                                    element={<HomePage />}               />
+              <Route path="/about"                               element={<Suspense fallback={null}><AboutFullPage /></Suspense>}     />
+              <Route path="/contact"                             element={<Suspense fallback={null}><ContactUsFullPage /></Suspense>} />
+              <Route path="/services/luxury-palace-houses"       element={<Suspense fallback={null}><LuxuryPalaceHouses /></Suspense>}      />
+              <Route path="/services/large-luxury-farm-houses"   element={<Suspense fallback={null}><LargeLuxuryFarmHouses /></Suspense>}    />
+              <Route path="/services/luxury-residential"         element={<Suspense fallback={null}><LuxuryResidential /></Suspense>}        />
+              <Route path="/services/premium-plotted-residences" element={<Suspense fallback={null}><PremiumPlottedResidences /></Suspense>} />
+              <Route path="/portfolio"                           element={<Suspense fallback={null}><PortfolioFullPage /></Suspense>} />
+              <Route path="/projects/:slug"                      element={<ProjectDetailFullPage />} />
+              <Route path="/blog"                                element={<Suspense fallback={null}><BlogPage /></Suspense>} />
+              <Route path="/blog/:slug"                          element={<Suspense fallback={null}><BlogDetailPage /></Suspense>} />
+              
+              <Route path="/portal"                              element={<Suspense fallback={null}><PortalPage /></Suspense>}        />
+              <Route path="/alignment-session"                   element={<Suspense fallback={null}><AlignmentSession /></Suspense>}  />
+              <Route path="*"                                    element={<HomePage />}               />
+            </Routes>
+            <BackToTop />
+            <WhatsAppButton />
+          </div>
+        } />
+      </Routes>
+    </>
   );
 }
