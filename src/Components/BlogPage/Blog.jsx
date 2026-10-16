@@ -16,6 +16,14 @@ import farmhouseMohaliImage from '../../assets/BoxbuildtechblogimgNew.png';
 import customFarmHouseImage from '../../assets/From Plot to Finished Home Planning a Custom Farm House Design in Chandigarh Without Costly Mistakes (2).png';
 import howToChooseConstructionImage from '../../assets/HowtoChoosetheRightConstructionCompanyinChandigarh.png';
 import preConstructionPlanningImage from '../../assets/Construction Company in Chandigarh Why Pre-Construction Planning Is the Foundation of Every Successful Project.png';
+import luxuryFarmBuildersMohaliImage from '../../assets/Luxury Farm House Builders Mohali Complete Guide to Farm House Construction in Punjab.png';
+import turnkeyExecutionImage from '../../assets/Turnkey Project Execution Company in Chandigarh Project Management and Construction Chandigarh Guide.png';
+import heritageHomeImage from '../../assets/Heritage Home Construction in Chandigarh.png';
+import affordableResidentialImage from '../../assets/Affordable Residential Construction Chandigarh.png';
+import premiumPlotsImage from '../../assets/Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali.png';
+import constructionBudgetMohaliImage from '../../assets/Construction Budget Planning in Mohali.png';
+import civilContractorsChandigarhImage from '../../assets/Chandigarh civil contractors at work.png';
+import constructionContractorsMohaliImage from '../../assets/Construction contractors in Mohali How to Choose the Right Builder for Your Dream Home.png';
 
 // Image mapping for blogs
 const imageMap = {
@@ -30,11 +38,15 @@ const imageMap = {
   'construction-company-chandigarh-building-contractors': whyChoosingRightImage,
   'professional-construction-company-chandigarh': professionalConstructionImage,
   'luxury-villa-construction-chandigarh-guide': luxuryVillaImage,
-  'luxury-farm-house-builders-mohali': farmhouseMohaliImage,
-  'turnkey-project-execution-company-in-chandigarh': turnkeyConstructionImage,
-  'heritage-home-construction-chandigarh-palace-house-builders-punjab': luxuryHomeBuildersImage,
-  'premium-residential-plots-chandigarh-luxury-plotted-residences-mohali': premiumPlottedImage,
-  'affordable-residential-construction-chandigarh': professionalConstructionImage,
+  'luxury-farm-house-builders-mohali': luxuryFarmBuildersMohaliImage,
+  'turnkey-project-execution-company-in-chandigarh': turnkeyExecutionImage,
+  'heritage-home-construction-chandigarh-palace-house-builders-punjab': heritageHomeImage,
+  'premium-residential-plots-chandigarh-luxury-plotted-residences-mohali': premiumPlotsImage,
+  'affordable-residential-construction-chandigarh': affordableResidentialImage,
+  'construction-contractors-mohali-choose-right-builder': constructionContractorsMohaliImage,
+  'design-build-company-mohali-luxury-homes': luxuryHomeBuildersImage,
+  'construction-company-mohali-build-budget': constructionBudgetMohaliImage,
+  'civil-contractors-chandigarh-contracts-quality-site-checks': civilContractorsChandigarhImage,
 };
 
 // Transform BLOGS data from constants to match the component's expected format

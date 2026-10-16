@@ -176,23 +176,25 @@ body.blog-page-active .nav-root.top {
   border-color: rgba(233, 161, 2, 0.3);
 }
 
-/* FIX: enforce a consistent image height so all grid cards align.
-   The image is cropped to fill the fixed container without distortion. */
+/* FIX: show the FULL banner image, never crop the left/right edges.
+   The container takes the image's natural height (width: 100%, height: auto),
+   so nothing is cut off. */
 .blog-card-image {
   position: relative;
   background: #0D182E;
   overflow: hidden;
   width: 100%;
-  height: 240px;
+  height: auto;
   display: block;
   line-height: 0;
+  flex-shrink: 0;
 }
 
 .blog-card-image img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   object-position: center;
   transition: transform 0.5s ease, filter 0.3s ease;
   filter: brightness(1);
@@ -204,6 +206,7 @@ body.blog-page-active .nav-root.top {
 }
 
 .blog-card-image-placeholder {
+  min-height: 220px;
   background: linear-gradient(135deg, #1a2332 0%, #16273E 100%);
   display: flex;
   align-items: center;

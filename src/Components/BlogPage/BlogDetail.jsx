@@ -23,6 +23,10 @@ import affordableResidentialImage from '../../assets/Affordable Residential Cons
 import premiumPlotsImage from '../../assets/Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali.png';
 import constructionBudgetMohaliImage from '../../assets/Construction Budget Planning in Mohali.png';
 import civilContractorsChandigarhImage from '../../assets/Chandigarh civil contractors at work.png';
+import constructionContractorsMohaliImage from '../../assets/Construction contractors in Mohali How to Choose the Right Builder for Your Dream Home.png';
+
+// Temporary placeholder images for new blogs (until dedicated images are added)
+import designBuildMohaliImage from '../../assets/HowtoChoosetheRightConstructionCompanyinChandigarh.png';
 
 // Image mapping for blogs
 const imageMap = {
@@ -39,13 +43,172 @@ const imageMap = {
   'luxury-villa-construction-chandigarh-guide': luxuryVillaImage,
   'luxury-farm-house-builders-mohali': farmhouseMohaliImage,
   'turnkey-project-execution-company-in-chandigarh': turnkeyConstructionImage,
-  'heritage-home-construction-chandigarh-palace-house-builders-punjab': luxuryHomeBuildersImage,
-  'premium-residential-plots-chandigarh-luxury-plotted-residences-mohali': premiumPlottedImage,
-  'affordable-residential-construction-chandigarh': professionalConstructionImage,
+  'heritage-home-construction-chandigarh-palace-house-builders-punjab': heritageHomeImage,
+  'premium-residential-plots-chandigarh-luxury-plotted-residences-mohali': premiumPlotsImage,
+  'affordable-residential-construction-chandigarh': affordableResidentialImage,
+  'construction-contractors-mohali-choose-right-builder': constructionContractorsMohaliImage,
+  'design-build-company-mohali-luxury-homes': designBuildMohaliImage,
+  'construction-company-mohali-build-budget': constructionBudgetMohaliImage,
+  'civil-contractors-chandigarh-contracts-quality-site-checks': civilContractorsChandigarhImage,
 };
 
 
 const blogContent = {
+  'construction-contractors-mohali-choose-right-builder': {
+    category: 'CONSTRUCTION GUIDE',
+    title: 'Construction contractors in Mohali: How to Choose the Right Builder for Your Dream Home',
+    author: 'BOX BUILDtech',
+    date: '16 October, 2026',
+    readTime: '16 min read',
+    image: constructionContractorsMohaliImage,
+    content: (
+      <>
+        <p className="lead-paragraph">Building a home is probably the largest financial and emotional investment most families ever make. The wrong choice of contractor can mean delays, cost overruns, poor finishing and years of repair work. The right one gives you a home that is solid, beautiful and delivered with minimal stress.</p>
+        <p>If you own a plot in the Tricity and are searching for dependable construction contractors in Mohali, this guide explains how to choose wisely, compare quotes fairly, and avoid common mistakes.</p>
+
+        <h3>Why Choosing the Right Builder Matters</h3>
+        <p>Construction involves design, structure, services, materials, labour, schedules and quality control. A small foundation mistake can create expensive problems years later. Poor coordination between teams leads to rework and delays.</p>
+        
+        <h3>Types of Builders and Contractors</h3>
+        <h4>Individual Labour Contractors</h4>
+        <p>Small operators supplying labour for specific tasks. You handle materials and supervision.</p>
+        
+        <h4>General Building Contractors</h4>
+        <p>Manage entire construction including labour, materials and sub-contractors.</p>
+        
+        <h4>Design-Build Firms</h4>
+        <p>Combine architecture and construction under one agreement for smoother coordination.</p>
+        
+        <h4>Large Construction Companies</h4>
+        <p>Organized teams with standard processes and full project supervision.</p>
+
+        <h3>What to Expect From Professional Contractors</h3>
+        <ul>
+          <li>Clear written scope and documentation</li>
+          <li>Detailed cost breakdowns by item</li>
+          <li>Qualified site supervision</li>
+          <li>Quality tested materials</li>
+          <li>Realistic timelines with milestones</li>
+          <li>Proper safety practices</li>
+          <li>Post-completion support and warranty</li>
+        </ul>
+
+        <h3>How to Compare Quotes Fairly</h3>
+        <p>Check these differences:</p>
+        <ul>
+          <li>Complete scope of work included</li>
+          <li>Material brands and specifications</li>
+          <li>Finishing allowances and upgrade policies</li>
+          <li>Payment structure linked to progress</li>
+          <li>How variations are priced</li>
+          <li>Timeline and delay terms</li>
+        </ul>
+
+        <h3>Questions to Ask Before Hiring</h3>
+        <ol>
+          <li>Can I visit completed projects and speak with past clients?</li>
+          <li>Who supervises daily and how often do I get updates?</li>
+          <li>How do you control quality and what inspections are done?</li>
+          <li>Can I see material specifications in writing?</li>
+          <li>How do you handle design changes and delays?</li>
+          <li>What is the payment schedule?</li>
+          <li>What warranty do you provide after handover?</li>
+        </ol>
+
+        <h3>Red Flags to Avoid</h3>
+        <ul>
+          <li>Large advance demands before work starts</li>
+          <li>No written agreements or estimates</li>
+          <li>Prices far lower than others without explanation</li>
+          <li>No past projects to visit</li>
+          <li>Unrealistic timeline promises</li>
+          <li>Immediate decision pressure</li>
+        </ul>
+
+        <h3>Final Thoughts</h3>
+        <p>Your home shapes your life for decades. Choose a contractor with transparent documentation, qualified supervision, realistic timelines and clear communication. Visit completed projects, speak with past clients and select a partner who treats your project seriously.</p>
+        <p>For villa, plotted residence or farmhouse projects, explore Box Build Tech at <a href="https://www.boxbuildtech.com" target="_blank" rel="noopener noreferrer">boxbuildtech.com</a>.</p>
+      </>
+    ),
+  },
+
+  'design-build-company-mohali-luxury-homes': {
+    category: 'DESIGN BUILD',
+    title: 'Design and build company in Mohali: Why One Team for Design and Construction Delivers Better Homes',
+    author: 'BOX BUILDtech',
+    date: '16 October, 2026',
+    readTime: '15 min read',
+    image: designBuildMohaliImage,
+    content: (
+      <>
+        <p className="lead-paragraph">Traditional construction projects work like a relay race with too many runners. The owner hires an architect, who hands drawings to an engineer, who passes to a contractor. Each handover creates chances for misunderstanding and delays.</p>
+        <p>The design-build model puts design and construction under one agreement and one accountable team. This guide explains how it works and its advantages.</p>
+
+        <h3>What Is Design-Build?</h3>
+        <p>In conventional projects, design and construction are separate contracts. In design-build, one organization handles both from concept to completion:</p>
+        <ul>
+          <li>Understanding your brief, plot and budget</li>
+          <li>Preparing architectural concepts</li>
+          <li>Coordinating all services and structure</li>
+          <li>Planning procurement and schedules</li>
+          <li>Executing and supervising site work</li>
+          <li>Delivering completed building</li>
+        </ul>
+
+        <h3>Key Benefits</h3>
+        <h4>Single Point of Accountability</h4>
+        <p>No confusion about whether issues are design or construction problems.</p>
+
+        <h4>Better Cost Control</h4>
+        <p>Builders involved early can suggest cost-effective alternatives while maintaining quality.</p>
+
+        <h4>Faster Timelines</h4>
+        <p>Design and construction activities can overlap intelligently with fewer delays.</p>
+
+        <h4>Improved Quality</h4>
+        <p>Same team plans and builds, resolving details before they become site problems.</p>
+
+        <h4>Less Owner Burden</h4>
+        <p>No managing multiple vendors or resolving disputes between professionals.</p>
+
+        <h3>Construction Collaboration for Architects</h3>
+        <p>Many architects now partner with trusted builders for smoother delivery:</p>
+        <ol>
+          <li>Early builder involvement in design review</li>
+          <li>Clear roles and responsibilities</li>
+          <li>Shared material and quality standards</li>
+          <li>Transparent costing for client trust</li>
+          <li>Regular coordination meetings</li>
+          <li>Respect for design intent in execution</li>
+        </ol>
+
+        <h3>Choosing Civil Contractors</h3>
+        <p>Look for:</p>
+        <ul>
+          <li>Verifiable track record with site visits</li>
+          <li>Qualified daily site supervision</li>
+          <li>Clear written documentation</li>
+          <li>Good material and labour management</li>
+          <li>Safety and site discipline</li>
+          <li>Transparent regular communication</li>
+        </ul>
+
+        <h3>Common Mistakes to Avoid</h3>
+        <ul>
+          <li>Starting construction before design is final</li>
+          <li>Choosing only on lowest price</li>
+          <li>Ignoring written contracts</li>
+          <li>Skipping structural review</li>
+          <li>No contingency planning</li>
+          <li>Poor communication habits</li>
+        </ul>
+
+        <h3>Final Thoughts</h3>
+        <p>When design and construction unite under one team, results are smoother, faster and more predictable. For villa, plotted residence or farmhouse projects, explore Box Build Tech at <a href="https://www.boxbuildtech.com" target="_blank" rel="noopener noreferrer">boxbuildtech.com</a>.</p>
+      </>
+    ),
+  },
+
   'construction-company-mohali-build-budget': {
     category: 'CONSTRUCTION PLANNING',
     title: 'Construction Company in Mohali: How to Plan Your Build Budget',
@@ -1995,6 +2158,160 @@ const blogContent = {
   },
 
   /* ─────────────────────────────────────────────────────────
+     Construction Management Company Panchkula
+  ───────────────────────────────────────────────────────── */
+  'construction-management-company-panchkula-b2b-construction-services': {
+    category: 'CONSTRUCTION MANAGEMENT',
+    title: 'Construction Management Company in Panchkula: Complete B2B Construction Solutions',
+    author: 'BOX BUILDtech',
+    date: '25 September, 2026',
+    readTime: '12 min read',
+    image: constructionManagementImage,
+    content: (
+      <>
+        <p className="lead-paragraph">Running a construction project involves far more than laying bricks and pouring concrete. From coordination between architects and engineers to procurement, quality control, contractor management, and schedule tracking, construction demands systematic oversight at every stage.</p>
+        
+        <p>For businesses, developers, and architects working on multiple projects simultaneously, managing these moving parts can quickly become overwhelming. This is where a professional <strong>Construction Management Company in Panchkula</strong> becomes invaluable — bringing structure, accountability, and expertise to complex projects.</p>
+
+        <h3>What Is Construction Management?</h3>
+        <p>Construction management is the professional service of planning, coordinating, and controlling a construction project from start to finish. It involves:</p>
+        <ul>
+          <li>Project planning and scheduling</li>
+          <li>Budget management and cost control</li>
+          <li>Contractor and vendor coordination</li>
+          <li>Quality assurance and site supervision</li>
+          <li>Safety compliance</li>
+          <li>Material procurement and logistics</li>
+          <li>Progress monitoring and reporting</li>
+          <li>Risk management</li>
+        </ul>
+        <p>Instead of juggling multiple contractors and consultants, clients work with one dedicated management team that oversees the entire project.</p>
+
+        <h3>Why Businesses Need B2B Construction Services</h3>
+        <p>For architects, developers, corporate clients, and real estate businesses, construction isn't just about building — it's about delivering projects on time, within budget, and to specification. B2B construction services provide:</p>
+        
+        <h4>Single Point of Accountability</h4>
+        <p>Rather than coordinating with multiple parties, you have one team responsible for outcomes.</p>
+
+        <h4>Professional Project Execution</h4>
+        <p>Experienced teams bring systems, standards, and proven workflows to every project.</p>
+
+        <h4>Cost and Time Efficiency</h4>
+        <p>Better planning and coordination reduce delays, rework, and budget overruns.</p>
+
+        <h4>Quality Control</h4>
+        <p>Dedicated supervision ensures workmanship meets agreed standards.</p>
+
+        <h4>Scalability</h4>
+        <p>Whether you're managing one project or ten, professional construction management scales with your needs.</p>
+
+        <h3>Services Offered by Construction Management Companies</h3>
+        
+        <h4>1. Pre-Construction Planning</h4>
+        <p>Site assessment, feasibility studies, cost estimation, schedule development, and permit coordination.</p>
+
+        <h4>2. Design Coordination</h4>
+        <p>Working with architects and engineers to ensure designs are constructible, cost-effective, and aligned with client goals.</p>
+
+        <h4>3. Procurement Management</h4>
+        <p>Vendor selection, material sourcing, quality verification, and logistics coordination.</p>
+
+        <h4>4. Construction Execution</h4>
+        <p>Day-to-day site management, contractor supervision, progress tracking, and problem-solving.</p>
+
+        <h4>5. Quality Assurance</h4>
+        <p>Regular inspections, testing, documentation, and compliance with specifications.</p>
+
+        <h4>6. Project Handover</h4>
+        <p>Final inspections, documentation, warranties, and post-construction support.</p>
+
+        <h3>Who Benefits from Construction Outsourcing?</h3>
+        <p><strong>Construction Outsourcing in Chandigarh</strong> is particularly valuable for:</p>
+        <ul>
+          <li><strong>Architects:</strong> Focus on design while trusted partners handle execution</li>
+          <li><strong>Real Estate Developers:</strong> Manage multiple projects without expanding internal teams</li>
+          <li><strong>Corporate Clients:</strong> Build offices, warehouses, or facilities without construction expertise</li>
+          <li><strong>NRIs and Remote Owners:</strong> Monitor projects without being on-site daily</li>
+          <li><strong>Institutional Clients:</strong> Schools, hospitals, and organizations needing reliable delivery</li>
+        </ul>
+
+        <h3>Key Considerations When Choosing a Construction Management Partner</h3>
+        
+        <h4>Experience and Track Record</h4>
+        <p>Look for proven expertise in projects similar to yours in scale and complexity.</p>
+
+        <h4>Transparent Communication</h4>
+        <p>Regular updates, clear documentation, and accessible project information are essential.</p>
+
+        <h4>Systems and Processes</h4>
+        <p>Professional teams use standardized workflows, checklists, and quality controls.</p>
+
+        <h4>Financial Stability</h4>
+        <p>A financially sound partner reduces risk of project abandonment or payment disputes.</p>
+
+        <h4>Safety Standards</h4>
+        <p>Site safety protocols protect workers and reduce liability.</p>
+
+        <h4>Technology Adoption</h4>
+        <p>Modern project management tools improve tracking, reporting, and collaboration.</p>
+
+        <h3>How BOX Buildtech Approaches Construction Management</h3>
+        <p>BOX Buildtech provides systematic construction execution with focus on:</p>
+        <ul>
+          <li>Architect vision protection</li>
+          <li>Transparent cost and timeline management</li>
+          <li>Structured quality control</li>
+          <li>Regular client communication</li>
+          <li>Professional site supervision</li>
+          <li>End-to-end project coordination</li>
+        </ul>
+        <p>For B2B clients, this means predictable outcomes, professional documentation, and construction partners who understand business timelines and priorities.</p>
+
+        <h3>Benefits of Working in the Tricity Region</h3>
+        <p>Panchkula, Chandigarh, and Mohali form one of India's most well-planned construction markets. Benefits include:</p>
+        <ul>
+          <li>Clear regulatory frameworks</li>
+          <li>Availability of skilled labour</li>
+          <li>Good material supply chains</li>
+          <li>Strong professional networks</li>
+          <li>Infrastructure connectivity</li>
+        </ul>
+        <p>Working with local construction management expertise helps navigate these advantages effectively.</p>
+
+        <h3>Common Challenges in Construction Projects</h3>
+        <ul>
+          <li>Design changes during execution</li>
+          <li>Contractor coordination issues</li>
+          <li>Material delivery delays</li>
+          <li>Quality inconsistencies</li>
+          <li>Weather disruptions</li>
+          <li>Budget overruns</li>
+          <li>Timeline slippages</li>
+        </ul>
+        <p>Professional construction management anticipates and mitigates these challenges through planning, monitoring, and proactive problem-solving.</p>
+
+        <h3>Questions to Ask Before Hiring</h3>
+        <ol>
+          <li>What similar projects have you completed recently?</li>
+          <li>Can I visit ongoing sites and speak with past clients?</li>
+          <li>Who will be my primary point of contact?</li>
+          <li>How do you handle cost variations and change orders?</li>
+          <li>What reporting and communication systems do you use?</li>
+          <li>How do you ensure quality control?</li>
+          <li>What warranties and post-completion support do you provide?</li>
+        </ol>
+
+        <h3>Final Thoughts</h3>
+        <p>Construction management transforms projects from chaotic juggling acts into organized, predictable processes. For businesses, developers, and professionals who need reliable execution without managing every detail, partnering with an experienced <strong>Construction Management Company in Panchkula</strong> provides structure, accountability, and peace of mind.</p>
+        
+        <p>Whether you're planning a commercial build, residential development, or institutional project, professional construction management ensures your vision becomes reality — on time, on budget, and to specification.</p>
+        
+        <p>Visit <a href="https://www.boxbuildtech.com" target="_blank" rel="noopener noreferrer">boxbuildtech.com</a> to discuss your project requirements.</p>
+      </>
+    ),
+  },
+
+  /* ─────────────────────────────────────────────────────────
      BLOG 12 — Luxury Farm House Builders Mohali
   ───────────────────────────────────────────────────────── */
   'luxury-farm-house-builders-mohali': {
@@ -2538,17 +2855,11 @@ const blogContent = {
 const BlogDetail = () => {
   const { slug } = useParams();
   
-  // Try to find blog in BLOGS from constants first
+  // Use blogContent object which has full detailed content
+  const blog = blogContent[slug];
+  
+  // Find blog from constants for metadata
   const blogFromConstants = BLOGS.find(b => b.id === slug);
-  const blog = blogFromConstants ? {
-    category: blogFromConstants.category.toUpperCase(),
-    title: blogFromConstants.title,
-    author: blogFromConstants.author,
-    date: blogFromConstants.date,
-    readTime: '10 min read',
-    image: imageMap[blogFromConstants.id] || professionalConstructionImage,
-    content: <div dangerouslySetInnerHTML={{ __html: blogFromConstants.content }} />
-  } : blogContent[slug];
 
   // Force navbar to scrolled state
   useEffect(() => {
