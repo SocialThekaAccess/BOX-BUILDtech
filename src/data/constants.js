@@ -238,6 +238,16 @@ export const FOOTER = {
 // ============================================================
 export const BLOGS = [
   {
+    id: 'project-execution-company-mohali',
+    metaTitle: 'Project Execution Company in Mohali | BOX Buildtech for Tricity',
+    metaDescription: 'BOX Buildtech is a project execution company in Mohali offering luxury home construction, architect coordination, site supervision and quality finishing across Tricity.',
+    title: 'Project Execution Company in Mohali: Turning Your Dream Home into Reality',
+    category: 'Project Execution',
+    author: 'BOX BUILDtech',
+    date: '2024',
+    image: '/src/assets/Turnkey Project Execution Company in Chandigarh Project Management and Construction Chandigarh Guide.png',
+  },
+  {
     id: 'construction-contractors-mohali-choose-right-builder',
     metaTitle: 'Construction Contractors in Mohali for Luxury Homes | Box Build Tech',
     metaDescription: 'Looking for construction contractors in Mohali? Box Build Tech builds custom luxury villas, plotted residences and farm houses across Punjab. Request your quote today.',
@@ -436,15 +446,5 @@ export const BLOGS = [
     author: 'BOX BUILDtech',
     date: '2024',
     image: '/src/assets/Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali.png',
-  },
-  {
-    id: 'project-execution-company-mohali',
-    metaTitle: 'Project Execution Company in Mohali | BOX Buildtech for Tricity',
-    metaDescription: 'BOX Buildtech is a project execution company in Mohali offering luxury home construction, architect coordination, site supervision and quality finishing across Tricity.',
-    title: 'Project Execution Company in Mohali: Turning Your Dream Home into Reality',
-    category: 'Project Execution',
-    author: 'BOX BUILDtech',
-    date: '2024',
-    image: '/src/assets/Turnkey Project Execution Company in Chandigarh Project Management and Construction Chandigarh Guide.png',
   },
 ];
