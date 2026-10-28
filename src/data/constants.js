@@ -244,7 +244,7 @@ export const BLOGS = [
     title: 'Site Execution Company Chandigarh: Bringing Architectural Designs to Life with Precision',
     category: 'Site Execution',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Site Execution Company Chandigarh Bringing Architectural Designs to Life with Precision.png',
   },
   {
@@ -254,7 +254,7 @@ export const BLOGS = [
     title: 'Project Execution Company in Mohali: Turning Your Dream Home into Reality',
     category: 'Project Execution',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Project Execution Company in Mohali Turning Your Dream Home into Reality.png',
   },
   {
@@ -264,7 +264,7 @@ export const BLOGS = [
     title: 'Construction contractors in Mohali: How to Choose the Right Builder for Your Dream Home',
     category: 'Construction Guide',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Construction contractors in Mohali How to Choose the Right Builder for Your Dream Home.png',
   },
   {
@@ -274,7 +274,7 @@ export const BLOGS = [
     title: 'Design and build company in Mohali: Why One Team for Design and Construction Delivers Better Homes',
     category: 'Design Build',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Design and build company in Mohali Why One Team for Design and Construction Delivers Better Homes.png',
   },
   {
@@ -284,7 +284,7 @@ export const BLOGS = [
     title: 'Construction Company in Mohali: How to Plan Your Build Budget',
     category: 'Construction Planning',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Construction Budget Planning in Mohali.png',
   },
   {
@@ -294,7 +294,7 @@ export const BLOGS = [
     title: 'Civil Contractors Chandigarh: Contracts, Quality and Site Checks',
     category: 'Civil Contractors',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Chandigarh civil contractors at work.png',
   },
   {
@@ -304,7 +304,7 @@ export const BLOGS = [
     title: 'From Plot to Finished Home: Planning a Custom Farm House Design in Chandigarh Without Costly Mistakes',
     category: 'Farm House Design',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/From Plot to Finished Home Planning a Custom Farm House Design in Chandigarh Without Costly Mistakes (2).png',
   },
   {
@@ -314,7 +314,7 @@ export const BLOGS = [
     title: 'Construction Company in Chandigarh: Why Pre-Construction Planning Is the Foundation of Every Successful Project',
     category: 'Construction Planning',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Construction Company in Chandigarh Why Pre-Construction Planning Is the Foundation of Every Successful Project.png',
   },
   {
@@ -324,7 +324,7 @@ export const BLOGS = [
     title: 'How to Choose the Right Construction Company in Chandigarh for Your Dream Home',
     category: 'Construction Guide',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/HowtoChoosetheRightConstructionCompanyinChandigarh.png',
   },
   {
@@ -334,7 +334,7 @@ export const BLOGS = [
     title: 'Luxury Farm House Builders in Mohali | Turnkey Construction by BOX Buildtech',
     category: 'Farm House',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/BoxbuildtechblogimgNew.png',
   },
   {
@@ -344,7 +344,7 @@ export const BLOGS = [
     title: 'Luxury Home Builders in Chandigarh: Creating Villas, Farmhouses and Heritage Homes',
     category: 'Luxury Homes',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/LuxuryHomeBuilders.png',
   },
   {
@@ -354,7 +354,7 @@ export const BLOGS = [
     title: 'How a Turnkey Construction Company in Chandigarh Simplifies Your Entire Project',
     category: 'Turnkey Construction',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/HowTurnkey.png',
   },
   {
@@ -364,7 +364,7 @@ export const BLOGS = [
     title: 'Why Choosing a Professional Construction Company in Chandigarh Matters for Luxury Home Projects',
     category: 'Construction',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/WhyChoosingAProfessionalConstruction.png',
   },
   {
@@ -374,7 +374,7 @@ export const BLOGS = [
     title: 'Luxury Villa Construction Chandigarh: A Complete Guide to Building Your Dream Home',
     category: 'Luxury Villa',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/LuxuryVillaConstruction.png',
   },
   {
@@ -384,7 +384,7 @@ export const BLOGS = [
     title: 'Why Choosing the Right Construction Company in Chandigarh Makes All the Difference',
     category: 'Construction',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/WhyChoosingTheConstructionCompany.png',
   },
   {
@@ -394,7 +394,7 @@ export const BLOGS = [
     title: 'Premium Plotted Development in Chandigarh: A Complete Guide to Luxury Residential Projects',
     category: 'Plotted Development',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/PremimumPlottedDevelopment.png',
   },
   {
@@ -404,7 +404,7 @@ export const BLOGS = [
     title: 'Construction Management Company in Panchkula: Complete B2B Construction Solutions',
     category: 'Construction Management',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/ConstructionManagementPanchkula.png',
   },
   {
@@ -414,7 +414,7 @@ export const BLOGS = [
     title: 'Luxury Farm House Builders Mohali: Complete Guide to Farm House Construction in Punjab',
     category: 'Farm House',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Luxury Farm House Builders Mohali Complete Guide to Farm House Construction in Punjab.png',
   },
   {
@@ -424,7 +424,7 @@ export const BLOGS = [
     title: 'Turnkey Project Execution Company in Chandigarh: Project Management and Construction Chandigarh Guide',
     category: 'Project Management',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Turnkey Project Execution Company in Chandigarh Project Management and Construction Chandigarh Guide.png',
   },
   {
@@ -434,7 +434,7 @@ export const BLOGS = [
     title: 'Heritage Home Construction in Chandigarh and Palace House Builders in Punjab: Building Timeless Luxury',
     category: 'Heritage Construction',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Heritage Home Construction in Chandigarh.png',
   },
   {
@@ -444,7 +444,7 @@ export const BLOGS = [
     title: 'Affordable Residential Construction Chandigarh: Choosing an Experienced Civil Contractor Chandigarh for End to End Construction Services Chandigarh',
     category: 'Affordable Construction',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Affordable Residential Construction Chandigarh.png',
   },
   {
@@ -454,7 +454,7 @@ export const BLOGS = [
     title: 'Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali and Premium Plotted Development in Chandigarh: A Construction Guide',
     category: 'Plotted Development',
     author: 'BOX BUILDtech',
-    date: '2024',
+    date: '2026',
     image: '/src/assets/Premium Residential Plots in Chandigarh, Luxury Plotted Residences in Mohali.png',
   },
 ];
