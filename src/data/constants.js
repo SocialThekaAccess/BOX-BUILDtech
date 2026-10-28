@@ -245,7 +245,7 @@ export const BLOGS = [
     category: 'Project Execution',
     author: 'BOX BUILDtech',
     date: '2024',
-    image: '/src/assets/Turnkey Project Execution Company in Chandigarh Project Management and Construction Chandigarh Guide.png',
+    image: '/src/assets/Project Execution Company in Mohali Turning Your Dream Home into Reality.png',
   },
   {
     id: 'construction-contractors-mohali-choose-right-builder',

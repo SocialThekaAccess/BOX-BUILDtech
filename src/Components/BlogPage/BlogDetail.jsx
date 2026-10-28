@@ -24,7 +24,7 @@ import premiumPlotsImage from '../../assets/Premium Residential Plots in Chandig
 import constructionBudgetMohaliImage from '../../assets/Construction Budget Planning in Mohali.png';
 import civilContractorsChandigarhImage from '../../assets/Chandigarh civil contractors at work.png';
 import constructionContractorsMohaliImage from '../../assets/Construction contractors in Mohali How to Choose the Right Builder for Your Dream Home.png';
-import projectExecutionMohaliImage from '../../assets/Turnkey Project Execution Company in Chandigarh Project Management and Construction Chandigarh Guide.png'; // Temporary placeholder
+import projectExecutionMohaliImage from '../../assets/Project Execution Company in Mohali Turning Your Dream Home into Reality.png';
 import designBuildMohaliImage from '../../assets/Design and build company in Mohali Why One Team for Design and Construction Delivers Better Homes.png';
 
 // Image mapping for blogs

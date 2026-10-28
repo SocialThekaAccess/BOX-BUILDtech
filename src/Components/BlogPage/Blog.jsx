@@ -25,6 +25,7 @@ import constructionBudgetMohaliImage from '../../assets/Construction Budget Plan
 import civilContractorsChandigarhImage from '../../assets/Chandigarh civil contractors at work.png';
 import constructionContractorsMohaliImage from '../../assets/Construction contractors in Mohali How to Choose the Right Builder for Your Dream Home.png';
 import designBuildMohaliImage from '../../assets/Design and build company in Mohali Why One Team for Design and Construction Delivers Better Homes.png';
+import projectExecutionMohaliImage from '../../assets/Project Execution Company in Mohali Turning Your Dream Home into Reality.png';
 
 // Image mapping for blogs
 const imageMap = {
@@ -48,7 +49,7 @@ const imageMap = {
   'design-build-company-mohali-luxury-homes': designBuildMohaliImage,
   'construction-company-mohali-build-budget': constructionBudgetMohaliImage,
   'civil-contractors-chandigarh-contracts-quality-site-checks': civilContractorsChandigarhImage,
-  'project-execution-company-mohali': turnkeyExecutionImage,
+  'project-execution-company-mohali': projectExecutionMohaliImage,
 };
 
 // Transform BLOGS data from constants to match the component's expected format
