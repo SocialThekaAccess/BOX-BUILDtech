@@ -47,6 +47,7 @@ const imageMap = {
   'design-build-company-mohali-luxury-homes': luxuryHomeBuildersImage,
   'construction-company-mohali-build-budget': constructionBudgetMohaliImage,
   'civil-contractors-chandigarh-contracts-quality-site-checks': civilContractorsChandigarhImage,
+  'project-execution-company-mohali': turnkeyExecutionImage,
 };
 
 // Transform BLOGS data from constants to match the component's expected format
