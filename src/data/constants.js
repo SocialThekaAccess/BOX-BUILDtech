@@ -265,7 +265,7 @@ export const BLOGS = [
     category: 'Design Build',
     author: 'BOX BUILDtech',
     date: '2024',
-    image: '/src/assets/Design-Build-Company-Mohali.png',
+    image: '/src/assets/Design and build company in Mohali Why One Team for Design and Construction Delivers Better Homes.png',
   },
   {
     id: 'construction-company-mohali-build-budget',

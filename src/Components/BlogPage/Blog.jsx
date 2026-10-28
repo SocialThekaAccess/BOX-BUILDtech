@@ -24,6 +24,7 @@ import premiumPlotsImage from '../../assets/Premium Residential Plots in Chandig
 import constructionBudgetMohaliImage from '../../assets/Construction Budget Planning in Mohali.png';
 import civilContractorsChandigarhImage from '../../assets/Chandigarh civil contractors at work.png';
 import constructionContractorsMohaliImage from '../../assets/Construction contractors in Mohali How to Choose the Right Builder for Your Dream Home.png';
+import designBuildMohaliImage from '../../assets/Design and build company in Mohali Why One Team for Design and Construction Delivers Better Homes.png';
 
 // Image mapping for blogs
 const imageMap = {
@@ -44,7 +45,7 @@ const imageMap = {
   'premium-residential-plots-chandigarh-luxury-plotted-residences-mohali': premiumPlotsImage,
   'affordable-residential-construction-chandigarh': affordableResidentialImage,
   'construction-contractors-mohali-choose-right-builder': constructionContractorsMohaliImage,
-  'design-build-company-mohali-luxury-homes': luxuryHomeBuildersImage,
+  'design-build-company-mohali-luxury-homes': designBuildMohaliImage,
   'construction-company-mohali-build-budget': constructionBudgetMohaliImage,
   'civil-contractors-chandigarh-contracts-quality-site-checks': civilContractorsChandigarhImage,
   'project-execution-company-mohali': turnkeyExecutionImage,
