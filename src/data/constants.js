@@ -245,7 +245,7 @@ export const BLOGS = [
     category: 'Site Execution',
     author: 'BOX BUILDtech',
     date: '2024',
-    image: '/src/assets/Site Execution Company Chandigarh.png',
+    image: '/src/assets/Site Execution Company Chandigarh Bringing Architectural Designs to Life with Precision.png',
   },
   {
     id: 'project-execution-company-mohali',

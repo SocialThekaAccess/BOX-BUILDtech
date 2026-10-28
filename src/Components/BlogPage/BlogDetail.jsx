@@ -26,7 +26,7 @@ import civilContractorsChandigarhImage from '../../assets/Chandigarh civil contr
 import constructionContractorsMohaliImage from '../../assets/Construction contractors in Mohali How to Choose the Right Builder for Your Dream Home.png';
 import projectExecutionMohaliImage from '../../assets/Project Execution Company in Mohali Turning Your Dream Home into Reality.png';
 import designBuildMohaliImage from '../../assets/Design and build company in Mohali Why One Team for Design and Construction Delivers Better Homes.png';
-import siteExecutionChandigarhImage from '../../assets/Project Execution Company in Mohali Turning Your Dream Home into Reality.png'; // Temporary placeholder until dedicated image is added
+import siteExecutionChandigarhImage from '../../assets/Site Execution Company Chandigarh Bringing Architectural Designs to Life with Precision.png';
 
 // Image mapping for blogs
 const imageMap = {
