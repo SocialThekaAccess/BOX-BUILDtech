@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import './BlogDetail.css';
 import { BLOGS } from '../../data/constants';
+import Footer from '../Footer/Footer';
 import heroBackgroundImage from '../../assets/heroproject1.png';
 import professionalConstructionImage from '../../assets/WhyChoosingAProfessionalConstruction.png';
 import luxuryVillaImage from '../../assets/LuxuryVillaConstruction.png';
@@ -3666,6 +3667,9 @@ const BlogDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 };
