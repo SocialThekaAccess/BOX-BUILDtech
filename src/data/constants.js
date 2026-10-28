@@ -238,6 +238,16 @@ export const FOOTER = {
 // ============================================================
 export const BLOGS = [
   {
+    id: 'site-execution-company-chandigarh',
+    metaTitle: 'Site Execution Company Chandigarh | BOX Buildtech Tricity Experts',
+    metaDescription: 'Looking for a site execution company Chandigarh? BOX Buildtech supports architects and homeowners with villa construction, site supervision and quality work in Tricity.',
+    title: 'Site Execution Company Chandigarh: Bringing Architectural Designs to Life with Precision',
+    category: 'Site Execution',
+    author: 'BOX BUILDtech',
+    date: '2024',
+    image: '/src/assets/Site Execution Company Chandigarh.png',
+  },
+  {
     id: 'project-execution-company-mohali',
     metaTitle: 'Project Execution Company in Mohali | BOX Buildtech for Tricity',
     metaDescription: 'BOX Buildtech is a project execution company in Mohali offering luxury home construction, architect coordination, site supervision and quality finishing across Tricity.',
